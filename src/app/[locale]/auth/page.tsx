@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 
 import { createSupabaseBrowserClient } from "@/lib/supabase/browser";
 
@@ -36,6 +37,12 @@ export default function AuthPage() {
   const [cooldownSeconds, setCooldownSeconds] = useState(0);
   const [codeExpiresInSeconds, setCodeExpiresInSeconds] = useState(0);
 
+  const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "";
+  const captchaEnabled = turnstileSiteKey.length > 0;
+  const turnstileRef = useRef<TurnstileInstance | undefined>(undefined);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const [captchaError, setCaptchaError] = useState<string | null>(null);
+
   useEffect(() => {
     if (cooldownSeconds <= 0) return;
     const t = window.setInterval(() => {
@@ -64,6 +71,12 @@ export default function AuthPage() {
     setBusy(true);
     setMessage(null);
 
+    if (captchaEnabled && !captchaToken) {
+      setMessage("请先完成验证码校验。");
+      setBusy(false);
+      return;
+    }
+
     const origin = window.location.origin;
 
     const locale = detectLocaleFromPathname(window.location.pathname);
@@ -77,8 +90,15 @@ export default function AuthPage() {
       options: {
         emailRedirectTo: callbackUrl.toString(),
         shouldCreateUser: true,
+        captchaToken: captchaToken ?? undefined,
       },
     });
+
+    if (captchaEnabled) {
+      setCaptchaToken(null);
+      setCaptchaError(null);
+      turnstileRef.current?.reset();
+    }
 
     if (error) {
       const msg = error.message;
@@ -108,12 +128,25 @@ export default function AuthPage() {
     setBusy(true);
     setMessage(null);
 
+    if (captchaEnabled && !captchaToken) {
+      setMessage("请先完成验证码校验。");
+      setBusy(false);
+      return;
+    }
+
     const { error } = await supabase.auth.signInWithOtp({
       email,
       options: {
         shouldCreateUser: true,
+        captchaToken: captchaToken ?? undefined,
       },
     });
+
+    if (captchaEnabled) {
+      setCaptchaToken(null);
+      setCaptchaError(null);
+      turnstileRef.current?.reset();
+    }
 
     if (error) {
       const msg = error.message;
@@ -231,6 +264,34 @@ export default function AuthPage() {
           placeholder="you@example.com"
           autoComplete="email"
         />
+
+        {captchaEnabled ? (
+          <div className="pt-1">
+            <Turnstile
+              ref={turnstileRef}
+              siteKey={turnstileSiteKey}
+              onSuccess={(token) => {
+                setCaptchaToken(token);
+                setCaptchaError(null);
+              }}
+              onExpire={() => {
+                setCaptchaToken(null);
+              }}
+              onUnsupported={() => {
+                setCaptchaToken(null);
+                setCaptchaError("当前浏览器不支持验证码组件。");
+              }}
+              onError={() => {
+                setCaptchaToken(null);
+                setCaptchaError("验证码加载失败，请刷新页面或检查 Turnstile 域名配置。");
+              }}
+              options={{ theme: "auto" }}
+            />
+            {captchaError ? (
+              <div className="mt-2 text-xs text-red-700">{captchaError}</div>
+            ) : null}
+          </div>
+        ) : null}
 
         {mode === "magic_link" ? (
           <button
