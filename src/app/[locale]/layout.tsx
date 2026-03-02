@@ -6,11 +6,14 @@ import { normalizeLocale } from "@/i18n/request";
 import { SiteShell } from "@/components/SiteShell";
 import "../globals.css";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://chinese-chi.vercel.app";
+
 export const metadata: Metadata = {
   title: "Chinese CHI 2026",
   description: "Chinese CHI 2026 Conference Website",
+  metadataBase: new URL(siteUrl),
   icons: {
-    icon: "https://ichec.icachi.org/favicon.ico",
+    icon: "/favicon.ico",
   },
 };
 

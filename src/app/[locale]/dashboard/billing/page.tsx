@@ -2,6 +2,12 @@
 
 import { useState } from "react";
 
+function normalizeBasePath(value: string | undefined): string {
+  if (!value) return "";
+  if (value === "/") return "";
+  return `/${value}`.replace(/\/+/g, "/").replace(/\/+$/, "");
+}
+
 export default function BillingPage() {
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
@@ -10,7 +16,8 @@ export default function BillingPage() {
     setBusy(true);
     setMessage(null);
 
-    const res = await fetch("/api/stripe/checkout", {
+    const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH);
+    const res = await fetch(`${basePath}/api/stripe/checkout`.replace(/\/+/g, "/"), {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ kind }),
@@ -53,4 +60,3 @@ export default function BillingPage() {
     </div>
   );
 }
-

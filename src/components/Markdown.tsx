@@ -4,14 +4,35 @@ import type { ReactNode } from "react";
 function renderInline(text: string): ReactNode[] {
   const nodes: ReactNode[] = [];
   const linkRe = /\[([^\]]+)\]\(([^)]+)\)/g;
-  let lastIndex = 0;
-  let match: RegExpExecArray | null;
+  const codeRe = /`([^`]+)`/g;
 
-  while ((match = linkRe.exec(text)) !== null) {
-    const [full, label, href] = match;
-    const start = match.index;
-    if (start > lastIndex) nodes.push(text.slice(lastIndex, start));
-    const key = `${start}-${href}`;
+  let cursor = 0;
+  let linkMatch = linkRe.exec(text);
+  let codeMatch = codeRe.exec(text);
+
+  while (linkMatch || codeMatch) {
+    const nextLinkIndex = linkMatch ? linkMatch.index : Number.POSITIVE_INFINITY;
+    const nextCodeIndex = codeMatch ? codeMatch.index : Number.POSITIVE_INFINITY;
+    const nextIsCode = nextCodeIndex < nextLinkIndex;
+    const nextIndex = nextIsCode ? nextCodeIndex : nextLinkIndex;
+
+    if (nextIndex > cursor) nodes.push(text.slice(cursor, nextIndex));
+
+    if (nextIsCode) {
+      const [full, code] = codeMatch as RegExpExecArray;
+      const key = `${nextIndex}-code`;
+      nodes.push(
+        <code key={key} className="inline-code">
+          {code}
+        </code>,
+      );
+      cursor = nextIndex + full.length;
+      codeMatch = codeRe.exec(text);
+      continue;
+    }
+
+    const [full, label, href] = linkMatch as RegExpExecArray;
+    const key = `${nextIndex}-${href}`;
     if (href.startsWith("/")) {
       nodes.push(
         <Link key={key} href={href} className="underline underline-offset-4">
@@ -31,10 +52,11 @@ function renderInline(text: string): ReactNode[] {
         </a>,
       );
     }
-    lastIndex = start + full.length;
+    cursor = nextIndex + full.length;
+    linkMatch = linkRe.exec(text);
   }
 
-  if (lastIndex < text.length) nodes.push(text.slice(lastIndex));
+  if (cursor < text.length) nodes.push(text.slice(cursor));
   return nodes;
 }
 

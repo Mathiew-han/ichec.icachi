@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/navigation";
 import { Markdown } from "@/components/Markdown";
 import { readSiteMarkdown } from "@/lib/site-content";
 import { createSupabaseServerClient } from "@/lib/supabase/server";

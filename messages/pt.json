@@ -45,6 +45,129 @@
     "backToHome": "Voltar ao Início",
     "attend": "Participar"
   },
+  "CFP": {
+    "eyebrow": "Chamada de Trabalhos",
+    "title": "Chamada de Trabalhos & Participação",
+    "subtitle": "Aceitamos submissões de alta qualidade em pesquisa, design, arte e prática industrial. O ICHEC enfatiza tecnologia responsável e centrada nas pessoas, incentivando colaboração interdisciplinar e intercultural.",
+    "submit": {
+      "title": "Submissão",
+      "heading": "Submeter via EasyChair",
+      "desc": "Faça login primeiro e siga para o sistema de submissão. Recomendamos verificar o formato e (se aplicável) os requisitos de anonimato antes de submeter.",
+      "cta": "Entrar para submeter",
+      "easychair": "Abrir EasyChair"
+    },
+    "resources": {
+      "title": "Recursos",
+      "heading": "Modelos & Políticas",
+      "template": "Modelo de formatação (Em breve)",
+      "check": "Verificação de similaridade (Em breve)",
+      "registration": "Inscrição & Taxas",
+      "contact": "Contato: contact@chinese-chi.org",
+      "hint": "Itens marcados como “Em breve” serão substituídos por links oficiais quando o sistema estiver disponível."
+    },
+    "tracks": {
+      "title": "Trilhas",
+      "heading": "Trilhas de Submissão",
+      "desc": "Escolha a trilha que melhor se adequa ao seu trabalho. Expanda cada cartão para ver os pontos-chave e o caminho de submissão.",
+      "cta": "Ir para submissão",
+      "note": "Limites finais, modelos e políticas serão anunciados oficialmente.",
+      "paper": {
+        "title": "Artigos",
+        "desc": "Pesquisa original e contribuições substanciais em métodos, sistemas, teoria e investigação crítica.",
+        "b1": "Contribuição clara e metodologia reprodutível",
+        "b2": "Materiais suplementares são recomendados quando aplicável",
+        "b3": "Siga o modelo e (se aplicável) política de anonimato"
+      },
+      "poster": {
+        "title": "Pôsteres",
+        "desc": "Trabalhos em andamento e resultados iniciais, com foco em discussão e feedback.",
+        "b1": "Destaque a ideia central e evidências iniciais",
+        "b2": "Links de demo/protótipo quando aplicável",
+        "b3": "Formato flexível para interação presencial"
+      },
+      "workshop": {
+        "title": "Workshops",
+        "desc": "Discussões e cocriação sobre temas emergentes e comunidades.",
+        "b1": "Defina objetivos, agenda e resultados esperados",
+        "b2": "Descreva formato de participação e perguntas-guia",
+        "b3": "Incentive participação diversa e materiais abertos"
+      },
+      "artdemo": {
+        "title": "Arte & Demo",
+        "desc": "Trabalhos interativos e sistemas implantáveis, com ênfase em engajamento público e experiência no local.",
+        "b1": "Descreva interação, necessidades no local e segurança",
+        "b2": "Inclua imagens/vídeos ou demos online quando possível",
+        "b3": "Explique relevância temática e participação do público"
+      }
+    },
+    "timeline": {
+      "heading": "Marcos (Sincronizado com o Início)",
+      "desc": "Janelas principais para submissões e organização. Datas finais serão anunciadas oficialmente.",
+      "step1": { "title": "Lançamento da Chamada", "date": "Início de Maio" },
+      "step2": { "title": "Segunda Rodada", "date": "Final de Junho" },
+      "step3": { "title": "Prazo de Submissão", "date": "Final de Agosto" },
+      "step4": { "title": "Notificações", "date": "Final de Setembro" }
+    },
+    "guide": {
+      "title": "Guia",
+      "heading": "Notas de Submissão",
+      "desc": "Reúne entrada de submissão, trilhas e informações de inscrição. Mais detalhes serão adicionados conforme o sistema for finalizado.",
+      "cardTitle": "Expandir para detalhes",
+      "cardDesc": "Sistema de submissão, trilhas e inscrição"
+    }
+  },
+  "Registration": {
+    "eyebrow": "Participar",
+    "title": "Inscrição & Guia no Local",
+    "lead": "Esta página resume janelas de inscrição, referência de taxas, orientação de credenciamento, políticas e notas de hospedagem. Os detalhes finais serão anunciados oficialmente.",
+    "links": {
+      "cfp": "Chamada de Trabalhos",
+      "program": "Programa",
+      "contact": "Contato"
+    },
+    "fees": {
+      "kicker": "Taxas",
+      "title": "Inscrição & Taxas (vale o anúncio oficial)",
+      "desc": "O conteúdo abaixo baseia-se em materiais de planejamento e placeholders para alinhar orçamento e fluxo."
+    },
+    "checkin": {
+      "kicker": "Credenciamento",
+      "title": "Inscrição & Credenciamento",
+      "desc": "O credenciamento no local geralmente inclui verificação de identidade e retirada de crachá. Local e horários serão atualizados quando o sistema estiver finalizado.",
+      "rows": {
+        "location": { "k": "Local", "v": "Balcão principal de atendimento (Em breve)" },
+        "hours": { "k": "Horários", "v": "Manhã do primeiro dia e períodos diurnos (Em breve)" },
+        "materials": { "k": "Levar", "v": "Documento de identificação e confirmação da inscrição (digital ou impressa)" }
+      },
+      "notes": {
+        "n1": "Chegue cedo para evitar filas em horários de pico.",
+        "n2": "Para nota fiscal ou alterações, prepare documentos relevantes.",
+        "n3": "Palestrantes e voluntários podem ter instruções específicas (Em breve)."
+      }
+    },
+    "policies": {
+      "kicker": "Políticas",
+      "title": "Políticas & Notas",
+      "desc": "Destaques comuns para planejar viagem e orçamento. As regras finais serão anunciadas oficialmente.",
+      "p1": { "title": "Alterações & Reembolsos", "text": "Janelas de reembolso, taxas e transferências serão anunciadas após o lançamento do sistema." },
+      "p2": { "title": "Visto & Carta Convite", "text": "Se precisar de suporte para visto, contate o e-mail da conferência e reserve tempo de processamento." },
+      "p3": { "title": "O que inclui", "text": "Normalmente inclui acesso principal e algumas refeições/eventos sociais (sujeito ao anúncio final)." }
+    },
+    "stay": {
+      "kicker": "Hospedagem",
+      "title": "Local & Hospedagem",
+      "desc": "Recomendamos ficar perto do local para equilibrar caminhada e transporte.",
+      "links": {
+        "baidu": "Baidu Maps (Em breve)",
+        "google": "Google Maps (Em breve)",
+        "hint": "Mapas e lista de hotéis serão atualizados com links oficiais quando o local for confirmado."
+      },
+      "hotelHead": { "name": "Hotel", "walk": "Caminhada", "link": "Link" },
+      "hotels": {
+        "h1": { "name": "Hotel Royal Queens (ref.)", "walk": "10–15 min", "site": "Site" }
+      }
+    }
+  },
   "Shell": {
     "titles": {
       "about": "Sobre o ICHEC 2026",

@@ -49,6 +49,98 @@
   }
 }
 
+body.has-custom-cursor {
+  cursor: none;
+}
+
+body.has-custom-cursor a,
+body.has-custom-cursor button,
+body.has-custom-cursor summary,
+body.has-custom-cursor [role="button"],
+body.has-custom-cursor [data-cursor="interactive"] {
+  cursor: none;
+}
+
+body.has-custom-cursor input,
+body.has-custom-cursor textarea,
+body.has-custom-cursor select {
+  cursor: auto;
+}
+
+.custom-cursor-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+}
+
+.custom-cursor-dot,
+.custom-cursor-ring {
+  position: fixed;
+  left: 0;
+  top: 0;
+  will-change: transform;
+}
+
+.custom-cursor-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--accent-green) 88%, white);
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--accent-green) 25%, transparent);
+  opacity: 0.95;
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.custom-cursor-ring {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in oklab, var(--accent-green) 55%, transparent);
+  background: color-mix(in oklab, var(--accent-green) 14%, transparent);
+  box-shadow: 0 18px 44px color-mix(in oklab, var(--accent-green) 22%, transparent);
+  opacity: 0.9;
+  transition: width 180ms ease, height 180ms ease, opacity 180ms ease, border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.custom-cursor-ring.is-interactive {
+  width: 52px;
+  height: 52px;
+  opacity: 0.95;
+  border-color: color-mix(in oklab, var(--accent-green) 72%, transparent);
+  background: color-mix(in oklab, var(--accent-green) 22%, transparent);
+}
+
+.custom-cursor-dot.is-interactive {
+  opacity: 0.85;
+}
+
+.custom-cursor-ring.is-pressed {
+  width: 34px;
+  height: 34px;
+  opacity: 0.92;
+  background: color-mix(in oklab, var(--accent-green) 28%, transparent);
+}
+
+.custom-cursor-dot.is-pressed {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .custom-cursor-ring,
+  .custom-cursor-dot {
+    transition: none;
+  }
+
+  .hero-title,
+  .hero-tagline,
+  .hero-divider,
+  .hero-meta {
+    animation: none;
+  }
+}
+
 html,
 body {
   height: 100%;
@@ -131,6 +223,45 @@ body {
   opacity: 0.9;
 }
 
+.hero-title {
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  letter-spacing: 0.1em;
+  animation: hero-enter 520ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.hero-tagline {
+  color: color-mix(in oklab, var(--foreground) 82%, var(--accent-green) 18%);
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  animation: hero-enter 640ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.hero-divider {
+  background: linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--accent-green) 14%, transparent),
+    color-mix(in oklab, var(--accent-green) 68%, transparent),
+    color-mix(in oklab, var(--accent-green) 14%, transparent)
+  );
+  animation: hero-enter 740ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.hero-meta {
+  color: color-mix(in oklab, var(--foreground) 74%, var(--accent-green) 26%);
+  letter-spacing: 0.03em;
+  animation: hero-enter 860ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .glass {
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
@@ -154,6 +285,22 @@ body {
   box-shadow: 0 12px 32px rgba(13, 16, 14, 0.08);
   -webkit-backdrop-filter: blur(6px) saturate(110%);
   backdrop-filter: blur(6px) saturate(110%);
+}
+
+:not(pre) > code.inline-code {
+  padding: 0.18rem 0.45rem;
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: color-mix(in oklab, var(--foreground) 92%, transparent);
+  background: color-mix(in oklab, var(--accent-neutral) 70%, transparent);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  white-space: nowrap;
+}
+
+:not(pre) > code.inline-code::before,
+:not(pre) > code.inline-code::after {
+  content: none;
 }
 
 .schedule-head {
@@ -367,6 +514,7 @@ body {
   font-family: system-ui, sans-serif;
   font-size: 18px;
   font-weight: 300;
+  transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .card-title {
@@ -820,5 +968,3 @@ body {
         transparent 50%);
   }
 }
-
-

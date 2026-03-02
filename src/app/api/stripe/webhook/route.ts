@@ -4,8 +4,23 @@ import Stripe from "stripe";
 
 import { getEnv } from "@/lib/env";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { getClientIpFromHeaders, rateLimit } from "@/lib/security/rate-limit";
 
 export async function POST(request: Request) {
+  const contentLength = Number(request.headers.get("content-length") ?? "0");
+  if (Number.isFinite(contentLength) && contentLength > 1_500_000) {
+    return NextResponse.json({ error: "Payload too large" }, { status: 413 });
+  }
+
+  const ip = getClientIpFromHeaders(request.headers);
+  const rl = rateLimit(`stripe_webhook:${ip}`, { windowMs: 60_000, max: 300 });
+  if (!rl.ok) {
+    return new NextResponse("Too Many Requests", {
+      status: 429,
+      headers: { "retry-after": String(rl.retryAfterSeconds) },
+    });
+  }
+
   const stripeSecretKey = getEnv("STRIPE_SECRET_KEY");
   if (!stripeSecretKey) {
     return NextResponse.json({ error: "Missing STRIPE_SECRET_KEY" }, { status: 500 });

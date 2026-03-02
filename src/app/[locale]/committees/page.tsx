@@ -2,32 +2,45 @@ import { Link } from "@/navigation";
 import { getTranslations } from "next-intl/server";
 import { Markdown } from "@/components/Markdown";
 import { readSiteMarkdown } from "@/lib/site-content";
+import styles from "./committees.module.css";
 
 export default async function CommitteesPage({ params }: { params: Promise<{ locale: string }> }) {
   const t = await getTranslations("Common");
   const { locale } = await params;
   const content = await readSiteMarkdown("committees", locale);
   return (
-    <div className="space-y-10">
+    <div className={styles.page}>
       <Markdown content={content} />
-      <section className="space-y-6">
-        <div className="text-lg font-semibold tracking-wide text-black/85 dark:text-white/85">
-          {t("organization")}
+      <section className={styles.section}>
+        <div className={styles.sectionTitle}>{t("organization")}</div>
+        <div className={styles.lead}>
+          {t("toBeUpdated")}
         </div>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {["General Chair", "Program Chair", "Workshops Chair", "Art & Demo Chair", "Local Chair", "Sponsorship Chair"].map((role) => (
-            <div key={role} className="glass-panel px-6 py-6">
-              <div className="text-xs font-semibold uppercase tracking-[0.2em] text-black/50 dark:text-white/50">
-                {role}
-              </div>
-              <div className="mt-3 text-base font-semibold text-black/80 dark:text-white/80">
-                Name Placeholder
-              </div>
-              <div className="mt-1 text-sm text-black/65 dark:text-white/65">University / Lab</div>
-              <div className="mt-3 text-sm">
-                <Link href="#" className="underline underline-offset-4">
-                  {t("homepage")}
-                </Link>
+        <div className={styles.roster}>
+          {[
+            { role: "General Chair", name: "Name Placeholder", aff: "University / Lab" },
+            { role: "Program Chair", name: "Name Placeholder", aff: "University / Lab" },
+            { role: "Workshops Chair", name: "Name Placeholder", aff: "University / Lab" },
+            { role: "Art & Demo Chair", name: "Name Placeholder", aff: "University / Lab" },
+            { role: "Local Chair", name: "Name Placeholder", aff: "University / Lab" },
+            { role: "Sponsorship Chair", name: "Name Placeholder", aff: "University / Lab" },
+          ].map((item) => (
+            <div key={item.role} className={styles.item}>
+              <div className={styles.role}>{item.role}</div>
+              <div className={styles.name}>{item.name}</div>
+              <div className={styles.aff}>{item.aff}</div>
+              <div className={styles.kv}>
+                <div>
+                  <b>Email:</b> chair@example.com
+                </div>
+                <div>
+                  <b>Focus:</b> HCI · Cultural Computing · Responsible AI
+                </div>
+                <div>
+                  <Link href="#" className="underline underline-offset-4">
+                    {t("homepage")}
+                  </Link>
+                </div>
               </div>
             </div>
           ))}

@@ -15,6 +15,12 @@ function getEnv(name: string): string | undefined {
   return value;
 }
 
+function normalizeBasePath(value: string | undefined): string {
+  if (!value) return "";
+  if (value === "/") return "";
+  return `/${value}`.replace(/\/+/g, "/").replace(/\/+$/, "");
+}
+
 export default async function middleware(request: NextRequest) {
   const response = intlMiddleware(request);
 
@@ -42,11 +48,18 @@ export default async function middleware(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
+  const basePath = normalizeBasePath(getEnv("NEXT_PUBLIC_BASE_PATH"));
   const pathname = request.nextUrl.pathname;
+  const pathnameNoBase =
+    basePath && pathname.startsWith(`${basePath}/`)
+      ? pathname.slice(basePath.length)
+      : pathname === basePath
+        ? "/"
+        : pathname;
 
-  let normalizedPathname = pathname;
+  let normalizedPathname = pathnameNoBase;
   let currentLocale = "en";
-  const pathSegments = pathname.split("/");
+  const pathSegments = pathnameNoBase.split("/");
   const localeFromPath = pathSegments[1] ?? "";
   const normalizedFromPath = localeFromPath ? normalizeLocale(localeFromPath) : null;
   if (normalizedFromPath) {
@@ -58,7 +71,7 @@ export default async function middleware(request: NextRequest) {
   if (normalizedPathname.startsWith("/dashboard") || normalizedPathname.startsWith("/admin")) {
     if (!user) {
       const redirectUrl = request.nextUrl.clone();
-      redirectUrl.pathname = `/${currentLocale}/auth`;
+      redirectUrl.pathname = `${basePath}/${currentLocale}/auth`.replace(/\/+/g, "/");
       redirectUrl.searchParams.set("next", pathname);
       return NextResponse.redirect(redirectUrl);
     }
@@ -73,7 +86,7 @@ export default async function middleware(request: NextRequest) {
 
     if (error || !data || data.role !== "admin") {
       const redirectUrl = request.nextUrl.clone();
-      redirectUrl.pathname = `/${currentLocale}/dashboard`;
+      redirectUrl.pathname = `${basePath}/${currentLocale}/dashboard`.replace(/\/+/g, "/");
       return NextResponse.redirect(redirectUrl);
     }
   }

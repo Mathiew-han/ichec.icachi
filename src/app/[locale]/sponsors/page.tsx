@@ -1,7 +1,8 @@
-import Link from "next/link";
+import { Link } from "@/navigation";
 import { Markdown } from "@/components/Markdown";
 import { readSiteMarkdown } from "@/lib/site-content";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import styles from "./sponsors.module.css";
 
 type SponsorRow = {
   id: string;
@@ -27,66 +28,69 @@ export default async function SponsorsPage({ params }: { params: Promise<{ local
   const sponsors = (data ?? []) as SponsorRow[];
 
   return (
-    <div className="space-y-10">
+    <div className={styles.page}>
       <Markdown content={content} />
       {sponsors.length > 0 ? (
-        <section className="space-y-6">
-          <div className="text-lg font-semibold tracking-wide text-black/85 dark:text-white/85">
-            Sponsors
+        <section className={styles.section}>
+          <div className={styles.sectionTitle}>Sponsors</div>
+          <div className={styles.lead}>
+            {sponsors.length} sponsor(s) listed.
           </div>
-          <div className="grid gap-4 md:grid-cols-2">
-            {sponsors.map((s) => (
-              <div key={s.id} className="glass-panel px-6 py-6">
-                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-black/50 dark:text-white/50">
-                  {s.level}
-                </div>
-                <div className="mt-2 text-xl font-semibold text-black/85 dark:text-white/85">
-                  {s.name}
-                </div>
-                {s.website_url ? (
-                  <div className="mt-2 text-sm">
-                    <a className="underline underline-offset-4" href={s.website_url}>
-                      {s.website_url}
-                    </a>
-                  </div>
-                ) : null}
-                {s.logo_url ? (
-                  <div className="mt-3 text-xs text-neutral-500 break-all">{s.logo_url}</div>
-                ) : null}
+          {Array.from(new Set(sponsors.map((s) => s.level))).map((level) => (
+            <div key={level} className={styles.group}>
+              <div className={styles.groupTitle}>{level}</div>
+              <div className={styles.sponsorList}>
+                {sponsors
+                  .filter((s) => s.level === level)
+                  .map((s) => (
+                    <div key={s.id} className={styles.sponsorItem}>
+                      <div className={styles.sponsorName}>{s.name}</div>
+                      <div className={styles.sponsorMeta}>
+                        {s.website_url ? (
+                          <a className="underline underline-offset-4" href={s.website_url}>
+                            {s.website_url}
+                          </a>
+                        ) : (
+                          <span>Website to be announced</span>
+                        )}
+                      </div>
+                    </div>
+                  ))}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </section>
       ) : null}
-      <section className="space-y-6">
-        <div className="text-lg font-semibold tracking-wide text-black/85 dark:text-white/85">
-          赞助级别（参考）
+      <section className={`${styles.section} ${styles.inlineCode}`}>
+        <div className={styles.sectionTitle}>赞助级别（参考）</div>
+        <div className={styles.lead}>
+          费用与权益将以正式赞助权益包为准。以下为占位结构，便于快速对齐内容。
         </div>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className={styles.tierGrid}>
           {[
             { tier: "Bronze", fee: "￥X,XXX", perks: "展位 + Logo 露出" },
             { tier: "Silver", fee: "￥X,XXX", perks: "议程露出 + 展位" },
             { tier: "Gold", fee: "￥X,XXX", perks: "主会场露出 + 赞助致辞" },
             { tier: "Platinum", fee: "￥X,XXX", perks: "冠名曝光 + 深度合作" },
           ].map((item) => (
-            <div key={item.tier} className="glass-panel px-6 py-6">
-              <div className="text-xs font-semibold uppercase tracking-[0.2em] text-black/50 dark:text-white/50">
-                {item.tier}
+            <div key={item.tier} className={styles.tierRow}>
+              <div className={styles.tierTop}>
+                <div className={styles.tierName}>{item.tier}</div>
+                <div className={styles.tierFee}>
+                  <code className="inline-code">{item.fee}</code>
+                </div>
               </div>
-              <div className="mt-2 text-xl font-semibold text-black/85 dark:text-white/85">
-                {item.fee}
-              </div>
-              <div className="mt-2 text-sm text-black/70 dark:text-white/70">{item.perks}</div>
+              <div className={styles.tierPerks}>{item.perks}</div>
             </div>
           ))}
         </div>
-        <div className="glass-panel px-6 py-6">
-          <div className="text-sm font-semibold text-black/60 dark:text-white/60">Sponsorship Link</div>
-          <div className="mt-3 text-sm">
-            <Link href="#" className="underline underline-offset-4">
-              获取赞助方案与联系方式
-            </Link>
-          </div>
+        <div className={styles.cta}>
+          <Link href="#" className="underline underline-offset-4">
+            获取赞助方案与联系方式
+          </Link>
+          <a className="underline underline-offset-4" href="mailto:contact@chinese-chi.org">
+            contact@chinese-chi.org
+          </a>
         </div>
       </section>
     </div>

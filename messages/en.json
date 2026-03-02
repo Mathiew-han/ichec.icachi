@@ -45,6 +45,129 @@
     "backToHome": "Back to Home",
     "attend": "Attend"
   },
+  "CFP": {
+    "eyebrow": "Call for Papers",
+    "title": "Call for Papers & Participation",
+    "subtitle": "We welcome high-quality submissions across research, design, art, and industry practice. ICHEC emphasizes human-centered and responsible technology, and encourages interdisciplinary and cross-cultural collaboration.",
+    "submit": {
+      "title": "Submit",
+      "heading": "Submit via EasyChair",
+      "desc": "Sign in first and proceed to the submission system. Please verify formatting and (if applicable) anonymity requirements before submission.",
+      "cta": "Sign in to submit",
+      "easychair": "Open EasyChair"
+    },
+    "resources": {
+      "title": "Resources",
+      "heading": "Templates & Policies",
+      "template": "Formatting template (TBA)",
+      "check": "Similarity check (TBA)",
+      "registration": "Registration & Fees",
+      "contact": "Contact: contact@chinese-chi.org",
+      "hint": "Items marked TBA will be replaced with official links once the conference system is live."
+    },
+    "tracks": {
+      "title": "Tracks",
+      "heading": "Submission Tracks at a Glance",
+      "desc": "Choose the track that best fits your work. Expand each card for key points and the submission entry.",
+      "cta": "Go to submission",
+      "note": "Final page limits, templates, and review policies will be announced officially.",
+      "paper": {
+        "title": "Papers",
+        "desc": "Original research and substantial contributions across methods, systems, theory, and critical inquiry.",
+        "b1": "Clear contribution statement and reproducible methodology",
+        "b2": "Supplementary materials encouraged when applicable",
+        "b3": "Follow the formatting and (if applicable) anonymity policy"
+      },
+      "poster": {
+        "title": "Posters",
+        "desc": "Works-in-progress and early results, emphasizing discussion and feedback.",
+        "b1": "Highlight the core idea and initial evidence",
+        "b2": "Optional demo/prototype links when applicable",
+        "b3": "Flexible presentation for in-person interaction"
+      },
+      "workshop": {
+        "title": "Workshops",
+        "desc": "Focused discussions and co-creation around emerging topics and communities.",
+        "b1": "Define goals, agenda, and expected outcomes",
+        "b2": "Provide participation format and guiding questions",
+        "b3": "Encourage diverse participation and open materials"
+      },
+      "artdemo": {
+        "title": "Art & Demo",
+        "desc": "Interactive works and deployable systems, highlighting public engagement and on-site experience.",
+        "b1": "Describe interaction, on-site needs, and safety considerations",
+        "b2": "Include images/videos or accessible online demos when possible",
+        "b3": "Clarify thematic relevance and audience participation"
+      }
+    },
+    "timeline": {
+      "heading": "Key Milestones (Synced with Home)",
+      "desc": "Key windows for submissions and conference logistics. Final dates will be announced officially.",
+      "step1": { "title": "CFP Launch", "date": "Early May" },
+      "step2": { "title": "Second Round", "date": "Late June" },
+      "step3": { "title": "Submission Deadline", "date": "Late August" },
+      "step4": { "title": "Notifications", "date": "Late September" }
+    },
+    "guide": {
+      "title": "Guide",
+      "heading": "Submission & Participation Notes",
+      "desc": "A consolidated place for submission entry, tracks, and registration notes. More detailed policies will be added as the system is finalized.",
+      "cardTitle": "Expand for details",
+      "cardDesc": "Submission system, tracks, and registration notes"
+    }
+  },
+  "Registration": {
+    "eyebrow": "Attend",
+    "title": "Registration & On-site Guide",
+    "lead": "This page summarizes key registration windows, fee references, check-in guidance, policies, and accommodation notes. Final details will be announced officially.",
+    "links": {
+      "cfp": "Call for Papers",
+      "program": "Program",
+      "contact": "Contact"
+    },
+    "fees": {
+      "kicker": "Fees",
+      "title": "Registration & Fees (Official announcement prevails)",
+      "desc": "The following content is based on planning materials and placeholders to help align budgeting and workflow."
+    },
+    "checkin": {
+      "kicker": "Check-in",
+      "title": "Registration & Check-in",
+      "desc": "On-site check-in usually includes identity verification and badge pickup. Location and hours will be updated when the conference system is finalized.",
+      "rows": {
+        "location": { "k": "Location", "v": "Main entrance service desk (TBA)" },
+        "hours": { "k": "Hours", "v": "Conference day morning and daytime slots (TBA)" },
+        "materials": { "k": "Bring", "v": "ID and registration confirmation (digital or printed)" }
+      },
+      "notes": {
+        "n1": "Arrive early to avoid peak-time queues.",
+        "n2": "For invoices or registration changes, prepare relevant documents.",
+        "n3": "Speakers and student volunteers may have dedicated check-in instructions (TBA)."
+      }
+    },
+    "policies": {
+      "kicker": "Policies",
+      "title": "Policies & Notes",
+      "desc": "Common policy highlights for planning travel and budgeting. Final rules will be announced officially.",
+      "p1": { "title": "Changes & Refunds", "text": "Refund windows, fees, and transferability will be announced after the system launch." },
+      "p2": { "title": "Visa & Invitation Letter", "text": "If you need visa support, contact the conference email and allow sufficient processing time." },
+      "p3": { "title": "What’s Included", "text": "Typically includes main conference access and some meals/social events (subject to final announcement)." }
+    },
+    "stay": {
+      "kicker": "Stay",
+      "title": "Venue & Accommodation",
+      "desc": "We recommend staying near the venue to balance walkability and convenient transport.",
+      "links": {
+        "baidu": "Baidu Maps (TBA)",
+        "google": "Google Maps (TBA)",
+        "hint": "Maps and hotel lists will be updated with official links once venue details are confirmed."
+      },
+      "hotelHead": { "name": "Hotel", "walk": "Walk", "link": "Link" },
+      "hotels": {
+        "h1": { "name": "Hotel Royal Queens (ref.)", "walk": "10–15 min", "site": "Website" }
+      }
+    }
+  },
   "Shell": {
     "titles": {
       "about": "About ICHEC 2026",

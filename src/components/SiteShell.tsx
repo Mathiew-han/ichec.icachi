@@ -1,10 +1,18 @@
 "use client";
 
-import { Link, usePathname } from "@/navigation";
+import { usePathname } from "@/navigation";
 import { useTranslations } from "next-intl";
 import type { ReactNode } from "react";
 
 import { SiteHeader } from "@/components/SiteHeader";
+import { CustomCursor } from "@/components/CustomCursor";
+import { Footer } from "@/components/Footer";
+
+function normalizeBasePath(value: string | undefined): string {
+  if (!value) return "";
+  if (value === "/") return "";
+  return `/${value}`.replace(/\/+/g, "/").replace(/\/+$/, "");
+}
 
 export function SiteShell({
   children,
@@ -16,8 +24,15 @@ export function SiteShell({
   const t = useTranslations("Shell");
   const tHome = useTranslations("Home");
   const pathname = usePathname();
-  const isHome = pathname === "/";
-  const topSegment = pathname.split("/")[1] || "";
+  const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH);
+  const pathnameNoBase =
+    basePath && pathname.startsWith(`${basePath}/`)
+      ? pathname.slice(basePath.length)
+      : pathname === basePath
+        ? "/"
+        : pathname;
+  const isHome = pathnameNoBase === "/";
+  const topSegment = pathnameNoBase.split("/")[1] || "";
 
   const titleKeyBySegment = {
     about: "titles.about",
@@ -42,6 +57,7 @@ export function SiteShell({
 
   return (
     <div className="relative min-h-dvh flex flex-col">
+      <CustomCursor />
       <div
         className={`site-poster${isHome ? "" : " site-poster-compact"}`}
         aria-hidden="true"
@@ -74,24 +90,7 @@ export function SiteShell({
           )}
         </main>
 
-        <footer className="pb-10">
-          <div className="mx-auto max-w-6xl px-4">
-          <div className="glass-panel px-6 py-6 text-center text-sm">
-              <p className="opacity-80">{t("footer.rights")}</p>
-              <div className="mt-3 flex flex-wrap justify-center gap-x-4 gap-y-2">
-                <Link href="#" className="site-nav-link">
-                  {t("footer.privacy")}
-                </Link>
-                <Link href="#" className="site-nav-link">
-                  {t("footer.terms")}
-                </Link>
-                <Link href="#" className="site-nav-link">
-                  {t("footer.contact")}
-                </Link>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </div>
   );

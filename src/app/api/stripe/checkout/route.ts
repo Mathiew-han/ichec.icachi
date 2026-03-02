@@ -4,15 +4,30 @@ import Stripe from "stripe";
 
 import { getEnv } from "@/lib/env";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { getClientIpFromHeaders, rateLimit } from "@/lib/security/rate-limit";
 
 const LOCALES = new Set(["en", "zh-CN", "zh-TW", "pt"]);
 
+function normalizeBasePath(value: string | undefined): string {
+  if (!value) return "";
+  if (value === "/") return "";
+  return `/${value}`.replace(/\/+/g, "/").replace(/\/+$/, "");
+}
+
 function inferLocaleFromRequest(request: Request): string {
+  const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH);
   const referer = request.headers.get("referer");
   if (referer) {
     try {
       const url = new URL(referer);
-      const first = url.pathname.split("/")[1] ?? "";
+      const pathname = url.pathname;
+      const pathnameNoBase =
+        basePath && pathname.startsWith(`${basePath}/`)
+          ? pathname.slice(basePath.length)
+          : pathname === basePath
+            ? "/"
+            : pathname;
+      const first = pathnameNoBase.split("/")[1] ?? "";
       if (LOCALES.has(first)) return first;
     } catch {
       return "en";
@@ -31,6 +46,15 @@ const PRICE_BY_KIND: Record<string, { amount: number; currency: string; name: st
   };
 
 export async function POST(request: Request) {
+  const ip = getClientIpFromHeaders(request.headers);
+  const rl = rateLimit(`stripe_checkout:${ip}`, { windowMs: 60_000, max: 20 });
+  if (!rl.ok) {
+    return new NextResponse("Too Many Requests", {
+      status: 429,
+      headers: { "retry-after": String(rl.retryAfterSeconds) },
+    });
+  }
+
   const body = (await request.json().catch(() => null)) as
     | { kind?: string }
     | null;
@@ -91,7 +115,10 @@ export async function POST(request: Request) {
   const stripe = new Stripe(stripeSecretKey);
 
   const origin = new URL(request.url).origin;
+  const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH);
   const locale = inferLocaleFromRequest(request);
+  const successPath = `${basePath}/${locale}/dashboard/billing/success`.replace(/\/+/g, "/");
+  const cancelPath = `${basePath}/${locale}/dashboard/billing/cancel`.replace(/\/+/g, "/");
 
   const session = await stripe.checkout.sessions.create({
     mode: "payment",
@@ -107,8 +134,8 @@ export async function POST(request: Request) {
         quantity: 1,
       },
     ],
-    success_url: `${origin}/${locale}/dashboard/billing/success?session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${origin}/${locale}/dashboard/billing/cancel`,
+    success_url: `${origin}${successPath}?session_id={CHECKOUT_SESSION_ID}`,
+    cancel_url: `${origin}${cancelPath}`,
     metadata: {
       order_id: order.id,
       user_id: user.id,

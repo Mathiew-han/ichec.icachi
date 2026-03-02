@@ -8,6 +8,12 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 
 import logo from "../../images/icachi-logo-dark.svg";
 
+function normalizeBasePath(value: string | undefined): string {
+  if (!value) return "";
+  if (value === "/") return "";
+  return `/${value}`.replace(/\/+/g, "/").replace(/\/+$/, "");
+}
+
 function isActivePath(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
   return pathname === href || pathname.startsWith(`${href}/`);
@@ -16,6 +22,13 @@ function isActivePath(pathname: string, href: string) {
 export function SiteHeader({ hasSupabase }: { hasSupabase: boolean }) {
   const t = useTranslations("Header");
   const pathname = usePathname();
+  const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH);
+  const pathnameNoBase =
+    basePath && pathname.startsWith(`${basePath}/`)
+      ? pathname.slice(basePath.length)
+      : pathname === basePath
+        ? "/"
+        : pathname;
   const [hidden, setHidden] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const lastScrollY = useRef(0);
@@ -92,7 +105,7 @@ export function SiteHeader({ hasSupabase }: { hasSupabase: boolean }) {
           {/* Desktop Navigation */}
           <nav className="hidden items-center gap-x-1 lg:flex">
             {PRIMARY_LINKS.map((it) => {
-              const active = isActivePath(pathname, it.href);
+              const active = isActivePath(pathnameNoBase, it.href);
               return (
                 <Link
                   key={it.href}
@@ -115,7 +128,7 @@ export function SiteHeader({ hasSupabase }: { hasSupabase: boolean }) {
                 <Link
                   href="/dashboard"
                   className={
-                    isActivePath(pathname, "/dashboard")
+                    isActivePath(pathnameNoBase, "/dashboard")
                       ? "px-2 py-1 text-sm font-semibold text-black/90 dark:text-white/90"
                       : "px-2 py-1 text-sm text-black/65 hover:text-black/90 dark:text-white/65 dark:hover:text-white/90"
                   }
@@ -125,7 +138,7 @@ export function SiteHeader({ hasSupabase }: { hasSupabase: boolean }) {
                 <Link
                   href="/auth"
                   className={
-                    isActivePath(pathname, "/auth")
+                    isActivePath(pathnameNoBase, "/auth")
                       ? "px-2 py-1 text-sm font-semibold text-black/90 dark:text-white/90"
                       : "px-2 py-1 text-sm text-black/65 hover:text-black/90 dark:text-white/65 dark:hover:text-white/90"
                   }
@@ -198,7 +211,7 @@ export function SiteHeader({ hasSupabase }: { hasSupabase: boolean }) {
                   href={it.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`px-2 py-2 text-base font-medium transition-colors hover:bg-black/5 dark:hover:bg-white/5 ${
-                    isActivePath(pathname, it.href)
+                    isActivePath(pathnameNoBase, it.href)
                       ? "font-bold text-black dark:text-white"
                       : "text-black/70 dark:text-white/70"
                   }`}

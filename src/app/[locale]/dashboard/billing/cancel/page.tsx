@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/navigation";
 
 export default function BillingCancelPage() {
   return (
@@ -11,4 +11,3 @@ export default function BillingCancelPage() {
     </div>
   );
 }
-

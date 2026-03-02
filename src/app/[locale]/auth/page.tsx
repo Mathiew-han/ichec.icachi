@@ -4,9 +4,30 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 
 import { createSupabaseBrowserClient } from "@/lib/supabase/browser";
+import styles from "./auth.module.css";
+
+function normalizeBasePath(value: string | undefined): string {
+  if (!value) return "";
+  if (value === "/") return "";
+  return `/${value}`.replace(/\/+/g, "/").replace(/\/+$/, "");
+}
 
 function detectLocaleFromPathname(pathname: string): string {
-  const first = pathname.split("/")[1] ?? "";
+  const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH);
+  const segments = pathname.split("/").filter(Boolean);
+  const first = segments[0] ?? "";
+  const candidate = basePath ? segments[1] ?? "" : first;
+  const maybeLocale = basePath ? candidate : first;
+  const firstSegmentIfNoBase = basePath ? maybeLocale : first;
+  const localeCandidate = basePath ? maybeLocale : firstSegmentIfNoBase;
+  if (
+    localeCandidate === "en" ||
+    localeCandidate === "zh-CN" ||
+    localeCandidate === "zh-TW" ||
+    localeCandidate === "pt"
+  ) {
+    return localeCandidate;
+  }
   if (first === "en" || first === "zh-CN" || first === "zh-TW" || first === "pt") {
     return first;
   }
@@ -29,7 +50,6 @@ export default function AuthPage() {
     }
   }, []);
 
-  const [mode, setMode] = useState<"magic_link" | "code">("magic_link");
   const [email, setEmail] = useState("");
   const [code, setCode] = useState("");
   const [message, setMessage] = useState<string | null>(null);
@@ -37,11 +57,13 @@ export default function AuthPage() {
   const [cooldownSeconds, setCooldownSeconds] = useState(0);
   const [codeExpiresInSeconds, setCodeExpiresInSeconds] = useState(0);
 
+  const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH);
   const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "";
   const captchaEnabled = turnstileSiteKey.length > 0;
   const turnstileRef = useRef<TurnstileInstance | undefined>(undefined);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [captchaError, setCaptchaError] = useState<string | null>(null);
+  const [messageTone, setMessageTone] = useState<"info" | "error">("info");
 
   useEffect(() => {
     if (cooldownSeconds <= 0) return;
@@ -59,68 +81,12 @@ export default function AuthPage() {
     return () => window.clearInterval(t);
   }, [codeExpiresInSeconds]);
 
-  async function signInWithEmail() {
-    if (!supabase) {
-      setMessage(
-        "Missing NEXT_PUBLIC_SUPABASE_URL / NEXT_PUBLIC_SUPABASE_ANON_KEY",
-      );
-      return;
-    }
-    if (cooldownSeconds > 0) return;
-
-    setBusy(true);
-    setMessage(null);
-
-    if (captchaEnabled && !captchaToken) {
-      setMessage("请先完成验证码校验。");
-      setBusy(false);
-      return;
-    }
-
-    const origin = window.location.origin;
-
-    const locale = detectLocaleFromPathname(window.location.pathname);
-    const search = new URLSearchParams(window.location.search);
-    const next = safeNextPath(search.get("next"), `/${locale}/dashboard`);
-    const callbackUrl = new URL(`/${locale}/auth/callback`, origin);
-    callbackUrl.searchParams.set("next", next);
-
-    const { error } = await supabase.auth.signInWithOtp({
-      email,
-      options: {
-        emailRedirectTo: callbackUrl.toString(),
-        shouldCreateUser: true,
-        captchaToken: captchaToken ?? undefined,
-      },
-    });
-
-    if (captchaEnabled) {
-      setCaptchaToken(null);
-      setCaptchaError(null);
-      turnstileRef.current?.reset();
-    }
-
-    if (error) {
-      const msg = error.message;
-      setMessage(msg);
-      if (/rate limit/i.test(msg)) {
-        setCooldownSeconds(300);
-      } else {
-        setCooldownSeconds(60);
-      }
-    } else {
-      setMessage("Check your email for the sign-in link.");
-      setCooldownSeconds(60);
-    }
-
-    setBusy(false);
-  }
-
   async function sendCode() {
     if (!supabase) {
       setMessage(
         "Missing NEXT_PUBLIC_SUPABASE_URL / NEXT_PUBLIC_SUPABASE_ANON_KEY",
       );
+      setMessageTone("error");
       return;
     }
     if (cooldownSeconds > 0) return;
@@ -130,6 +96,7 @@ export default function AuthPage() {
 
     if (captchaEnabled && !captchaToken) {
       setMessage("请先完成验证码校验。");
+      setMessageTone("error");
       setBusy(false);
       return;
     }
@@ -151,6 +118,7 @@ export default function AuthPage() {
     if (error) {
       const msg = error.message;
       setMessage(msg);
+      setMessageTone("error");
       if (/rate limit/i.test(msg)) {
         setCooldownSeconds(300);
       } else {
@@ -161,6 +129,7 @@ export default function AuthPage() {
     }
 
     setMessage("验证码已发送（6位数字），有效期 2 分钟。");
+    setMessageTone("info");
     setCooldownSeconds(60);
     setCodeExpiresInSeconds(120);
     setBusy(false);
@@ -171,16 +140,19 @@ export default function AuthPage() {
       setMessage(
         "Missing NEXT_PUBLIC_SUPABASE_URL / NEXT_PUBLIC_SUPABASE_ANON_KEY",
       );
+      setMessageTone("error");
       return;
     }
 
     const token = code.trim();
     if (!/^\d{6}$/.test(token)) {
       setMessage("请输入 6 位数字验证码。");
+      setMessageTone("error");
       return;
     }
     if (codeExpiresInSeconds <= 0) {
       setMessage("验证码已过期，请重新发送。");
+      setMessageTone("error");
       return;
     }
 
@@ -195,78 +167,75 @@ export default function AuthPage() {
 
     if (error) {
       setMessage(error.message);
+      setMessageTone("error");
+      setBusy(false);
+      return;
+    }
+
+    const {
+      data: { user },
+      error: userError,
+    } = await supabase.auth.getUser();
+
+    if (userError || !user) {
+      setMessage(userError?.message ?? "登录成功，但未读取到用户信息。");
+      setMessageTone("error");
+      setBusy(false);
+      return;
+    }
+
+    const { error: profileError } = await supabase.from("profiles").upsert({
+      id: user.id,
+      email: user.email,
+    });
+
+    if (profileError) {
+      setMessage(`登录成功，但保存邮箱失败：${profileError.message}`);
+      setMessageTone("error");
       setBusy(false);
       return;
     }
 
     const locale = detectLocaleFromPathname(window.location.pathname);
     const search = new URLSearchParams(window.location.search);
-    const next = safeNextPath(search.get("next"), `/${locale}/dashboard`);
+    const next = safeNextPath(search.get("next"), `${basePath}/${locale}/dashboard`.replace(/\/+/g, "/"));
     window.location.href = next;
   }
 
   async function signOut() {
     if (!supabase) return;
     await supabase.auth.signOut();
-    window.location.href = "/";
+    window.location.href = `${basePath}/`.replace(/\/+$/, "/");
   }
 
   return (
-    <div className="space-y-6">
-      <div className="space-y-1">
-        <h1 className="text-2xl font-semibold tracking-tight">Sign in</h1>
-        <p className="text-sm text-neutral-600">
-          This MVP uses Supabase email sign-in. If you hit email rate limits, wait
-          for cooldown or configure custom SMTP in Supabase.
+    <div className={styles.page}>
+      <div className={styles.header}>
+        <div className={styles.eyebrow}>Portal</div>
+        <h2 className={styles.title}>登录</h2>
+        <p className={styles.lead}>
+          使用邮箱验证码登录。若触发邮件发送频率限制，请等待冷却时间或在 Supabase 配置自定义 SMTP。
         </p>
       </div>
 
-      <div className="max-w-md space-y-3 rounded-lg border p-4">
-        <div className="flex flex-wrap gap-2">
-          <button
-            type="button"
-            onClick={() => {
-              setMode("magic_link");
-              setMessage(null);
-              setCode("");
-            }}
-            className={
-              mode === "magic_link"
-                ? "rounded-md border bg-neutral-50 px-3 py-1.5 text-sm font-medium"
-                : "rounded-md border px-3 py-1.5 text-sm"
-            }
-          >
-            Magic link
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              setMode("code");
-              setMessage(null);
-              setCode("");
-            }}
-            className={
-              mode === "code"
-                ? "rounded-md border bg-neutral-50 px-3 py-1.5 text-sm font-medium"
-                : "rounded-md border px-3 py-1.5 text-sm"
-            }
-          >
-            验证码
-          </button>
+      <div className={styles.form} aria-busy={busy}>
+        <div className={styles.row}>
+          <label className={styles.label} htmlFor="auth-email">
+            Email
+          </label>
+          <input
+            id="auth-email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            type="email"
+            className={styles.input}
+            placeholder="you@example.com"
+            autoComplete="email"
+          />
         </div>
 
-        <label className="block text-sm font-medium">Email</label>
-        <input
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          type="email"
-          className="w-full rounded-md border px-3 py-2 text-sm"
-          placeholder="you@example.com"
-          autoComplete="email"
-        />
-
         {captchaEnabled ? (
-          <div className="pt-1">
+          <div className={styles.turnstileWrap}>
             <Turnstile
               ref={turnstileRef}
               siteKey={turnstileSiteKey}
@@ -288,69 +257,67 @@ export default function AuthPage() {
               options={{ theme: "auto" }}
             />
             {captchaError ? (
-              <div className="mt-2 text-xs text-red-700">{captchaError}</div>
+              <div className={`${styles.message} ${styles.messageError}`}>{captchaError}</div>
             ) : null}
           </div>
         ) : null}
 
-        {mode === "magic_link" ? (
-          <button
-            disabled={busy || email.length === 0 || cooldownSeconds > 0}
-            onClick={signInWithEmail}
-            className="rounded-md bg-black px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
-          >
-            {cooldownSeconds > 0
-              ? `Send magic link (${cooldownSeconds}s)`
-              : "Send magic link"}
-          </button>
-        ) : (
-          <div className="space-y-2">
+        <div className={styles.row}>
+          <div className={styles.actions}>
             <button
+              type="button"
               disabled={busy || email.length === 0 || cooldownSeconds > 0}
               onClick={sendCode}
-              className="rounded-md bg-black px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
+              className={styles.actionPrimary}
             >
-              {cooldownSeconds > 0
-                ? `发送验证码（${cooldownSeconds}s）`
-                : "发送验证码"}
+              {cooldownSeconds > 0 ? `发送验证码（${cooldownSeconds}s）` : "发送验证码"}
             </button>
-            <div className="grid grid-cols-1 gap-2">
-              <input
-                value={code}
-                onChange={(e) => setCode(e.target.value)}
-                inputMode="numeric"
-                pattern="\\d*"
-                className="w-full rounded-md border px-3 py-2 text-sm"
-                placeholder="6 位验证码"
-              />
-              <button
-                disabled={
-                  busy ||
-                  email.length === 0 ||
-                  code.trim().length === 0 ||
-                  codeExpiresInSeconds <= 0
-                }
-                onClick={verifyCode}
-                className="rounded-md border px-4 py-2 text-sm font-medium disabled:opacity-50"
-              >
-                {codeExpiresInSeconds > 0
-                  ? `验证并登录（${codeExpiresInSeconds}s）`
-                  : "验证码已过期"}
-              </button>
-            </div>
-            <div className="text-xs text-neutral-600">
-              验证码有效期 2 分钟。
-            </div>
+            <button type="button" onClick={signOut} className={styles.actionSecondary}>
+              退出登录
+            </button>
           </div>
-        )}
+          <div className={styles.helper}>验证码有效期 2 分钟。</div>
+        </div>
 
-        <button
-          onClick={signOut}
-          className="ml-2 rounded-md border px-4 py-2 text-sm font-medium"
-        >
-          Sign out
-        </button>
-        {message ? <div className="text-sm text-neutral-700">{message}</div> : null}
+        <div className={styles.row}>
+          <label className={styles.label} htmlFor="auth-code">
+            验证码
+          </label>
+          <input
+            id="auth-code"
+            value={code}
+            onChange={(e) => setCode(e.target.value)}
+            inputMode="numeric"
+            pattern="\\d*"
+            className={styles.input}
+            placeholder="6 位验证码"
+            autoComplete="one-time-code"
+          />
+          <div className={styles.actions}>
+            <button
+              type="button"
+              disabled={busy || email.length === 0 || code.trim().length === 0 || codeExpiresInSeconds <= 0}
+              onClick={verifyCode}
+              className={styles.actionPrimary}
+            >
+              {codeExpiresInSeconds > 0 ? `验证并登录（${codeExpiresInSeconds}s）` : "验证码已过期"}
+            </button>
+            <button
+              type="button"
+              disabled={busy || email.length === 0 || cooldownSeconds > 0}
+              onClick={sendCode}
+              className={styles.actionSecondary}
+            >
+              {cooldownSeconds > 0 ? `重新发送（${cooldownSeconds}s）` : "重新发送"}
+            </button>
+          </div>
+        </div>
+
+        {message ? (
+          <div className={`${styles.message}${messageTone === "error" ? ` ${styles.messageError}` : ""}`}>
+            {message}
+          </div>
+        ) : null}
       </div>
     </div>
   );

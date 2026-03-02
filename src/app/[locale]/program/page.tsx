@@ -1,24 +1,15 @@
 "use client";
 
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-
-import breakOutRoom1 from "../../../../images/break_out_room/1.png";
-import breakOutRoom2 from "../../../../images/break_out_room/2.png";
-import breakOutRoom3 from "../../../../images/break_out_room/3.png";
+import styles from "./program.module.css";
 
 export default function ProgramPage() {
   const t = useTranslations("Common");
   const [activeDay, setActiveDay] = useState("day1");
-  const programImages = [
-    { src: breakOutRoom1, title: "break_out_room/1.png" },
-    { src: breakOutRoom2, title: "break_out_room/2.png" },
-    { src: breakOutRoom3, title: "break_out_room/3.png" },
-  ];
 
   return (
-    <div className="space-y-12">
+    <div className={`${styles.page} space-y-12`}>
       <section className="px-2 py-2 sm:px-4 sm:py-6">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <h2 className="text-2xl font-bold tracking-tight text-black/85 dark:text-white/85">
@@ -250,15 +241,17 @@ export default function ProgramPage() {
         </div>
       </section>
 
-      <section className="space-y-6">
-        <div className="text-lg font-semibold tracking-wide text-black/85 dark:text-white/85">
-          {t("detailedProgram")}
-        </div>
-        <div className="grid gap-6 lg:grid-cols-3">
-          {[t("day1"), t("day2"), t("day3")].map((day) => (
-            <div key={day} className="glass-panel px-6 py-6">
-              <div className="text-sm font-semibold text-black/60 dark:text-white/60">{day}</div>
-              <div className="mt-2 text-sm text-black/75 dark:text-white/75">
+      <section className={`${styles.section} space-y-6`}>
+        <div className={styles.sectionTitle}>{t("detailedProgram")}</div>
+        <p className={styles.lead}>
+          {t("toBeUpdated")}
+        </p>
+        <div className={styles.listGrid}>
+          {[t("day1"), t("day2"), t("day3")].map((day, index) => (
+            <div key={day} className={styles.dayBlock}>
+              <div className={styles.dayKicker}>{`Day ${index + 1}`}</div>
+              <div className={styles.dayTitle}>{day}</div>
+              <div className={styles.dayText}>
                 Workshops / Arts / Sessions / Banquet etc. to be updated for 2026.
               </div>
             </div>
@@ -266,26 +259,23 @@ export default function ProgramPage() {
         </div>
       </section>
 
-      <section className="space-y-6">
-        <div className="text-lg font-semibold tracking-wide text-black/85 dark:text-white/85">
-          {t("venue")}
-        </div>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {programImages.map((img) => (
-            <div key={img.title} className="glass-panel p-4">
-              <div className="overflow-hidden">
-                <Image
-                  src={img.src}
-                  alt={img.title}
-                  width={900}
-                  height={600}
-                  className="h-44 w-full object-cover sm:h-48"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-              </div>
-              <div className="mt-3 text-sm font-semibold text-black/75 dark:text-white/75">
-                {img.title}
-              </div>
+      <section className={`${styles.section} space-y-6`}>
+        <div className={styles.sectionTitle}>{t("venue")}</div>
+        <p className={styles.lead}>
+          Breakout rooms and activity spaces will be confirmed and published for 2026.
+        </p>
+        <div className={styles.venueList}>
+          {[
+            { name: "Main Hall", meta: "Plenary · Keynotes · Panels" },
+            { name: "Room 1", meta: "Paper Sessions · Workshops" },
+            { name: "Room 2", meta: "Paper Sessions · Workshops" },
+            { name: "Room 3", meta: "Workshops · Community Events" },
+            { name: "Room 4", meta: "Workshops · Community Events" },
+            { name: "VIP Room", meta: "Meetings · Invited Sessions" },
+          ].map((item) => (
+            <div key={item.name} className={styles.venueItem}>
+              <div className={styles.venueName}>{item.name}</div>
+              <div className={styles.venueMeta}>{item.meta}</div>
             </div>
           ))}
         </div>

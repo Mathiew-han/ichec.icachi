@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/navigation";
 
 import { SupabaseNotConfigured } from "@/components/SupabaseNotConfigured";
 import { createSupabaseServerClient } from "@/lib/supabase/server";

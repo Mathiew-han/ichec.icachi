@@ -1,0 +1,91 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.section + .section {
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.sectionTitle {
+  font-size: 1.125rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: color-mix(in oklab, var(--foreground) 90%, transparent);
+}
+
+.lead {
+  margin-top: 0.85rem;
+  max-width: 56rem;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: color-mix(in oklab, var(--foreground) 72%, transparent);
+}
+
+.roster {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 0;
+}
+
+.item {
+  padding: 1.05rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.role {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--foreground) 60%, transparent);
+}
+
+.name {
+  margin-top: 0.6rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: color-mix(in oklab, var(--foreground) 90%, transparent);
+}
+
+.aff {
+  margin-top: 0.35rem;
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: color-mix(in oklab, var(--foreground) 72%, transparent);
+}
+
+.kv {
+  margin-top: 0.75rem;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: color-mix(in oklab, var(--foreground) 74%, transparent);
+}
+
+.kv b {
+  font-weight: 800;
+  color: color-mix(in oklab, var(--foreground) 86%, transparent);
+}
+
+@media (min-width: 1024px) {
+  .roster {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2.5rem;
+  }
+
+  .item {
+    border-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 1.2rem 0;
+  }
+
+  .roster .item:nth-child(-n + 2) {
+    border-top: 0;
+    padding-top: 0;
+  }
+}
+

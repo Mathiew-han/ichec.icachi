@@ -1,0 +1,562 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.heroSection {
+  margin-top: -2rem;
+  min-height: calc(100dvh - 96px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+.heroInner {
+  width: 100%;
+  max-width: 72rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroEyebrow {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  color: color-mix(in oklab, var(--foreground) 70%, var(--accent-green) 30%);
+}
+
+.heroTitle {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: color-mix(in oklab, var(--foreground) 90%, transparent);
+  text-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+  margin-top: 1.25rem;
+}
+
+.heroTagline {
+  margin-top: 1.75rem;
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: color-mix(in oklab, var(--foreground) 78%, var(--accent-green) 22%);
+}
+
+.heroActions {
+  margin-top: 2.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroDivider {
+  margin-top: 2.75rem;
+  height: 1px;
+  width: min(560px, 88vw);
+  background: linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--accent-green) 10%, transparent),
+    color-mix(in oklab, var(--accent-green) 70%, transparent),
+    color-mix(in oklab, var(--accent-green) 10%, transparent)
+  );
+}
+
+.heroMeta {
+  margin-top: 1.75rem;
+  max-width: 48rem;
+  font-size: clamp(1rem, 1.8vw, 1.125rem);
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.03em;
+  color: color-mix(in oklab, var(--foreground) 72%, var(--accent-green) 28%);
+}
+
+.section {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 72rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 8rem;
+}
+
+.gridCards {
+  display: grid;
+  gap: 3rem;
+  padding-top: 6rem;
+}
+
+.macauCard {
+  position: relative;
+  background: #f8f6f2;
+  border: 1px solid rgba(78, 191, 160, 0.26);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.macauCardTrigger {
+  display: block;
+  padding: 3rem 2.25rem;
+}
+
+.macauCardExpand {
+  padding: 0 2.25rem 2.25rem;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.45;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.cardDesc {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: #5f6361;
+}
+
+.macauCorner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 2px 0 32px;
+  background: linear-gradient(135deg, #4ebfa0 0%, #78cdb3 100%);
+}
+
+.macauArrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.macauCard[open] .macauArrow {
+  transform: rotate(45deg);
+}
+
+.cardContentList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: color-mix(in oklab, var(--foreground) 72%, transparent);
+}
+
+.glassButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: color-mix(in oklab, var(--foreground) 86%, transparent);
+  background: color-mix(in oklab, var(--glass-bg) 94%, transparent);
+  border: 1px solid color-mix(in oklab, var(--glass-border) 90%, transparent);
+  -webkit-backdrop-filter: blur(6px) saturate(110%);
+  backdrop-filter: blur(6px) saturate(110%);
+  text-decoration: none;
+  transition: transform 220ms ease, border-color 220ms ease;
+}
+
+.glassButton:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in oklab, var(--accent-green) 38%, transparent);
+}
+
+.gridSplit {
+  display: grid;
+  gap: 3.5rem;
+  margin-top: 3rem;
+}
+
+.timelineBox,
+.macauCardInfo {
+  position: relative;
+  background: #f8f6f2;
+  border-radius: 2px;
+  border: 1px solid rgba(78, 191, 160, 0.22);
+  padding: 3.2rem 2.6rem;
+  overflow: hidden;
+}
+
+.macauCardLarge,
+.macauCardTheme {
+  position: relative;
+  padding: 1rem 0;
+}
+
+.labelBox {
+  display: inline-block;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid #c9a154;
+  color: #8f6d2f;
+  margin-bottom: 0.5rem;
+}
+
+.labelText {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.labelBoxTheme {
+  border-color: #8f6d2f;
+}
+
+.labelTextTheme {
+  color: #8a672b;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.4;
+  color: color-mix(in oklab, var(--foreground) 90%, transparent);
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.textBlock {
+  margin-top: 1.2rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: color-mix(in oklab, var(--foreground) 80%, transparent);
+  text-align: left;
+  max-width: 68ch;
+}
+
+.dropCap {
+  margin: 0;
+}
+
+.dropCap::first-letter {
+  float: left;
+  margin-right: 0.5rem;
+  margin-top: 0.2rem;
+  font-size: 3rem;
+  line-height: 0.8;
+  font-weight: 700;
+  color: #c9a154;
+}
+
+.textParagraph {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.textParagraphTight {
+  margin: 0;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1.2rem;
+  border: 1px solid color-mix(in oklab, var(--accent-green) 28%, transparent);
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--accent-green) 18%, white),
+    color-mix(in oklab, var(--accent-green) 32%, white)
+  );
+  color: color-mix(in oklab, var(--foreground) 90%, transparent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(0, 108, 63, 0.2);
+}
+
+.spaceY5 > * + * {
+  margin-top: 1.25rem;
+}
+
+.spaceY3 > * + * {
+  margin-top: 0.75rem;
+}
+
+.pt4 {
+  padding-top: 1rem;
+}
+
+.block {
+  display: block;
+}
+
+.mb2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb4 {
+  margin-bottom: 1rem;
+}
+
+.mb6 {
+  margin-bottom: 1.5rem;
+}
+
+.mt6 {
+  margin-top: 1.5rem;
+}
+
+.mt8 {
+  margin-top: 2rem;
+}
+
+.gridKeynote {
+  display: grid;
+  gap: 4rem;
+}
+
+.macauCardInfo {
+  text-decoration: none;
+}
+
+.horizontalTimelineContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.horizontalTimeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.horizontalTimeline::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #e3e8e3;
+  z-index: 0;
+}
+
+.horizontalStep {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  flex: 1;
+}
+
+.horizontalCircle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #d8ddd8;
+  color: #8a928d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.timelineCompleted .horizontalCircle {
+  border-color: #4ebfa0;
+  background: #4ebfa0;
+  color: white;
+}
+
+.timelineActive .horizontalCircle {
+  border-color: #4ebfa0;
+  background: white;
+  color: #14917b;
+  box-shadow: 0 0 0 4px rgba(78, 191, 160, 0.2);
+}
+
+.horizontalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0 0.5rem;
+}
+
+.horizontalTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: color-mix(in oklab, var(--foreground) 86%, transparent);
+}
+
+.horizontalDate {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.horizontalStatus {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: #f3f5f4;
+  color: #677069;
+}
+
+.timelineCompleted .horizontalStatus {
+  background: #d8f3ea;
+  color: #085f48;
+}
+
+.timelineActive .horizontalStatus {
+  background: #def0fb;
+  color: #16519d;
+}
+
+.eventGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.eventCard {
+  background: #fcfbf9;
+  border: 1px solid rgba(78, 191, 160, 0.15);
+  border-radius: 4px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.eventCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(78, 191, 160, 0.4);
+}
+
+.eventTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.eventDate {
+  font-size: 1rem;
+  color: #14917b;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.eventDesc {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .gridSplit {
+    gap: 2.75rem;
+    margin-top: 2.5rem;
+  }
+
+  .horizontalTimeline {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+    padding-left: 1rem;
+  }
+  
+  .horizontalTimeline::before {
+    width: 2px;
+    height: 100%;
+    left: 14px;
+    top: 0;
+  }
+
+  .horizontalStep {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+  }
+
+  .horizontalCircle {
+    margin-bottom: 0;
+    margin-right: 1rem;
+    min-width: 30px;
+  }
+
+  .horizontalContent {
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .eventGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .gridCards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .gridSplit {
+    grid-template-columns: 1.3fr 0.7fr;
+  }
+
+  .gridKeynote {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+}
+
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
