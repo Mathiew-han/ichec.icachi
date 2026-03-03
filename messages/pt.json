@@ -19,6 +19,7 @@
     "program": "Programa da Conferência",
     "aboutTitle": "Sobre o ICHEC 2026",
     "aboutSubtitle": "Uma Comunidade de IHC Aberta, Inclusiva e Voltada para o Futuro",
+    "aboutBrief": "Encontro em Macau para conectar pesquisa, design e indústria.",
     "aboutP1": "O ICHEC 2026 será realizado em Macau, China, dando continuidade ao espírito da Interação Humano-Computador (IHC) e focando em como a Inteligência Artificial e as tecnologias emergentes se entrelaçam com os valores humanos, a cultura e as experiências de vida.",
     "aboutP2": "A conferência abrange todo o espectro de tópicos de IHC, desde a inovação técnica até a investigação crítica, e da expressão criativa a sistemas implementáveis. Convidamos pesquisadores, designers, artistas e especialistas técnicos de todo o mundo a compartilhar seus resultados e pontos de vista.",
     "aboutP3": "Incentivamos práticas de IA e tecnologia interativa centradas no ser humano e responsáveis, promovendo a tradução eficaz dos resultados da pesquisa em aplicações sociais para moldar um ecossistema tecnológico futuro mais inclusivo e resiliente.",
@@ -188,7 +189,8 @@
       "rights": "© 2026 Chinese CHI. Todos os direitos reservados.",
       "privacy": "Política de Privacidade",
       "terms": "Termos de Serviço",
-      "contact": "Contate-nos"
+      "contact": "Contate-nos",
+      "aboutFull": "O ICHEC 2026 será realizado em Macau, China, dando continuidade ao espírito da Interação Humano-Computador (IHC) e focando em como a Inteligência Artificial e as tecnologias emergentes se entrelaçam com os valores humanos, a cultura e as experiências de vida. A conferência abrange todo o espectro de tópicos de IHC, desde a inovação técnica até a investigação crítica, e da expressão criativa a sistemas implementáveis. Convidamos pesquisadores, designers, artistas e especialistas técnicos de todo o mundo a compartilhar seus resultados e pontos de vista. Incentivamos práticas de IA e tecnologia interativa centradas no ser humano e responsáveis, promovendo a tradução eficaz dos resultados da pesquisa em aplicações sociais para moldar um ecossistema tecnológico futuro mais inclusivo e resiliente."
     }
   },
   "Common": {

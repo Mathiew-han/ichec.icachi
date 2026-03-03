@@ -19,6 +19,7 @@
     "program": "Program",
     "aboutTitle": "About ICHEC 2026",
     "aboutSubtitle": "An Open, Inclusive, and Future-Oriented HCI Community",
+    "aboutBrief": "Meet in Macau, connect research, design, and industry.",
     "aboutP1": "ICHEC 2026 will be held in Macau SAR, China, continuing the spirit of Human-Computer Interaction (HCI) and focusing on how Artificial Intelligence and emerging technologies intertwine with human values, culture, and lived experiences.",
     "aboutP2": "The conference covers the full spectrum of HCI topics, from technical innovation to critical inquiry, and from creative expression to deployable systems. We welcome researchers, designers, artists, and practitioners from around the globe to share their work and perspectives.",
     "aboutP3": "We encourage human-centered, responsible AI and interactive technology practices, promoting the effective translation of research into social applications to shape a more inclusive and resilient future technology ecosystem.",
@@ -188,7 +189,8 @@
       "rights": "© 2026 Chinese CHI. All rights reserved.",
       "privacy": "Privacy Policy",
       "terms": "Terms of Service",
-      "contact": "Contact Us"
+      "contact": "Contact Us",
+      "aboutFull": "ICHEC 2026 will be held in Macau SAR, China, continuing the spirit of Human-Computer Interaction (HCI) and focusing on how Artificial Intelligence and emerging technologies intertwine with human values, culture, and lived experiences. The conference covers the full spectrum of HCI topics, from technical innovation to critical inquiry, and from creative expression to deployable systems. We welcome researchers, designers, artists, and practitioners from around the globe to share their work and perspectives. We encourage human-centered, responsible AI and interactive technology practices, promoting the effective translation of research into social applications to shape a more inclusive and resilient future technology ecosystem."
     }
   },
   "Common": {

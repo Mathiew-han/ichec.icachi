@@ -56,27 +56,6 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            className={styles.heroActions}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-          >
-            <Link href="/registration" className={styles.ctaButton}>
-              {t("registerNow")} <span>→</span>
-            </Link>
-            <Link href="/cfp" className={styles.glassButton}>
-              {t("cfp")}
-            </Link>
-            <Link href="/important-dates" className={styles.glassButton}>
-              {t("importantDates")}
-            </Link>
-            <Link href="/program" className={styles.glassButton}>
-              {t("program")}
-            </Link>
-          </motion.div>
-
-          <motion.div
             className={styles.heroDivider}
             initial="hidden"
             whileInView="visible"
@@ -86,10 +65,8 @@ export default function Home() {
         </div>
       </section>
 
-
-      {/* About Section - Moved up and became part of Hero flow */}
-      <motion.section 
-        className={styles.section}
+      <motion.section
+        className={`${styles.section} ${styles.aboutSection}`}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
@@ -105,16 +82,7 @@ export default function Home() {
                 {t("aboutSubtitle")}
               </ScrollReveal>
             </h2>
-            <div className={styles.textBlock}>
-              <p className={styles.dropCap}>{t("aboutP1")}</p>
-              <p className={styles.textParagraph}>{t("aboutP2")}</p>
-              <p className={styles.textParagraph}>{t("aboutP3")}</p>
-            </div>
-            <div className={styles.mt8}>
-              <Link href="/registration" className={styles.ctaButton}>
-                {t("registerNow")} <span>→</span>
-              </Link>
-            </div>
+            <div className={styles.aboutBrief}>{t("aboutBrief")}</div>
           </div>
           <div className={styles.macauCardTheme}>
             <div className={`${styles.labelBox} ${styles.labelBoxTheme}`}>
