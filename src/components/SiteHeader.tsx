@@ -19,7 +19,7 @@ function isActivePath(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-export function SiteHeader({ hasSupabase }: { hasSupabase: boolean }) {
+export function SiteHeader() {
   const t = useTranslations("Header");
   const pathname = usePathname();
   const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH);
@@ -39,6 +39,7 @@ export function SiteHeader({ hasSupabase }: { hasSupabase: boolean }) {
     { href: "/cfp", label: t("authors") },
     { href: "/registration", label: t("attend") },
     { href: "/program", label: t("program") },
+    { href: "/amalunch", label: t("amalunch") },
     { href: "/committees", label: t("committee") },
     { href: "/sponsors", label: t("sponsorship") },
   ];
@@ -122,38 +123,6 @@ export function SiteHeader({ hasSupabase }: { hasSupabase: boolean }) {
             })}
 
             <div className="mx-2 h-4 w-px bg-black/10 dark:bg-white/15" />
-
-            {hasSupabase ? (
-              <div className="flex items-center gap-1">
-                <Link
-                  href="/dashboard"
-                  className={
-                    isActivePath(pathnameNoBase, "/dashboard")
-                      ? "px-2 py-1 text-sm font-semibold text-black/90 dark:text-white/90"
-                      : "px-2 py-1 text-sm text-black/65 hover:text-black/90 dark:text-white/65 dark:hover:text-white/90"
-                  }
-                >
-                  {t("portal")}
-                </Link>
-                <Link
-                  href="/auth"
-                  className={
-                    isActivePath(pathnameNoBase, "/auth")
-                      ? "px-2 py-1 text-sm font-semibold text-black/90 dark:text-white/90"
-                      : "px-2 py-1 text-sm text-black/65 hover:text-black/90 dark:text-white/65 dark:hover:text-white/90"
-                  }
-                >
-                  {t("signin")}
-                </Link>
-              </div>
-            ) : (
-              <div className="flex items-center gap-1 opacity-40">
-                <span className="px-3 py-1.5 text-sm font-medium">{t("portal")}</span>
-                <span className="px-3 py-1.5 text-sm font-medium">{t("signin")}</span>
-              </div>
-            )}
-
-            <div className="mx-2 h-4 w-px bg-black/10 dark:bg-white/15" />
             <LanguageSwitcher />
           </nav>
 
@@ -220,29 +189,6 @@ export function SiteHeader({ hasSupabase }: { hasSupabase: boolean }) {
                 </Link>
               ))}
               <div className="my-2 h-px bg-black/10 dark:bg-white/10" />
-              {hasSupabase ? (
-                <>
-                  <Link
-                    href="/dashboard"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="px-2 py-2 text-base font-medium text-black/70 hover:bg-black/5 dark:text-white/70 dark:hover:bg-white/5"
-                  >
-                    {t("portal")}
-                  </Link>
-                  <Link
-                    href="/auth"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="px-2 py-2 text-base font-medium text-black/70 hover:bg-black/5 dark:text-white/70 dark:hover:bg-white/5"
-                  >
-                    {t("signin")}
-                  </Link>
-                </>
-              ) : (
-                <>
-                  <span className="px-2 py-2 text-base font-medium text-black/30 dark:text-white/30">{t("portal")}</span>
-                  <span className="px-2 py-2 text-base font-medium text-black/30 dark:text-white/30">{t("signin")}</span>
-                </>
-              )}
             </nav>
           </div>
         )}

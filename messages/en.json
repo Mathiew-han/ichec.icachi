@@ -5,15 +5,64 @@
     "attend": "Attend",
     "program": "Program",
     "committee": "Committee",
+    "amalunch": "AMA Lunch",
     "sponsorship": "Sponsorship",
     "portal": "Portal",
     "signin": "Sign in"
+  },
+  "Locale": {
+    "switch": "Switch language",
+    "en": "English",
+    "zh-CN": "Simplified Chinese",
+    "zh-TW": "Traditional Chinese",
+    "pt": "Portuguese"
+  },
+  "Sponsors": {
+    "title": "Sponsorship Opportunities",
+    "lead": "All sponsors will be acknowledged in the official program and proceedings with their sponsorship level. Sponsor logos will be displayed on the website with a hyperlink. Sponsors may provide limited materials for the registration kit. Each level includes the benefits of preceding level(s), plus additional visibility and engagement opportunities.",
+    "tiers": {
+      "bronze": {
+        "name": "Bronze Sponsor",
+        "fee": "2,700 SGD (~USD 2,000)",
+        "p1": "1 complimentary conference registration",
+        "p2": "Acknowledged as a Coffee Break Sponsor"
+      },
+      "silver": {
+        "name": "Silver Sponsor",
+        "fee": "4,000 SGD (~USD 3,000)",
+        "meta": "Includes all Bronze benefits, plus:",
+        "p1": "1 additional complimentary registration (2 total registrations)",
+        "p2": "Acknowledged as a Lunch Break Sponsor",
+        "p3": "Company logo displayed at On-Site Registration",
+        "p4": "Opportunity to provide a Company brochure/handouts at registration"
+      },
+      "gold": {
+        "name": "Gold Sponsor",
+        "fee": "6,700 SGD (~USD 5,000)",
+        "meta": "Includes all Silver benefits, plus:",
+        "p1": "1 additional complimentary registration (3 total registrations)",
+        "p2": "Acknowledged as a Demo/Art Show Sponsor",
+        "p3": "Display board space during the art show, demo, and poster sessions",
+        "p4": "Recognized as Co-Sponsor of the Best Paper Awards"
+      },
+      "platinum": {
+        "name": "Platinum Sponsor",
+        "fee": "10,000 SGD (~USD 7,500)",
+        "meta": "Includes all Gold benefits, plus:",
+        "p1": "1 additional complimentary registration (4 total registrations)",
+        "p2": "Acknowledged as Gala Dinner Co-Sponsor and/or Overall Conference Sponsor",
+        "p3": "Special recognition as a Platinum Sponsor during the event and in conference materials"
+      }
+    },
+    "contact": {
+      "prefix": "For sponsorship inquiries, please contact:"
+    }
   },
   "Home": {
     "title": "ICHEC 2026",
     "tagline": "Inclusion · Intelligence · Connection",
     "date": "November 23–26, 2026",
-    "location": "Wynn Palace, Macau SAR, China",
+    "location": "City University of Macau",
     "importantDates": "Important Dates",
     "cfp": "Call for Papers",
     "program": "Program",
@@ -129,7 +178,36 @@
     "fees": {
       "kicker": "Fees",
       "title": "Registration & Fees (Official announcement prevails)",
-      "desc": "The following content is based on planning materials and placeholders to help align budgeting and workflow."
+      "desc": "The following content is based on planning materials and placeholders to help align budgeting and workflow.",
+      "pricing": {
+        "title": "Per-paper pricing (Preview)",
+        "desc": "Displayed as a swipeable carousel for quick review on mobile. Final prices and policies will be published in the registration system.",
+        "cta": "Register",
+        "prev": "Previous",
+        "next": "Next",
+        "dots": "Carousel dots",
+        "dot": "Slide",
+        "details": "View fee table (details)"
+      },
+      "cards": {
+        "standard": {
+          "title": "Standard",
+          "desc": "Standard registration to cover one paper (subject to final policy).",
+          "price": "USD 600",
+          "unit": "/ per paper"
+        },
+        "student": {
+          "title": "Student",
+          "desc": "Student pricing preview; eligibility to cover papers is subject to final policy.",
+          "price": "USD 300",
+          "unit": "/ per paper"
+        },
+        "contact": {
+          "title": "Group / Special",
+          "desc": "For group options or special requests, please contact the organizers.",
+          "price": "Contact"
+        }
+      }
     },
     "checkin": {
       "kicker": "Check-in",
@@ -177,6 +255,7 @@
       "keynotes": "Keynotes",
       "program": "Program",
       "registration": "Registration",
+      "amalunch": "AMA Lunch",
       "venue": "Venue",
       "committees": "Committee",
       "sponsors": "Sponsorship",
@@ -184,6 +263,9 @@
       "dashboard": "Dashboard",
       "admin": "Admin",
       "auth": "Sign in"
+    },
+    "notes": {
+      "committees": "Compiled from the final minutes of the CChi2026 organizing meeting. The committee list below will be updated as preparation progresses."
     },
     "footer": {
       "rights": "© 2026 Chinese CHI. All rights reserved.",

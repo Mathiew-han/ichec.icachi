@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[81537,["/26/_next/static/chunks/3d0693997fc997b1.js","/26/_next/static/chunks/ce8fe7d4945bb3e9.js"],"ViewportBoundary"]
+3:I[81537,["/26/_next/static/chunks/3d0693997fc997b1.js","/26/_next/static/chunks/ce8fe7d4945bb3e9.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+5:I[44751,["/26/_next/static/chunks/3d0693997fc997b1.js","/26/_next/static/chunks/ce8fe7d4945bb3e9.js"],"IconMark"]
+0:{"buildId":"1gDOaUe25Tk71427FsICg","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Chinese CHI 2026"}],["$","meta","1",{"name":"description","content":"Chinese CHI 2026 Conference Website"}],["$","link","2",{"rel":"icon","href":"/favicon.ico"}],["$","$L5","3",{}]]}]}]}],null]}],"loading":null,"isPartial":false}

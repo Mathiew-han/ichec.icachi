@@ -1,19 +1,14 @@
 "use client";
 
 import { useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import { locales } from "@/i18n/request";
 import { useRouter, usePathname } from "@/navigation";
 import { useState, useRef, useEffect } from "react";
 
-const localeNames: Record<string, string> = {
-  en: "English",
-  "zh-CN": "简体中文",
-  "zh-TW": "繁體中文",
-  pt: "Português",
-};
-
 export function LanguageSwitcher() {
   const locale = useLocale();
+  const t = useTranslations("Locale");
   const router = useRouter();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -38,6 +33,7 @@ export function LanguageSwitcher() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
+        aria-label={t("switch")}
         className="flex items-center gap-1 px-2 py-1 text-sm font-medium text-black/70 transition-all hover:text-black/90 dark:text-white/70 dark:hover:text-white/90"
       >
         <svg
@@ -55,7 +51,7 @@ export function LanguageSwitcher() {
           <line x1="2" y1="12" x2="22" y2="12" />
           <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
         </svg>
-        <span>{localeNames[locale]}</span>
+        <span>{t(locale)}</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="12"
@@ -82,7 +78,7 @@ export function LanguageSwitcher() {
                 locale === loc ? "font-bold text-black dark:text-white" : "text-black/70 dark:text-white/70"
               }`}
             >
-              {localeNames[loc]}
+              {t(loc)}
             </button>
           ))}
         </div>

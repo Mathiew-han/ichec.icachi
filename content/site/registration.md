@@ -1,55 +1,40 @@
-# 注册与费用（暂定）
+Welcome to the **ICHEC 2026** registration page.
 
-说明：筹备材料中给出了 2025 版本预算与注册费率作为参考（Budget Plan to be discussed）。Chinese CHI 2026 的最终费率以正式公布为准。
+### Key Information
 
-## 注册节点（AoE）
+- **Dates:** **November 23–26, 2026**
+- **Venue:** **City University of Macau**
+- **Hosts:** Faculty of Innovation and Design + Faculty of Data Science (joint)
 
-- `8 月下旬`：注册开放（Registration Opens）
-- `10 月 23 日（AoE）`：早鸟截止（Early Bird Due）
-- `11 月 13 日（AoE）`：常规截止（Normal Due）
-- `11 月 23–26 日`：会议举办（Late Registration Rate）
+### Registration Notes
 
-## 参考费率（2025 版，非最终）
+- Registration milestones (early/regular/late) are **TBA**
+- Please enable browser pop-ups and follow the registration system instructions
+- Currency, taxes, and invoicing rules will be finalized in the registration system
 
-### Standard（约 50 人）
+### Registration Fees (Initial Proposal)
 
-- Early：`S$688`（约 `USD 600`）/ `HKD 4680`
-- Normal：`S$788`（约 `USD 700`）
-- Late：`S$888`（约 `USD 800`）
+Fees will be recalculated based on updated costs. The amounts below are **tentative**.
 
-### Student（约 120 人）
+| Type | Early | Regular | Late |
+| --- | --- | --- | --- |
+| Standard | **USD 600 (tentative)** | TBA | TBA |
+| Student | **USD 300 (tentative)** | TBA | TBA |
 
-- Early：`S$288`（约 `USD 300`）
-- Normal：`S$388`（约 `USD 400`）
-- Late：`S$488`（约 `USD 500`）
+### 1. Authors of Accepted FULL Papers (Policy TBA)
 
-### Student Volunteer（约 25 人）
+- At least one author of each accepted FULL (long) paper is expected to complete a **Standard** registration (deadline TBA)
+- Each FULL (long) paper must be covered by a **distinct Standard registration**
+- Final applicability to other tracks (short papers, posters, demos) will be announced officially
 
-- 费用：`/`
+### 2. Refund Policy (TBA)
 
-## Chinese CHI 2026 费率（待甲方确认）
+- Refund windows, eligibility, and processing rules will be published in the registration system
 
-说明：以下为占位，价格用 `￥XXX` 形式表达，方便一眼看出需要替换成“金额”。
+### 3. Inclusions (TBA)
 
-### Standard
+Registration inclusions (access, meals, social events) will be updated once finalized.
 
-- Early：`￥XXX`（2026 Standard Early 费用）
-- Normal：`￥XXX`（2026 Standard Normal 费用）
-- Late：`￥XXX`（2026 Standard Late 费用）
+### Venue & Accommodation
 
-### Student
-
-- Early：`￥XXX`（2026 Student Early 费用）
-- Normal：`￥XXX`（2026 Student Normal 费用）
-- Late：`￥XXX`（2026 Student Late 费用）
-
-### Student Volunteer
-
-- 费用：`￥X`（2026 Student Volunteer 费用/是否免费）
-
-## 费用用途（参考）
-
-- ACM ICPS 论文集申请、Proceedings 发布
-- 投稿系统（EasyChair）、官网、注册支付门户
-- 宣传推广、物料设计制作
-- 场地与会务、餐饮、社交活动、志愿者等
+See [Venue](/venue) for venue notes and accommodation guidance. Transportation and recommended hotels will be added when available.

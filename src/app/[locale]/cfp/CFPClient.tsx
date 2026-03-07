@@ -2,7 +2,6 @@
 
 import { Link } from "@/navigation";
 import { Markdown } from "@/components/Markdown";
-import { ScrollReveal } from "@/components/ScrollReveal";
 import { useTranslations } from "next-intl";
 import { motion, type Variants } from "framer-motion";
 import styles from "./cfp.module.css";
@@ -30,22 +29,6 @@ export function CFPClient({ content }: { content: string }) {
 
   return (
     <div className={styles.page}>
-      <motion.section
-        className={styles.hero}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
-        variants={fadeUp}
-      >
-        <div className={styles.eyebrow}>{t("eyebrow")}</div>
-        <h1 className={styles.title}>
-          <ScrollReveal baseOpacity={0} enableBlur={true} blurStrength={10} baseRotation={4}>
-            {t("title")}
-          </ScrollReveal>
-        </h1>
-        <p className={styles.subtitle}>{t("subtitle")}</p>
-      </motion.section>
-
       <section className={styles.section}>
         <div className={styles.gridTop}>
           <motion.div
@@ -61,10 +44,10 @@ export function CFPClient({ content }: { content: string }) {
             </div>
             <div className={styles.cardBody}>{t("submit.desc")}</div>
             <div className={styles.cardActions}>
-              <Link href="/auth" className={styles.primaryButton}>
+              <a href="https://easychair.org/my2/conference?conf=ichec2026" className={styles.primaryButton}>
                 {t("submit.cta")}
-              </Link>
-              <a href="https://easychair.org/conferences/?conf=chinesechi2026" className={styles.secondaryLink}>
+              </a>
+              <a href="https://easychair.org/my2/conference?conf=ichec2026" className={styles.secondaryLink}>
                 {t("submit.easychair")}
               </a>
             </div>
@@ -152,12 +135,6 @@ export function CFPClient({ content }: { content: string }) {
                     <li key={text}>{text}</li>
                   ))}
                 </ul>
-                <div className={styles.expandActions}>
-                  <Link href="/auth" className={styles.primaryButton}>
-                    {t("tracks.cta")}
-                  </Link>
-                  <span className={styles.metaNote}>{t("tracks.note")}</span>
-                </div>
                 </div>
               </div>
             </motion.div>
@@ -165,7 +142,10 @@ export function CFPClient({ content }: { content: string }) {
         </div>
       </section>
 
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.sectionWithNote}`}>
+        <div className={styles.sectionLineNote}>
+          <span className={styles.sectionLineNoteText}>{`${t("tracks.cta")}${t("tracks.note")}`}</span>
+        </div>
         <motion.div
           className={styles.sectionHeader}
           initial="hidden"

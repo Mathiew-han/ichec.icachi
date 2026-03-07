@@ -8,41 +8,50 @@ const basePath = rawBasePath && rawBasePath !== "/"
   ? `/${rawBasePath}`.replace(/\/+/g, "/").replace(/\/+$/, "")
   : "";
 
-type NextConfigWithServerActions = NextConfig & {
-  experimental?: NextConfig["experimental"] & {
-    serverActions?: {
-      bodySizeLimit?: string | number;
-      allowedOrigins?: string[];
-    };
-  };
-};
-
-const nextConfig: NextConfigWithServerActions = {
+const nextConfig: NextConfig = {
+  output: "export",
   basePath,
   trailingSlash: true,
-  experimental: {
-    serverActions: {
-      bodySizeLimit: "30mb",
-    },
-  },
-  async headers() {
-    return [
+  images: {
+    unoptimized: true,
+    dangerouslyAllowSVG: true,
+    remotePatterns: [
       {
-        source: "/:path*",
-        headers: [
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "X-Frame-Options", value: "DENY" },
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-          {
-            key: "Permissions-Policy",
-            value:
-              "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()",
-          },
-          { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
-          { key: "Cross-Origin-Resource-Policy", value: "same-origin" },
-        ],
+        protocol: "https",
+        hostname: "fds.cityu.edu.mo",
+        pathname: "/uploads/**",
       },
-    ];
+      {
+        protocol: "https",
+        hostname: "fiad.cityu.edu.mo",
+        pathname: "/uploads_thumb/**",
+      },
+      {
+        protocol: "https",
+        hostname: "ichec.icachi.org",
+        pathname: "/assets/**",
+      },
+      {
+        protocol: "https",
+        hostname: "sdmda.bupt.edu.cn",
+        pathname: "/__local/**",
+      },
+      {
+        protocol: "https",
+        hostname: "yong-wang.org",
+        pathname: "/images/**",
+      },
+      {
+        protocol: "https",
+        hostname: "jc926.github.io",
+        pathname: "/Jie_Cai/**",
+      },
+      {
+        protocol: "https",
+        hostname: "shi.buaa.edu.cn",
+        pathname: "/_resources/**",
+      },
+    ],
   },
 };
 

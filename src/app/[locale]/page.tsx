@@ -8,6 +8,7 @@ import styles from "./home.module.css";
 
 export default function Home() {
   const t = useTranslations("Home");
+  const tShell = useTranslations("Shell");
 
   const easeStandard: [number, number, number, number] = [0.2, 0.8, 0.2, 1];
 
@@ -83,6 +84,7 @@ export default function Home() {
               </ScrollReveal>
             </h2>
             <div className={styles.aboutBrief}>{t("aboutBrief")}</div>
+            <div className={styles.aboutFull}>{tShell("footer.aboutFull")}</div>
           </div>
           <div className={styles.macauCardTheme}>
             <div className={`${styles.labelBox} ${styles.labelBoxTheme}`}>
@@ -112,18 +114,15 @@ export default function Home() {
 
       {/* Program & Timeline Section - Refactored */}
       <motion.section 
-        className={styles.section}
+        className={`${styles.section} ${styles.timelineSection}`}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={fadeInLeft}
       >
         <div className={styles.horizontalTimelineContainer}>
-          <div className={styles.mb6}>
-            <span className={`${styles.labelText} ${styles.block} ${styles.mb2}`}>
-              {t("milestonesTitle")}
-            </span>
-            <p className={styles.sectionTitle}>{t("milestonesSubtitle")}</p>
+          <div>
+            <p className={`${styles.sectionTitle} ${styles.timelineTitle}`}>{t("milestonesSubtitle")}</p>
           </div>
 
           <div className={styles.horizontalTimeline}>

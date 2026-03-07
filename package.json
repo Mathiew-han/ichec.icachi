@@ -8,20 +8,16 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "check": "npm run lint && npm run typecheck && npm run build",
-    "set-admin": "node scripts/set-admin.cjs"
+    "check": "npm run lint && npm run typecheck && npm run build"
   },
   "dependencies": {
     "@marsidev/react-turnstile": "^1.1.0",
-    "@supabase/ssr": "^0.8.0",
-    "@supabase/supabase-js": "^2.95.2",
     "clsx": "^2.1.1",
     "framer-motion": "^12.34.3",
     "next": "16.1.6",
     "next-intl": "^4.8.2",
     "react": "19.2.3",
-    "react-dom": "19.2.3",
-    "stripe": "^20.3.1"
+    "react-dom": "19.2.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

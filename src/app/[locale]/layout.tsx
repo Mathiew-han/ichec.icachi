@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { normalizeLocale } from "@/i18n/request";
+import { locales, normalizeLocale } from "@/i18n/request";
 import { SiteShell } from "@/components/SiteShell";
 import "../globals.css";
 
@@ -16,6 +16,10 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
 };
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export default async function RootLayout({
   children,
@@ -33,10 +37,6 @@ export default async function RootLayout({
 
   setRequestLocale(normalizedLocale);
   const messages = await getMessages();
-
-  const hasSupabase = Boolean(
-    process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
-  );
 
   return (
     <html lang={normalizedLocale}>
@@ -75,7 +75,7 @@ export default async function RootLayout({
               </filter>
             </defs>
           </svg>
-          <SiteShell hasSupabase={hasSupabase}>{children}</SiteShell>
+          <SiteShell>{children}</SiteShell>
         </NextIntlClientProvider>
       </body>
     </html>

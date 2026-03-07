@@ -10,14 +10,9 @@ export default function ProgramPage() {
 
   return (
     <div className={`${styles.page} space-y-12`}>
-      <section className="px-2 py-2 sm:px-4 sm:py-6">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <h2 className="text-2xl font-bold tracking-tight text-black/85 dark:text-white/85">
-            {t("overview")}
-          </h2>
-          <div className="inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-800 dark:bg-amber-900/30 dark:text-amber-400">
-            {t("toBeUpdated")}
-          </div>
+      <section className="px-2 pb-2 pt-16 sm:px-4 sm:pb-6 sm:pt-16">
+        <div className="inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-800 dark:bg-amber-900/30 dark:text-amber-400">
+          {t("toBeUpdated")}
         </div>
         <div className="day-tabs mt-6 flex flex-nowrap items-center gap-6 text-xs font-semibold text-black/70 dark:text-white/70">
           {[
@@ -259,7 +254,7 @@ export default function ProgramPage() {
         </div>
       </section>
 
-      <section className={`${styles.section} space-y-6`}>
+      <section className={`${styles.section} ${styles.sectionNoDivider} space-y-6`}>
         <div className={styles.sectionTitle}>{t("venue")}</div>
         <p className={styles.lead}>
           Breakout rooms and activity spaces will be confirmed and published for 2026.

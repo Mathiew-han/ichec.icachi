@@ -1,10 +1,9 @@
 "use client";
 
-import { Link } from "@/navigation";
 import { Markdown } from "@/components/Markdown";
-import { ScrollReveal } from "@/components/ScrollReveal";
 import { useTranslations } from "next-intl";
 import { motion, type Variants } from "framer-motion";
+import { useMemo } from "react";
 import styles from "./registration.module.css";
 
 const easeStandard: [number, number, number, number] = [0.2, 0.8, 0.2, 1];
@@ -26,56 +25,95 @@ const slideInRight: Variants = {
 
 export function RegistrationClient({ content }: { content: string }) {
   const t = useTranslations("Registration");
+  const pricingT = useTranslations("Registration.fees.pricing");
+  const cardsT = useTranslations("Registration.fees.cards");
+  const cards = useMemo(
+    () => [
+      {
+        title: cardsT("standard.title"),
+        desc: cardsT("standard.desc"),
+        price: cardsT("standard.price"),
+        unit: cardsT("standard.unit"),
+      },
+      {
+        title: cardsT("student.title"),
+        desc: cardsT("student.desc"),
+        price: cardsT("student.price"),
+        unit: cardsT("student.unit"),
+      },
+      {
+        title: cardsT("contact.title"),
+        desc: cardsT("contact.desc"),
+        price: cardsT("contact.price"),
+        unit: "",
+      },
+    ],
+    [cardsT],
+  );
+
+  const feesMarkdown = useMemo(() => {
+    const tableRe =
+      /^\|.*\|\s*\r?\n^\|(?:\s*:?-{3,}:?\s*\|)+\s*\r?\n(?:^\|.*\|\s*\r?\n)+/m;
+    const match = tableRe.exec(content);
+    if (!match || match.index == null) {
+      return { before: content.trim(), after: "" };
+    }
+
+    const tableStart = match.index;
+    const tableEnd = tableStart + match[0].length;
+    const beforeTable = content.slice(0, tableStart).replace(/\s+$/, "");
+    const afterTable = content.slice(tableEnd).trimStart();
+
+    const headingNeedle = "\n### ";
+    let headingIdx = beforeTable.lastIndexOf(headingNeedle);
+    if (headingIdx >= 0) headingIdx += 1;
+    if (headingIdx < 0 && beforeTable.startsWith("### ")) headingIdx = 0;
+    if (headingIdx < 0) {
+      return { before: beforeTable.trim(), after: afterTable };
+    }
+
+    const feesBlock = beforeTable.slice(headingIdx);
+    const headingLine = feesBlock.split(/\r?\n/)[0] ?? "";
+    const prefix = beforeTable.slice(0, headingIdx).trimEnd();
+    const before = `${prefix}\n\n${headingLine}\n`.trimStart();
+    return { before, after: afterTable };
+  }, [content]);
 
   return (
     <div className={styles.page}>
-      <motion.section
-        className={styles.section}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
-        variants={fadeUp}
-      >
-        <div className={styles.eyebrow}>{t("eyebrow")}</div>
-        <h2 className={styles.h1}>
-          <ScrollReveal baseOpacity={0} enableBlur={true} blurStrength={8} baseRotation={3}>
-            {t("title")}
-          </ScrollReveal>
-        </h2>
-        <p className={styles.lead}>{t("lead")}</p>
-
-        <div className={styles.quickLinks}>
-          <Link href="/cfp" className={styles.textLink}>
-            {t("links.cfp")}
-          </Link>
-          <Link href="/program" className={styles.textLink}>
-            {t("links.program")}
-          </Link>
-          <a href="mailto:contact@chinese-chi.org" className={styles.textLink}>
-            {t("links.contact")}
-          </a>
-        </div>
-      </motion.section>
-
       <section className={styles.section}>
-        <motion.div
-          className={styles.sectionHeader}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
-          variants={fadeUp}
-        >
-          <div className={styles.kicker}>{t("fees.kicker")}</div>
-          <h3 className={styles.h2}>{t("fees.title")}</h3>
-          <p className={styles.sublead}>{t("fees.desc")}</p>
-        </motion.div>
+        <div className={styles.markdownWrap}>
+          <Markdown content={feesMarkdown.before} />
+        </div>
+
+        <div className={styles.pricingShell}>
+          <div className={styles.pricingTop}>
+            <div className={styles.pricingDesc}>{pricingT("desc")}</div>
+            <a className={styles.pricingCta} href="#" aria-label={pricingT("cta")}>
+              {pricingT("cta")}
+            </a>
+          </div>
+
+          <div className={styles.pricingCards} aria-label={pricingT("title")}>
+            {cards.map((c) => (
+              <article key={c.title} className={styles.priceCard} aria-label={c.title}>
+                <div className={styles.cardTitle}>{c.title}</div>
+                <div className={styles.cardDesc}>{c.desc}</div>
+                <div className={styles.cardPriceRow}>
+                  <span className={styles.cardPrice}>{c.price}</span>
+                  {c.unit ? <span className={styles.cardUnit}>{c.unit}</span> : null}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
 
         <div className={styles.markdownWrap}>
-          <Markdown content={content} />
+          <Markdown content={feesMarkdown.after} />
         </div>
       </section>
 
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.sectionNoBorder}`}>
         <motion.div
           className={styles.sectionHeader}
           initial="hidden"
@@ -200,4 +238,3 @@ export function RegistrationClient({ content }: { content: string }) {
     </div>
   );
 }
-

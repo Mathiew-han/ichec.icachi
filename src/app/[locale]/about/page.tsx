@@ -1,16 +1,21 @@
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { Markdown } from "@/components/Markdown";
+import { normalizeLocale } from "@/i18n/request";
 import { readSiteMarkdown } from "@/lib/site-content";
 
 import ica3pp2024 from "../../../../images/ICA3PP2024.png";
 import scenicRound from "../../../../images/圆形风景照.png";
 
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
-  const t = await getTranslations("Common");
   const { locale } = await params;
-  const content = await readSiteMarkdown("about", locale);
+  const normalizedLocale = normalizeLocale(locale);
+  if (!normalizedLocale) notFound();
+  setRequestLocale(normalizedLocale);
+  const t = await getTranslations("Common");
+  const content = await readSiteMarkdown("about", normalizedLocale);
   return (
     <div className="space-y-8">
       <Markdown content={content} />

@@ -1,96 +1,88 @@
-import { Link } from "@/navigation";
-import { Markdown } from "@/components/Markdown";
-import { readSiteMarkdown } from "@/lib/site-content";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
 import styles from "./sponsors.module.css";
-
-type SponsorRow = {
-  id: string;
-  name: string;
-  level: string;
-  logo_url: string | null;
-  website_url: string | null;
-};
+import { notFound } from "next/navigation";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { normalizeLocale } from "@/i18n/request";
 
 export default async function SponsorsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const content = await readSiteMarkdown("sponsors", locale);
-
-  const supabase = await createSupabaseServerClient();
-  const { data } = supabase
-    ? await supabase
-        .from("sponsors")
-        .select("id,name,level,logo_url,website_url")
-        .order("sort_order", { ascending: true })
-        .order("name", { ascending: true })
-    : { data: null };
-
-  const sponsors = (data ?? []) as SponsorRow[];
-
+  const normalizedLocale = normalizeLocale(locale);
+  if (!normalizedLocale) notFound();
+  setRequestLocale(normalizedLocale);
+  const tCommon = await getTranslations("Common");
+  const t = await getTranslations("Sponsors");
   return (
     <div className={styles.page}>
-      <Markdown content={content} />
-      {sponsors.length > 0 ? (
-        <section className={styles.section}>
-          <div className={styles.sectionTitle}>Sponsors</div>
-          <div className={styles.lead}>
-            {sponsors.length} sponsor(s) listed.
-          </div>
-          {Array.from(new Set(sponsors.map((s) => s.level))).map((level) => (
-            <div key={level} className={styles.group}>
-              <div className={styles.groupTitle}>{level}</div>
-              <div className={styles.sponsorList}>
-                {sponsors
-                  .filter((s) => s.level === level)
-                  .map((s) => (
-                    <div key={s.id} className={styles.sponsorItem}>
-                      <div className={styles.sponsorName}>{s.name}</div>
-                      <div className={styles.sponsorMeta}>
-                        {s.website_url ? (
-                          <a className="underline underline-offset-4" href={s.website_url}>
-                            {s.website_url}
-                          </a>
-                        ) : (
-                          <span>Website to be announced</span>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-              </div>
-            </div>
-          ))}
-        </section>
-      ) : null}
-      <section className={`${styles.section} ${styles.inlineCode}`}>
-        <div className={styles.sectionTitle}>赞助级别（参考）</div>
-        <div className={styles.lead}>
-          费用与权益将以正式赞助权益包为准。以下为占位结构，便于快速对齐内容。
-        </div>
+      <section className={styles.section}>
+        <div className={styles.notice}>{tCommon("toBeUpdated")}</div>
+        <div className={styles.sectionTitle}>{t("title")}</div>
+        <p className={styles.lead}>{t("lead")}</p>
+
         <div className={styles.tierGrid}>
-          {[
-            { tier: "Bronze", fee: "￥X,XXX", perks: "展位 + Logo 露出" },
-            { tier: "Silver", fee: "￥X,XXX", perks: "议程露出 + 展位" },
-            { tier: "Gold", fee: "￥X,XXX", perks: "主会场露出 + 赞助致辞" },
-            { tier: "Platinum", fee: "￥X,XXX", perks: "冠名曝光 + 深度合作" },
-          ].map((item) => (
-            <div key={item.tier} className={styles.tierRow}>
-              <div className={styles.tierTop}>
-                <div className={styles.tierName}>{item.tier}</div>
-                <div className={styles.tierFee}>
-                  <code className="inline-code">{item.fee}</code>
-                </div>
-              </div>
-              <div className={styles.tierPerks}>{item.perks}</div>
+          <div className={`${styles.tierRow} ${styles.tierRowBronze}`}>
+            <div className={styles.tierTop}>
+              <div className={styles.tierName}>{t("tiers.bronze.name")}</div>
+              <div className={styles.tierFee}>{t("tiers.bronze.fee")}</div>
             </div>
-          ))}
+            <div className={styles.tierPerks}>
+              <ul className={styles.list}>
+                <li>{t("tiers.bronze.p1")}</li>
+                <li>{t("tiers.bronze.p2")}</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className={`${styles.tierRow} ${styles.tierRowSilver}`}>
+            <div className={styles.tierTop}>
+              <div className={styles.tierName}>{t("tiers.silver.name")}</div>
+              <div className={styles.tierFee}>{t("tiers.silver.fee")}</div>
+            </div>
+            <div className={styles.tierPerks}>
+              <div className={styles.tierMeta}>{t("tiers.silver.meta")}</div>
+              <ul className={styles.list}>
+                <li>{t("tiers.silver.p1")}</li>
+                <li>{t("tiers.silver.p2")}</li>
+                <li>{t("tiers.silver.p3")}</li>
+                <li>{t("tiers.silver.p4")}</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className={`${styles.tierRow} ${styles.tierRowGold}`}>
+            <div className={styles.tierTop}>
+              <div className={styles.tierName}>{t("tiers.gold.name")}</div>
+              <div className={styles.tierFee}>{t("tiers.gold.fee")}</div>
+            </div>
+            <div className={styles.tierPerks}>
+              <div className={styles.tierMeta}>{t("tiers.gold.meta")}</div>
+              <ul className={styles.list}>
+                <li>{t("tiers.gold.p1")}</li>
+                <li>{t("tiers.gold.p2")}</li>
+                <li>{t("tiers.gold.p3")}</li>
+                <li>{t("tiers.gold.p4")}</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className={`${styles.tierRow} ${styles.tierRowPlatinum}`}>
+            <div className={styles.tierTop}>
+              <div className={styles.tierName}>{t("tiers.platinum.name")}</div>
+              <div className={styles.tierFee}>{t("tiers.platinum.fee")}</div>
+            </div>
+            <div className={styles.tierPerks}>
+              <div className={styles.tierMeta}>{t("tiers.platinum.meta")}</div>
+              <ul className={styles.list}>
+                <li>{t("tiers.platinum.p1")}</li>
+                <li>{t("tiers.platinum.p2")}</li>
+                <li>{t("tiers.platinum.p3")}</li>
+              </ul>
+            </div>
+          </div>
         </div>
+
         <div className={styles.cta}>
-          <Link href="#" className="underline underline-offset-4">
-            获取赞助方案与联系方式
-          </Link>
-          <a className="underline underline-offset-4" href="mailto:contact@chinese-chi.org">
-            contact@chinese-chi.org
-          </a>
+          <div className={styles.lead}>
+            {t("contact.prefix")} <a href="mailto:jude.yew@gmail.com">jude.yew@gmail.com</a>.
+          </div>
         </div>
       </section>
     </div>

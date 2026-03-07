@@ -5,15 +5,64 @@
     "attend": "Participar",
     "program": "Programa",
     "committee": "Comitê",
+    "amalunch": "Almoço AMA",
     "sponsorship": "Patrocínio",
     "portal": "Portal",
     "signin": "Entrar"
+  },
+  "Locale": {
+    "switch": "Mudar idioma",
+    "en": "English",
+    "zh-CN": "Chinês (Simplificado)",
+    "zh-TW": "Chinês (Tradicional)",
+    "pt": "Português"
+  },
+  "Sponsors": {
+    "title": "Oportunidades de Patrocínio (ref. 2025)",
+    "lead": "Os patrocinadores serão mencionados no programa e nos anais oficiais com seu nível de patrocínio. Os logos serão exibidos no site com link. Materiais limitados podem ser incluídos no kit de inscrição. Cada nível inclui os benefícios dos níveis anteriores e adiciona mais visibilidade e oportunidades de engajamento (sujeito ao anúncio final).",
+    "tiers": {
+      "bronze": {
+        "name": "Bronze",
+        "fee": "2,700 SGD (~USD 2,000)",
+        "p1": "1 inscrição gratuita na conferência",
+        "p2": "Reconhecido como patrocinador do coffee break"
+      },
+      "silver": {
+        "name": "Silver",
+        "fee": "4,000 SGD (~USD 3,000)",
+        "meta": "Inclui todos os benefícios Bronze, mais:",
+        "p1": "1 inscrição gratuita adicional (2 inscrições no total)",
+        "p2": "Reconhecido como patrocinador do almoço",
+        "p3": "Logo da empresa exibido no credenciamento no local",
+        "p4": "Oportunidade de fornecer folhetos no credenciamento"
+      },
+      "gold": {
+        "name": "Gold",
+        "fee": "6,700 SGD (~USD 5,000)",
+        "meta": "Inclui todos os benefícios Silver, mais:",
+        "p1": "1 inscrição gratuita adicional (3 inscrições no total)",
+        "p2": "Reconhecido como patrocinador de Demo/Art Show",
+        "p3": "Espaço de exposição durante sessões de arte, demo e pôsteres",
+        "p4": "Reconhecido como co-patrocinador do prêmio de melhor artigo"
+      },
+      "platinum": {
+        "name": "Platinum",
+        "fee": "10,000 SGD (~USD 7,500)",
+        "meta": "Inclui todos os benefícios Gold, mais:",
+        "p1": "1 inscrição gratuita adicional (4 inscrições no total)",
+        "p2": "Reconhecido como co-patrocinador do jantar de gala e/ou patrocinador geral",
+        "p3": "Reconhecimento especial como Platinum durante o evento e nos materiais"
+      }
+    },
+    "contact": {
+      "prefix": "Contato para patrocínio:"
+    }
   },
   "Home": {
     "title": "ICHEC 2026",
     "tagline": "Inclusão · Inteligência · Conexão",
     "date": "23–26 de novembro de 2026",
-    "location": "Wynn Palace, Macau, China",
+    "location": "Universidade da Cidade de Macau",
     "importantDates": "Datas Importantes",
     "cfp": "Chamada de Trabalhos",
     "program": "Programa da Conferência",
@@ -129,7 +178,36 @@
     "fees": {
       "kicker": "Taxas",
       "title": "Inscrição & Taxas (vale o anúncio oficial)",
-      "desc": "O conteúdo abaixo baseia-se em materiais de planejamento e placeholders para alinhar orçamento e fluxo."
+      "desc": "O conteúdo abaixo baseia-se em materiais de planejamento e placeholders para alinhar orçamento e fluxo.",
+      "pricing": {
+        "title": "Preço por artigo (Prévia)",
+        "desc": "Exibido como carrossel para facilitar a visualização no mobile. Preços e políticas finais serão publicados no sistema.",
+        "cta": "Registrar",
+        "prev": "Anterior",
+        "next": "Próximo",
+        "dots": "Indicadores do carrossel",
+        "dot": "Slide",
+        "details": "Ver tabela de taxas (detalhes)"
+      },
+      "cards": {
+        "standard": {
+          "title": "Standard",
+          "desc": "Inscrição standard para cobrir um artigo (sujeito à política final).",
+          "price": "USD 600",
+          "unit": "/ por artigo"
+        },
+        "student": {
+          "title": "Student",
+          "desc": "Prévia de preço estudantil; elegibilidade para cobrir artigos depende da política final.",
+          "price": "USD 300",
+          "unit": "/ por artigo"
+        },
+        "contact": {
+          "title": "Grupo / Especial",
+          "desc": "Para opções em grupo ou solicitações especiais, entre em contato com os organizadores.",
+          "price": "Contato"
+        }
+      }
     },
     "checkin": {
       "kicker": "Credenciamento",
@@ -177,6 +255,7 @@
       "keynotes": "Palestras",
       "program": "Programa",
       "registration": "Inscrição",
+      "amalunch": "Almoço AMA",
       "venue": "Local",
       "committees": "Comitê",
       "sponsors": "Patrocínio",
@@ -184,6 +263,9 @@
       "dashboard": "Painel",
       "admin": "Admin",
       "auth": "Entrar"
+    },
+    "notes": {
+      "committees": "Conteúdo compilado a partir da ata final da reunião de organização do CChi2026. A lista de comitê abaixo será atualizada conforme o progresso da preparação."
     },
     "footer": {
       "rights": "© 2026 Chinese CHI. Todos os direitos reservados.",

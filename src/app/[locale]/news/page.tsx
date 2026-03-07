@@ -1,60 +1,14 @@
 import { Link } from "@/navigation";
 import { Markdown } from "@/components/Markdown";
 import { readSiteMarkdown } from "@/lib/site-content";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
-
-type NewsRow = {
-  id: string;
-  title_zh: string;
-  title_en: string;
-  published_at: string | null;
-  pinned: boolean;
-};
 
 export default async function NewsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const content = await readSiteMarkdown("news", locale);
 
-  const supabase = await createSupabaseServerClient();
-  const { data } = supabase
-    ? await supabase
-        .from("news")
-        .select("id,title_zh,title_en,published_at,pinned")
-        .order("pinned", { ascending: false })
-        .order("published_at", { ascending: false })
-    : { data: null };
-
-  const rows = (data ?? []) as NewsRow[];
-
   return (
     <div className="space-y-10">
       <Markdown content={content} />
-      {rows.length > 0 ? (
-        <section className="space-y-4">
-          <div className="text-lg font-semibold tracking-wide text-black/85 dark:text-white/85">
-            Updates
-          </div>
-          <div className="rounded-lg border">
-            <div className="divide-y">
-              {rows.map((r) => (
-                <div key={r.id} className="px-4 py-3">
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="font-medium">
-                      {locale.startsWith("zh") ? r.title_zh : r.title_en}
-                    </div>
-                    <div className="text-xs text-neutral-600 whitespace-nowrap">
-                      {r.published_at ? new Date(r.published_at).toLocaleDateString() : ""}
-                    </div>
-                  </div>
-                  {r.pinned ? (
-                    <div className="mt-1 text-[10px] text-neutral-500">Pinned</div>
-                  ) : null}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      ) : null}
       <section className="space-y-6">
         <div className="text-lg font-semibold tracking-wide text-black/85 dark:text-white/85">
           AMA 午餐（示意）
