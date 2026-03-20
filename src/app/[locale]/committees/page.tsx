@@ -169,7 +169,7 @@ export default async function CommitteesPage({ params }: { params: Promise<{ loc
     {
       id: "short",
       label: { zh: zh("短文主席", "短文主席"), en: "Short Paper Chairs" },
-      layout: "two",
+      layout: "three",
       members: [
         {
           name: isZh ? "陈昕" : "Xin Chen",
@@ -197,7 +197,7 @@ export default async function CommitteesPage({ params }: { params: Promise<{ loc
     {
       id: "ops",
       label: { zh: zh("艺术与展演 / 出版 / 技术", "藝術與展演 / 出版 / 技術"), en: "Art / Publication / Technical" },
-      layout: "threeMid",
+      layout: "four",
       members: [
         {
           name: isZh ? "李晴川" : "Qingchuan Li",
