@@ -172,6 +172,12 @@ export default async function CommitteesPage({ params }: { params: Promise<{ loc
       layout: "two",
       members: [
         {
+          name: isZh ? "陈昕" : "Xin Chen",
+          affiliation: isZh ? zh("深圳大学 · 副教授", "深圳大學 · 副教授") : "Shenzhen University · Associate Professor",
+          avatarUrl: "/avatars/chenxin.jpg",
+          profileUrl: "https://art.szu.edu.cn/info/1196/4091.htm",
+        },
+        {
           name: isZh ? zh("张为威", "張為威") : "Weiwei Zhang",
           affiliation: isZh ? zh("北京邮电大学", "北京郵電大學") : "Beijing University of Posts and Telecommunications",
           avatarUrl: "/avatars/zhangweiwei.jpg",
@@ -193,6 +199,13 @@ export default async function CommitteesPage({ params }: { params: Promise<{ loc
       label: { zh: zh("艺术与展演 / 出版 / 技术", "藝術與展演 / 出版 / 技術"), en: "Art / Publication / Technical" },
       layout: "threeMid",
       members: [
+        {
+          name: isZh ? "李晴川" : "Qingchuan Li",
+          role: isZh ? zh("艺术与展演主席", "藝術與展演主席") : "Art Gallery Chair",
+          affiliation: isZh ? zh("哈尔滨工业大学（深圳） · 副教授", "哈爾濱工業大學（深圳） · 副教授") : "Harbin Institute of Technology (Shenzhen) · Associate Professor",
+          avatarUrl: "/avatars/liqingchuan.jpg",
+          profileUrl: "https://homepage.hit.edu.cn/liqingchuan?lang=zh",
+        },
         {
           name: "熊原",
           role: isZh ? zh("艺术与展演主席", "藝術與展演主席") : "Art Gallery Chair",
