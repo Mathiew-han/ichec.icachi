@@ -84,12 +84,7 @@ export default async function CommitteesPage({ params }: { params: Promise<{ loc
         {
           name: isZh ? zh("王铭浩", "王銘浩") : "Minghao Wang",
           affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
-<<<<<<< HEAD
           avatarUrl: "/avatars/wangminghao.png",
-=======
-          avatarUrl: "https://fds.cityu.edu.mo/uploads/userfiles/%E7%8E%8B%E9%8A%98%E6%B5%A9.jpg",
->>>>>>> 02176575b2911b17d7f00c41299ae4d088bbbcad
-          profileUrl: "https://fds.cityu.edu.mo/members/383",
         },
       ],
     },
@@ -103,12 +98,7 @@ export default async function CommitteesPage({ params }: { params: Promise<{ loc
           affiliation: isZh
             ? zh("澳门城市大学创新设计学院 · 教授", "澳門城市大學創新設計學院 · 教授")
             : "Faculty of Innovation and Design · City University of Macau",
-<<<<<<< HEAD
           avatarUrl: "/avatars/youzhenwei.png",
-=======
-          avatarUrl:
-            "https://fiad.cityu.edu.mo/uploads_thumb/list/aa0dc278487017aa0ed4991f6391ee7a_500X500.jpg",
->>>>>>> 02176575b2911b17d7f00c41299ae4d088bbbcad
           profileUrl: "https://fiad.cityu.edu.mo/acad_ft/854",
         },
         {
@@ -116,11 +106,7 @@ export default async function CommitteesPage({ params }: { params: Promise<{ loc
           affiliation: isZh
             ? zh("澳门城市大学数据科学学院 · 助理教授", "澳門城市大學數據科學學院 · 助理教授")
             : "Faculty of Data Science · City University of Macau",
-<<<<<<< HEAD
           avatarUrl: "/avatars/zuoxuhan.jpg",
-=======
-          avatarUrl: "https://fds.cityu.edu.mo/uploads/userfiles/%E5%B7%A6%E6%97%AD%E5%90%AB.jpg",
->>>>>>> 02176575b2911b17d7f00c41299ae4d088bbbcad
           profileUrl: "https://fds.cityu.edu.mo/members/496",
         },
       ],
@@ -154,12 +140,7 @@ export default async function CommitteesPage({ params }: { params: Promise<{ loc
         {
           name: isZh ? "李萌" : "Meng Li",
           affiliation: isZh ? zh("北京邮电大学", "北京郵電大學") : "Beijing University of Posts and Telecommunications",
-<<<<<<< HEAD
           avatarUrl: "/avatars/limeng.jpg",
-=======
-          avatarUrl:
-            "https://sdmda.bupt.edu.cn/__local/E/70/E3/AD42F061589BA8BED2E2E9A4B17_67E9F848_69569.jpg",
->>>>>>> 02176575b2911b17d7f00c41299ae4d088bbbcad
           profileUrl: "https://sdmda.bupt.edu.cn/info/1047/1209.htm",
         },
         {
@@ -193,10 +174,7 @@ export default async function CommitteesPage({ params }: { params: Promise<{ loc
         {
           name: isZh ? zh("张为威", "張為威") : "Weiwei Zhang",
           affiliation: isZh ? zh("北京邮电大学", "北京郵電大學") : "Beijing University of Posts and Telecommunications",
-<<<<<<< HEAD
           avatarUrl: "/avatars/zhangweiwei.jpg",
-=======
->>>>>>> 02176575b2911b17d7f00c41299ae4d088bbbcad
           profileUrl: "https://sdmda.bupt.edu.cn/info/1048/1533.htm",
         },
         {
@@ -219,12 +197,7 @@ export default async function CommitteesPage({ params }: { params: Promise<{ loc
           name: "熊原",
           role: isZh ? zh("艺术与展演主席", "藝術與展演主席") : "Art Gallery Chair",
           affiliation: isZh ? zh("澳门城市大学创新设计学院", "澳門城市大學創新設計學院") : "Faculty of Innovation and Design · City University of Macau",
-<<<<<<< HEAD
           avatarUrl: "/avatars/xiongyuan.jpg",
-=======
-          avatarUrl:
-            "https://fiad.cityu.edu.mo/uploads_thumb/list/c8b8c0b9f52737d69274378db5fae739_1000X1000.jpg",
->>>>>>> 02176575b2911b17d7f00c41299ae4d088bbbcad
           profileUrl: "https://fiad.cityu.edu.mo/acad_ft/855",
         },
         {
