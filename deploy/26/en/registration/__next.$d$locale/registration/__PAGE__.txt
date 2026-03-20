@@ -1,0 +1,47 @@
+1:"$Sreact.fragment"
+2:I[56077,["/26/_next/static/chunks/bea3f1c9bbcc69cc.js","/26/_next/static/chunks/27c1964f208ab94e.js","/26/_next/static/chunks/65008c6911cc2399.js","/26/_next/static/chunks/baa3368f1c9d7622.js"],"RegistrationClient"]
+4:I[81537,["/26/_next/static/chunks/3d0693997fc997b1.js","/26/_next/static/chunks/ce8fe7d4945bb3e9.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+:HL["/26/_next/static/chunks/0fe4a086dc93ca89.css","style"]
+3:T5f9,Welcome to the **ICHEC 2026** registration page.
+
+### Key Information
+
+- **Dates:** **November 23–26, 2026**
+- **Venue:** **City University of Macau**
+- **Hosts:** Faculty of Innovation and Design + Faculty of Data Science (joint)
+
+### Registration Notes
+
+- Registration milestones (early/regular/late) are **TBA**
+- Please enable browser pop-ups and follow the registration system instructions
+- Currency, taxes, and invoicing rules will be finalized in the registration system
+
+### Registration Fees (Initial Proposal)
+
+Fees will be recalculated based on updated costs. The amounts below are **tentative**.
+
+| Type | Early | Regular | Late |
+| --- | --- | --- | --- |
+| Standard | **USD 600 (tentative)** | TBA | TBA |
+| Student | **USD 300 (tentative)** | TBA | TBA |
+
+### 1. Authors of Accepted FULL Papers (Policy TBA)
+
+- At least one author of each accepted FULL (long) paper is expected to complete a **Standard** registration (deadline TBA)
+- Each FULL (long) paper must be covered by a **distinct Standard registration**
+- Final applicability to other tracks (short papers, posters, demos) will be announced officially
+
+### 2. Refund Policy (TBA)
+
+- Refund windows, eligibility, and processing rules will be published in the registration system
+
+### 3. Inclusions (TBA)
+
+Registration inclusions (access, meals, social events) will be updated once finalized.
+
+### Venue & Accommodation
+
+See [Venue](/venue) for venue notes and accommodation guidance. Transportation and recommended hotels will be added when available.
+0:{"buildId":"1gDOaUe25Tk71427FsICg","rsc":["$","$1","c",{"children":[["$","$L2",null,{"content":"$3"}],[["$","link","0",{"rel":"stylesheet","href":"/26/_next/static/chunks/0fe4a086dc93ca89.css","precedence":"next"}],["$","script","script-0",{"src":"/26/_next/static/chunks/65008c6911cc2399.js","async":true}],["$","script","script-1",{"src":"/26/_next/static/chunks/baa3368f1c9d7622.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"loading":null,"isPartial":false}
+6:null

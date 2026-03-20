@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,9263,e=>{"use strict";var t=e.i(54506);function c(){return(0,t.useEffect)(()=>{let e="/26".replace(/\/+/g,"/").replace(/\/+$/,""),t=`${e}/zh-CN/venue/`.replace(/\/+/g,"/");window.location.replace(t)},[]),null}e.s(["default",()=>c])}]);

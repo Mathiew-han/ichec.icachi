@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[23570,["/26/_next/static/chunks/bea3f1c9bbcc69cc.js","/26/_next/static/chunks/27c1964f208ab94e.js"],"ResponsiveGlowCircle"]
+3:I[81537,["/26/_next/static/chunks/3d0693997fc997b1.js","/26/_next/static/chunks/ce8fe7d4945bb3e9.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"1gDOaUe25Tk71427FsICg","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"space-y-6","children":[["$","div",null,{"className":"glass-panel p-5 sm:p-6","children":[["$","div",null,{"className":"text-lg font-semibold tracking-wide text-black/85 dark:text-white/85","children":"Responsive Glow Circle"}],["$","div",null,{"className":"mt-2 text-sm text-black/70 dark:text-white/70","children":"直径 = 父容器宽度的 66.67%，圆心距底部 3cm"}]]}],["$","div",null,{"className":"glass-panel relative min-h-[60vh] overflow-hidden","children":[["$","$L2",null,{}],["$","div",null,{"className":"relative z-10 p-5 sm:p-6","children":["$","div",null,{"className":"max-w-prose text-sm leading-6 text-black/70 dark:text-white/70","children":"调整浏览器窗口宽度（320px - 3840px）观察圆形与渐变边缘的响应式表现。"}]}]]}]]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+5:null

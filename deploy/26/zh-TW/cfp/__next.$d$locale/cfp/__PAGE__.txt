@@ -1,0 +1,7 @@
+1:"$Sreact.fragment"
+2:I[43882,["/26/_next/static/chunks/bea3f1c9bbcc69cc.js","/26/_next/static/chunks/27c1964f208ab94e.js","/26/_next/static/chunks/74bbaf3bffb5761f.js","/26/_next/static/chunks/baa3368f1c9d7622.js"],"CFPClient"]
+3:I[81537,["/26/_next/static/chunks/3d0693997fc997b1.js","/26/_next/static/chunks/ce8fe7d4945bb3e9.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+:HL["/26/_next/static/chunks/0925af88566d1af4.css","style"]
+0:{"buildId":"1gDOaUe25Tk71427FsICg","rsc":["$","$1","c",{"children":[["$","$L2",null,{"content":"## **征稿通知（CfP）**\n\n- 计划发布时间：4 月中旬\n- 出版平台：优先沿用 ACM\n- 会议主题暂未最终确定，将由王伯勛牵头拟定 2–3 组关键词，群内讨论后确定\n\n## 征稿类别（筹备信息）\n\n- 已确认：Full paper、Workshop\n- Art Gallery 需协会支持，场地约 600㎡\n- 其它类别与细则将随 CfP 正式发布更新\n\n## **投稿系统（待更新）**\n\n- EasyChair：[https://easychair.org/my2/conference?conf=ichec2026](https://easychair.org/my2/conference?conf=ichec2026)\n\n## 注册与费用\n\n注册费目前为初步方案（Standard / Student），需重新核算成本后确认最终价格，详见 [注册与费用](/registration)。\n"}],[["$","link","0",{"rel":"stylesheet","href":"/26/_next/static/chunks/0925af88566d1af4.css","precedence":"next"}],["$","script","script-0",{"src":"/26/_next/static/chunks/74bbaf3bffb5761f.js","async":true}],["$","script","script-1",{"src":"/26/_next/static/chunks/baa3368f1c9d7622.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+5:null
