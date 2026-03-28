@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
+import { useState, use } from "react";
 import styles from "./committees.module.css";
+import { motion, AnimatePresence } from "framer-motion";
 
 type Person = {
   name: string;
@@ -7,6 +11,7 @@ type Person = {
   affiliation?: string;
   avatarUrl?: string;
   profileUrl?: string;
+  bio?: { zh: string; en: string };
 };
 
 type CommitteeGroup = {
@@ -16,8 +21,10 @@ type CommitteeGroup = {
   members: Person[];
 };
 
-export default async function CommitteesPage({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params;
+export default function CommitteesPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = use(params);
+  const [selectedPerson, setSelectedPerson] = useState<Person | null>(null);
+
   const tbdAvatar = "/avatars/tbd.svg";
   const isZh = locale.startsWith("zh");
   const isZhTW = locale === "zh-TW";
@@ -51,7 +58,7 @@ export default async function CommitteesPage({ params }: { params: Promise<{ loc
       layout: "two",
       members: [
         {
-          name: isZh ? "王伯勛" : "Boxun Wang",
+          name: isZh ? "王伯勛" : "Po-Hsun Wang",
           affiliation: isZh
             ? zh("澳门城市大学创新设计学院 · 执行副院长", "澳門城市大學創新設計學院 · 執行副院長")
             : "Faculty of Innovation and Design · City University of Macau",
@@ -85,6 +92,7 @@ export default async function CommitteesPage({ params }: { params: Promise<{ loc
           name: isZh ? zh("王铭浩", "王銘浩") : "Minghao Wang",
           affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
           avatarUrl: "/avatars/wangminghao.png",
+          profileUrl: "https://fds.cityu.edu.mo/members/383",
         },
       ],
     },
@@ -197,7 +205,7 @@ export default async function CommitteesPage({ params }: { params: Promise<{ loc
     {
       id: "ops",
       label: { zh: zh("艺术与展演 / 出版 / 技术", "藝術與展演 / 出版 / 技術"), en: "Art / Publication / Technical" },
-      layout: "four",
+      layout: "three",
       members: [
         {
           name: isZh ? "李晴川" : "Qingchuan Li",
@@ -205,6 +213,22 @@ export default async function CommitteesPage({ params }: { params: Promise<{ loc
           affiliation: isZh ? zh("哈尔滨工业大学（深圳） · 副教授", "哈爾濱工業大學（深圳） · 副教授") : "Harbin Institute of Technology (Shenzhen) · Associate Professor",
           avatarUrl: "/avatars/liqingchuan.jpg",
           profileUrl: "https://homepage.hit.edu.cn/liqingchuan?lang=zh",
+        },
+        {
+          name: isZh ? "何思倩" : "He Siqian",
+          role: isZh ? zh("艺术与展演主席", "藝術與展演主席") : "Art Gallery Chair",
+          affiliation: isZh ? zh("北京科技大学 · 副教授", "北京科技大學 · 副教授") : "University of Science and Technology Beijing · Associate Professor",
+          avatarUrl: "/avatars/hesiqian.jpg",
+          bio: {
+            zh: `何思倩教授，北京科技大学工业设计系副教授。研究方向处于设计、人工智能和社会福祉的交汇点，重点关注人工智能时代的儿童发展。致力于探索人工智能产品如何对儿童更具同理心和责任感，开发平衡社会价值与人文关怀的人工智能产品和服务。
+            
+代表性成果包括在 CoDesign、Futures、The Design Journal 等国际顶级期刊发表多篇论文。著有《绘北京老行当》，其研究和教学成果曾被《北京日报》、《北京青年报》及新华社报道。`,
+            en: `Prof. HE SIQIAN, Associate Professor at the Department of Industrial Design, University of Science and Technology Beijing (USTB). 
+
+RESEARCH INTERESTS: Her research lies at the intersection of Design, Artificial Intelligence, and Social Wellbeing, with a specific focus on Child Development in the AI Era. She is committed to exploring how AI products can be more empathetic and responsible toward children, developing AI products and services that balance social value with humanistic care.
+
+REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as CoDesign, Futures, and The Design Journal. Author of "Sketching the Craftspeople of Old Beijing". Her research and teaching achievements have been featured by Beijing Daily, Beijing Youth Daily, and Xinhua News.`
+          }
         },
         {
           name: "熊原",
@@ -297,11 +321,9 @@ export default async function CommitteesPage({ params }: { params: Promise<{ loc
             className={`${styles.grid} ${
               group.layout === "two"
                 ? styles.gridTwo
-                : group.layout === "threeMid"
-                  ? styles.gridThreeMid
-                  : group.layout === "three"
-                    ? styles.gridThree
-                    : styles.gridFour
+                : group.layout === "three"
+                  ? styles.gridThree
+                  : styles.gridFour
             }`}
           >
             {group.members.map((m) => {
@@ -329,6 +351,18 @@ export default async function CommitteesPage({ params }: { params: Promise<{ loc
                 </>
               );
 
+              if (m.bio) {
+                return (
+                  <button
+                    key={key}
+                    className={`glass-panel ${styles.card} ${styles.cardLink}`}
+                    onClick={() => setSelectedPerson(m)}
+                  >
+                    {body}
+                  </button>
+                );
+              }
+
               return (
                 m.profileUrl ? (
                   <a
@@ -350,6 +384,43 @@ export default async function CommitteesPage({ params }: { params: Promise<{ loc
           </div>
         </section>
       ))}
+
+      <AnimatePresence>
+        {selectedPerson && (
+          <div className={styles.modalOverlay} onClick={() => setSelectedPerson(null)}>
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              className={styles.modalContent} 
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button className={styles.closeBtn} onClick={() => setSelectedPerson(null)}>×</button>
+              <div className={styles.modalHeader}>
+                <div className={styles.modalAvatarWrap}>
+                  <Image
+                    src={selectedPerson.avatarUrl ?? tbdAvatar}
+                    alt={selectedPerson.name}
+                    width={120}
+                    height={120}
+                    className={styles.avatar}
+                    unoptimized={true}
+                  />
+                </div>
+                <div className={styles.modalHeaderText}>
+                  <h3 className={styles.modalName}>{selectedPerson.name}</h3>
+                  <p className={styles.modalAff}>{selectedPerson.affiliation}</p>
+                </div>
+              </div>
+              <div className={styles.modalBody}>
+                <div className={styles.bioText}>
+                  {isZh ? selectedPerson.bio?.zh : selectedPerson.bio?.en}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

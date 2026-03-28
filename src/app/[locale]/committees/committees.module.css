@@ -72,6 +72,97 @@
   grid-template-columns: repeat(1, minmax(0, 18rem));
 }
 
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1.5rem;
+}
+
+.modalContent {
+  background: color-mix(in oklab, var(--glass-bg) 95%, white);
+  border: 1px solid var(--glass-border);
+  border-radius: 1.5rem;
+  width: 100%;
+  max-width: 42rem;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 2.5rem;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--foreground);
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.closeBtn:hover {
+  opacity: 1;
+}
+
+.modalHeader {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.modalAvatarWrap {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid var(--glass-border);
+}
+
+.modalHeaderText {
+  flex: 1;
+}
+
+.modalName {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  color: var(--foreground);
+}
+
+.modalAff {
+  font-size: 1.1rem;
+  color: color-mix(in oklab, var(--foreground) 70%, transparent);
+  margin: 0;
+}
+
+.modalBody {
+  border-top: 1px solid var(--glass-border);
+  padding-top: 1.5rem;
+}
+
+.bioText {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: color-mix(in oklab, var(--foreground) 85%, transparent);
+  white-space: pre-wrap;
+}
+
 .cardLink {
   text-decoration: none;
   color: inherit;
