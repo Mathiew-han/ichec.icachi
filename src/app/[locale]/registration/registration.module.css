@@ -162,17 +162,28 @@
 }
 
 .priceCard {
-  background: color-mix(in oklab, var(--accent-green) 14%, var(--background));
-  border: 0;
+  background: transparent;
+  border: 1px solid color-mix(in oklab, var(--foreground) 15%, transparent);
   border-radius: 0;
   padding: 1.15rem 1.1rem;
   min-height: 8.8rem;
+  transition: all 200ms ease;
+}
+
+.priceCard:hover {
+  background: var(--foreground);
+  color: var(--background);
 }
 
 .cardTitle {
   font-size: 0.95rem;
   font-weight: 850;
   color: color-mix(in oklab, var(--foreground) 90%, transparent);
+  transition: color 200ms ease;
+}
+
+.priceCard:hover .cardTitle {
+  color: var(--background);
 }
 
 .cardDesc {
@@ -180,6 +191,11 @@
   font-size: 0.92rem;
   line-height: 1.65;
   color: color-mix(in oklab, var(--foreground) 65%, transparent);
+  transition: color 200ms ease;
+}
+
+.priceCard:hover .cardDesc {
+  color: color-mix(in oklab, var(--background) 80%, transparent);
 }
 
 .cardPriceRow {
@@ -194,12 +210,22 @@
   font-weight: 900;
   letter-spacing: -0.02em;
   color: color-mix(in oklab, var(--foreground) 92%, transparent);
+  transition: color 200ms ease;
+}
+
+.priceCard:hover .cardPrice {
+  color: var(--background);
 }
 
 .cardUnit {
   font-size: 0.88rem;
   font-weight: 700;
   color: color-mix(in oklab, var(--foreground) 60%, transparent);
+  transition: color 200ms ease;
+}
+
+.priceCard:hover .cardUnit {
+  color: color-mix(in oklab, var(--background) 70%, transparent);
 }
 
 .markdownWrap :global(.prose) {
