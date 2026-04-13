@@ -1,7 +1,7 @@
 import { getRequestConfig } from "next-intl/server";
 import { notFound } from "next/navigation";
 
-export const locales = ["en", "zh-CN", "zh-TW", "pt"] as const;
+export const locales = ["en", "zh-CN", "zh-TW"] as const;
 export type Locale = (typeof locales)[number];
 
 export function normalizeLocale(value: string | null | undefined): Locale | null {
