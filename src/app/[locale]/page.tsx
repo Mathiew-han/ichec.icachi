@@ -91,29 +91,6 @@ export default function Home() {
               <p className={styles.textParagraphTight}>{t("aboutP3")}</p>
             </div>
           </div>
-          <div className={styles.macauCardTheme}>
-            <div className={`${styles.labelBox} ${styles.labelBoxTheme}`}>
-              <span className={`${styles.labelText} ${styles.labelTextTheme}`}>
-                {t("themeTitle")}
-              </span>
-            </div>
-            <div className={styles.spaceY5}>
-              <div className={styles.sectionTitle}>
-                <ScrollReveal baseOpacity={0} enableBlur={true} blurStrength={10} baseRotation={5}>
-                  {t("themeSubtitle")}
-                </ScrollReveal>
-              </div>
-              <div className={styles.textBlock}>
-                <p className={styles.textParagraphTight}>{t("themeDescription")}</p>
-              </div>
-              <div className={`${styles.pt4} ${styles.spaceY3}`}>
-                <div className={styles.labelBox}>Research · Design · Art · Industry</div>
-                <div className={styles.labelBox}>
-                  Human-Centered AI · Cultural Computing · Responsible Tech
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </motion.section>
 

@@ -166,8 +166,7 @@
 }
 
 .gridSplit {
-  display: grid;
-  gap: 3.5rem;
+  display: block;
   margin-top: 3rem;
 }
 
@@ -185,6 +184,11 @@
 .macauCardTheme {
   position: relative;
   padding: 1rem 0;
+}
+
+.macauCardLarge {
+  max-width: 920px;
+  margin: 0 auto;
 }
 
 .labelBox {
@@ -218,6 +222,7 @@
   color: color-mix(in oklab, var(--foreground) 90%, transparent);
   margin-top: 1rem;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .timelineTitle {
@@ -242,6 +247,9 @@
   letter-spacing: 0.01em;
   color: color-mix(in oklab, var(--foreground) 82%, transparent);
   max-width: 44ch;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .aboutFull {
@@ -256,10 +264,14 @@
 
 .aboutFullZh {
   max-width: 40em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .aboutFullEn {
   max-width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .aboutFull .textParagraphTight + .textParagraphTight {
@@ -516,7 +528,6 @@
 
 @media (max-width: 768px) {
   .gridSplit {
-    gap: 2.75rem;
     margin-top: 2.5rem;
   }
 
