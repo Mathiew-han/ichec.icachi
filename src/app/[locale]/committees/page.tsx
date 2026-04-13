@@ -203,8 +203,8 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
       ],
     },
     {
-      id: "ops",
-      label: { zh: zh("艺术与展演 / 出版 / 技术", "藝術與展演 / 出版 / 技術"), en: "Art / Publication / Technical" },
+      id: "art",
+      label: { zh: zh("艺术与展演", "藝術與展演"), en: "Art Gallery" },
       layout: "three",
       members: [
         {
@@ -237,6 +237,13 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
           avatarUrl: "/avatars/xiongyuan.jpg",
           profileUrl: "https://fiad.cityu.edu.mo/acad_ft/855",
         },
+      ],
+    },
+    {
+      id: "ops",
+      label: { zh: zh("出版 / 技术", "出版 / 技術"), en: "Publication / Technical" },
+      layout: "four",
+      members: [
         {
           name: "安舜",
           role: isZh ? zh("出版主席", "出版主席") : "Publication Chair",

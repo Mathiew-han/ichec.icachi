@@ -130,11 +130,11 @@ export function CFPClient({ content }: { content: string }) {
                   </div>
                 </div>
                 <div className={styles.expandContent}>
-                <ul className={styles.bullets}>
-                  {item.bullets.map((text) => (
-                    <li key={text}>{text}</li>
-                  ))}
-                </ul>
+                  <ul className={styles.bullets}>
+                    {item.bullets.map((text) => (
+                      <li key={text}>{text}</li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </motion.div>
@@ -145,59 +145,6 @@ export function CFPClient({ content }: { content: string }) {
       <section className={`${styles.section} ${styles.sectionWithNote}`}>
         <div className={styles.sectionLineNote}>
           <span className={styles.sectionLineNoteText}>{`${t("tracks.cta")}${t("tracks.note")}`}</span>
-        </div>
-        <motion.div
-          className={styles.sectionHeader}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
-          variants={fadeUp}
-        >
-          <div className={styles.label}>{tHome("milestonesTitle")}</div>
-          <h2 className={styles.h2}>{t("timeline.heading")}</h2>
-          <p className={styles.lead}>{t("timeline.desc")}</p>
-        </motion.div>
-
-        <div className={styles.horizontalTimeline}>
-          {[
-            {
-              step: "1",
-              title: t("timeline.step1.title"),
-              date: t("timeline.step1.date"),
-              status: tHome("timelineStatusCompleted"),
-              cls: styles.timelineCompleted,
-            },
-            {
-              step: "2",
-              title: t("timeline.step2.title"),
-              date: t("timeline.step2.date"),
-              status: tHome("timelineStatusInProgress"),
-              cls: styles.timelineActive,
-            },
-            {
-              step: "3",
-              title: t("timeline.step3.title"),
-              date: t("timeline.step3.date"),
-              status: tHome("timelineStatusPending"),
-              cls: "",
-            },
-            {
-              step: "4",
-              title: t("timeline.step4.title"),
-              date: t("timeline.step4.date"),
-              status: tHome("timelineStatusPending"),
-              cls: "",
-            },
-          ].map((item) => (
-            <div key={item.step} className={`${styles.horizontalStep} ${item.cls}`}>
-              <div className={styles.horizontalCircle}>{item.step}</div>
-              <div className={styles.horizontalContent}>
-                <div className={styles.horizontalTitle}>{item.title}</div>
-                <div className={styles.horizontalDate}>{item.date}</div>
-                <div className={styles.horizontalStatus}>{item.status}</div>
-              </div>
-            </div>
-          ))}
         </div>
       </section>
 
