@@ -86,7 +86,11 @@ export default function Home() {
               </ScrollReveal>
             </h2>
             <div className={styles.aboutBrief}>{t("aboutBrief")}</div>
-            <div className={styles.aboutFull}>{tShell("footer.aboutFull")}</div>
+            <div className={styles.aboutFull}>
+              <p className={styles.textParagraphTight}>{t("aboutP1")}</p>
+              <p className={styles.textParagraphTight}>{t("aboutP2")}</p>
+              <p className={styles.textParagraphTight}>{t("aboutP3")}</p>
+            </div>
           </div>
           <div className={styles.macauCardTheme}>
             <div className={`${styles.labelBox} ${styles.labelBoxTheme}`}>
