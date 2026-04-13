@@ -1,9 +1,5 @@
 # ICHEC 2026 人机交互会议论文征稿启事
 
-世界华人华侨人机交互协会（International Chinese Association of Computer Human Interaction，简称 ICACHI）举办的International Conference on Human-Engaged Computing (ICHEC 2026) 将由澳门城市大学承办，于2026 年 11 月 23 日至 26 日在中国澳门，永利皇宫（Wynn Palace）举行。本次会议主题为：共融（Inclusion）、体验（Experience）、创新（Innovation）。
-
-ICHEC（前身为 Chinese CHI）由 ICACHI 发起，已成为连接全球人机交互领域学者、业界人士的重要学术会议。自 2012 年起，Chinese CHI 已在巴黎、多伦多、首尔、硅谷、广州、蒙特利尔、厦门、巴厘岛、深圳及新加坡成功举办。往年历届会议发表论文均会收录于ACM Digital Library，并提交EI检索 。2025 年会议正式更名为 ICHEC，以体现其更广泛的包容性与国际参与度。2026 年，我们诚邀全球人机交互领域的学者、研究人员及业界领袖，分享最新研究成果与实践经验，共同探索人机交互的未来可能。
-
 ## 征稿选题
 
 征稿范围包括但不限于：

@@ -1,9 +1,5 @@
 # Call for Papers: ICHEC 2026
 
-The International Chinese Association of Computer Human Interaction (ICACHI) is delighted to announce that the International Conference on Human-Engaged Computing (ICHEC 2026) will be hosted by the City University of Macau and held at Wynn Palace, Macau, China, from November 21st to 23th, 2026. The conference theme is “Inclusion, Experience, Innovation”.
-
-ICHEC (formerly known as “Chinese CHI”) was initiated by ICACHI and has become a premier venue connecting HCI scholars, practitioners, and industry leaders worldwide. Since 2012, Chinese CHI has been successfully held in Paris, Toronto, Seoul, Silicon Valley, Guangzhou, Montreal, Xiamen, Bali, Shenzhen, and Singapore. The papers accepted at the conference in the past years have been published annually in the ACM Digital Library and are indexed by EI Compendex. The conference was officially renamed ICHEC in 2025 to reflect its broader inclusiveness and international participation. In 2026, we cordially invite leading scholars, researchers and industry leaders from around world to share their latest research progress and practical experiences, to foster intellectual exchange and research collaboration, and to explore the boundless possibilities that lie ahead in the future development of HCI.
-
 ## Call for Topics
 
 We invite contributions to ICHEC 2026 across a variety of research domains, including but not limited to:
