@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@/navigation";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { motion, type Variants } from "framer-motion";
 import styles from "./home.module.css";
@@ -9,6 +9,8 @@ import styles from "./home.module.css";
 export default function Home() {
   const t = useTranslations("Home");
   const tShell = useTranslations("Shell");
+  const locale = useLocale();
+  const isZh = locale.startsWith("zh");
 
   const easeStandard: [number, number, number, number] = [0.2, 0.8, 0.2, 1];
 
@@ -185,6 +187,43 @@ export default function Home() {
             <div className={styles.eventDate}>Nov 26, 2026</div>
             <div className={styles.eventDesc}>
               Celebrating the best papers, student competitions, and handing over to the next host.
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Organizers Section */}
+      <motion.section
+        className={`${styles.section} py-16 mt-12 border-t border-black/5 dark:border-white/5`}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={fadeInUp}
+      >
+        <div className="flex flex-col items-center justify-center">
+          <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-black/50 dark:text-white/50 mb-10">
+            {isZh ? "主办 / 承办" : "Organizers / Co-organizers"}
+          </h3>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-16 md:gap-24">
+            <div className="flex flex-col items-center gap-5">
+              <img 
+                src="https://ichec.icachi.org/assets/img/logo/icachi-logo.svg" 
+                alt="ICACHI" 
+                className="h-16 w-auto object-contain dark:brightness-0 dark:invert"
+              />
+              <span className="text-sm font-semibold text-black/70 dark:text-white/70">
+                {isZh ? "世界华人华侨人机交互协会" : "ICACHI"}
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-5">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/zh/thumb/7/71/City_University_of_Macau_logo.svg/250px-City_University_of_Macau_logo.svg.png" 
+                alt="City University of Macau" 
+                className="h-16 w-auto object-contain"
+              />
+              <span className="text-sm font-semibold text-black/70 dark:text-white/70">
+                {isZh ? "澳门城市大学" : "City University of Macau"}
+              </span>
             </div>
           </div>
         </div>
