@@ -114,7 +114,7 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
           affiliation: isZh
             ? zh("澳门城市大学数据科学学院 · 助理教授", "澳門城市大學數據科學學院 · 助理教授")
             : "Faculty of Data Science · City University of Macau",
-          avatarUrl: "/avatars/zuoxuhan.jpg",
+          avatarUrl: "https://fds.cityu.edu.mo/uploads/userfiles/%E5%B7%A6%E6%97%AD%E5%90%AB.jpg",
           profileUrl: "https://fds.cityu.edu.mo/members/496",
         },
       ],
@@ -240,8 +240,8 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
       ],
     },
     {
-      id: "ops",
-      label: { zh: zh("出版 / 技术", "出版 / 技術"), en: "Publication / Technical" },
+      id: "ops_support",
+      label: { zh: zh("出版 / 技术 / 志愿者", "出版 / 技術 / 志願者"), en: "Publication / Technical / Volunteer" },
       layout: "four",
       members: [
         {
@@ -258,13 +258,6 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
           affiliation: isZh ? zh("博士生", "博士生") : "PhD student",
           avatarUrl: "/avatars/guochang.png",
         },
-      ],
-    },
-    {
-      id: "support",
-      label: { zh: zh("志愿者 / 财务", "志願者 / 財務"), en: "Volunteer / Finance" },
-      layout: "four",
-      members: [
         {
           name: "牛朝西",
           role: isZh ? zh("志愿者主席", "志願者主席") : "Volunteer Chair",
@@ -279,6 +272,13 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
           role: isZh ? zh("志愿者主席", "志願者主席") : "Volunteer Chair",
           affiliation: isZh ? zh("博士后研究员", "博士後研究員") : "Postdoctoral researcher",
         },
+      ],
+    },
+    {
+      id: "finance_comms",
+      label: { zh: zh("财务 / 宣传 / 秘书处", "財務 / 宣傳 / 秘書處"), en: "Finance / Publicity / Secretaries" },
+      layout: "four",
+      members: [
         {
           name: "林浩屹",
           role: isZh ? zh("财务主席", "財務主席") : "Finance Chair",
@@ -289,13 +289,6 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
           role: isZh ? zh("财务主席", "財務主席") : "Finance Chair",
           affiliation: isZh ? zh("博士生", "博士生") : "PhD student",
         },
-      ],
-    },
-    {
-      id: "comms",
-      label: { zh: zh("宣传 / 秘书处", "宣傳 / 秘書處"), en: "Publicity / Secretaries" },
-      layout: "four",
-      members: [
         {
           name: isZh ? zh("范馨文", "範馨文") : "Xinwen Fan",
           role: isZh ? zh("宣传主席", "宣傳主席") : "Publicity Chair",
