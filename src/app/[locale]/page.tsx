@@ -8,7 +8,6 @@ import styles from "./home.module.css";
 
 export default function Home() {
   const t = useTranslations("Home");
-  const tShell = useTranslations("Shell");
   const locale = useLocale();
   const isZh = locale.startsWith("zh");
 
@@ -86,7 +85,7 @@ export default function Home() {
               </ScrollReveal>
             </h2>
             <div className={styles.aboutBrief}>{t("aboutBrief")}</div>
-            <div className={styles.aboutFull}>
+            <div className={`${styles.aboutFull} ${isZh ? styles.aboutFullZh : styles.aboutFullEn}`}>
               <p className={styles.textParagraphTight}>{t("aboutP1")}</p>
               <p className={styles.textParagraphTight}>{t("aboutP2")}</p>
               <p className={styles.textParagraphTight}>{t("aboutP3")}</p>

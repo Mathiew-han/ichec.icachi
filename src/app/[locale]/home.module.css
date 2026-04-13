@@ -236,22 +236,34 @@
 
 .aboutBrief {
   margin-top: 1.25rem;
-  font-size: 1.02rem;
-  font-weight: 600;
-  line-height: 1.75;
-  letter-spacing: 0.02em;
-  color: color-mix(in oklab, var(--foreground) 78%, transparent);
-  max-width: 56ch;
+  font-size: clamp(1rem, 0.96rem + 0.22vw, 1.08rem);
+  font-weight: 620;
+  line-height: 1.72;
+  letter-spacing: 0.01em;
+  color: color-mix(in oklab, var(--foreground) 82%, transparent);
+  max-width: 44ch;
 }
 
 .aboutFull {
-  margin-top: 1rem;
-  font-size: 0.95rem;
-  font-weight: 500;
-  line-height: 1.75;
-  letter-spacing: 0.01em;
-  color: color-mix(in oklab, var(--foreground) 62%, transparent);
-  max-width: 68ch;
+  margin-top: 1.1rem;
+  font-size: clamp(1rem, 0.96rem + 0.24vw, 1.12rem);
+  font-weight: 450;
+  line-height: 1.72;
+  letter-spacing: 0;
+  color: color-mix(in oklab, var(--foreground) 70%, transparent);
+  text-wrap: pretty;
+}
+
+.aboutFullZh {
+  max-width: 40em;
+}
+
+.aboutFullEn {
+  max-width: 70ch;
+}
+
+.aboutFull .textParagraphTight + .textParagraphTight {
+  margin-top: 0.95em;
 }
 
 .dropCap {
@@ -506,6 +518,20 @@
   .gridSplit {
     gap: 2.75rem;
     margin-top: 2.5rem;
+  }
+
+  .aboutBrief {
+    max-width: 100%;
+  }
+
+  .aboutFull {
+    font-size: 1rem;
+    line-height: 1.68;
+    max-width: 100%;
+  }
+
+  .aboutFull .textParagraphTight + .textParagraphTight {
+    margin-top: 0.9em;
   }
 
   .horizontalTimeline {
