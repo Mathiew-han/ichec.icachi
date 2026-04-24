@@ -81,7 +81,7 @@ export function RegistrationClient({ content }: { content: string }) {
 
   return (
     <div className={styles.page}>
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.heroSection}`}>
         <div className={styles.markdownWrap}>
           <Markdown content={feesMarkdown.before} />
         </div>
@@ -113,7 +113,7 @@ export function RegistrationClient({ content }: { content: string }) {
         </div>
       </section>
 
-      <section className={`${styles.section} ${styles.sectionNoBorder}`}>
+      <section className={`${styles.section} ${styles.sectionNoBorder} ${styles.infoSection}`}>
         <motion.div
           className={styles.sectionHeader}
           initial="hidden"
@@ -164,7 +164,7 @@ export function RegistrationClient({ content }: { content: string }) {
         </div>
       </section>
 
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.policySection}`}>
         <motion.div
           className={styles.sectionHeader}
           initial="hidden"
@@ -193,48 +193,6 @@ export function RegistrationClient({ content }: { content: string }) {
         </div>
       </section>
 
-      <section className={styles.section}>
-        <motion.div
-          className={styles.sectionHeader}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
-          variants={fadeUp}
-        >
-          <div className={styles.kicker}>{t("stay.kicker")}</div>
-          <h3 className={styles.h2}>{t("stay.title")}</h3>
-          <p className={styles.sublead}>{t("stay.desc")}</p>
-        </motion.div>
-
-        <div className={styles.twoCol}>
-          <div>
-            <div className={styles.inlineGroup}>
-              <a className={styles.textLink} href="#" aria-disabled="true">
-                {t("stay.links.baidu")}
-              </a>
-              <a className={styles.textLink} href="#" aria-disabled="true">
-                {t("stay.links.google")}
-              </a>
-            </div>
-            <div className={styles.muted}>{t("stay.links.hint")}</div>
-          </div>
-
-          <div>
-            <div className={styles.hotelHead}>
-              <span>{t("stay.hotelHead.name")}</span>
-              <span>{t("stay.hotelHead.walk")}</span>
-              <span>{t("stay.hotelHead.link")}</span>
-            </div>
-            <div className={styles.hotelRow}>
-              <span>{t("stay.hotels.h1.name")}</span>
-              <span>{t("stay.hotels.h1.walk")}</span>
-              <a className={styles.textLink} href="#" aria-disabled="true">
-                {t("stay.hotels.h1.site")}
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

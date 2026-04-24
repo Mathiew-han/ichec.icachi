@@ -26,10 +26,18 @@ We invite contributions to ICHEC 2026 across a variety of research domains, incl
 ## Submission Guidelines
 
 ### 1. Important Dates (All in AoE Time)
-Submissions of Full Papers are now open. The deadlines for full paper submission are as follows:
-- **Abstract Submission**: September 14, 2026, 23:59 (AoE time)
-- **Full Paper Submission**: September 18, 2026, 23:59 (AoE time)
-- **Decision Notification**: October 18, 2026, 23:59 (AoE time)
+ICHEC 2026 provides two submission tracks: Full Paper and LBW (Late Breaking Work). The key dates are:
+
+Full Paper:
+- **Abstract Submission**: September 12, 2026, 23:59 (AoE time)
+- **Full Paper Submission**: September 17, 2026, 23:59 (AoE time)
+- **Review Completion**: October 20, 2026, 23:59 (AoE time)
+- **Final Decision**: October 25, 2026, 23:59 (AoE time)
+
+LBW (Late Breaking Work):
+- **LBW Submission**: September 24, 2026, 23:59 (AoE time)
+- **Review Completion**: October 25, 2026, 23:59 (AoE time)
+- **Final Decision**: October 28, 2026, 23:59 (AoE time)
 
 ### 2. Submission Requirements
 - **Language**: The conference accepts English submissions only.
@@ -58,7 +66,7 @@ For more detailed formatting and submission guidelines, please visit the confere
 - [http://chchi.icachi.org/26/](http://chchi.icachi.org/26/)
 
 ### 4. Paper Acceptance and Registration
-All submissions undergo a blinded peer review process, conducted by experienced HCI scholars. Accepted papers will be presented by the authors as oral presentations during the conference. Attendees will have the opportunity to exchange ideas with HCI researchers from around the world. Upon acceptance, at least one author of each accepted paper must register for the conference. Detailed registration information will be available on the conference website.
+All submissions undergo a blinded peer review process, conducted by experienced HCI scholars. Accepted papers will be presented by the authors as oral presentations during the conference. Attendees will have the opportunity to exchange ideas with HCI researchers from around the world. Upon acceptance, at least one author of each accepted paper must register for the conference. To support travel preparation timelines, final notification dates are scheduled as October 25 for Full Paper and October 28 for LBW. Detailed registration information will be available on the conference website.
 
 ### 5. ACM Open Access
 Starting in 2024, ACM introduced a new open access policy. Depending on whether the corresponding author’s institution is a member of the ACM Open program, the paper may be subject to an article processing charge (APC) after publication. Authors are encouraged to review the following official ACM links for details and FAQs:

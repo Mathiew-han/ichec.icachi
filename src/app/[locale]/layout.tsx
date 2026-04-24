@@ -9,11 +9,13 @@ import "../globals.css";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://chinese-chi.vercel.app";
 
 export const metadata: Metadata = {
-  title: "Chinese CHI 2026",
-  description: "Chinese CHI 2026 Conference Website",
+  title: "ICHEC 2026",
+  description: "ICHEC 2026 Conference Website",
   metadataBase: new URL(siteUrl),
   icons: {
     icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
 };
 

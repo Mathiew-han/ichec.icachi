@@ -1,7 +1,7 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2.2rem;
 }
 
 .section {
@@ -11,6 +11,10 @@
   max-width: 72rem;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.heroSection {
+  padding-top: 2rem;
 }
 
 .section + .section {
@@ -25,27 +29,31 @@
 .eyebrow {
   display: inline-flex;
   align-items: center;
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 700;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: color-mix(in oklab, var(--foreground) 60%, transparent);
+  color: #34a18f;
+  font-family: Manrope, system-ui, sans-serif;
 }
 
 .h1 {
   margin: 5rem 0 0;
-  font-size: clamp(1.65rem, 2.9vw, 2.1rem);
-  line-height: 1.3;
-  font-weight: 700;
+  font-size: clamp(2.15rem, 4.6vw, 3.95rem);
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-family: Newsreader, Georgia, serif;
   color: color-mix(in oklab, var(--foreground) 92%, transparent);
 }
 
 .lead {
   margin-top: 0.9rem;
   max-width: 62rem;
-  font-size: 1.05rem;
-  line-height: 1.9;
-  color: color-mix(in oklab, var(--foreground) 74%, transparent);
+  font-size: 1.08rem;
+  line-height: 1.72;
+  color: #3d4946;
+  font-family: Manrope, system-ui, sans-serif;
 }
 
 .quickLinks {
@@ -90,17 +98,19 @@
 
 .h2 {
   margin: 0.9rem 0 0;
-  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
-  line-height: 1.35;
-  font-weight: 800;
+  font-size: clamp(1.75rem, 3.3vw, 2.5rem);
+  line-height: 1.22;
+  font-weight: 500;
+  font-family: Newsreader, Georgia, serif;
   color: color-mix(in oklab, var(--foreground) 90%, transparent);
 }
 
 .sublead {
   margin-top: 0.85rem;
-  font-size: 1rem;
-  line-height: 1.9;
-  color: color-mix(in oklab, var(--foreground) 72%, transparent);
+  font-size: 1.02rem;
+  line-height: 1.72;
+  color: #3d4946;
+  font-family: Manrope, system-ui, sans-serif;
 }
 
 .pricingShell {
@@ -108,7 +118,7 @@
   background: transparent;
   border-radius: 0;
   padding: 0;
-  margin-top: 0.9rem;
+  margin-top: 1.1rem;
 }
 
 .pricingTop {
@@ -119,18 +129,20 @@
 }
 
 .pricingTitle {
-  font-size: 1.55rem;
-  line-height: 1.2;
-  font-weight: 900;
+  font-size: clamp(1.9rem, 3.1vw, 2.5rem);
+  line-height: 1.15;
+  font-weight: 600;
   letter-spacing: -0.02em;
+  font-family: Newsreader, Georgia, serif;
   color: color-mix(in oklab, var(--foreground) 92%, transparent);
 }
 
 .pricingDesc {
   max-width: 46rem;
-  font-size: 0.98rem;
-  line-height: 1.85;
-  color: color-mix(in oklab, var(--foreground) 70%, transparent);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #3d4946;
+  font-family: Manrope, system-ui, sans-serif;
 }
 
 .pricingCta {
@@ -156,32 +168,41 @@
 }
 
 .pricingCards {
-  margin-top: 1.4rem;
+  margin-top: 1.2rem;
   display: grid;
   gap: 1rem;
 }
 
 .priceCard {
-  background: transparent;
-  border: 1px solid color-mix(in oklab, var(--foreground) 15%, transparent);
+  background: #fff;
+  border: 1px solid #d6e2de;
   border-radius: 0;
-  padding: 1.15rem 1.1rem;
-  min-height: 8.8rem;
+  padding: 1.35rem 1.15rem;
+  min-height: 12rem;
   transition: all 200ms ease;
 }
 
+.priceCard:nth-child(2) {
+  border-color: #34a18f;
+  box-shadow: 0 8px 20px rgba(52, 161, 143, 0.16);
+  transform: translateY(-4px);
+}
+
 .cardTitle {
-  font-size: 0.95rem;
+  font-size: 1.42rem;
   font-weight: 850;
+  line-height: 1.2;
+  font-family: Newsreader, Georgia, serif;
   color: color-mix(in oklab, var(--foreground) 90%, transparent);
   transition: color 200ms ease;
 }
 
 .cardDesc {
   margin-top: 0.45rem;
-  font-size: 0.92rem;
-  line-height: 1.65;
-  color: color-mix(in oklab, var(--foreground) 65%, transparent);
+  font-size: 1rem;
+  line-height: 1.68;
+  color: #3d4946;
+  font-family: Manrope, system-ui, sans-serif;
   transition: color 200ms ease;
 }
 
@@ -193,17 +214,20 @@
 }
 
 .cardPrice {
-  font-size: 1.55rem;
-  font-weight: 900;
+  font-size: clamp(1.42rem, 2.4vw, 1.75rem);
+  font-weight: 850;
   letter-spacing: -0.02em;
+  line-height: 1.2;
+  font-family: Manrope, system-ui, sans-serif;
   color: color-mix(in oklab, var(--foreground) 92%, transparent);
   transition: color 200ms ease;
 }
 
 .cardUnit {
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  color: color-mix(in oklab, var(--foreground) 60%, transparent);
+  color: #5f5e5e;
+  font-family: Manrope, system-ui, sans-serif;
   transition: color 200ms ease;
 }
 
@@ -214,29 +238,31 @@
 .markdownWrap :global(.prose h1),
 .markdownWrap :global(.prose h2),
 .markdownWrap :global(.prose h3) {
-  font-weight: 900;
+  font-weight: 600;
   letter-spacing: -0.01em;
+  font-family: Newsreader, Georgia, serif;
 }
 
 .markdownWrap :global(.prose h1) {
-  font-size: clamp(2rem, 3.2vw, 2.6rem);
-  line-height: 1.2;
+  font-size: clamp(2.3rem, 4.8vw, 4rem);
+  line-height: 1.1;
   margin-top: 2.2rem;
   margin-bottom: 1.2rem;
 }
 
 .markdownWrap :global(.prose h2) {
-  font-size: clamp(1.65rem, 2.7vw, 2.15rem);
-  line-height: 1.25;
+  font-size: clamp(1.95rem, 3.3vw, 2.6rem);
+  line-height: 1.2;
   margin-top: 2.1rem;
   margin-bottom: 1.1rem;
 }
 
 .markdownWrap :global(.prose h3) {
-  font-size: clamp(1.25rem, 2.1vw, 1.6rem);
-  line-height: 1.3;
+  font-size: clamp(1.75rem, 3.3vw, 2.5rem);
+  line-height: 1.22;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 500;
 }
 
 .markdownWrap :global(.prose h1 + p),
@@ -260,6 +286,10 @@
 .markdownWrap :global(.prose .md-table-shell) {
   margin-top: 0.8rem;
   margin-bottom: 0;
+  font-family: Manrope, system-ui, sans-serif;
+  color: #3d4946;
+  line-height: 1.72;
+  font-size: 1rem;
 }
 
 .markdownWrap :global(.prose p + p),
@@ -315,8 +345,8 @@
   position: sticky;
   top: 0;
   background: color-mix(in oklab, white 92%, transparent);
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 800;
   color: color-mix(in oklab, var(--foreground) 70%, transparent);
@@ -391,7 +421,7 @@
 
 .twoCol {
   display: grid;
-  gap: 2rem;
+  gap: 1.1rem;
 }
 
 .dl {
@@ -408,26 +438,28 @@
 }
 
 .dlRow dt {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 800;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: color-mix(in oklab, var(--foreground) 60%, transparent);
+  color: #34a18f;
+  font-family: Manrope, system-ui, sans-serif;
 }
 
 .dlRow dd {
   margin: 0;
-  font-size: 1.02rem;
-  line-height: 1.85;
-  color: color-mix(in oklab, var(--foreground) 82%, transparent);
+  font-size: 1rem;
+  line-height: 1.72;
+  color: #3d4946;
+  font-family: Manrope, system-ui, sans-serif;
 }
 
 .bullets {
   margin: 1rem 0 0;
   padding: 0;
   list-style: none;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 18px;
+  border: 1px solid #d6e2de;
+  border-radius: 0;
   overflow: hidden;
   font-size: 1rem;
   line-height: 1.85;
@@ -455,25 +487,93 @@
 
 .policyGrid {
   display: grid;
-  gap: 1.25rem;
+  gap: 0;
+  border: 1px solid #d6e2de;
+  background: #fff;
 }
 
 .policyBlock {
-  padding: 1.1rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #e4ece9;
 }
 
 .policyTitle {
-  font-size: 1.05rem;
+  font-size: 1.16rem;
   font-weight: 800;
+  line-height: 1.25;
+  font-family: Newsreader, Georgia, serif;
   color: color-mix(in oklab, var(--foreground) 90%, transparent);
 }
 
 .policyText {
   margin-top: 0.55rem;
   font-size: 1rem;
-  line-height: 1.85;
-  color: color-mix(in oklab, var(--foreground) 74%, transparent);
+  line-height: 1.72;
+  color: #3d4946;
+  font-family: Manrope, system-ui, sans-serif;
+}
+
+.infoSection {
+  padding-top: 2rem;
+}
+
+.policySection {
+  background: #f4f7f6;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.ctaSection {
+  background: #1a1a1a;
+  color: #fff;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.ctaSection .kicker,
+.ctaSection .h2,
+.ctaSection .sublead,
+.ctaSection .policyTitle,
+.ctaSection .policyText,
+.ctaSection .muted,
+.ctaSection .dlRow dt,
+.ctaSection .dlRow dd {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.ctaSection .dlRow,
+.ctaSection .policyBlock,
+.ctaSection .hotelHead,
+.ctaSection .hotelRow {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.ctaActions {
+  margin-top: 0.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.15rem;
+}
+
+.ctaPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.05rem;
+  border: 1px solid #34a18f;
+  background: #34a18f;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: Manrope, system-ui, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.ctaHelp {
+  color: #6de0cd;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .inlineGroup {
@@ -521,19 +621,17 @@
 
   .policyGrid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.5rem;
+    gap: 0;
   }
 
   .policyBlock {
-    padding: 0.6rem 0 0.2rem;
+    padding: 1rem 1rem;
     border-bottom: 0;
-    border-right: 1px solid rgba(0, 0, 0, 0.08);
-    padding-right: 1.5rem;
+    border-right: 1px solid #e4ece9;
   }
 
   .policyGrid .policyBlock:last-child {
     border-right: 0;
-    padding-right: 0;
   }
 
   .pricingCards {

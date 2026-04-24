@@ -39,14 +39,14 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
         {
           name: isZh ? "付志勇" : "Zhiyong Fu",
           affiliation: isZh
-            ? zh("组委会主席 · 清华大学美术学院", "組委會主席 · 清華大學美術學院")
-            : "Conference Chair · Academy of Arts & Design, Tsinghua University",
+            ? zh("清华大学美术学院", "清華大學美術學院")
+            : "Academy of Arts & Design, Tsinghua University",
           avatarUrl: "https://ichec.icachi.org/assets/img/committee/100x100/FuZhiyong.jpg",
           profileUrl: "https://www.ad.tsinghua.edu.cn/info/1229/15141.htm",
         },
         {
           name: isZh ? zh("周万雷", "周萬雷") : "Wanlei Zhou",
-          affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
+          affiliation: isZh ? zh("澳门城市大学数据科学学院", "澳門城市大學數據科學學院") : "Faculty of Data Science · City University of Macau",
           avatarUrl: "https://fds.cityu.edu.mo/uploads/userfiles/%E5%91%A8%E8%90%AC%E9%9B%B7(1).jpg",
           profileUrl: "https://fds.cityu.edu.mo/members/177",
         },
@@ -60,7 +60,7 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
         {
           name: isZh ? "王伯勛" : "Po-Hsun Wang",
           affiliation: isZh
-            ? zh("澳门城市大学创新设计学院 · 执行副院长", "澳門城市大學創新設計學院 · 執行副院長")
+            ? zh("澳门城市大学创新设计学院", "澳門城市大學創新設計學院")
             : "Faculty of Innovation and Design · City University of Macau",
           avatarUrl:
             "https://fiad.cityu.edu.mo/uploads_thumb/list/b40a6b916753a9c9b632afb71a23e08d_1000X1000.jpg",
@@ -68,7 +68,7 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
         },
         {
           name: isZh ? "朱天清" : "Tianqing Zhu",
-          affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
+          affiliation: isZh ? zh("澳门城市大学数据科学学院", "澳門城市大學數據科學學院") : "Faculty of Data Science · City University of Macau",
           avatarUrl: "https://fds.cityu.edu.mo/uploads/userfiles/Image_20240927111003(2).jpg",
           profileUrl: "https://fds.cityu.edu.mo/members/336",
         },
@@ -82,7 +82,7 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
         {
           name: isZh ? "柳婧" : "Jing Liu",
           affiliation: isZh
-            ? zh("澳门城市大学创新设计学院 · 助理教授", "澳門城市大學創新設計學院 · 助理教授")
+            ? zh("澳门城市大学创新设计学院", "澳門城市大學創新設計學院")
             : "Faculty of Innovation and Design · City University of Macau",
           avatarUrl:
             "https://fiad.cityu.edu.mo/uploads_thumb/list/f9c5d26e7bea31a5770500fc0a625a17_500X500.jpg",
@@ -90,7 +90,7 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
         },
         {
           name: isZh ? zh("王铭浩", "王銘浩") : "Minghao Wang",
-          affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
+          affiliation: isZh ? zh("澳门城市大学数据科学学院", "澳門城市大學數據科學學院") : "Faculty of Data Science · City University of Macau",
           avatarUrl: "/avatars/wangminghao.png",
           profileUrl: "https://fds.cityu.edu.mo/members/383",
         },
@@ -104,7 +104,7 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
         {
           name: isZh ? "由振偉" : "Zhenwei You",
           affiliation: isZh
-            ? zh("澳门城市大学创新设计学院 · 教授", "澳門城市大學創新設計學院 · 教授")
+            ? zh("澳门城市大学创新设计学院", "澳門城市大學創新設計學院")
             : "Faculty of Innovation and Design · City University of Macau",
           avatarUrl: "/avatars/youzhenwei.png",
           profileUrl: "https://fiad.cityu.edu.mo/acad_ft/854",
@@ -112,7 +112,7 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
         {
           name: isZh ? "左旭含" : "Xuhan Zuo",
           affiliation: isZh
-            ? zh("澳门城市大学数据科学学院 · 助理教授", "澳門城市大學數據科學學院 · 助理教授")
+            ? zh("澳门城市大学数据科学学院", "澳門城市大學數據科學學院")
             : "Faculty of Data Science · City University of Macau",
           avatarUrl: "https://fds.cityu.edu.mo/uploads/userfiles/%E5%B7%A6%E6%97%AD%E5%90%AB.jpg",
           profileUrl: "https://fds.cityu.edu.mo/members/496",
@@ -181,7 +181,7 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
       members: [
         {
           name: isZh ? "陈昕" : "Xin Chen",
-          affiliation: isZh ? zh("深圳大学 · 副教授", "深圳大學 · 副教授") : "Shenzhen University · Associate Professor",
+          affiliation: isZh ? zh("深圳大学", "深圳大學") : "Shenzhen University",
           avatarUrl: "/avatars/chenxin.jpg",
           profileUrl: "https://art.szu.edu.cn/info/1196/4091.htm",
         },
@@ -210,20 +210,20 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
         {
           name: isZh ? "李晴川" : "Qingchuan Li",
           role: isZh ? zh("艺术与展演主席", "藝術與展演主席") : "Art Gallery Chair",
-          affiliation: isZh ? zh("哈尔滨工业大学（深圳） · 副教授", "哈爾濱工業大學（深圳） · 副教授") : "Harbin Institute of Technology (Shenzhen) · Associate Professor",
+          affiliation: isZh ? zh("哈尔滨工业大学（深圳）", "哈爾濱工業大學（深圳）") : "Harbin Institute of Technology (Shenzhen)",
           avatarUrl: "/avatars/liqingchuan.jpg",
           profileUrl: "https://homepage.hit.edu.cn/liqingchuan?lang=zh",
         },
         {
           name: isZh ? "何思倩" : "He Siqian",
           role: isZh ? zh("艺术与展演主席", "藝術與展演主席") : "Art Gallery Chair",
-          affiliation: isZh ? zh("北京科技大学 · 副教授", "北京科技大學 · 副教授") : "University of Science and Technology Beijing · Associate Professor",
+          affiliation: isZh ? zh("北京科技大学工业设计系", "北京科技大學工業設計系") : "Department of Industrial Design, University of Science and Technology Beijing",
           avatarUrl: "/avatars/hesiqian.jpg",
           bio: {
-            zh: `何思倩教授，北京科技大学工业设计系副教授。研究方向处于设计、人工智能和社会福祉的交汇点，重点关注人工智能时代的儿童发展。致力于探索人工智能产品如何对儿童更具同理心和责任感，开发平衡社会价值与人文关怀的人工智能产品和服务。
+            zh: `北京科技大学工业设计系。研究方向处于设计、人工智能和社会福祉的交汇点，重点关注人工智能时代的儿童发展。致力于探索人工智能产品如何对儿童更具同理心和责任感，开发平衡社会价值与人文关怀的人工智能产品和服务。
             
 代表性成果包括在 CoDesign、Futures、The Design Journal 等国际顶级期刊发表多篇论文。著有《绘北京老行当》，其研究和教学成果曾被《北京日报》、《北京青年报》及新华社报道。`,
-            en: `Prof. HE SIQIAN, Associate Professor at the Department of Industrial Design, University of Science and Technology Beijing (USTB). 
+            en: `Department of Industrial Design, University of Science and Technology Beijing (USTB). 
 
 RESEARCH INTERESTS: Her research lies at the intersection of Design, Artificial Intelligence, and Social Wellbeing, with a specific focus on Child Development in the AI Era. She is committed to exploring how AI products can be more empathetic and responsible toward children, developing AI products and services that balance social value with humanistic care.
 
@@ -242,7 +242,7 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
     {
       id: "ops_support",
       label: { zh: zh("出版 / 技术 / 志愿者", "出版 / 技術 / 志願者"), en: "Publication / Technical / Volunteer" },
-      layout: "four",
+      layout: "two",
       members: [
         {
           name: "安舜",
@@ -255,7 +255,7 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
         {
           name: isZh ? zh("郭畅", "郭暢") : "Chang Guo",
           role: isZh ? zh("技术主席", "技術主席") : "Technical Chair",
-          affiliation: isZh ? zh("博士生", "博士生") : "PhD student",
+          affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
           avatarUrl: "/avatars/guochang.png",
         },
         {
@@ -270,7 +270,10 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
         {
           name: isZh ? zh("赖雅凤", "賴雅鳳") : "Yafeng Lai",
           role: isZh ? zh("志愿者主席", "志願者主席") : "Volunteer Chair",
-          affiliation: isZh ? zh("博士后研究员", "博士後研究員") : "Postdoctoral researcher",
+          affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
+          avatarUrl: "/avatars/赖雅凤.jpg",
+          profileUrl:
+            "https://scholar.google.com/citations?hl=zh-CN&view_op=list_works&gmla=AEk_c1tui7kCvU8ECS1nlifUmcvZvxQD0EPvti-AOQv6OZQsS7tm9oMlGB6l6hcHN9WwEePfbQ1UOIOpj1EYyv0jSBSVArhfX78GiliFHrSAjY3jRmMtDI0gJ6Js3DZTUYg&user=IJOJMkAAAAAJ",
         },
       ],
     },
@@ -282,32 +285,38 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
         {
           name: "林浩屹",
           role: isZh ? zh("财务主席", "財務主席") : "Finance Chair",
-          affiliation: isZh ? zh("博士生", "博士生") : "PhD student",
+          affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
+          avatarUrl: "/avatars/林浩屹.jpg",
         },
         {
           name: isZh ? zh("路遥", "路遙") : "Yao Lu",
           role: isZh ? zh("财务主席", "財務主席") : "Finance Chair",
-          affiliation: isZh ? zh("博士生", "博士生") : "PhD student",
+          affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
+          avatarUrl: "/avatars/路遥.png",
         },
         {
           name: isZh ? zh("范馨文", "範馨文") : "Xinwen Fan",
           role: isZh ? zh("宣传主席", "宣傳主席") : "Publicity Chair",
-          affiliation: isZh ? zh("博士生", "博士生") : "PhD student",
+          affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
+          avatarUrl: "/avatars/范馨文.jpg",
         },
         {
           name: "王若梅",
           role: isZh ? zh("宣传主席", "宣傳主席") : "Publicity Chair",
-          affiliation: isZh ? zh("博士生", "博士生") : "PhD student",
+          affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
+          avatarUrl: "/avatars/王若梅.jpg",
         },
         {
           name: "李晨曦",
           role: isZh ? zh("秘书处", "秘書處") : "Secretary",
-          affiliation: isZh ? zh("博士生", "博士生") : "PhD student",
+          affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
+          avatarUrl: "/avatars/李晨曦.jpg",
         },
         {
           name: isZh ? zh("苏锴", "蘇鍇") : "Kai Su",
           role: isZh ? zh("秘书处", "秘書處") : "Secretary",
-          affiliation: isZh ? zh("博士生", "博士生") : "PhD student",
+          affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
+          avatarUrl: "/avatars/苏锴.jpg",
         },
       ],
     },

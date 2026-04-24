@@ -199,35 +199,22 @@
 
 .trackGrid {
   display: grid;
-  gap: 0;
-  border-top: 1px solid color-mix(in oklab, var(--foreground) 12%, transparent);
-  border-bottom: 1px solid color-mix(in oklab, var(--foreground) 12%, transparent);
+  gap: 1.25rem;
 }
 
 .expandCard {
   background: transparent;
-  border: 0;
-  border-bottom: 1px solid color-mix(in oklab, var(--foreground) 12%, transparent);
-  border-radius: 0;
-  padding: 2rem 2.5rem;
+  border: 1px solid color-mix(in oklab, var(--foreground) 12%, transparent);
+  border-radius: 18px;
+  padding: 0 1.1rem;
   overflow: hidden;
-  height: 100%;
-}
-
-.trackGrid > div:nth-child(odd) .expandCard {
-  border-right: 1px solid color-mix(in oklab, var(--foreground) 12%, transparent);
-}
-
-.trackGrid > div:nth-last-child(-n+2) .expandCard {
-  border-bottom: 0;
 }
 
 .expandTrigger {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  padding: 0;
-  margin-bottom: 1rem;
+  padding: 1.1rem 0;
 }
 
 .expandSummary {
@@ -235,44 +222,31 @@
 }
 
 .expandTitle {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 800;
   line-height: 1.4;
-  color: color-mix(in oklab, var(--foreground) 95%, transparent);
+  color: color-mix(in oklab, var(--foreground) 90%, transparent);
 }
 
 .expandDesc {
-  margin-top: 0.8rem;
+  margin-top: 0.6rem;
   font-size: 0.98rem;
   line-height: 1.8;
-  color: color-mix(in oklab, var(--foreground) 80%, transparent);
+  color: color-mix(in oklab, var(--foreground) 72%, transparent);
 }
 
 .expandContent {
-  padding: 0;
+  padding: 0 0 1.2rem;
 }
 
 .bullets {
   margin: 0;
-  padding-left: 0;
-  list-style: none;
+  padding-left: 1.1rem;
   display: grid;
-  gap: 0.8rem;
-  color: color-mix(in oklab, var(--foreground) 80%, transparent);
+  gap: 0.55rem;
+  color: color-mix(in oklab, var(--foreground) 74%, transparent);
   font-size: 0.95rem;
   line-height: 1.8;
-}
-
-.bullets li {
-  position: relative;
-  padding-left: 1.5rem;
-}
-
-.bullets li::before {
-  content: "—";
-  position: absolute;
-  left: 0;
-  color: color-mix(in oklab, var(--foreground) 40%, transparent);
 }
 
 .expandActions {
@@ -477,25 +451,7 @@
 
   .trackGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0;
-  }
-}
-
-@media (max-width: 1023px) {
-  .expandCard {
-    padding: 1.5rem 1rem;
-  }
-  
-  .trackGrid > div:nth-child(odd) .expandCard {
-    border-right: 0;
-  }
-  
-  .trackGrid > div:nth-last-child(-n+2) .expandCard {
-    border-bottom: 1px solid color-mix(in oklab, var(--foreground) 12%, transparent);
-  }
-  
-  .trackGrid > div:last-child .expandCard {
-    border-bottom: 0;
+    gap: 1.5rem;
   }
 }
 

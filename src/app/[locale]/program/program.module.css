@@ -1,106 +1,206 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2.25rem;
 }
 
-.section + .section {
-  padding-top: 2.5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+.hero {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 72rem;
+  padding: 4.5rem 1rem 1.4rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  text-align: center;
 }
 
-.sectionNoDivider {
-  padding-top: 0;
-  border-top: 0;
+.heroTitle {
+  margin: 0;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
-.sectionTitle {
-  font-size: 1.125rem;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  color: color-mix(in oklab, var(--foreground) 90%, transparent);
+.heroDesc {
+  margin: 0.9rem auto 0;
+  max-width: 44rem;
+  font-size: 1.03rem;
+  line-height: 1.7;
+  color: color-mix(in oklab, var(--foreground) 70%, transparent);
 }
 
-.lead {
-  margin-top: 0.85rem;
-  max-width: 56rem;
-  font-size: 1rem;
-  line-height: 1.9;
+.dayTabs {
+  margin-top: 1.45rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.dayTab {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #efeded;
   color: color-mix(in oklab, var(--foreground) 72%, transparent);
+  padding: 0.55rem 0.9rem;
+  font-size: 0.84rem;
+  font-weight: 700;
+  border-radius: 9999px;
 }
 
-.listGrid {
-  margin-top: 1.25rem;
+.dayTabActive {
+  background: #34a18f;
+  color: #fff;
+  border-color: #34a18f;
+}
+
+.scheduleSection {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 72rem;
+  padding: 0 1rem;
+}
+
+.scheduleGrid {
   display: grid;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
-.dayBlock {
-  padding: 1.1rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.dayKicker {
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: color-mix(in oklab, var(--foreground) 60%, transparent);
-}
-
-.dayTitle {
-  margin-top: 0.6rem;
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: color-mix(in oklab, var(--foreground) 90%, transparent);
-}
-
-.dayText {
-  margin-top: 0.55rem;
-  font-size: 1rem;
-  line-height: 1.85;
-  color: color-mix(in oklab, var(--foreground) 74%, transparent);
-}
-
-.venueList {
-  margin-top: 1.25rem;
+.sidebar {
   display: grid;
   gap: 0.75rem;
 }
 
-.venueItem {
-  padding: 0.85rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  display: grid;
-  gap: 0.35rem;
+.sideCard {
+  border: 1px solid #e2e7e4;
+  background: #f3f6f5;
+  padding: 0.95rem;
 }
 
-.venueName {
-  font-size: 1rem;
-  font-weight: 800;
-  color: color-mix(in oklab, var(--foreground) 90%, transparent);
+.sideIcon {
+  color: #1f8b79;
+  font-weight: 700;
+  line-height: 1;
 }
 
-.venueMeta {
-  font-size: 0.95rem;
-  line-height: 1.8;
+.sideTitle {
+  margin: 0.35rem 0 0;
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+.sideText {
+  margin: 0.4rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
   color: color-mix(in oklab, var(--foreground) 70%, transparent);
 }
 
+.timeline {
+  display: grid;
+  gap: 0.72rem;
+}
+
+.timelineCard {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  border: 1px solid #e2e7e4;
+  background: #fff;
+}
+
+.timelineTime {
+  padding: 0.85rem 0.85rem 0.85rem 0.95rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #2d8f80;
+}
+
+.timelineContent {
+  border-left: 2px solid #34a18f;
+  padding: 0.75rem 0.9rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  background: #0f766e;
+  color: #fff;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 9999px;
+}
+
+.timelineTitle {
+  margin: 0.32rem 0 0;
+  font-size: 1.5rem;
+  line-height: 1.22;
+  font-weight: 500;
+  font-family: Newsreader, Georgia, serif;
+}
+
+.timelineDesc {
+  margin: 0.3rem 0 0;
+  font-size: 0.88rem;
+  color: color-mix(in oklab, var(--foreground) 72%, transparent);
+}
+
+.downloadSection {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 72rem;
+  border-radius: 18px;
+  padding: 2.35rem 1rem;
+  background: #f4f7f6;
+  text-align: center;
+}
+
+.downloadTitle {
+  margin: 0;
+  font-size: clamp(1.7rem, 3.1vw, 2.8rem);
+  font-family: Newsreader, Georgia, serif;
+  font-weight: 600;
+}
+
+.downloadDesc {
+  margin: 0.8rem auto 0;
+  max-width: 42rem;
+  color: color-mix(in oklab, var(--foreground) 72%, transparent);
+  line-height: 1.7;
+}
+
+.downloadActions {
+  margin-top: 1.15rem;
+  display: inline-flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  border-radius: 8px;
+  padding: 0.62rem 1rem;
+  font-weight: 700;
+  font-size: 0.86rem;
+}
+
+.primaryBtn {
+  border: 1px solid #34a18f;
+  background: #34a18f;
+  color: #fff;
+}
+
+.secondaryBtn {
+  border: 1px solid #34a18f;
+  background: #fff;
+  color: #1e7f70;
+}
+
 @media (min-width: 1024px) {
-  .listGrid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.5rem;
-  }
-
-  .dayBlock {
-    border-bottom: 0;
-    border-right: 1px solid rgba(0, 0, 0, 0.08);
-    padding-right: 1.5rem;
-  }
-
-  .listGrid .dayBlock:last-child {
-    border-right: 0;
-    padding-right: 0;
+  .scheduleGrid {
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 1.1rem;
   }
 }
