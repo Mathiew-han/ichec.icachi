@@ -120,7 +120,7 @@ export default function Home() {
     const topology = worldTopology as unknown as {
       objects: { countries: unknown };
     };
-    return feature(topology as never, topology.objects.countries as never) as GeoJSON.FeatureCollection;
+    return feature(topology as never, topology.objects.countries as never) as unknown as GeoJSON.FeatureCollection;
   }, []);
   const worldProjection = useMemo(
     () => geoNaturalEarth1().rotate([-105, 0]).fitExtent([[8, 8], [992, 512]], countriesGeo),
