@@ -1123,6 +1123,50 @@
   line-height: 1.6;
 }
 
+@media (max-width: 1180px) {
+  .keynoteCard {
+    grid-template-columns: minmax(220px, 360px) minmax(0, 1fr);
+    grid-template-areas:
+      "media talk"
+      "bio bio";
+    align-items: start;
+    gap: 2rem 2.6rem;
+    min-height: 0;
+  }
+
+  .keynoteMediaWrap {
+    grid-area: media;
+  }
+
+  .keynoteTalk {
+    grid-area: talk;
+    justify-content: flex-start;
+    padding-top: 0.2rem;
+  }
+
+  .keynoteBio {
+    grid-area: bio;
+    border-left: 0;
+    border-top: 1px solid color-mix(in oklab, var(--foreground) 7%, transparent);
+    padding-left: 0;
+    padding-top: 1.35rem;
+  }
+}
+
+@media (max-width: 920px) {
+  .keynoteCard {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "media"
+      "talk"
+      "bio";
+  }
+
+  .keynoteAvatar {
+    width: min(100%, 400px);
+  }
+}
+
 @media (max-width: 768px) {
   .gridSplit {
     margin-top: 2.5rem;
