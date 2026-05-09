@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  color-scheme: light;
   --background: #f7f5f0;
   --foreground: #10120f;
   --accent-green: #006c3f;
@@ -31,6 +32,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    color-scheme: dark;
     --background: #0b0e0b;
     --foreground: #f4f2ed;
     --accent-green: #1db07c;
@@ -144,6 +146,11 @@ body.has-custom-cursor select {
 html,
 body {
   height: 100%;
+}
+
+html {
+  background: var(--background);
+  color: var(--foreground);
 }
 
 body {

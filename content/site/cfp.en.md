@@ -1,5 +1,11 @@
 # Call for Papers: ICHEC 2026
 
+## Call for Late Breaking Work
+
+We welcome submissions of Late Breaking Work from scholars, researchers, design practitioners, and industry professionals worldwide. Late Breaking Work sessions provide a platform for studies featuring innovative insights, frontier explorations, interim research outcomes, and practical case studies, facilitating interdisciplinary exchanges and collisions of novel ideas in human-computer interaction.
+
+Late Breaking Work is particularly suitable for ongoing research projects, preliminary experimental results, design prototypes, methodological investigations, case studies, and insightful perspective papers.
+
 ## Call for Topics
 
 We invite contributions to ICHEC 2026 across a variety of research domains, including but not limited to:
@@ -36,8 +42,7 @@ Full Paper:
 
 LBW (Late Breaking Work):
 - **LBW Submission**: September 24, 2026, 23:59 (AoE time)
-- **Review Completion**: October 25, 2026, 23:59 (AoE time)
-- **Final Decision**: October 28, 2026, 23:59 (AoE time)
+- **Notification of Decision**: October 23, 2026, 23:59 (AoE time)
 
 ### 2. Submission Requirements
 - **Language**: The conference accepts English submissions only.
@@ -58,6 +63,18 @@ LBW (Late Breaking Work):
     - [https://www.acm.org/publications/policies/frequently-asked-questions](https://www.acm.org/publications/policies/frequently-asked-questions)
 - **Academic Integrity**: Authors must adhere to academic ethics. The conference committee will strictly enforce quality control and investigate any academic misconduct. The authors themselves shall bear all responsibility for any related issues, and ICACHI reserves the right to pursue accountability.
 
+### Additional Requirements for Late Breaking Work
+- **Late Breaking Work length**: no more than 5,000 words in single-column format, excluding references.
+- Submissions exceeding the 5,000-word limit will be rejected directly unless the authors provide a sufficient justification for the additional length.
+
+### Eligible Submission Types
+- Interim research outcomes
+- Preliminary experiments and pilot studies
+- Innovative design prototypes
+- Methodological explorations
+- Empirical case studies
+- Perspective papers and discussion articles
+
 ### 3. Submission Portal
 All submissions must be made online via the EasyChair system:
 - [https://easychair.org/conferences/?conf=chchi2026](https://easychair.org/conferences/?conf=chchi2026)
@@ -66,7 +83,13 @@ For more detailed formatting and submission guidelines, please visit the confere
 - [http://chchi.icachi.org/26/](http://chchi.icachi.org/26/)
 
 ### 4. Paper Acceptance and Registration
-All submissions undergo a blinded peer review process, conducted by experienced HCI scholars. Accepted papers will be presented by the authors as oral presentations during the conference. Attendees will have the opportunity to exchange ideas with HCI researchers from around the world. Upon acceptance, at least one author of each accepted paper must register for the conference. To support travel preparation timelines, final notification dates are scheduled as October 25 for Full Paper and October 28 for LBW. Detailed registration information will be available on the conference website.
+All submissions undergo a blinded peer review process, conducted by experienced HCI scholars. Accepted papers will be presented by the authors as oral presentations during the conference. Attendees will have the opportunity to exchange ideas with HCI researchers from around the world. Upon acceptance, at least one author of each accepted paper must register for the conference. To support travel preparation timelines, final notification dates are scheduled as October 25 for Full Paper and October 23 for Late Breaking Work. Detailed registration information will be available on the conference website.
+
+### Late Breaking Work Presentation Arrangement
+Accepted Late Breaking Work submissions will be presented in dedicated independent poster sessions, with separate indexing and display arrangements from full papers.
+
+### Special Invitation
+Submissions focusing on Macao characteristics, local innovations, and regional cultural features in HCI are especially encouraged to support a more diverse global HCI community.
 
 ### 5. ACM Open Access
 Starting in 2024, ACM introduced a new open access policy. Depending on whether the corresponding author’s institution is a member of the ACM Open program, the paper may be subject to an article processing charge (APC) after publication. Authors are encouraged to review the following official ACM links for details and FAQs:

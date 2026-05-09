@@ -82,7 +82,7 @@ function renderInline(text: string): ReactNode[] {
 }
 
 type Block =
-  | { kind: "h"; level: 1 | 2 | 3; text: string }
+  | { kind: "h"; level: 1 | 2 | 3 | 4; text: string }
   | { kind: "p"; text: string }
   | { kind: "ul"; items: string[] }
   | { kind: "ol"; items: string[] }
@@ -133,6 +133,7 @@ function parseBlocks(markdown: string): Block[] {
     const h1 = /^# (.+)$/.exec(line);
     const h2 = /^## (.+)$/.exec(line);
     const h3 = /^### (.+)$/.exec(line);
+    const h4 = /^#### (.+)$/.exec(line);
     if (h1) {
       blocks.push({ kind: "h", level: 1, text: h1[1] });
       i += 1;
@@ -148,6 +149,11 @@ function parseBlocks(markdown: string): Block[] {
       i += 1;
       continue;
     }
+    if (h4) {
+      blocks.push({ kind: "h", level: 4, text: h4[1] });
+      i += 1;
+      continue;
+    }
 
     const next = lines[i + 1]?.trimEnd() ?? "";
     if (line.includes("|") && next.trim().length > 0 && isTableSeparator(next)) {
@@ -158,7 +164,7 @@ function parseBlocks(markdown: string): Block[] {
         const rowLine = lines[i].trimEnd();
         if (rowLine.trim().length === 0) break;
         if (!rowLine.includes("|")) break;
-        if (/^# /.test(rowLine) || /^## /.test(rowLine) || /^### /.test(rowLine)) break;
+        if (/^# /.test(rowLine) || /^## /.test(rowLine) || /^### /.test(rowLine) || /^#### /.test(rowLine)) break;
         if (/^- /.test(rowLine) || /^\d+\. /.test(rowLine)) break;
         if (rowLine.trimStart().startsWith("```")) break;
         rows.push(splitTableRow(rowLine));
@@ -196,6 +202,7 @@ function parseBlocks(markdown: string): Block[] {
       !/^# /.test(lines[i].trimEnd()) &&
       !/^## /.test(lines[i].trimEnd()) &&
       !/^### /.test(lines[i].trimEnd()) &&
+      !/^#### /.test(lines[i].trimEnd()) &&
       !/^- /.test(lines[i].trimEnd()) &&
       !/^\d+\. /.test(lines[i].trimEnd())
     ) {
@@ -265,137 +272,182 @@ export function Markdown({
 }: {
   content: string;
   tableVariant?: "fees";
-  variant?: "amalunch";
+  variant?: "amalunch" | "registration" | "cfp";
 }) {
   const blocks = parseBlocks(content);
+  const renderBlock = (b: Block, idx: number, prevBlock?: Block) => {
+    const key = `${b.kind}-${idx}`;
+    if (b.kind === "h") {
+      if (b.level === 1)
+        return (
+          <h1
+            key={key}
+            className={
+              variant === "amalunch"
+                ? "!mt-4 !text-xl sm:!text-2xl !font-semibold !tracking-tight"
+                : undefined
+            }
+          >
+            {renderInline(b.text)}
+          </h1>
+        );
+      if (b.level === 2) {
+        const isAmalunchSection =
+          variant === "amalunch" &&
+          (b.text === "活动信息" || b.text === "重要日期" || b.text === "如何报名");
+        return (
+          <h2
+            key={key}
+            className={
+              isAmalunchSection
+                ? "!mt-10 !text-xl sm:!text-2xl !font-semibold !tracking-tight"
+                : variant === "amalunch"
+                  ? "!text-lg !font-semibold"
+                  : undefined
+            }
+          >
+            {renderInline(b.text)}
+          </h2>
+        );
+      }
+      if (b.level === 3) {
+        return (
+          <h3 key={key} className={variant === "amalunch" ? "!text-base !font-semibold" : undefined}>
+            {renderInline(b.text)}
+          </h3>
+        );
+      }
+      return <h4 key={key}>{renderInline(b.text)}</h4>;
+    }
+    if (b.kind === "p") return <p key={key}>{renderInline(b.text)}</p>;
+    if (b.kind === "ul")
+      return (
+        <ul
+          key={key}
+          className={
+            variant === "amalunch"
+              ? "md-ul"
+              : variant === "cfp" &&
+                  prevBlock?.kind === "h" &&
+                  (prevBlock.text === "征稿主题" || prevBlock.text === "欢迎以下类型投稿")
+                ? "md-cfp-two-col"
+                : undefined
+          }
+        >
+          {b.items.map((it, j) => (
+            <li
+              key={`${key}-${j}`}
+              className={variant === "amalunch" && it.trimStart().startsWith("**申请表")
+                ? "md-li-form"
+                : undefined}
+            >
+              {renderInline(it)}
+            </li>
+          ))}
+        </ul>
+      );
+    if (b.kind === "ol")
+      return (
+        <ol key={key} className={variant === "amalunch" ? "md-ol" : undefined}>
+          {b.items.map((it, j) => (
+            <li key={`${key}-${j}`}>{renderInline(it)}</li>
+          ))}
+        </ol>
+      );
+    if (b.kind === "table")
+      return tableVariant === "fees" ? (
+        <div key={key} className="md-table-shell">
+          {(() => {
+            return (
+              <table className="md-table md-table-fees">
+            <thead>
+              <tr>
+                {b.head.map((h, j) => (
+                  <th key={`${key}-h-${j}`}>{renderInline(h)}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {b.rows.map((row, rIdx) => (
+                <tr key={`${key}-r-${rIdx}`}>
+                  {row.map((cell, cIdx) => (
+                    <td key={`${key}-c-${rIdx}-${cIdx}`}>
+                      {cIdx !== 0 && (isFeesTable(b.head, b.rows) || isMoneyCell(cell))
+                        ? renderFeeCell(cell)
+                        : renderInline(cell)}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+              </table>
+            );
+          })()}
+        </div>
+      ) : (
+        <table key={key}>
+          <thead>
+            <tr>
+              {b.head.map((h, j) => (
+                <th key={`${key}-h-${j}`}>{renderInline(h)}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {b.rows.map((row, rIdx) => (
+              <tr key={`${key}-r-${rIdx}`}>
+                {row.map((cell, cIdx) => (
+                  <td key={`${key}-c-${rIdx}-${cIdx}`}>{renderInline(cell)}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      );
+    const className = b.lang ? `language-${b.lang}` : undefined;
+    return (
+      <pre key={key}>
+        <code className={className}>{b.code}</code>
+      </pre>
+    );
+  };
+
+  const contentNodes =
+    variant === "registration"
+      ? (() => {
+          const nodes: ReactNode[] = [];
+          let i = 0;
+          while (i < blocks.length) {
+            const block = blocks[i];
+            if (block.kind === "h" && block.level === 3) {
+              const sectionBlocks: Block[] = [block];
+              i += 1;
+              while (i < blocks.length) {
+                const next = blocks[i];
+                if (next.kind === "h" && next.level === 3) break;
+                sectionBlocks.push(next);
+                i += 1;
+              }
+              nodes.push(
+                <section key={`registration-section-${i}`} className="md-registration-card">
+                  {sectionBlocks.map((item, idx) => renderBlock(item, i * 100 + idx))}
+                </section>,
+              );
+              continue;
+            }
+            nodes.push(renderBlock(block, i));
+            i += 1;
+          }
+          return nodes;
+        })()
+      : blocks.map((b, idx) => renderBlock(b, idx, idx > 0 ? blocks[idx - 1] : undefined));
   return (
     <div
       className={`prose prose-neutral max-w-none prose-headings:tracking-tight prose-headings:text-black/85 prose-p:text-black/75 prose-li:text-black/70 dark:prose-headings:text-white/85 dark:prose-p:text-white/75 dark:prose-li:text-white/70${
         variant === "amalunch" ? " md-variant-amalunch" : ""
       }`}
     >
-      {blocks.map((b, idx) => {
-        const key = `${b.kind}-${idx}`;
-        if (b.kind === "h") {
-          if (b.level === 1)
-            return (
-              <h1
-                key={key}
-                className={
-                  variant === "amalunch"
-                    ? "!mt-4 !text-xl sm:!text-2xl !font-semibold !tracking-tight"
-                    : undefined
-                }
-              >
-                {renderInline(b.text)}
-              </h1>
-            );
-          if (b.level === 2) {
-            const isAmalunchSection =
-              variant === "amalunch" &&
-              (b.text === "活动信息" || b.text === "重要日期" || b.text === "如何报名");
-            return (
-              <h2
-                key={key}
-                className={
-                  isAmalunchSection
-                    ? "!mt-10 !text-xl sm:!text-2xl !font-semibold !tracking-tight"
-                    : variant === "amalunch"
-                      ? "!text-lg !font-semibold"
-                      : undefined
-                }
-              >
-                {renderInline(b.text)}
-              </h2>
-            );
-          }
-          return (
-            <h3 key={key} className={variant === "amalunch" ? "!text-base !font-semibold" : undefined}>
-              {renderInline(b.text)}
-            </h3>
-          );
-        }
-        if (b.kind === "p") return <p key={key}>{renderInline(b.text)}</p>;
-        if (b.kind === "ul")
-          return (
-            <ul key={key} className={variant === "amalunch" ? "md-ul" : undefined}>
-              {b.items.map((it, j) => (
-                <li
-                  key={`${key}-${j}`}
-                  className={variant === "amalunch" && it.trimStart().startsWith("**申请表")
-                    ? "md-li-form"
-                    : undefined}
-                >
-                  {renderInline(it)}
-                </li>
-              ))}
-            </ul>
-          );
-        if (b.kind === "ol")
-          return (
-            <ol key={key} className={variant === "amalunch" ? "md-ol" : undefined}>
-              {b.items.map((it, j) => (
-                <li key={`${key}-${j}`}>{renderInline(it)}</li>
-              ))}
-            </ol>
-          );
-        if (b.kind === "table")
-          return tableVariant === "fees" ? (
-            <div key={key} className="md-table-shell">
-              {(() => {
-                return (
-                  <table className="md-table md-table-fees">
-                <thead>
-                  <tr>
-                    {b.head.map((h, j) => (
-                      <th key={`${key}-h-${j}`}>{renderInline(h)}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {b.rows.map((row, rIdx) => (
-                    <tr key={`${key}-r-${rIdx}`}>
-                      {row.map((cell, cIdx) => (
-                        <td key={`${key}-c-${rIdx}-${cIdx}`}>
-                          {cIdx !== 0 && (isFeesTable(b.head, b.rows) || isMoneyCell(cell))
-                            ? renderFeeCell(cell)
-                            : renderInline(cell)}
-                        </td>
-                      ))}
-                    </tr>
-                  ))}
-                </tbody>
-                  </table>
-                );
-              })()}
-            </div>
-          ) : (
-            <table key={key}>
-              <thead>
-                <tr>
-                  {b.head.map((h, j) => (
-                    <th key={`${key}-h-${j}`}>{renderInline(h)}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {b.rows.map((row, rIdx) => (
-                  <tr key={`${key}-r-${rIdx}`}>
-                    {row.map((cell, cIdx) => (
-                      <td key={`${key}-c-${rIdx}-${cIdx}`}>{renderInline(cell)}</td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          );
-        const className = b.lang ? `language-${b.lang}` : undefined;
-        return (
-          <pre key={key}>
-            <code className={className}>{b.code}</code>
-          </pre>
-        );
-      })}
+      {contentNodes}
     </div>
   );
 }

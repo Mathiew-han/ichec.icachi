@@ -78,12 +78,14 @@ export function CFPClient({ content }: { content: string }) {
                 {t("resources.contact")}
               </a>
             </div>
-            <div className={styles.hint}>{t("resources.hint")}</div>
           </motion.div>
         </div>
       </section>
 
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.sectionWithNote}`}>
+        <div className={styles.sectionLineNote}>
+          <span className={styles.sectionLineNoteText}>{t("resources.hint")}</span>
+        </div>
         <motion.div
           className={styles.sectionHeader}
           initial="hidden"
@@ -144,7 +146,7 @@ export function CFPClient({ content }: { content: string }) {
 
       <section className={`${styles.section} ${styles.sectionWithNote}`}>
         <div className={styles.sectionLineNote}>
-          <span className={styles.sectionLineNoteText}>{`${t("tracks.cta")}${t("tracks.note")}`}</span>
+          <span className={styles.sectionLineNoteText}>{t("timeline.desc")}</span>
         </div>
         <motion.div
           className={styles.sectionHeader}
@@ -155,7 +157,6 @@ export function CFPClient({ content }: { content: string }) {
         >
           <div className={styles.label}>{tHome("milestonesTitle")}</div>
           <h2 className={styles.h2}>{t("timeline.heading")}</h2>
-          <p className={styles.lead}>{t("timeline.desc")}</p>
         </motion.div>
 
         <div className={styles.horizontalTimeline}>
@@ -223,7 +224,7 @@ export function CFPClient({ content }: { content: string }) {
           </div>
           <div className={styles.expandContent}>
             <div className={styles.markdownWrap}>
-              <Markdown content={content} />
+              <Markdown content={content} variant="cfp" />
             </div>
           </div>
         </div>

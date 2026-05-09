@@ -64,7 +64,7 @@
   display: grid;
   gap: 1.5rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 0;
 }
 
 .card {
@@ -268,7 +268,7 @@
 
 .sectionLineNote {
   position: relative;
-  margin-top: -2.5rem;
+  margin-top: -1.5rem;
   margin-bottom: 2.5rem;
   display: flex;
   justify-content: center;
@@ -405,6 +405,10 @@
   padding-top: 1.6rem;
 }
 
+.guideCard .expandDesc {
+  margin-top: 0.15rem;
+}
+
 .markdownWrap :global(.prose) {
   max-width: none;
   font-size: 0.95rem;
@@ -426,21 +430,39 @@
 }
 
 .markdownWrap :global(.prose h2) {
-  margin-top: 2rem;
-  margin-bottom: 0.9rem;
+  margin-top: 1.9rem;
+  margin-bottom: 0;
   font-size: 1.1rem;
   font-weight: 800;
   color: color-mix(in oklab, var(--foreground) 78%, transparent);
 }
 
-.markdownWrap :global(.prose > h2:first-of-type) {
-  margin-top: 0;
-}
-
 .markdownWrap :global(.prose h3) {
+  margin-top: 1.9rem;
+  margin-bottom: 0;
   font-size: 1rem;
   font-weight: 800;
   color: color-mix(in oklab, var(--foreground) 76%, transparent);
+}
+
+.markdownWrap :global(.prose h2 + p),
+.markdownWrap :global(.prose h2 + ul),
+.markdownWrap :global(.prose h2 + ol),
+.markdownWrap :global(.prose h2 + .md-table-shell),
+.markdownWrap :global(.prose h2 + h3),
+.markdownWrap :global(.prose h3 + p),
+.markdownWrap :global(.prose h3 + ul),
+.markdownWrap :global(.prose h3 + ol),
+.markdownWrap :global(.prose h3 + .md-table-shell) {
+  margin-top: 0.15rem;
+}
+
+.markdownWrap :global(.prose .md-cfp-two-col) {
+  margin-top: 0.15rem;
+}
+
+.markdownWrap :global(.prose .md-cfp-two-col li) {
+  break-inside: avoid;
 }
 
 @media (min-width: 1024px) {
@@ -452,6 +474,11 @@
   .trackGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
+  }
+
+  .markdownWrap :global(.prose .md-cfp-two-col) {
+    columns: 2;
+    column-gap: 2.5rem;
   }
 }
 

@@ -83,7 +83,7 @@ export function RegistrationClient({ content }: { content: string }) {
     <div className={styles.page}>
       <section className={`${styles.section} ${styles.heroSection}`}>
         <div className={styles.markdownWrap}>
-          <Markdown content={feesMarkdown.before} />
+          <Markdown content={feesMarkdown.before} variant="registration" />
         </div>
 
         <div className={styles.pricingShell}>
@@ -108,8 +108,8 @@ export function RegistrationClient({ content }: { content: string }) {
           </div>
         </div>
 
-        <div className={styles.markdownWrap}>
-          <Markdown content={feesMarkdown.after} />
+        <div className={`${styles.markdownWrap} ${styles.afterMarkdownWrap}`}>
+          <Markdown content={feesMarkdown.after} variant="registration" />
         </div>
       </section>
 
@@ -121,7 +121,7 @@ export function RegistrationClient({ content }: { content: string }) {
           viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
           variants={fadeUp}
         >
-          <div className={styles.kicker}>{t("checkin.kicker")}</div>
+          {t("checkin.kicker") ? <div className={styles.kicker}>{t("checkin.kicker")}</div> : null}
           <h3 className={styles.h2}>{t("checkin.title")}</h3>
           <p className={styles.sublead}>{t("checkin.desc")}</p>
         </motion.div>
@@ -164,7 +164,7 @@ export function RegistrationClient({ content }: { content: string }) {
         </div>
       </section>
 
-      <section className={`${styles.section} ${styles.policySection}`}>
+      <section className={`${styles.section} ${styles.sectionNoBorder} ${styles.policySection}`}>
         <motion.div
           className={styles.sectionHeader}
           initial="hidden"
@@ -172,7 +172,7 @@ export function RegistrationClient({ content }: { content: string }) {
           viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
           variants={fadeUp}
         >
-          <div className={styles.kicker}>{t("policies.kicker")}</div>
+          {t("policies.kicker") ? <div className={styles.kicker}>{t("policies.kicker")}</div> : null}
           <h3 className={styles.h2}>{t("policies.title")}</h3>
           <p className={styles.sublead}>{t("policies.desc")}</p>
         </motion.div>
