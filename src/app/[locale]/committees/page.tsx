@@ -318,6 +318,15 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
           affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
           avatarUrl: "/avatars/苏锴.jpg",
         },
+        {
+          name: "Robert Xiao",
+          role: isZh ? zh("秘书处", "秘書處") : "Secretary",
+          affiliation: isZh
+            ? zh("不列颠哥伦比亚大学", "不列顛哥倫比亞大學")
+            : "University of British Columbia",
+          avatarUrl: "/avatars/robert-xiao.jpg",
+          profileUrl: "https://robertxiao.ca",
+        },
       ],
     },
   ];

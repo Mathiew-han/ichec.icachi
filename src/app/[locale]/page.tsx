@@ -317,6 +317,9 @@ export default function Home() {
                 <img src={session.avatar} alt={session.speaker} className={styles.keynoteAvatar} />
               </div>
               <div className={styles.keynoteTalk}>
+                <p className={styles.keynoteType}>{session.title}</p>
+                <h3 className={styles.keynoteSpeakerName}>{session.speaker}</h3>
+                <p className={styles.keynoteOrg}>{session.affiliation}</p>
                 <h3 className={styles.keynoteTitle}>{session.title}</h3>
                 <p className={styles.keynoteDate}>{session.date}</p>
                 <p className={styles.keynoteDesc}>{session.demo}</p>

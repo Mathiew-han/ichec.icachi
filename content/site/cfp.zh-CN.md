@@ -1,9 +1,3 @@
-# ICHEC 2026 人机交互会议短论文征稿启事
-
-世界华人华侨人机交互协会（International Chinese Association of Computer Human Interaction，简称 ICACHI）举办的 International Conference on Human-Engaged Computing（ICHEC 2026）将由澳门城市大学承办，于 2026 年 11 月 23 日至 26 日在中国澳门永利皇宫（Wynn Palace）举行。本次会议主题为：共融（Inclusivity）、体验（Experience）、创新（Innovation）。
-
-ICHEC（前身为 Chinese CHI）由 ICACHI 发起，已成为连接全球人机交互领域学者、业界人士的重要学术会议。自 2012 年起，Chinese CHI 已在巴黎、多伦多、首尔、硅谷、广州、蒙特利尔、厦门、巴厘岛、深圳及新加坡成功举办。往年历届会议发表论文均会收录于 ACM Digital Library，并提交 EI 检索。2025 年会议正式更名为 ICHEC，以体现其更广泛的包容性与国际参与度。2026 年，我们诚邀全球人机交互领域的学者、研究人员及业界领袖，分享最新研究成果与实践经验，共同探索人机交互的未来可能。
-
 ## 短论文征稿说明
 
 短论文（Late Breaking Work）现面向国内外学者、研究人员、设计实践者及产业界人士公开征稿。短论文旨在为具有创新性观点、前沿探索、阶段性成果及实践案例的研究提供交流平台，促进人机交互领域的新思想碰撞与跨学科合作。
@@ -49,6 +43,7 @@ ICHEC（前身为 Chinese CHI）由 ICACHI 发起，已成为连接全球人机�
 - Word 模版下载：[https://www.acm.org/binaries/content/assets/publications/taps/acm_submission_template.docx](https://www.acm.org/binaries/content/assets/publications/taps/acm_submission_template.docx)
 - LaTeX 模版下载：[https://portalparts.acm.org/hippo/latex_templates/acmart-primary.zip](https://portalparts.acm.org/hippo/latex_templates/acmart-primary.zip)
 - Overleaf 模版下载：[https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc](https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc)
+
 - **投稿长度**：投稿的写作应简洁明了，并保证论文长度与论文实际贡献成正比；论文的长度计算只计算正文内容，不计参考文献、附录、图表标题等内容的字数。
 - **短文长度**：短文长度应不超过 5000 字（单栏，不包括参考文献）。
 - 超出长度的短文投稿（超过 5000 字）会被直接拒稿，除非作者提供有力依据说明超出投稿字数限制是必要的。

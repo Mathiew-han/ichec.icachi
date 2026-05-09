@@ -36,8 +36,8 @@ export function SiteHeader() {
 
   const PRIMARY_LINKS = [
     { href: "/", label: t("home") },
-    // { href: "/cfp", label: t("authors") }, // Temporarily hidden
     { href: "/registration", label: t("attend") },
+    { href: "/cfp", label: t("authors") },
     { href: "/program", label: t("program") },
     { href: "/amalunch", label: t("amalunch") },
     { href: "/committees", label: t("committee") },

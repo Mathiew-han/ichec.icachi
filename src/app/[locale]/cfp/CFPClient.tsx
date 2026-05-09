@@ -119,6 +119,7 @@ export function CFPClient({ content }: { content: string }) {
           ].map((item, index) => (
             <motion.div
               key={item.key}
+              className={styles.trackItem}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
@@ -132,11 +133,11 @@ export function CFPClient({ content }: { content: string }) {
                   </div>
                 </div>
                 <div className={styles.expandContent}>
-                <ul className={styles.bullets}>
-                  {item.bullets.map((text) => (
-                    <li key={text}>{text}</li>
-                  ))}
-                </ul>
+                  <ul className={styles.bullets}>
+                    {item.bullets.map((text) => (
+                      <li key={text}>{text}</li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </motion.div>
@@ -202,29 +203,25 @@ export function CFPClient({ content }: { content: string }) {
         </div>
       </section>
 
-      <section className={styles.section}>
-        <motion.div
-          className={styles.sectionHeader}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
-          variants={fadeUp}
-        >
-          <div className={styles.label}>{t("guide.title")}</div>
-          <h2 className={styles.h2}>{t("guide.heading")}</h2>
-          <p className={styles.lead}>{t("guide.desc")}</p>
-        </motion.div>
+      <section className={`${styles.section} ${styles.guideSection}`}>
+        <div className={styles.guideLayout}>
+          <motion.div
+            className={`${styles.sectionHeader} ${styles.guideHeader}`}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
+            variants={fadeUp}
+          >
+            <div className={styles.label}>{t("guide.title")}</div>
+            <h2 className={styles.h2}>{t("guide.heading")}</h2>
+            <p className={styles.lead}>{t("guide.desc")}</p>
+          </motion.div>
 
-        <div className={styles.guideCard}>
-          <div className={styles.expandTrigger}>
-            <div className={styles.expandSummary}>
-              <div className={styles.expandTitle}>{t("guide.cardTitle")}</div>
-              <div className={styles.expandDesc}>{t("guide.cardDesc")}</div>
-            </div>
-          </div>
-          <div className={styles.expandContent}>
-            <div className={styles.markdownWrap}>
-              <Markdown content={content} variant="cfp" />
+          <div className={styles.guideCard}>
+            <div className={styles.expandContent}>
+              <div className={styles.markdownWrap}>
+                <Markdown content={content} variant="cfp" />
+              </div>
             </div>
           </div>
         </div>

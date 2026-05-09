@@ -286,13 +286,16 @@
 }
 
 .markdownWrap :global(.md-registration-card) {
-  margin-top: 1.25rem;
-  padding: 0;
+  margin-top: 1.6rem;
+  padding: 1.6rem 0 0;
   background: transparent;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .markdownWrap :global(.md-registration-card:first-of-type) {
   margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
 }
 
 .markdownWrap :global(.md-registration-card .md-table-shell) {
@@ -349,11 +352,31 @@
 }
 
 .afterMarkdownWrap {
-  margin-top: 1.2rem;
+  margin-top: 1.6rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .afterMarkdownWrap :global(.prose h3) {
-  margin-top: 3.6rem;
+  margin-top: 1.6rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.afterMarkdownWrap :global(.prose h3:first-child) {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.afterMarkdownWrap :global(.prose h4:first-of-type) {
+  margin-top: 1rem;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.afterMarkdownWrap :global(.md-registration-card:last-child) {
+  margin-top: 3.4rem;
 }
 
 .markdownWrap :global(.md-table-shell) {
@@ -562,8 +585,8 @@
 }
 
 .section.infoSection {
-  padding-top: 0.8rem;
-  border-top: 0;
+  padding-top: 1.6rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .section.policySection {

@@ -9,8 +9,9 @@
   --accent-gold: #c9a154;
   --accent-gold-soft: #e3c58a;
   --accent-neutral: #e7e2d8;
-  --font-geist-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
-    "Apple Color Emoji", "Segoe UI Emoji";
+  --site-text-font: Newsreader, Georgia, "Times New Roman", "Noto Serif SC",
+    "Source Han Serif SC", "Songti SC", SimSun, serif;
+  --font-geist-sans: var(--site-text-font);
   --font-geist-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
   --glass-bg: rgba(255, 255, 255, 0.92);
@@ -40,8 +41,7 @@
     --accent-gold: #caa65a;
     --accent-gold-soft: #8f6d2f;
     --accent-neutral: #23201b;
-    --font-geist-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
-      "Apple Color Emoji", "Segoe UI Emoji";
+    --font-geist-sans: var(--site-text-font);
     --font-geist-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --glass-bg: rgba(18, 20, 18, 0.88);
@@ -159,6 +159,18 @@ body {
   font-family: var(--font-geist-sans);
   position: relative;
   overflow-x: hidden;
+}
+
+body,
+body *,
+body *::before,
+body *::after {
+  font-family: var(--site-text-font) !important;
+  letter-spacing: 0;
+}
+
+body ::placeholder {
+  font-family: var(--site-text-font) !important;
 }
 
 .md-variant-amalunch li,
