@@ -125,7 +125,7 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
       layout: "two",
       members: [
         {
-          name: "王韫",
+          name: isZh ? "王韫" : "Yun Wang",
           affiliation: isZh ? zh("北京航空航天大学", "北京航空航天大學") : "Beihang University",
           avatarUrl: "https://shi.buaa.edu.cn/_resources/group1/M00/00/01/wKgAH2JDtUiAC-dzAAB31xXbtqA067.jpg",
           profileUrl: "https://shi.buaa.edu.cn/wangyun/zh_CN/index.htm",
@@ -192,7 +192,7 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
           profileUrl: "https://sdmda.bupt.edu.cn/info/1048/1533.htm",
         },
         {
-          name: "康妮",
+          name: isZh ? "康妮" : "Ni Kang",
           affiliation: isZh
             ? zh("澳门城市大学创新设计学院", "澳門城市大學創新設計學院")
             : "Faculty of Innovation and Design · City University of Macau",
@@ -231,7 +231,7 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
           }
         },
         {
-          name: "熊原",
+          name: isZh ? "熊原" : "Yuan Xiong",
           role: isZh ? zh("艺术与展演主席", "藝術與展演主席") : "Art Gallery Chair",
           affiliation: isZh ? zh("澳门城市大学创新设计学院", "澳門城市大學創新設計學院") : "Faculty of Innovation and Design · City University of Macau",
           avatarUrl: "/avatars/xiongyuan.jpg",
@@ -245,12 +245,27 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
       layout: "two",
       members: [
         {
-          name: "安舜",
+          name: isZh ? "安舜" : "Shun An",
           role: isZh ? zh("出版主席", "出版主席") : "Publication Chair",
           affiliation: isZh ? zh("澳门城市大学创新设计学院", "澳門城市大學創新設計學院") : "Faculty of Innovation and Design · City University of Macau",
           avatarUrl:
             "https://fiad.cityu.edu.mo/uploads_thumb/list/ff40f00eb3e37932b5a8adb6286da7c8_1000X1000.jpg",
           profileUrl: "https://fiad.cityu.edu.mo/acad_ft/477",
+        },
+        {
+          name: isZh ? zh("屈弘", "屈弘") : "Hong Qu",
+          role: isZh ? zh("出版主席", "出版主席") : "Publication Chair",
+          affiliation: isZh ? zh("澳门城市大学数据科学学院", "澳門城市大學數據科學學院") : "Faculty of Data Science · City University of Macau",
+          avatarUrl: "/avatars/quhong.jpg",
+        },
+        {
+          name: isZh ? zh("肖博", "肖博") : "Robert Xiao",
+          role: isZh ? zh("出版主席", "出版主席") : "Publication Chair",
+          affiliation: isZh
+            ? zh("不列颠哥伦比亚大学", "不列顛哥倫比亞大學")
+            : "University of British Columbia",
+          avatarUrl: "/avatars/robert-xiao.jpg",
+          profileUrl: "https://robertxiao.ca",
         },
         {
           name: isZh ? zh("郭畅", "郭暢") : "Chang Guo",
@@ -259,7 +274,7 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
           avatarUrl: "/avatars/guochang.png",
         },
         {
-          name: "牛朝西",
+          name: isZh ? "牛朝西" : "Chaoxi Niu",
           role: isZh ? zh("志愿者主席", "志願者主席") : "Volunteer Chair",
           affiliation: isZh
             ? zh("澳门城市大学数据科学学院", "澳門城市大學數據科學學院")
@@ -283,7 +298,7 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
       layout: "four",
       members: [
         {
-          name: "林浩屹",
+          name: isZh ? "林浩屹" : "Haoyi Lin",
           role: isZh ? zh("财务主席", "財務主席") : "Finance Chair",
           affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
           avatarUrl: "/avatars/林浩屹.jpg",
@@ -301,13 +316,13 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
           avatarUrl: "/avatars/范馨文.jpg",
         },
         {
-          name: "王若梅",
+          name: isZh ? "王若梅" : "Ruomei Wang",
           role: isZh ? zh("宣传主席", "宣傳主席") : "Publicity Chair",
           affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
           avatarUrl: "/avatars/王若梅.jpg",
         },
         {
-          name: "李晨曦",
+          name: isZh ? "李晨曦" : "Chenxi Li",
           role: isZh ? zh("秘书处", "秘書處") : "Secretary",
           affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
           avatarUrl: "/avatars/李晨曦.jpg",
@@ -317,15 +332,6 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
           role: isZh ? zh("秘书处", "秘書處") : "Secretary",
           affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
           avatarUrl: "/avatars/苏锴.jpg",
-        },
-        {
-          name: "Robert Xiao",
-          role: isZh ? zh("秘书处", "秘書處") : "Secretary",
-          affiliation: isZh
-            ? zh("不列颠哥伦比亚大学", "不列顛哥倫比亞大學")
-            : "University of British Columbia",
-          avatarUrl: "/avatars/robert-xiao.jpg",
-          profileUrl: "https://robertxiao.ca",
         },
       ],
     },
