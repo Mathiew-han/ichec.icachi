@@ -189,14 +189,34 @@
       "title": "Registration & Fees (Official announcement prevails)",
       "desc": "The following content is based on planning materials and placeholders to help align budgeting and workflow.",
       "pricing": {
-        "title": "Per-paper pricing (Preview)",
-        "desc": "Displayed as a swipeable carousel for quick review on mobile. Final prices and policies will be published in the registration system.",
+        "title": "Registration pricing",
+        "desc": "Registration fees are organized by registration period. Final payment instructions will be published in the registration system.",
         "cta": "Register",
         "prev": "Previous",
         "next": "Next",
         "dots": "Carousel dots",
         "dot": "Slide",
         "details": "View fee table (details)"
+      },
+      "table": {
+        "type": "Type",
+        "columns": {
+          "early": "Registration by Oct 23, 2026",
+          "regular": "Registration by Nov 13, 2026",
+          "late": "Registration from Nov 14, 2026"
+        },
+        "standard": "Standard (In-person)",
+        "student": "Student (In-person)",
+        "standardPrices": {
+          "early": "USD 600",
+          "regular": "USD 700",
+          "late": "USD 800"
+        },
+        "studentPrices": {
+          "early": "USD 300",
+          "regular": "USD 400",
+          "late": "USD 500"
+        }
       },
       "cards": {
         "standard": {

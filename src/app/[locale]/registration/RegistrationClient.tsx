@@ -3,7 +3,7 @@
 import { Markdown } from "@/components/Markdown";
 import { useTranslations } from "next-intl";
 import { motion, type Variants } from "framer-motion";
-import { useMemo } from "react";
+import { Fragment, useMemo } from "react";
 import styles from "./registration.module.css";
 
 const easeStandard: [number, number, number, number] = [0.2, 0.8, 0.2, 1];
@@ -23,32 +23,30 @@ const slideInRight: Variants = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.85, ease: easeStandard } },
 };
 
+const priceColumns = [
+  { key: "early", priceKey: "early", titleKey: "columns.early" },
+  { key: "regular", priceKey: "regular", titleKey: "columns.regular" },
+  { key: "late", priceKey: "late", titleKey: "columns.late" },
+] as const;
+
 export function RegistrationClient({ content }: { content: string }) {
   const t = useTranslations("Registration");
   const pricingT = useTranslations("Registration.fees.pricing");
-  const cardsT = useTranslations("Registration.fees.cards");
-  const cards = useMemo(
+  const tableT = useTranslations("Registration.fees.table");
+  const feeRows = useMemo(
     () => [
       {
-        title: cardsT("standard.title"),
-        desc: cardsT("standard.desc"),
-        price: cardsT("standard.price"),
-        unit: cardsT("standard.unit"),
+        key: "standard",
+        label: tableT("standard"),
+        prices: priceColumns.map((column) => tableT(`standardPrices.${column.priceKey}`)),
       },
       {
-        title: cardsT("student.title"),
-        desc: cardsT("student.desc"),
-        price: cardsT("student.price"),
-        unit: cardsT("student.unit"),
-      },
-      {
-        title: cardsT("contact.title"),
-        desc: cardsT("contact.desc"),
-        price: cardsT("contact.price"),
-        unit: "",
+        key: "student",
+        label: tableT("student"),
+        prices: priceColumns.map((column) => tableT(`studentPrices.${column.priceKey}`)),
       },
     ],
-    [cardsT],
+    [tableT],
   );
 
   const feesMarkdown = useMemo(() => {
@@ -87,24 +85,41 @@ export function RegistrationClient({ content }: { content: string }) {
         </div>
 
         <div className={styles.pricingShell}>
-          <div className={styles.pricingTop}>
-            <div className={styles.pricingDesc}>{pricingT("desc")}</div>
+          <div className={styles.pricingTableWrap}>
+            <div className={styles.pricingTable} aria-label={pricingT("title")}>
+              <div className={`${styles.pricingCell} ${styles.pricingHead}`}>{tableT("type")}</div>
+              {priceColumns.map((column) => (
+                <div key={column.key} className={`${styles.pricingCell} ${styles.pricingHead}`}>
+                  {tableT(column.titleKey)}
+                </div>
+              ))}
+              {feeRows.map((row, rowIndex) => (
+                <Fragment key={row.key}>
+                  <div
+                    className={`${styles.pricingCell} ${styles.pricingType} ${
+                      rowIndex > 0 ? styles.pricingRowDivider : ""
+                    }`}
+                  >
+                    {row.label}
+                  </div>
+                  {row.prices.map((price) => (
+                    <div
+                      key={price}
+                      className={`${styles.pricingCell} ${styles.pricingPrice} ${
+                        rowIndex > 0 ? styles.pricingRowDivider : ""
+                      }`}
+                    >
+                      {price}
+                    </div>
+                  ))}
+                </Fragment>
+              ))}
+            </div>
+
             <a className={styles.pricingCta} href="#" aria-label={pricingT("cta")}>
               {pricingT("cta")}
+              <span className={styles.pricingCtaArrow} aria-hidden="true">›</span>
             </a>
-          </div>
-
-          <div className={styles.pricingCards} aria-label={pricingT("title")}>
-            {cards.map((c) => (
-              <article key={c.title} className={styles.priceCard} aria-label={c.title}>
-                <div className={styles.cardTitle}>{c.title}</div>
-                <div className={styles.cardDesc}>{c.desc}</div>
-                <div className={styles.cardPriceRow}>
-                  <span className={styles.cardPrice}>{c.price}</span>
-                  {c.unit ? <span className={styles.cardUnit}>{c.unit}</span> : null}
-                </div>
-              </article>
-            ))}
           </div>
         </div>
 

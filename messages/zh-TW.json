@@ -189,14 +189,34 @@
       "title": "註冊與費用（以官方公告為準）",
       "desc": "下方內容來自籌備材料與占位資訊，用於協助快速對齊預算與流程。",
       "pricing": {
-        "title": "每篇文章定價（示意）",
-        "desc": "採用輪播式展示，便於在行動裝置快速瀏覽。最終價格與規則以會務系統為準。",
-        "cta": "登記",
+        "title": "註冊費用",
+        "desc": "註冊費用按註冊時間階段劃分，最終繳費說明以會務系統發布為準。",
+        "cta": "Register",
         "prev": "上一項",
         "next": "下一項",
         "dots": "輪播指示",
         "dot": "第",
         "details": "查看費用表（詳情）"
+      },
+      "table": {
+        "type": "類型",
+        "columns": {
+          "early": "2026 年 10 月 23 日前註冊",
+          "regular": "2026 年 11 月 13 日前註冊",
+          "late": "2026 年 11 月 14 日起註冊"
+        },
+        "standard": "Standard (In-person)",
+        "student": "Student (In-person)",
+        "standardPrices": {
+          "early": "USD 600",
+          "regular": "USD 700",
+          "late": "USD 800"
+        },
+        "studentPrices": {
+          "early": "USD 300",
+          "regular": "USD 400",
+          "late": "USD 500"
+        }
       },
       "cards": {
         "standard": {

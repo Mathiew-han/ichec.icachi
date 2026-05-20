@@ -189,14 +189,34 @@
       "title": "注册与费用（以官方公告为准）",
       "desc": "下方内容来自筹备材料与占位信息，用于帮助快速对齐预算与流程。",
       "pricing": {
-        "title": "每篇文章定价（示意）",
-        "desc": "以下内容依据 CChi2026 筹备工作推进会（终版会议纪要）整理，用于对齐筹备方向与参会预期；最终安排以 官方公告与会务系统 为准。",
-        "cta": "登记",
+        "title": "注册费用",
+        "desc": "注册费用按注册时间阶段划分，最终缴费说明以会务系统发布为准。",
+        "cta": "Register",
         "prev": "上一项",
         "next": "下一项",
         "dots": "轮播指示",
         "dot": "第",
         "details": "查看费用表（详情）"
+      },
+      "table": {
+        "type": "类型",
+        "columns": {
+          "early": "2026 年 10 月 23 日前注册",
+          "regular": "2026 年 11 月 13 日前注册",
+          "late": "2026 年 11 月 14 日起注册"
+        },
+        "standard": "Standard (In-person)",
+        "student": "Student (In-person)",
+        "standardPrices": {
+          "early": "USD 600",
+          "regular": "USD 700",
+          "late": "USD 800"
+        },
+        "studentPrices": {
+          "early": "USD 300",
+          "regular": "USD 400",
+          "late": "USD 500"
+        }
       },
       "cards": {
         "standard": {

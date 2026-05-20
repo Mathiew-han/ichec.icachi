@@ -8,18 +8,20 @@ Welcome to the **ICHEC 2026** registration page.
 
 ### Registration Notes
 
-- Registration milestones (early/regular/late) are **TBA**
+- Early-bird registration is due by **October 23, 2026 (AoE)**
+- Regular registration is due by **November 13, 2026 (AoE)**
+- Late registration starts from **November 14, 2026 (AoE)**
 - Please enable browser pop-ups and follow the registration system instructions
 - Currency, taxes, and invoicing rules will be finalized in the registration system
 
 ### Registration Fees (Initial Proposal)
 
-Fees will be recalculated based on updated costs. The amounts below are **tentative**.
+Fees are organized by registration period. Final payment instructions will be published in the registration system.
 
-| Type | Early | Regular | Late |
+| Type | Registration by Oct 23, 2026 | Registration by Nov 13, 2026 | Registration from Nov 14, 2026 |
 | --- | --- | --- | --- |
-| Standard | **USD 600 (tentative)** | TBA | TBA |
-| Student | **USD 300 (tentative)** | TBA | TBA |
+| Standard (In-person) | **USD 600** | **USD 700** | **USD 800** |
+| Student (In-person) | **USD 300** | **USD 400** | **USD 500** |
 
 ### 1. Authors of Accepted FULL Papers (Policy TBA)
 
