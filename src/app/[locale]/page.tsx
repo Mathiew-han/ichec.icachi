@@ -157,35 +157,33 @@ export default function Home() {
       id: "opening",
       title: isZh ? zh("开幕主题演讲", "開幕主題演講") : "Opening Keynote",
       date: "Nov 23, 2026",
-      speaker: isZh ? "付志勇" : "Zhiyong Fu",
+      speaker: "XXX",
       affiliation: isZh
-        ? zh("清华大学美术学院", "清華大學美術學院")
-        : "Academy of Arts and Design, Tsinghua University",
-      avatar: "/avatars/fuzhiyong.jpg",
-      profile: "https://www.ad.tsinghua.edu.cn/info/1229/15141.htm",
+        ? zh("主讲嘉宾信息待公布", "主講嘉賓資訊待公布")
+        : "Speaker information to be announced",
+      avatar: "/avatars/tbd.svg",
       demo: isZh
         ? zh("目前仅为 Demo 展示，后续将进行调整。暂以社会技术系统视角呈现人机参与计算中的设计方法、协作机制与长期影响评估路径。", "目前僅為 Demo 展示，後續將進行調整。暫以社會技術系統視角呈現人機參與計算中的設計方法、協作機制與長期影響評估路徑。")
         : "Demo display only; this section will be updated later. Current placeholder: design methods, collaboration mechanisms, and long-term impact evaluation in human-engaged computing.",
       bio: isZh
-        ? zh("付志勇，清华大学美术学院教授，长期从事社会计算与交互设计研究，聚焦技术系统中的人文价值与社会责任。", "付志勇，清華大學美術學院教授，長期從事社會計算與交互設計研究，聚焦技術系統中的人文價值與社會責任。")
-        : "Zhiyong Fu is a professor at Tsinghua University, focusing on social computing, interaction design, and human values in technology systems."
+        ? zh("主讲嘉宾与个人简介将在确认后更新。", "主講嘉賓與個人簡介將在確認後更新。")
+        : "Speaker details and biography will be updated after confirmation."
     },
     {
       id: "closing",
       title: isZh ? zh("闭幕主题演讲", "閉幕主題演講") : "Closing Keynote",
       date: "Nov 26, 2026",
-      speaker: isZh ? zh("周万雷", "周萬雷") : "Wanlei Zhou",
+      speaker: "XXX",
       affiliation: isZh
-        ? zh("澳门城市大学数据科学学院", "澳門城市大學數據科學學院")
-        : "Faculty of Data Science, City University of Macau",
-      avatar: "/avatars/zhouwanlei.jpg",
-      profile: "https://fds.cityu.edu.mo/members/177",
+        ? zh("主讲嘉宾信息待公布", "主講嘉賓資訊待公布")
+        : "Speaker information to be announced",
+      avatar: "/avatars/tbd.svg",
       demo: isZh
         ? zh("目前仅为 Demo 展示，后续将进行调整。暂以可信智能、数据驱动交互和跨学科平台建设作为闭幕主旨方向。", "目前僅為 Demo 展示，後續將進行調整。暫以可信智能、數據驅動交互和跨學科平台建設作為閉幕主旨方向。")
         : "Demo display only; this section will be updated later. Current placeholder: trustworthy intelligence, data-driven interaction, and cross-disciplinary platforms for future HCI.",
       bio: isZh
-        ? zh("周万雷，澳门城市大学数据科学学院教授，研究方向包括可信计算、人工智能与数据科学应用。", "周萬雷，澳門城市大學數據科學學院教授，研究方向包括可信計算、人工智能與數據科學應用。")
-        : "Wanlei Zhou is a professor at the Faculty of Data Science, City University of Macau, working on trustworthy computing and AI-driven data science."
+        ? zh("主讲嘉宾与个人简介将在确认后更新。", "主講嘉賓與個人簡介將在確認後更新。")
+        : "Speaker details and biography will be updated after confirmation."
     }
   ];
 
@@ -341,7 +339,7 @@ export default function Home() {
         </h2>
         <div className={styles.keynoteGrid}>
           {keynoteSessions.map((session) => (
-            <a key={session.id} className={styles.keynoteCard} href={session.profile} target="_blank" rel="noreferrer">
+            <article key={session.id} className={styles.keynoteCard}>
               <div className={styles.keynoteMediaWrap}>
                 <img src={session.avatar} alt={session.speaker} className={styles.keynoteAvatar} />
               </div>
@@ -357,9 +355,8 @@ export default function Home() {
                 <p className={styles.keynoteSpeaker}>{session.speaker}</p>
                 <p className={styles.keynoteAff}>{session.affiliation}</p>
                 <p className={styles.keynoteBioText}>{session.bio}</p>
-                <p className={styles.keynoteLink}>{isZh ? zh("查看主页", "查看主頁") : "View profile"}</p>
               </aside>
-            </a>
+            </article>
           ))}
         </div>
       </motion.section>

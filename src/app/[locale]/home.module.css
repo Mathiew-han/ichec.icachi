@@ -961,7 +961,7 @@
   font-size: clamp(2rem, 2.7vw, 3rem);
   line-height: 1.08;
   font-weight: 700;
-  color: #8b1f5d;
+  color: var(--accent-green);
 }
 
 .keynoteOrg {
@@ -994,7 +994,7 @@
   font-size: clamp(1.04rem, 1.16vw, 1.25rem);
   line-height: 1.45;
   font-weight: 500;
-  color: #8b1f5d;
+  color: var(--accent-green);
 }
 
 .keynoteAff {

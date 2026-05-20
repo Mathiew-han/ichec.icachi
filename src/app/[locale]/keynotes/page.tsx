@@ -19,8 +19,8 @@ export default async function KeynotesPage({ params }: { params: Promise<{ local
             <div className="mt-2 text-lg font-semibold text-black/85 dark:text-white/85">
               演讲主题占位
             </div>
-            <div className="mt-3 text-sm text-black/70 dark:text-white/70">
-              Speaker Name · Institution / College
+            <div className="mt-3 text-sm font-semibold text-[var(--accent-green)]">
+              XXX
             </div>
             <div className="mt-3 text-sm text-black/70 dark:text-white/70">
               目前仅为 Demo 展示，后续将进行调整。议题简介暂以大会主题与关键挑战为占位。
@@ -33,8 +33,8 @@ export default async function KeynotesPage({ params }: { params: Promise<{ local
             <div className="mt-2 text-lg font-semibold text-black/85 dark:text-white/85">
               演讲主题占位
             </div>
-            <div className="mt-3 text-sm text-black/70 dark:text-white/70">
-              Speaker Name · Institution / College
+            <div className="mt-3 text-sm font-semibold text-[var(--accent-green)]">
+              XXX
             </div>
             <div className="mt-3 text-sm text-black/70 dark:text-white/70">
               目前仅为 Demo 展示，后续将进行调整。议题简介暂以大会成果回顾与未来方向为占位。
