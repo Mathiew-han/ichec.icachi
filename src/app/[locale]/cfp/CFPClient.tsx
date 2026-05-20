@@ -44,10 +44,10 @@ export function CFPClient({ content }: { content: string }) {
             </div>
             <div className={styles.cardBody}>{t("submit.desc")}</div>
             <div className={styles.cardActions}>
-              <a href="https://easychair.org/my2/conference?conf=ichec2026" className={styles.primaryButton}>
+              <a href="https://easychair.org/my/conference?conf=ichec2026" className={styles.primaryButton}>
                 {t("submit.cta")}
               </a>
-              <a href="https://easychair.org/my2/conference?conf=ichec2026" className={styles.secondaryLink}>
+              <a href="https://easychair.org/my/conference?conf=ichec2026" className={styles.secondaryLink}>
                 {t("submit.easychair")}
               </a>
             </div>
@@ -65,12 +65,30 @@ export function CFPClient({ content }: { content: string }) {
               <div className={styles.cardTitle}>{t("resources.heading")}</div>
             </div>
             <div className={styles.resourceList}>
-              <div className={styles.resourceItem} aria-disabled="true">
+              <a
+                className={styles.resourceItem}
+                href="https://chi2026.acm.org/chi-publication-formats/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 {t("resources.template")}
-              </div>
-              <div className={styles.resourceItem} aria-disabled="true">
+              </a>
+              <a
+                className={styles.resourceItem}
+                href="https://www.acm.org/publications/icps/integrity-check-criteria"
+                target="_blank"
+                rel="noreferrer"
+              >
                 {t("resources.check")}
-              </div>
+              </a>
+              <a
+                className={styles.resourceItem}
+                href="https://www.ichec2026.com/en/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {t("resources.website")}
+              </a>
               <Link className={styles.resourceItem} href="/registration">
                 {t("resources.registration")}
               </Link>
@@ -161,37 +179,16 @@ export function CFPClient({ content }: { content: string }) {
         </motion.div>
 
         <div className={styles.horizontalTimeline}>
-          {[
-            {
-              step: "1",
-              title: t("timeline.step1.title"),
-              date: t("timeline.step1.date"),
-              status: tHome("timelineStatusCompleted"),
-              cls: styles.timelineCompleted,
-            },
-            {
-              step: "2",
-              title: t("timeline.step2.title"),
-              date: t("timeline.step2.date"),
-              status: tHome("timelineStatusInProgress"),
-              cls: styles.timelineActive,
-            },
-            {
-              step: "3",
-              title: t("timeline.step3.title"),
-              date: t("timeline.step3.date"),
+          {Array.from({ length: 8 }, (_, index) => {
+            const step = String(index + 1);
+            return {
+              step,
+              title: t(`timeline.step${step}.title`),
+              date: t(`timeline.step${step}.date`),
               status: tHome("timelineStatusPending"),
-              cls: "",
-            },
-            {
-              step: "4",
-              title: t("timeline.step4.title"),
-              date: t("timeline.step4.date"),
-              status: tHome("timelineStatusPending"),
-              cls: "",
-            },
-          ].map((item) => (
-            <div key={item.step} className={`${styles.horizontalStep} ${item.cls}`}>
+            };
+          }).map((item) => (
+            <div key={item.step} className={styles.horizontalStep}>
               <div className={styles.horizontalCircle}>{item.step}</div>
               <div className={styles.horizontalContent}>
                 <div className={styles.horizontalTitle}>{item.title}</div>

@@ -23,7 +23,7 @@ export default async function KeynotesPage({ params }: { params: Promise<{ local
               Speaker Name · Institution / College
             </div>
             <div className="mt-3 text-sm text-black/70 dark:text-white/70">
-              议题简介占位，强调大会主题与关键挑战。
+              目前仅为 Demo 展示，后续将进行调整。议题简介暂以大会主题与关键挑战为占位。
             </div>
           </div>
           <div className="glass-panel px-6 py-6">
@@ -37,7 +37,7 @@ export default async function KeynotesPage({ params }: { params: Promise<{ local
               Speaker Name · Institution / College
             </div>
             <div className="mt-3 text-sm text-black/70 dark:text-white/70">
-              议题简介占位，回顾成果并提出未来方向。
+              目前仅为 Demo 展示，后续将进行调整。议题简介暂以大会成果回顾与未来方向为占位。
             </div>
           </div>
         </div>

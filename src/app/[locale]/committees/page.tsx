@@ -17,7 +17,7 @@ type Person = {
 type CommitteeGroup = {
   id: string;
   label: { zh: string; en: string };
-  layout?: "two" | "three" | "threeMid" | "four";
+  layout?: "two" | "three" | "threeMid" | "four" | "ops";
   members: Person[];
 };
 
@@ -242,7 +242,7 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
     {
       id: "ops_support",
       label: { zh: zh("出版 / 技术 / 志愿者", "出版 / 技術 / 志願者"), en: "Publication / Technical / Volunteer" },
-      layout: "two",
+      layout: "ops",
       members: [
         {
           name: isZh ? "安舜" : "Shun An",
@@ -255,7 +255,9 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
         {
           name: isZh ? zh("屈弘", "屈弘") : "Hong Qu",
           role: isZh ? zh("出版主席", "出版主席") : "Publication Chair",
-          affiliation: isZh ? zh("澳门城市大学数据科学学院", "澳門城市大學數據科學學院") : "Faculty of Data Science · City University of Macau",
+          affiliation: isZh
+            ? zh("澳门城市大学创新设计学院 · 助理教授（8 月入职）", "澳門城市大學創新設計學院 · 助理教授（8 月入職）")
+            : "Assistant Professor, Faculty of Innovation and Design · City University of Macau (starting in August)",
           avatarUrl: "/avatars/quhong.jpg",
         },
         {
@@ -347,7 +349,11 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
                 ? styles.gridTwo
                 : group.layout === "three"
                   ? styles.gridThree
-                  : styles.gridFour
+                  : group.layout === "threeMid"
+                    ? styles.gridThreeMid
+                    : group.layout === "ops"
+                      ? styles.gridOps
+                      : styles.gridFour
             }`}
           >
             {group.members.map((m) => {

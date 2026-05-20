@@ -3,7 +3,7 @@
   margin-right: auto;
   width: 100%;
   max-width: 72rem;
-  padding: 0 1rem 4rem;
+  padding: clamp(4.25rem, 7vw, 6.5rem) 1rem 4rem;
   display: grid;
   gap: 2.6rem;
 }
@@ -69,6 +69,10 @@
 }
 
 .gridFour {
+  grid-template-columns: repeat(1, minmax(0, 18rem));
+}
+
+.gridOps {
   grid-template-columns: repeat(1, minmax(0, 18rem));
 }
 
@@ -257,6 +261,16 @@
   .gridFour {
     grid-template-columns: repeat(2, minmax(0, 18rem));
   }
+
+  .gridOps {
+    grid-template-columns: repeat(2, minmax(0, 18rem));
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding-top: clamp(3.4rem, 14vw, 4.6rem);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -270,6 +284,22 @@
 
   .gridFour {
     grid-template-columns: repeat(3, minmax(0, 18rem));
+  }
+
+  .gridOps {
+    grid-template-columns: repeat(6, minmax(0, 9rem));
+  }
+
+  .gridOps > * {
+    grid-column: span 2;
+  }
+
+  .gridOps > :nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+
+  .gridOps > :nth-child(5) {
+    grid-column: 4 / span 2;
   }
 }
 

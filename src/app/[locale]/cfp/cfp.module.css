@@ -64,7 +64,7 @@
   display: grid;
   align-items: stretch;
   gap: 1.25rem;
-  padding-top: 1rem;
+  padding-top: clamp(3.75rem, 6.8vw, 6.25rem);
   border-top: 0;
 }
 
@@ -346,8 +346,9 @@
 }
 
 .horizontalTimeline {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 0.5rem;
   position: relative;
   width: 100%;
   margin-top: 2.3rem;
@@ -372,7 +373,7 @@
   align-items: center;
   text-align: center;
   z-index: 1;
-  flex: 1;
+  min-width: 0;
 }
 
 .horizontalCircle {
@@ -592,6 +593,10 @@
     padding: 1.1rem;
   }
 
+  .gridTop {
+    padding-top: clamp(3rem, 14vw, 4.6rem);
+  }
+
   .sectionLineNote {
     justify-content: flex-start;
   }
@@ -606,6 +611,7 @@
   }
 
   .horizontalTimeline {
+    display: flex;
     flex-direction: column;
     gap: 2rem;
     align-items: flex-start;

@@ -59,7 +59,7 @@
   },
   "Home": {
     "title": "ICHEC 2026",
-    "tagline": "包容·體驗·創新",
+    "tagline": "共融·體驗·創新",
     "date": "2026年11月23–26日",
     "location": "永利皇宮",
     "importantDates": "重要日期",
@@ -68,8 +68,8 @@
     "aboutTitle": "關於 ICHEC 2026",
     "aboutSubtitle": "開放、包容、面向未來的人機交互共同體",
     "aboutBrief": "澳門相聚，連結研究設計與產業",
-    "aboutP1": "世界華人華僑人機交互協會（International Chinese Association of Computer Human Interaction，簡稱 ICACHI）舉辦的International Conference on Human-Engaged Computing (ICHEC 2026) 將由澳門城市大學承辦，於2026 年 11 月 23 日至 26 日在中國澳門，永利皇宮（Wynn Palace）舉行。本次會議主題為：共融（Inclusion）、體驗（Experience）、創新（Innovation）。",
-    "aboutP2": "ICHEC（前身為 Chinese CHI）由 ICACHI 發起，已成為連接全球人機交互領域學者、業界人士的重要學術會議。自 2012 年起，Chinese CHI 已在巴黎、多倫多、首爾、硅谷、廣州、蒙特利爾、廈門、巴厘島、深圳及新加坡成功舉辦。往年歷屆會議發表論文均會收錄於ACM Digital Library，並提交EI檢索 。",
+    "aboutP1": "世界華人華僑人機交互協會（International Chinese Association of Computer Human Interaction，簡稱 ICACHI）舉辦的 International Conference on Human-Engaged Computing (ICHEC 2026) 將由澳門城市大學承辦，於 2026 年 11 月 23 日至 26 日在中國澳門，永利皇宮（Wynn Palace）舉行。本次會議主題為：共融（Inclusivity）、體驗（Experience）、創新（Innovation）。",
+    "aboutP2": "ICHEC（前身為 Chinese CHI）由 ICACHI 發起，已成為連接全球人機交互領域學者、業界人士的重要學術會議。自 2012 年起，Chinese CHI 已在巴黎、多倫多、首爾、矽谷、廣州、蒙特利爾、廈門、巴厘島、深圳及新加坡成功舉辦。往年歷屆會議發表論文均會收錄於 ACM Digital Library，並提交 EI 檢索。",
     "aboutP3": "2025 年會議正式更名為 ICHEC，以體現其更廣泛的包容性與國際參與度。2026 年，我們誠邀全球人機交互領域的學者、研究人員及業界領袖，分享最新研究成果與實踐經驗，共同探索人機交互的未來可能。",
     "registerNow": "立即註冊",
     "themeTitle": "主題",
@@ -82,14 +82,19 @@
     "milestonesSubtitle": "重要時間節點",
     "viewSchedule": "查看完整日程",
     "timelineCfpLaunch": "徵稿啟動",
+    "timelineRound1": "第一輪投稿",
+    "timelineRound2": "第二輪投稿",
     "timelineSubmissionDeadline": "投稿截止",
     "timelineDecisions": "錄用通知",
     "timelineStatusCompleted": "已完成",
     "timelineStatusInProgress": "進行中",
     "timelineStatusPending": "待開始",
     "timelineEarlyMay": "5月初",
-    "timelineLateAugust": "8月底",
-    "timelineLateSeptember": "9月底",
+    "timelineLateAugust": "摘要 8/10 · 全文 8/14",
+    "timelineLateSeptember": "2026 年 10 月 1 日",
+    "timelineRound1Dates": "摘要 8/10 · 全文 8/14",
+    "timelineRound2Dates": "摘要 9/10 · 全文 9/13",
+    "timelineDecisionDate": "2026 年 10 月 1 日",
     "contact": "聯繫我們",
     "backToHome": "回到首頁",
     "attend": "參會"
@@ -108,11 +113,12 @@
     "resources": {
       "title": "資源",
       "heading": "模板與政策",
-      "template": "格式模板（待更新）",
-      "check": "查重入口（待更新）",
+      "template": "ACM 格式與 TAPS 流程",
+      "check": "ACM 官方完整性與 AI 檢測說明",
+      "website": "會議官網徵稿啟事",
       "registration": "註冊與費用",
       "contact": "聯繫：contact@chinese-chi.org",
-      "hint": "標註「待更新」的資源將於會務系統上線後替換為正式連結。"
+      "hint": "格式模板、完整性檢查說明與投稿入口均以官方連結為準。"
     },
     "tracks": {
       "title": "類別",
@@ -151,11 +157,15 @@
     },
     "timeline": {
       "heading": "重要時間節點（首頁同步）",
-      "desc": "以下為徵稿與會務流程的關鍵時間窗口，最終日期以官方公告為準。",
-      "step1": { "title": "徵稿啟動", "date": "5 月上旬" },
-      "step2": { "title": "第二輪徵稿", "date": "6 月下旬" },
-      "step3": { "title": "投稿截止", "date": "8 月下旬" },
-      "step4": { "title": "結果通知", "date": "9 月下旬" }
+      "desc": "以下為 ICHEC 2026 投稿與出版流程關鍵日期。",
+      "step1": { "title": "第一輪摘要", "date": "2026 年 8 月 10 日" },
+      "step2": { "title": "第一輪全文", "date": "2026 年 8 月 14 日" },
+      "step3": { "title": "第二輪摘要", "date": "2026 年 9 月 10 日" },
+      "step4": { "title": "第二輪全文", "date": "2026 年 9 月 13 日" },
+      "step5": { "title": "結果公布", "date": "2026 年 10 月 1 日" },
+      "step6": { "title": "E-rights 完成", "date": "2026 年 10 月 8 日" },
+      "step7": { "title": "TAPS 初次上傳", "date": "2026 年 10 月 15 日" },
+      "step8": { "title": "出版就緒稿", "date": "2026 年 10 月 22 日" }
     },
     "guide": {
       "title": "指南",
