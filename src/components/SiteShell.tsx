@@ -7,6 +7,7 @@ import type { ReactNode } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Footer } from "@/components/Footer";
 import { ResponsiveGlowCircle } from "@/components/ResponsiveGlowCircle";
+import { SiteParallaxBackground } from "@/components/SiteParallaxBackground";
 
 function normalizeBasePath(value: string | undefined): string {
   if (!value) return "";
@@ -64,7 +65,7 @@ export function SiteShell({
         : "";
 
   return (
-    <div className="relative min-h-dvh flex flex-col">
+    <div className="relative min-h-dvh flex flex-col" data-site-shell-root>
       <div
         className={`site-poster${isHome ? "" : " site-poster-compact"}`}
         aria-hidden="true"
@@ -72,6 +73,7 @@ export function SiteShell({
         <ResponsiveGlowCircle className="site-bg-circle site-bg-circle-right-mid" />
         <span className="ripple-overlay" />
       </div>
+      <SiteParallaxBackground />
 
       <div className="relative z-10 flex min-h-dvh flex-col">
         <SiteHeader />

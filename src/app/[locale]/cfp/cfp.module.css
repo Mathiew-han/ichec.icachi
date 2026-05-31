@@ -94,7 +94,7 @@
   width: fit-content;
   padding: 0.25rem 0;
   border-bottom: 2px solid #c9a154;
-  color: #8f6d2f;
+  color: #1f7f62;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.24em;
@@ -494,13 +494,13 @@
 }
 
 .markdownWrap :global(.prose a) {
-  color: #2563eb;
+  color: #147a5e;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
 :global(.dark) .markdownWrap :global(.prose a) {
-  color: #60a5fa;
+  color: #78cdb3;
 }
 
 .markdownWrap :global(.prose h2) {

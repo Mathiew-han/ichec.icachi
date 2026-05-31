@@ -204,7 +204,7 @@
   display: inline-block;
   padding: 0.25rem 0;
   border-bottom: 2px solid #c9a154;
-  color: #8f6d2f;
+  color: #1f7f62;
   margin-bottom: 0.5rem;
 }
 
@@ -216,11 +216,11 @@
 }
 
 .labelBoxTheme {
-  border-color: #8f6d2f;
+  border-color: #1f7f62;
 }
 
 .labelTextTheme {
-  color: #8a672b;
+  color: #1f7f62;
 }
 
 .sectionTitle {
@@ -321,7 +321,7 @@
   border-radius: 0;
   border: 0;
   background: transparent;
-  color: #2563eb;
+  color: #147a5e;
   font-size: 0.95rem;
   font-weight: 600;
   text-decoration: underline;
@@ -330,22 +330,22 @@
 }
 
 .ctaButton:focus-visible {
-  outline: 2px solid color-mix(in oklab, #2563eb 55%, transparent);
+  outline: 2px solid color-mix(in oklab, #147a5e 55%, transparent);
   outline-offset: 4px;
 }
 
 :global(.dark) .ctaButton {
-  color: #60a5fa;
+  color: #78cdb3;
 }
 
 .ctaButton:hover {
   transform: none;
   box-shadow: none;
-  color: #1d4ed8;
+  color: #0b6f55;
 }
 
 :global(.dark) .ctaButton:hover {
-  color: #93c5fd;
+  color: #a8dcc9;
 }
 .spaceY5 > * + * {
   margin-top: 1.25rem;
@@ -986,7 +986,7 @@
   margin: 1.1rem 0 0;
   font-size: 1rem;
   font-weight: 600;
-  color: #8b1f5d;
+  color: #147a5e;
 }
 
 .keynoteSpeaker {
@@ -1024,7 +1024,7 @@
   font-size: clamp(1rem, 1.06vw, 1.16rem);
   line-height: 1.35;
   font-weight: 600;
-  color: #9b1855;
+  color: #147a5e;
 }
 
 .venueSection {
@@ -1035,7 +1035,8 @@
 .venueGrid {
   display: grid;
   grid-template-columns: 0.95fr 1.45fr;
-  gap: 1rem;
+  gap: clamp(1rem, 2.4vw, 2rem);
+  align-items: stretch;
 }
 
 .venueInfo {
@@ -1098,44 +1099,6 @@
   font-size: 0.9rem;
   line-height: 1.62;
   color: color-mix(in oklab, var(--foreground) 66%, transparent);
-}
-
-.venueVisuals {
-  display: grid;
-  grid-template-columns: 1fr 0.8fr;
-  gap: 0.75rem;
-}
-
-.venueHeroImg,
-.venueSideImg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.venueSideCol {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  gap: 0.75rem;
-}
-
-.venueTipBox {
-  background: #1f9b87;
-  color: #f2fffb;
-  padding: 0.85rem;
-}
-
-.venueTipBox h4 {
-  margin: 0;
-  font-size: 0.92rem;
-  font-weight: 700;
-}
-
-.venueTipBox p {
-  margin: 0.45rem 0 0;
-  font-size: 0.82rem;
-  line-height: 1.6;
 }
 
 @media (max-width: 1180px) {
@@ -1239,8 +1202,7 @@
 
   .themeGrid,
   .keynoteGrid,
-  .venueGrid,
-  .venueVisuals {
+  .venueGrid {
     grid-template-columns: 1fr;
   }
 
@@ -1305,9 +1267,6 @@
     padding-top: 1.15rem;
   }
 
-  .venueSideCol {
-    grid-template-rows: auto auto;
-  }
 }
 
 

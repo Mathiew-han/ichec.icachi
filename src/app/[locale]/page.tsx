@@ -2,6 +2,7 @@
 
 import { useLocale, useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { VenueParallaxCarousel } from "@/components/VenueParallaxCarousel";
 import { motion, type Variants } from "framer-motion";
 import { useMemo } from "react";
 import { geoNaturalEarth1, geoPath } from "d3-geo";
@@ -379,16 +380,7 @@ export default function Home() {
               <p>{isZh ? zh("会议主办与学术组织支持", "會議主辦與學術組織支持") : "Host institution and academic support"}</p>
             </div>
           </div>
-          <div className={styles.venueVisuals}>
-            <img src="/venue/wynn-palace.png" alt="Wynn Palace" className={styles.venueHeroImg} />
-            <div className={styles.venueSideCol}>
-              <img src="/venue/cityu-macau.jpg" alt="City University of Macau" className={styles.venueSideImg} />
-              <div className={styles.venueTipBox}>
-                <h4>{isZh ? zh("探索澳门", "探索澳門") : "Explore Macau"}</h4>
-                <p>{isZh ? zh("在会期内体验多元文化与城市夜景。", "在會期內體驗多元文化與城市夜景。") : "Experience the city culture and skyline during the conference."}</p>
-              </div>
-            </div>
-          </div>
+          <VenueParallaxCarousel isZh={isZh} isZhTW={isZhTW} />
         </div>
       </motion.section>
 

@@ -89,7 +89,7 @@
   display: inline-block;
   padding: 0.25rem 0;
   border-bottom: 2px solid #c9a154;
-  color: #8f6d2f;
+  color: #1f7f62;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.24em;
@@ -210,10 +210,10 @@
   gap: 0.35rem;
   padding: 1rem 1.45rem;
   border-radius: 9999px;
-  border: 1px solid #8a1431;
+  border: 1px solid #147a5e;
   background: #fff;
-  color: #8a1431;
-  box-shadow: 0 12px 26px rgba(71, 24, 33, 0.12);
+  color: #147a5e;
+  box-shadow: 0 12px 26px rgba(20, 122, 94, 0.12);
   font-size: clamp(1.05rem, 1.5vw, 1.35rem);
   font-weight: 800;
   letter-spacing: 0.02em;
@@ -223,8 +223,8 @@
 }
 
 .pricingCta:hover {
-  background: #fff8fa;
-  box-shadow: 0 16px 32px rgba(71, 24, 33, 0.16);
+  background: #f2fbf7;
+  box-shadow: 0 16px 32px rgba(20, 122, 94, 0.16);
   transform: translateY(-1px);
 }
 

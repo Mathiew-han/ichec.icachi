@@ -32,6 +32,40 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
 
   const groups: CommitteeGroup[] = [
     {
+      id: "full",
+      label: { zh: zh("长文主席", "長文主席"), en: "Full Paper Chairs" },
+      layout: "two",
+      members: [
+        {
+          name: isZh ? "李萌" : "Meng Li",
+          affiliation: isZh ? zh("北京邮电大学", "北京郵電大學") : "Beijing University of Posts and Telecommunications",
+          avatarUrl: "/avatars/limeng.jpg",
+          profileUrl: "https://sdmda.bupt.edu.cn/info/1047/1209.htm",
+        },
+        {
+          name: isZh ? "王勇" : "Yong Wang",
+          affiliation: isZh ? zh("南洋理工大学", "南洋理工大學") : "Nanyang Technological University (NTU)",
+          avatarUrl: "https://yong-wang.org/images/wangyong-2020.jpg",
+          profileUrl: "https://yong-wang.org/",
+        },
+        {
+          name: isZh ? "蔡杰" : "Jie Cai",
+          affiliation: isZh ? zh("清华大学", "清華大學") : "Tsinghua University",
+          avatarUrl: "https://jc926.github.io/Jie_Cai/image/Jie%20Cai.png",
+          profileUrl: "https://jc926.github.io/Jie_Cai/",
+        },
+        {
+          name: isZh ? zh("贺红红", "賀紅紅") : "Honghong He",
+          affiliation: isZh
+            ? zh("澳门城市大学创新设计学院", "澳門城市大學創新設計學院")
+            : "Faculty of Innovation and Design · City University of Macau",
+          avatarUrl:
+            "https://fiad.cityu.edu.mo/uploads_thumb/list/5a05a167595bae231c7959e7933b775d_1000X1000.jpg",
+          profileUrl: "https://fiad.cityu.edu.mo/acad_ft/752",
+        },
+      ],
+    },
+    {
       id: "general",
       label: { zh: zh("大会主席", "大會主席"), en: "General Chairs" },
       layout: "two",
@@ -120,61 +154,6 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
       ],
     },
     {
-      id: "workshop",
-      label: { zh: zh("工作坊主席", "工作坊主席"), en: "Workshop Chairs" },
-      layout: "two",
-      members: [
-        {
-          name: isZh ? "王韫" : "Yun Wang",
-          affiliation: isZh ? zh("北京航空航天大学", "北京航空航天大學") : "Beihang University",
-          avatarUrl: "https://shi.buaa.edu.cn/_resources/group1/M00/00/01/wKgAH2JDtUiAC-dzAAB31xXbtqA067.jpg",
-          profileUrl: "https://shi.buaa.edu.cn/wangyun/zh_CN/index.htm",
-        },
-        {
-          name: isZh ? zh("高永杰", "高永傑") : "Yongjie Gao",
-          affiliation: isZh
-            ? zh("澳门城市大学创新设计学院", "澳門城市大學創新設計學院")
-            : "Faculty of Innovation and Design · City University of Macau",
-          avatarUrl: "https://fiad.cityu.edu.mo/uploads_thumb/list/af47ff443a5528223e70d0a61b154600_1000X1000.jpg",
-          profileUrl: "https://fiad.cityu.edu.mo/acad_ft/633",
-        },
-      ],
-    },
-    {
-      id: "full",
-      label: { zh: zh("长文主席", "長文主席"), en: "Full Paper Chairs" },
-      layout: "four",
-      members: [
-        {
-          name: isZh ? "李萌" : "Meng Li",
-          affiliation: isZh ? zh("北京邮电大学", "北京郵電大學") : "Beijing University of Posts and Telecommunications",
-          avatarUrl: "/avatars/limeng.jpg",
-          profileUrl: "https://sdmda.bupt.edu.cn/info/1047/1209.htm",
-        },
-        {
-          name: isZh ? "王勇" : "Yong Wang",
-          affiliation: isZh ? zh("南洋理工大学", "南洋理工大學") : "Nanyang Technological University (NTU)",
-          avatarUrl: "https://yong-wang.org/images/wangyong-2020.jpg",
-          profileUrl: "https://yong-wang.org/",
-        },
-        {
-          name: isZh ? "蔡杰" : "Jie Cai",
-          affiliation: isZh ? zh("清华大学", "清華大學") : "Tsinghua University",
-          avatarUrl: "https://jc926.github.io/Jie_Cai/image/Jie%20Cai.png",
-          profileUrl: "https://jc926.github.io/Jie_Cai/",
-        },
-        {
-          name: isZh ? zh("贺红红", "賀紅紅") : "Honghong He",
-          affiliation: isZh
-            ? zh("澳门城市大学创新设计学院", "澳門城市大學創新設計學院")
-            : "Faculty of Innovation and Design · City University of Macau",
-          avatarUrl:
-            "https://fiad.cityu.edu.mo/uploads_thumb/list/5a05a167595bae231c7959e7933b775d_1000X1000.jpg",
-          profileUrl: "https://fiad.cityu.edu.mo/acad_ft/752",
-        },
-      ],
-    },
-    {
       id: "short",
       label: { zh: zh("短文主席", "短文主席"), en: "Short Paper Chairs" },
       layout: "three",
@@ -236,6 +215,27 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
           affiliation: isZh ? zh("澳门城市大学创新设计学院", "澳門城市大學創新設計學院") : "Faculty of Innovation and Design · City University of Macau",
           avatarUrl: "/avatars/xiongyuan.jpg",
           profileUrl: "https://fiad.cityu.edu.mo/acad_ft/855",
+        },
+      ],
+    },
+    {
+      id: "workshop",
+      label: { zh: zh("工作坊主席", "工作坊主席"), en: "Workshop Chairs" },
+      layout: "two",
+      members: [
+        {
+          name: isZh ? "王韫" : "Yun Wang",
+          affiliation: isZh ? zh("北京航空航天大学", "北京航空航天大學") : "Beihang University",
+          avatarUrl: "https://shi.buaa.edu.cn/_resources/group1/M00/00/01/wKgAH2JDtUiAC-dzAAB31xXbtqA067.jpg",
+          profileUrl: "https://shi.buaa.edu.cn/wangyun/zh_CN/index.htm",
+        },
+        {
+          name: isZh ? zh("高永杰", "高永傑") : "Yongjie Gao",
+          affiliation: isZh
+            ? zh("澳门城市大学创新设计学院", "澳門城市大學創新設計學院")
+            : "Faculty of Innovation and Design · City University of Macau",
+          avatarUrl: "https://fiad.cityu.edu.mo/uploads_thumb/list/af47ff443a5528223e70d0a61b154600_1000X1000.jpg",
+          profileUrl: "https://fiad.cityu.edu.mo/acad_ft/633",
         },
       ],
     },
