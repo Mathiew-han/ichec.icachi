@@ -3,10 +3,11 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
-import logo from "../../images/icachi-logo-dark.svg";
+import logoDark from "../../images/icachi-logo-dark.svg";
+import logoColor from "../../images/icachi-logo-dark.svg";
 
 function normalizeBasePath(value: string | undefined): string {
   if (!value) return "";
@@ -29,169 +30,92 @@ export function SiteHeader() {
       : pathname === basePath
         ? "/"
         : pathname;
-  const [hidden, setHidden] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const lastScrollY = useRef(0);
-  const idleTimer = useRef<number | null>(null);
+  const [scrolled, setScrolled] = useState(false);
 
-  const PRIMARY_LINKS = [
+  const primaryLinks = [
     { href: "/", label: t("home") },
-    { href: "/registration", label: t("attend") },
     { href: "/cfp", label: t("authors") },
+    { href: "/registration", label: t("attend") },
     { href: "/program", label: t("program") },
-    { href: "/amalunch", label: t("amalunch") },
     { href: "/committees", label: t("committee") },
     { href: "/sponsors", label: t("sponsorship") },
   ];
 
   useEffect(() => {
-    const onScroll = () => {
-      const current = window.scrollY;
-      const goingDown = current > lastScrollY.current;
-      const nearTop = current <= 12;
-
-      if (nearTop) {
-        setHidden(false);
-      } else if (goingDown) {
-        setHidden(true);
-        setMobileMenuOpen(false);
-      } else {
-        setHidden(false);
-      }
-
-      lastScrollY.current = current;
-
-      if (idleTimer.current) {
-        window.clearTimeout(idleTimer.current);
-      }
-
-      idleTimer.current = window.setTimeout(() => {
-        if (window.scrollY > 12) {
-          setHidden(true);
-        }
-      }, 3000);
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      if (idleTimer.current) {
-        window.clearTimeout(idleTimer.current);
-      }
-    };
+    const updateScrolled = () => setScrolled(window.scrollY > 18);
+    updateScrolled();
+    window.addEventListener("scroll", updateScrolled, { passive: true });
+    return () => window.removeEventListener("scroll", updateScrolled);
   }, []);
 
   return (
-    <header
-      className={`sticky top-0 z-20 transition-all duration-300 ease-out ${
-        hidden ? "-translate-y-8 opacity-0 pointer-events-none" : "translate-y-0 opacity-100"
-      }`}
-    >
-      <div className="mx-auto max-w-6xl px-4 pt-3">
-        <div className="flex items-center justify-between gap-4 px-2 py-2">
-          <Link
-            href="/"
-            className="flex items-center gap-3 text-black/85 drop-shadow-sm dark:text-white/85"
-          >
-            <Image
-              src={logo}
-              alt="ICACHI"
-              width={184}
-              height={48}
-              priority
-              className="h-8 w-auto dark:invert"
-            />
-          </Link>
+    <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
+      <div className="site-header-section">
+        <div className="site-topbar" aria-hidden="true" />
 
-          {/* Desktop Navigation */}
-          <nav className="hidden items-center gap-x-1 lg:flex">
-            {PRIMARY_LINKS.map((it) => {
-              const active = isActivePath(pathnameNoBase, it.href);
+        <div className="site-header-container">
+          <nav className="site-navbar" aria-label="Primary navigation">
+            <Link href="/" className="site-brand" aria-label="ICACHI home">
+              <Image
+                src={scrolled ? logoColor : logoDark}
+                alt="ICACHI"
+                width={184}
+                height={48}
+                priority
+              />
+            </Link>
+
+            <div className="site-nav-desktop">
+              {primaryLinks.map((item) => {
+                const active = isActivePath(pathnameNoBase, item.href);
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`site-nav-item ${active ? "is-active" : ""}`}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+              <LanguageSwitcher />
+            </div>
+
+            <button
+              type="button"
+              className="site-menu-toggle"
+              aria-label="Toggle navigation"
+              aria-expanded={mobileMenuOpen}
+              aria-controls="site-mobile-nav"
+              onClick={() => setMobileMenuOpen((open) => !open)}
+            >
+              <span className="site-menu-lines" aria-hidden="true" />
+            </button>
+          </nav>
+
+          <div
+            id="site-mobile-nav"
+            className={`site-mobile-nav ${mobileMenuOpen ? "is-open" : ""}`}
+          >
+            {primaryLinks.map((item) => {
+              const active = isActivePath(pathnameNoBase, item.href);
               return (
                 <Link
-                  key={it.href}
-                  href={it.href}
-                  className={
-                    active
-                      ? "px-2 py-1 text-sm font-semibold text-black/90 dark:text-white/90"
-                      : "px-2 py-1 text-sm text-black/65 hover:text-black/90 dark:text-white/65 dark:hover:text-white/90"
-                  }
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`site-mobile-nav-item ${active ? "is-active" : ""}`}
                 >
-                  {it.label}
+                  {item.label}
                 </Link>
               );
             })}
-
-            <div className="mx-2 h-4 w-px bg-black/10 dark:bg-white/15" />
-            <LanguageSwitcher />
-          </nav>
-
-          {/* Mobile Menu Toggle */}
-          <div className="flex items-center gap-3 lg:hidden">
-            <LanguageSwitcher />
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="rounded-md p-1 text-black/70 hover:bg-black/5 dark:text-white/70 dark:hover:bg-white/5"
-              aria-label="Toggle menu"
-            >
-              {mobileMenuOpen ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <line x1="18" y1="6" x2="6" y2="18" />
-                  <line x1="6" y1="6" x2="18" y2="18" />
-                </svg>
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <line x1="4" y1="12" x2="20" y2="12" />
-                  <line x1="4" y1="6" x2="20" y2="6" />
-                  <line x1="4" y1="18" x2="20" y2="18" />
-                </svg>
-              )}
-            </button>
+            <div className="site-mobile-lang">
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
-
-        {/* Mobile Navigation Menu */}
-        {mobileMenuOpen && (
-          <div className="mt-2 border-t border-black/10 bg-transparent dark:border-white/10 lg:hidden">
-            <nav className="flex flex-col px-2 py-3">
-              {PRIMARY_LINKS.map((it) => (
-                <Link
-                  key={it.href}
-                  href={it.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`px-2 py-2 text-base font-medium transition-colors hover:bg-black/5 dark:hover:bg-white/5 ${
-                    isActivePath(pathnameNoBase, it.href)
-                      ? "font-bold text-black dark:text-white"
-                      : "text-black/70 dark:text-white/70"
-                  }`}
-                >
-                  {it.label}
-                </Link>
-              ))}
-              <div className="my-2 h-px bg-black/10 dark:bg-white/10" />
-            </nav>
-          </div>
-        )}
       </div>
     </header>
   );

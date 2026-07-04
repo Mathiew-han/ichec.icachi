@@ -4,22 +4,29 @@ import { useTranslations } from "next-intl";
 
 export function Footer({ hideAboutFull }: { hideAboutFull?: boolean }) {
   const t = useTranslations("Shell");
+  const contactEmail = "ichec2026@icachi.org";
 
   return (
-    <footer className="w-full py-12 mt-12">
-      <div className="mx-auto max-w-6xl px-4 flex flex-col items-center gap-8">
-        
+    <footer className="site-footer">
+      <div className="site-footer-container">
         {hideAboutFull ? null : (
-          <p className="text-center text-xs text-black/40 dark:text-white/40 max-w-4xl leading-relaxed">
-            {t("footer.aboutFull")}
-          </p>
+          <p className="site-footer-about">{t("footer.aboutFull")}</p>
         )}
 
-        {/* Copyright */}
-        <div className="text-xs text-black/40 dark:text-white/40">
-           {t("footer.rights")}
-        </div>
+        <div className="site-footer-row">
+          <p className="site-footer-copy">
+            <a href="https://icachi.org" target="_blank" rel="noreferrer">
+              {t("footer.rights")}
+            </a>
+          </p>
 
+          <div className="site-footer-contact">
+            <a className="site-footer-icon" href={`mailto:${contactEmail}`} aria-label={contactEmail}>
+              @
+            </a>
+            <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
+          </div>
+        </div>
       </div>
     </footer>
   );

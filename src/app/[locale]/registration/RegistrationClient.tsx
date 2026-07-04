@@ -1,5 +1,6 @@
 "use client";
 
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { Markdown } from "@/components/Markdown";
 import { useTranslations } from "next-intl";
 import { motion, type Variants } from "framer-motion";
@@ -70,21 +71,31 @@ export function RegistrationClient({ content }: { content: string }) {
       return { before: beforeTable.trim(), after: afterTable };
     }
 
-    const feesBlock = beforeTable.slice(headingIdx);
-    const headingLine = feesBlock.split(/\r?\n/)[0] ?? "";
     const prefix = beforeTable.slice(0, headingIdx).trimEnd();
-    const before = `${prefix}\n\n${headingLine}\n`.trimStart();
-    return { before, after: afterTable };
+    return { before: prefix.trim(), after: afterTable };
   }, [content]);
 
   return (
     <div className={styles.page}>
       <section className={`${styles.section} ${styles.heroSection}`}>
-        <div className={styles.markdownWrap}>
-          <Markdown content={feesMarkdown.before} variant="registration" />
-        </div>
+        {feesMarkdown.before ? (
+          <div className={styles.markdownWrap}>
+            <Markdown content={feesMarkdown.before} variant="registration" />
+          </div>
+        ) : null}
 
         <div className={styles.pricingShell}>
+          <div className={styles.pricingTop}>
+            <div className={styles.pricingCopy}>
+              <div className={styles.kicker}>{t("fees.kicker")}</div>
+              <h2 className={styles.pricingTitle}>{pricingT("title")}</h2>
+              <p className={styles.pricingDesc}>{pricingT("desc")}</p>
+            </div>
+            <div className={styles.pricingLanguage}>
+              <LanguageSwitcher />
+            </div>
+          </div>
+
           <div className={styles.pricingTableWrap}>
             <div className={styles.pricingTable} aria-label={pricingT("title")}>
               <div className={`${styles.pricingCell} ${styles.pricingHead}`}>{tableT("type")}</div>

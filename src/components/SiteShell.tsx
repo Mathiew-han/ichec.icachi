@@ -4,10 +4,8 @@ import { usePathname } from "@/navigation";
 import { useTranslations } from "next-intl";
 import type { ReactNode } from "react";
 
-import { SiteHeader } from "@/components/SiteHeader";
 import { Footer } from "@/components/Footer";
-import { ResponsiveGlowCircle } from "@/components/ResponsiveGlowCircle";
-import { SiteParallaxBackground } from "@/components/SiteParallaxBackground";
+import { SiteHeader } from "@/components/SiteHeader";
 
 function normalizeBasePath(value: string | undefined): string {
   if (!value) return "";
@@ -15,11 +13,7 @@ function normalizeBasePath(value: string | undefined): string {
   return `/${value}`.replace(/\/+/g, "/").replace(/\/+$/, "");
 }
 
-export function SiteShell({
-  children,
-}: {
-  children: ReactNode;
-}) {
+export function SiteShell({ children }: { children: ReactNode }) {
   const t = useTranslations("Shell");
   const tHome = useTranslations("Home");
   const tCfp = useTranslations("CFP");
@@ -34,8 +28,6 @@ export function SiteShell({
         : pathname;
   const isHome = pathnameNoBase === "/";
   const topSegment = pathnameNoBase.split("/")[1] || "";
-  const hideInnerHero = false;
-  const hideInnerHeroDivider = topSegment === "venue";
 
   const titleKeyBySegment = {
     about: "titles.about",
@@ -62,65 +54,41 @@ export function SiteShell({
         ? t("notes.committees")
         : topSegment === "registration"
           ? tRegistration("lead")
-        : "";
+          : "";
 
   return (
-    <div className="relative min-h-dvh flex flex-col" data-site-shell-root>
-      <div
-        className={`site-poster${isHome ? "" : " site-poster-compact"}`}
-        aria-hidden="true"
-      >
-        <ResponsiveGlowCircle className="site-bg-circle site-bg-circle-right-mid" />
-        <span className="ripple-overlay" />
-      </div>
-      <SiteParallaxBackground />
+    <div className="site-shell min-h-dvh" data-site-shell-root>
+      <SiteHeader />
 
-      <div className="relative z-10 flex min-h-dvh flex-col">
-        <SiteHeader />
+      <main id="content" className="site-main">
+        {isHome ? (
+          children
+        ) : (
+          <>
+            <section className="inner-hero">
+              <div className="inner-hero-bg" aria-hidden="true" />
+              <div className="inner-hero-content">
+                <p className="inner-hero-kicker">ICHEC 2026</p>
+                <h1>{heroTitle}</h1>
+                <div className="inner-hero-rule" />
+                <p className="inner-hero-meta">
+                  {tHome("date")} · {tHome("location")}
+                </p>
+                {heroNote ? <p className="inner-hero-note">{heroNote}</p> : null}
+              </div>
+              <div className="hero-wave" aria-hidden="true">
+                <svg preserveAspectRatio="none" viewBox="0 0 1920 100.1">
+                  <path d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z" />
+                </svg>
+              </div>
+            </section>
 
-        <main className="flex-1 pt-6 sm:pt-10">
-          {isHome ? (
-            children
-          ) : (
-          <div className="mx-auto w-full max-w-6xl px-4 pb-10 pt-4">
-              {hideInnerHero ? null : (
-                <section className="flex min-h-[calc(36vh-96px)] min-h-[calc(36dvh-96px)] -mt-6 flex-col items-center justify-center text-center sm:-mt-8">
-                  <div className="text-2xl font-semibold tracking-wide text-black/75 dark:text-white/75 sm:text-3xl">
-                    ICHEC 2026
-                  </div>
-                  <h1 className="mt-1 text-xl font-semibold tracking-tight text-black/85 dark:text-white/85 sm:text-2xl">
-                    {heroTitle}
-                  </h1>
-                  {hideInnerHeroDivider ? null : (
-                    <div className="mt-3 h-px w-[min(420px,82vw)] bg-black/20 dark:bg-white/20" />
-                  )}
-                  <div className="mt-3 text-sm font-medium text-black/70 dark:text-white/70">
-                    {tHome("date")} · {tHome("location")}
-                  </div>
-                  {heroNote ? (
-                    <p className="mt-4 max-w-3xl text-pretty text-base leading-relaxed text-black/70 dark:text-white/70">
-                      {heroNote}
-                    </p>
-                  ) : null}
-                </section>
-              )}
-            <div
-              className={`w-full ${
-                hideInnerHero
-                  ? "mt-[180px] sm:mt-[196px]"
-                  : topSegment === "committees"
-                    ? "mt-[180px] sm:mt-[196px]"
-                    : "mt-[164px] sm:mt-[180px]"
-              }`}
-            >
-              {children}
-            </div>
-            </div>
-          )}
-        </main>
+            <div className="site-page-container">{children}</div>
+          </>
+        )}
+      </main>
 
-        <Footer hideAboutFull={isHome} />
-      </div>
+      <Footer hideAboutFull={isHome} />
     </div>
   );
 }

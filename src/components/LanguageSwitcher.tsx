@@ -34,7 +34,7 @@ export function LanguageSwitcher() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         aria-label={t("switch")}
-        className="flex items-center gap-1 px-2 py-1 text-sm font-medium text-black/70 transition-all hover:text-black/90 dark:text-white/70 dark:hover:text-white/90"
+        className="site-language-button"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -69,14 +69,12 @@ export function LanguageSwitcher() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-32 origin-top-right rounded-md bg-white/80 p-1 shadow-lg ring-1 ring-black/5 backdrop-blur-md dark:bg-black/80 dark:ring-white/10">
+        <div className="site-language-menu">
           {locales.map((loc) => (
             <button
               key={loc}
               onClick={() => handleLocaleChange(loc)}
-              className={`block w-full px-4 py-2 text-left text-sm transition-colors hover:bg-black/5 dark:hover:bg-white/5 ${
-                locale === loc ? "font-bold text-black dark:text-white" : "text-black/70 dark:text-white/70"
-              }`}
+              className={`site-language-option ${locale === loc ? "is-active" : ""}`}
             >
               {t(loc)}
             </button>

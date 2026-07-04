@@ -1,10 +1,10 @@
-import { Markdown } from "@/components/Markdown";
-import { readSiteMarkdown } from "@/lib/site-content";
-import { getTranslations, setRequestLocale } from "next-intl/server";
-import { normalizeLocale } from "@/i18n/request";
 import { notFound } from "next/navigation";
 
 export default async function AmalunchPage({ params }: { params: Promise<{ locale: string }> }) {
+  await params;
+  notFound();
+
+  /*
   const { locale } = await params;
   const normalizedLocale = normalizeLocale(locale);
   if (!normalizedLocale) notFound();
@@ -20,4 +20,5 @@ export default async function AmalunchPage({ params }: { params: Promise<{ local
       <Markdown content={content} variant="amalunch" />
     </div>
   );
+  */
 }
