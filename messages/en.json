@@ -122,37 +122,171 @@
     },
     "tracks": {
       "title": "Tracks",
-      "heading": "Submission Tracks at a Glance",
-      "desc": "Choose the track that best fits your work. Expand each card for key points and the submission entry.",
+      "heading": "Choose Your Submission Track First",
+      "desc": "Deadlines, materials, and review expectations differ by track. Start with the submission type below, then read the matching timeline and requirements.",
       "cta": "Go to submission",
-      "note": "Final page limits, templates, and review policies will be announced officially.",
+      "view": "View track details",
+      "submit": "Submit via EasyChair",
+      "note": "Each track has its own dates and required materials. General ACM policies are collected at the bottom of the page.",
+      "detailsTitle": "Track Details",
+      "detailsHeading": "Topics, Timeline, Requirements",
+      "detailsDesc": "The same structure repeats for every track so authors can compare what is in scope, what is due, and what must be submitted.",
+      "overviewLabels": {
+        "bestFor": "Best for",
+        "deadline": "Key deadline",
+        "materials": "Core materials"
+      },
       "paper": {
-        "title": "Papers",
-        "desc": "Original research and substantial contributions across methods, systems, theory, and critical inquiry.",
-        "b1": "Clear contribution statement and reproducible methodology",
-        "b2": "Supplementary materials encouraged when applicable",
-        "b3": "Follow the formatting and (if applicable) anonymity policy"
+        "title": "Full Papers",
+        "kicker": "Research track",
+        "desc": "Complete original research with substantial contributions across HCI methods, systems, theory, design, and critical inquiry.",
+        "bestFor": "Mature research with clear evidence, analysis, and contribution.",
+        "deadline": "Round 1: Aug 10 / Aug 14; Round 2: Sep 10 / Sep 13, 2026.",
+        "materials": "Anonymous full paper PDF, ACM template, optional supplementary materials.",
+        "topics": {
+          "title": "Topics",
+          "b1": "Human-AI collaboration, generative AI and HCI, intelligent interaction, and responsible technology.",
+          "b2": "Interaction techniques, tools, systems, visualization, UX, accessibility, health, education, games, and social computing.",
+          "b3": "Design, digital heritage, cross-cultural interaction, theory, methods, ethics, and critical computing."
+        },
+        "timeline": {
+          "title": "Timeline",
+          "d1Label": "Round 1 abstract",
+          "d1Date": "August 10, 2026, 23:59 AoE",
+          "d2Label": "Round 1 full paper",
+          "d2Date": "August 14, 2026, 23:59 AoE",
+          "d3Label": "Round 2 abstract / full paper",
+          "d3Date": "September 10 / September 13, 2026, 23:59 AoE",
+          "d4Label": "Production workflow",
+          "d4Date": "E-rights Oct 8; TAPS Oct 15; publication-ready Oct 22, 2026"
+        },
+        "requirements": {
+          "title": "Requirements",
+          "b1": "English submissions only.",
+          "b2": "Double-blind review: remove author-identifying information from the paper and supplements.",
+          "b3": "Use the ACM Conference Proceedings Primary Article Template in single-column review format.",
+          "b4": "Main text should be 5,000-12,000 words; references, appendices, and figure/table captions are excluded."
+        },
+        "outcome": {
+          "title": "Review & Publication",
+          "b1": "Submissions undergo blinded peer review by experienced HCI scholars.",
+          "b2": "Accepted full papers are expected to be presented on site during the conference.",
+          "b3": "At least one author of each accepted paper must register; ACM publication workflow applies."
+        }
       },
       "poster": {
-        "title": "Posters",
-        "desc": "Works-in-progress and early results, emphasizing discussion and feedback.",
-        "b1": "Highlight the core idea and initial evidence",
-        "b2": "Optional demo/prototype links when applicable",
-        "b3": "Flexible presentation for in-person interaction"
+        "title": "Posters / Late Breaking Work",
+        "kicker": "Discussion track",
+        "desc": "Work-in-progress, early results, design prototypes, pilot studies, and perspective pieces that benefit from focused feedback.",
+        "bestFor": "Developing work, early evidence, prototypes, methods, cases, and discussion papers.",
+        "deadline": "Submission date to be confirmed; notification: October 23, 2026.",
+        "materials": "Short paper or extended abstract PDF, poster-ready summary, optional demo/prototype links.",
+        "topics": {
+          "title": "Topics",
+          "b1": "Preliminary findings, pilots, exploratory studies, and emerging research directions.",
+          "b2": "Design prototypes, case studies, methods, datasets, tools, or applied HCI practice.",
+          "b3": "Thought pieces and discussion-oriented work aligned with inclusivity, experience, and innovation."
+        },
+        "timeline": {
+          "title": "Timeline",
+          "d1Label": "Submission",
+          "d1Date": "To be confirmed in the final notice",
+          "d2Label": "Notification",
+          "d2Date": "October 23, 2026, 23:59 AoE",
+          "d3Label": "Camera-ready / poster prep",
+          "d3Date": "To be confirmed in the final notice",
+          "d4Label": "Presentation",
+          "d4Date": "Dedicated poster session during ICHEC 2026"
+        },
+        "requirements": {
+          "title": "Requirements",
+          "b1": "English submissions only.",
+          "b2": "Use the ACM template in single-column review format.",
+          "b3": "Late Breaking Work should not exceed 5,000 words, excluding references.",
+          "b4": "Remove author-identifying information when the track is reviewed anonymously."
+        },
+        "outcome": {
+          "title": "Presentation",
+          "b1": "Accepted submissions will be shown in a dedicated poster / Late Breaking Work session.",
+          "b2": "The session is organized separately from full-paper oral presentations.",
+          "b3": "At least one author should register and attend to present the work."
+        }
       },
       "workshop": {
         "title": "Workshops",
-        "desc": "Focused discussions and co-creation around emerging topics and communities.",
-        "b1": "Define goals, agenda, and expected outcomes",
-        "b2": "Provide participation format and guiding questions",
-        "b3": "Encourage diverse participation and open materials"
+        "kicker": "Organizer track",
+        "desc": "Focused sessions that convene communities around emerging HCI topics, shared methods, and collaborative discussion.",
+        "bestFor": "Organizers proposing a theme, format, audience, and planned workshop outcomes.",
+        "deadline": "Workshop proposal dates will be announced separately.",
+        "materials": "Workshop proposal, organizer bios, target audience, agenda, and participation plan.",
+        "topics": {
+          "title": "Topics",
+          "b1": "Emerging research communities, cross-disciplinary HCI themes, and regional or cultural perspectives.",
+          "b2": "Methods, design practice, responsible AI, accessibility, health, education, creative tools, and social impact.",
+          "b3": "Formats that support structured discussion, making, critique, or community building."
+        },
+        "timeline": {
+          "title": "Timeline",
+          "d1Label": "Proposal deadline",
+          "d1Date": "To be announced",
+          "d2Label": "Notification",
+          "d2Date": "To be announced",
+          "d3Label": "Workshop CFP / website",
+          "d3Date": "To be coordinated after acceptance",
+          "d4Label": "Workshop date",
+          "d4Date": "During ICHEC 2026"
+        },
+        "requirements": {
+          "title": "Requirements",
+          "b1": "Describe the workshop theme, motivation, intended audience, and expected outcomes.",
+          "b2": "Include organizer names, affiliations, roles, and relevant experience.",
+          "b3": "Provide a proposed agenda, participation format, and plan for recruiting participants.",
+          "b4": "State space, equipment, accessibility, hybrid, or facilitation needs if applicable."
+        },
+        "outcome": {
+          "title": "Organizer Responsibilities",
+          "b1": "Accepted organizers are expected to publicize the workshop and manage participant selection.",
+          "b2": "Organizers should coordinate final schedule, room needs, and materials with the conference team.",
+          "b3": "Post-workshop outcomes may include summaries, community plans, or follow-up publication proposals."
+        }
       },
       "artdemo": {
         "title": "Art & Demo",
-        "desc": "Interactive works and deployable systems, highlighting public engagement and on-site experience.",
-        "b1": "Describe interaction, on-site needs, and safety considerations",
-        "b2": "Include images/videos or accessible online demos when possible",
-        "b3": "Clarify thematic relevance and audience participation"
+        "kicker": "Experience track",
+        "desc": "Interactive systems, creative works, demonstrations, and installations that make the conference theme tangible on site.",
+        "bestFor": "Interactive demos, deployable systems, art pieces, installations, and public-facing experiences.",
+        "deadline": "Art & Demo dates will be announced separately.",
+        "materials": "Extended abstract, still image, short video, and technical / space requirements.",
+        "topics": {
+          "title": "Topics",
+          "b1": "Interactive systems, embodied experiences, creative AI, mixed reality, tangible interfaces, and design probes.",
+          "b2": "Artworks and demos that engage participants with inclusivity, experience, innovation, and cultural context.",
+          "b3": "Deployable prototypes that can be safely shown in a conference venue."
+        },
+        "timeline": {
+          "title": "Timeline",
+          "d1Label": "Submission deadline",
+          "d1Date": "To be announced",
+          "d2Label": "Notification",
+          "d2Date": "To be announced",
+          "d3Label": "Technical confirmation",
+          "d3Date": "To be coordinated after acceptance",
+          "d4Label": "Exhibition / demo",
+          "d4Date": "During ICHEC 2026"
+        },
+        "requirements": {
+          "title": "Requirements",
+          "b1": "Provide an extended abstract describing the work, motivation, and relationship to HCI or human-engaged computing.",
+          "b2": "Include at least one still image and a short video or accessible demo link where possible.",
+          "b3": "Submit technical requirements covering space, furniture, power, network, lighting, and equipment.",
+          "b4": "Identify safety, privacy, accessibility, or operational risks and how they will be managed."
+        },
+        "outcome": {
+          "title": "Review & Exhibition",
+          "b1": "Submissions will be assessed for quality, thematic relevance, interactivity, and feasibility.",
+          "b2": "Accepted works are expected to be demonstrated or exhibited on site.",
+          "b3": "At least one contributor should register, attend, and support the work during exhibition hours."
+        }
       }
     },
     "timeline": {

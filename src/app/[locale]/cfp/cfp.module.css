@@ -64,7 +64,7 @@
   display: grid;
   align-items: stretch;
   gap: 1.25rem;
-  padding-top: clamp(3.75rem, 6.8vw, 6.25rem);
+  padding-top: clamp(1.75rem, 3.2vw, 3rem);
   border-top: 0;
 }
 
@@ -299,6 +299,39 @@
   line-height: 1.68;
 }
 
+.trackMeta {
+  margin: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.trackMeta div {
+  display: grid;
+  gap: 0.18rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid color-mix(in oklab, var(--foreground) 6%, transparent);
+}
+
+.trackMeta div:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.trackMeta dt {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--foreground) 52%, transparent);
+}
+
+.trackMeta dd {
+  margin: 0;
+  font-size: 0.93rem;
+  line-height: 1.62;
+  color: color-mix(in oklab, var(--foreground) 74%, transparent);
+}
+
 .expandActions {
   margin-top: 1.2rem;
   display: flex;
@@ -443,6 +476,106 @@
   color: #16519d;
 }
 
+.trackDetails {
+  display: grid;
+  gap: clamp(1.35rem, 2.2vw, 1.9rem);
+}
+
+.trackDetail {
+  scroll-margin-top: 7rem;
+  border: 1px solid color-mix(in oklab, var(--foreground) 5%, transparent);
+  border-radius: 16px;
+  background: color-mix(in oklab, var(--background) 90%, white 10%);
+  box-shadow:
+    0 0 0 10px color-mix(in oklab, var(--background) 42%, transparent),
+    0 22px 76px rgba(68, 58, 42, 0.032);
+  backdrop-filter: blur(14px);
+  padding: clamp(1.15rem, 2vw, 1.75rem);
+}
+
+.trackDetailHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.trackKicker {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #1f7f62;
+}
+
+.trackDetailTitle {
+  margin: 0.35rem 0 0;
+  font-size: clamp(1.28rem, 2vw, 1.75rem);
+  line-height: 1.32;
+  font-weight: 800;
+  color: color-mix(in oklab, var(--foreground) 90%, transparent);
+}
+
+.trackDetailLead {
+  margin: 0.9rem 0 0;
+  max-width: 62rem;
+  font-size: 1rem;
+  line-height: 1.82;
+  color: color-mix(in oklab, var(--foreground) 70%, transparent);
+}
+
+.detailGrid {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.detailBlock {
+  min-width: 0;
+  border: 1px solid color-mix(in oklab, var(--foreground) 5%, transparent);
+  border-radius: 12px;
+  background: color-mix(in oklab, var(--background) 74%, white 26%);
+  padding: 1rem;
+}
+
+.detailBlock h4 {
+  margin: 0 0 0.75rem;
+  font-size: 0.96rem;
+  line-height: 1.35;
+  font-weight: 800;
+  color: color-mix(in oklab, var(--foreground) 86%, transparent);
+}
+
+.dateList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.dateItem {
+  display: grid;
+  gap: 0.18rem;
+  padding-left: 0.78rem;
+  border-left: 2px solid color-mix(in oklab, var(--accent-green) 38%, transparent);
+}
+
+.dateLabel {
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--foreground) 54%, transparent);
+}
+
+.dateValue {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  font-weight: 650;
+  color: color-mix(in oklab, var(--foreground) 78%, transparent);
+}
+
 .guideSection {
   max-width: min(92rem, 92vw);
 }
@@ -562,6 +695,10 @@
     align-items: stretch;
   }
 
+  .detailGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .guideLayout {
     grid-template-columns: minmax(14rem, 0.38fr) minmax(0, 1fr);
     gap: clamp(2rem, 4vw, 4rem);
@@ -594,7 +731,7 @@
   }
 
   .gridTop {
-    padding-top: clamp(3rem, 14vw, 4.6rem);
+    padding-top: clamp(1.35rem, 8vw, 2.6rem);
   }
 
   .sectionLineNote {
@@ -642,6 +779,14 @@
   .horizontalContent {
     align-items: flex-start;
     padding: 0;
+  }
+
+  .trackDetailHeader {
+    flex-direction: column;
+  }
+
+  .trackDetail {
+    scroll-margin-top: 5.5rem;
   }
 }
 
