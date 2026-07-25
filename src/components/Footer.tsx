@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 
 export function Footer({ hideAboutFull }: { hideAboutFull?: boolean }) {
   const t = useTranslations("Shell");
-  const contactEmail = "ichec2026@icachi.org";
+  const contactEmail = "ichec2026.info@gmail.com";
 
   return (
     <footer className="site-footer">

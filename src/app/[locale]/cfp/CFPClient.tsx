@@ -245,7 +245,7 @@ export function CFPClient({ content }: { content: string }) {
               <Link className={styles.resourceItem} href="/registration">
                 {t("resources.registration")}
               </Link>
-              <a className={styles.resourceItem} href="mailto:contact@chinese-chi.org">
+              <a className={styles.resourceItem} href="mailto:ichec2026.info@gmail.com">
                 {t("resources.contact")}
               </a>
             </div>
