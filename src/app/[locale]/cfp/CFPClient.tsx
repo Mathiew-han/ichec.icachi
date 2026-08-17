@@ -157,12 +157,16 @@ export function CFPClient({ content }: { content: string }) {
                   <div className={styles.trackKicker}>{t(`tracks.${track}.kicker`)}</div>
                   <h3 className={styles.trackDetailTitle}>{t(`tracks.${track}.title`)}</h3>
                 </div>
-                <a
-                  href="https://easychair.org/my/conference?conf=ichec2026"
-                  className={styles.secondaryLink}
-                >
-                  {t("tracks.submit")}
-                </a>
+                {track === "paper" ? (
+                  <span className={styles.submissionStatus}>{t("tracks.paper.submissionStatus")}</span>
+                ) : (
+                  <a
+                    href="https://easychair.org/my/conference?conf=ichec2026"
+                    className={styles.secondaryLink}
+                  >
+                    {t("tracks.submit")}
+                  </a>
+                )}
               </div>
               <p className={styles.trackDetailLead}>{t(`tracks.${track}.desc`)}</p>
 
