@@ -40,7 +40,7 @@ function TrackDetailList({
       <ol className={styles.dateList}>
         {Array.from({ length: 4 }, (_, index) => {
           const step = index + 1;
-          const isSupersededSubmissionDate = track === "paper" && step <= 3;
+          const isSupersededSubmissionDate = track === "paper" && step <= 2;
 
           return (
             <li
