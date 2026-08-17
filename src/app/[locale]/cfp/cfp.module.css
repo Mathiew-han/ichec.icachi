@@ -149,14 +149,6 @@
   text-underline-offset: 4px;
 }
 
-.submissionStatus {
-  max-width: 22rem;
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: color-mix(in oklab, var(--foreground) 78%, transparent);
-  text-align: right;
-}
-
 .resourceList {
   margin-top: 1rem;
   display: grid;
@@ -582,6 +574,28 @@
   line-height: 1.55;
   font-weight: 650;
   color: color-mix(in oklab, var(--foreground) 78%, transparent);
+}
+
+.supersededDateItem .dateLabel,
+.supersededDateItem .dateValue {
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+}
+
+.submissionStatusItem {
+  margin-top: 0.2rem;
+  border-left-color: color-mix(in oklab, #d33d3d 58%, transparent);
+}
+
+.submissionStatus {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  font-weight: 750;
+  color: #c73737;
+}
+
+:global(.dark) .submissionStatus {
+  color: #ff7979;
 }
 
 .guideSection {

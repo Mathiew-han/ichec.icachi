@@ -40,13 +40,23 @@ function TrackDetailList({
       <ol className={styles.dateList}>
         {Array.from({ length: 4 }, (_, index) => {
           const step = index + 1;
+          const isSupersededSubmissionDate = track === "paper" && step <= 3;
+
           return (
-            <li key={step} className={styles.dateItem}>
+            <li
+              key={step}
+              className={`${styles.dateItem}${isSupersededSubmissionDate ? ` ${styles.supersededDateItem}` : ""}`}
+            >
               <span className={styles.dateLabel}>{t(`tracks.${track}.timeline.d${step}Label`)}</span>
               <span className={styles.dateValue}>{t(`tracks.${track}.timeline.d${step}Date`)}</span>
             </li>
           );
         })}
+        {track === "paper" ? (
+          <li className={`${styles.dateItem} ${styles.submissionStatusItem}`}>
+            <span className={styles.submissionStatus}>{t("tracks.paper.submissionStatus")}</span>
+          </li>
+        ) : null}
       </ol>
     );
   }
@@ -157,16 +167,9 @@ export function CFPClient({ content }: { content: string }) {
                   <div className={styles.trackKicker}>{t(`tracks.${track}.kicker`)}</div>
                   <h3 className={styles.trackDetailTitle}>{t(`tracks.${track}.title`)}</h3>
                 </div>
-                {track === "paper" ? (
-                  <span className={styles.submissionStatus}>{t("tracks.paper.submissionStatus")}</span>
-                ) : (
-                  <a
-                    href="https://easychair.org/my/conference?conf=ichec2026"
-                    className={styles.secondaryLink}
-                  >
-                    {t("tracks.submit")}
-                  </a>
-                )}
+                <a href="https://easychair.org/my/conference?conf=ichec2026" className={styles.secondaryLink}>
+                  {t("tracks.submit")}
+                </a>
               </div>
               <p className={styles.trackDetailLead}>{t(`tracks.${track}.desc`)}</p>
 
