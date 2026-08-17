@@ -289,6 +289,11 @@
   margin-top: 0.1rem;
 }
 
+.supersededDate {
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+}
+
 .venueSection {
   display: grid;
   grid-template-columns: 1fr 1fr;

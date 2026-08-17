@@ -162,8 +162,10 @@ export default function Home() {
         <section className={styles.infoSection}>
           <h2>{t("importantDates")}</h2>
           <ul className={styles.dateList}>
-            {dates.map((item) => (
-              <li key={item}>{item}</li>
+            {dates.map((item, index) => (
+              <li key={item} className={index === 1 || index === 3 ? styles.supersededDate : undefined}>
+                {item}
+              </li>
             ))}
           </ul>
         </section>
