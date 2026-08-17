@@ -163,7 +163,7 @@ export default function Home() {
           <h2>{t("importantDates")}</h2>
           <ul className={styles.dateList}>
             {dates.map((item, index) => (
-              <li key={item} className={index === 1 ? styles.supersededDate : undefined}>
+              <li key={item} className={index <= 1 ? styles.supersededDate : undefined}>
                 {item}
               </li>
             ))}
