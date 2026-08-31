@@ -13,8 +13,6 @@ const importantDates = {
     "Round 2 Abstract Submission: September 10, 2026",
     "Round 2 Full Paper Submission: September 13, 2026",
     "Full Paper Notification: October 1, 2026",
-    "E-rights Completion: October 8, 2026",
-    "Initial TAPS Upload: October 15, 2026",
     "Publication-ready Deadline: October 22, 2026",
     "Main Conference: November 23-26, 2026",
   ],
@@ -24,8 +22,6 @@ const importantDates = {
     "第二轮摘要提交：2026 年 9 月 10 日",
     "第二轮全文提交：2026 年 9 月 13 日",
     "全文录用通知：2026 年 10 月 1 日",
-    "E-rights 完成：2026 年 10 月 8 日",
-    "TAPS 初次上传：2026 年 10 月 15 日",
     "出版就绪稿截止：2026 年 10 月 22 日",
     "大会日期：2026 年 11 月 23-26 日",
   ],
@@ -35,8 +31,6 @@ const importantDates = {
     "第二輪摘要提交：2026 年 9 月 10 日",
     "第二輪全文提交：2026 年 9 月 13 日",
     "全文錄用通知：2026 年 10 月 1 日",
-    "E-rights 完成：2026 年 10 月 8 日",
-    "TAPS 初次上傳：2026 年 10 月 15 日",
     "出版就緒稿截止：2026 年 10 月 22 日",
     "大會日期：2026 年 11 月 23-26 日",
   ],
@@ -99,7 +93,7 @@ export default function Home() {
           <div className={styles.heroRule} />
           <p className={styles.heroDate}>{t("date")}</p>
           <p className={styles.heroPlace}>
-            {isZh ? zh("中国澳门，永利皇宫", "中國澳門，永利皇宮") : "Wynn Palace, Macau, China"}
+            {isZh ? zh("中国澳门，永利澳门", "中國澳門，永利澳門") : "Macau Wynn, Macau, China"}
           </p>
         </div>
         <div className="hero-wave" aria-hidden="true">
@@ -176,17 +170,17 @@ export default function Home() {
             <p>
               {isZh
                 ? zh(
-                    "会议将在中国澳门永利皇宫举行，由澳门城市大学承办，兼具国际会务条件与城市文化体验。",
-                    "會議將在中國澳門永利皇宮舉行，由澳門城市大學承辦，兼具國際會務條件與城市文化體驗。",
+                    "会议将在中国澳门永利澳门举行，由澳门城市大学承办，兼具国际会务条件与城市文化体验。",
+                    "會議將在中國澳門永利澳門舉行，由澳門城市大學承辦，兼具國際會務條件與城市文化體驗。",
                   )
-                : "ICHEC 2026 will be held at Wynn Palace, Macau, hosted by City University of Macau."}
+                : "ICHEC 2026 will be held at Macau Wynn, Macau, hosted by City University of Macau."}
             </p>
             <Link href="/venue" className={styles.textLink}>
               {isZh ? zh("查看场地信息", "查看場地資訊") : "View venue details"}
             </Link>
           </div>
           <figure className={styles.venueImage}>
-            <img src="/venue/wynn-palace.png" alt={isZh ? zh("永利皇宫", "永利皇宮") : "Wynn Palace"} />
+            <img src="/venue/wynn-palace.png" alt={isZh ? zh("永利澳门", "永利澳門") : "Macau Wynn"} />
           </figure>
         </section>
 

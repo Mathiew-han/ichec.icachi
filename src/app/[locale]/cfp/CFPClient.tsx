@@ -52,11 +52,6 @@ function TrackDetailList({
             </li>
           );
         })}
-        {track === "paper" ? (
-          <li className={`${styles.dateItem} ${styles.submissionStatusItem}`}>
-            <span className={styles.submissionStatus}>{t("tracks.paper.submissionStatus")}</span>
-          </li>
-        ) : null}
       </ol>
     );
   }

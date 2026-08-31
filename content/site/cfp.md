@@ -8,4 +8,5 @@ This page is organized by submission track. Please use the track sections above 
 - ICHEC 2026 accepts English submissions only.
 - Paper-based submissions should follow the ACM Conference Proceedings Primary Article Template.
 - Tracks using blinded review require author-identifying information to be removed from papers and supplementary materials.
-- Final Poster / Late Breaking Work, Workshop, and Art & Demo dates will be updated after the official call is finalized.
+- Final Short Paper / Late Breaking Work, Workshop, and Art & Demo dates will be updated after the official call is finalized.
+

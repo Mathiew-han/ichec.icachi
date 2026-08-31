@@ -8,12 +8,10 @@ export default async function SponsorsPage({ params }: { params: Promise<{ local
   const normalizedLocale = normalizeLocale(locale);
   if (!normalizedLocale) notFound();
   setRequestLocale(normalizedLocale);
-  const tCommon = await getTranslations("Common");
   const t = await getTranslations("Sponsors");
   return (
     <div className={styles.page}>
       <section className={styles.section}>
-        <div className={styles.notice}>{tCommon("toBeUpdated")}</div>
         <div className={styles.sectionTitle}>{t("title")}</div>
         <p className={styles.lead}>{t("lead")}</p>
 
@@ -81,7 +79,7 @@ export default async function SponsorsPage({ params }: { params: Promise<{ local
 
         <div className={styles.cta}>
           <div className={styles.lead}>
-            {t("contact.prefix")} <a href="mailto:jude.yew@gmail.com">jude.yew@gmail.com</a>.
+            {t("contact.prefix")} <a href="mailto:ichec2026.info@gmail.com">ichec2026.info@gmail.com</a>.
           </div>
         </div>
       </section>

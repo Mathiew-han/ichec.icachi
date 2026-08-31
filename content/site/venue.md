@@ -1,8 +1,8 @@
 # 会场信息（Venue）
 
-## 永利皇宫（Wynn Palace）
+## 永利澳门（Macau Wynn）
 
-会场地点依据 **CChi2026 筹备工作推进会（终版会议纪要）**：**永利皇宫**。
+会场地点依据 **CChi2026 筹备工作推进会（终版会议纪要）**：**永利澳门**。
 
 更详细的楼宇/房间、动线与地图信息将在会务系统上线后补充。
 
@@ -16,7 +16,7 @@
 - Registration Area（注册区）
 - Plenary Hall（主会场）
 - Breakout Rooms（分会场）
-- Coffee Break & Poster Session（茶歇与海报区）
+- Coffee Break & Short Paper Session（茶歇与短论文区）
 - Lunch / Banquet（午餐/晚宴）
 
 ## 参会指南（待发布）

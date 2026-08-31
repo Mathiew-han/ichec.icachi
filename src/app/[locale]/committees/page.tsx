@@ -10,6 +10,7 @@ type Person = {
   role?: string;
   affiliation?: string;
   avatarUrl?: string;
+  avatarObjectPosition?: string;
   profileUrl?: string;
   bio?: { zh: string; en: string };
 };
@@ -92,6 +93,7 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
           name: isZh ? zh("王铭浩", "王銘浩") : "Minghao Wang",
           affiliation: isZh ? zh("澳门城市大学数据科学学院", "澳門城市大學數據科學學院") : "Faculty of Data Science · City University of Macau",
           avatarUrl: "/avatars/wangminghao.png",
+          avatarObjectPosition: "50% 20%",
           profileUrl: "https://fds.cityu.edu.mo/members/383",
         },
       ],
@@ -99,7 +101,7 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
     {
       id: "panel",
       label: { zh: zh("圆桌主席", "圓桌主席"), en: "Panel Chairs" },
-      layout: "two",
+      layout: "three",
       members: [
         {
           name: isZh ? "由振偉" : "Zhenwei You",
@@ -107,6 +109,7 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
             ? zh("澳门城市大学创新设计学院", "澳門城市大學創新設計學院")
             : "Faculty of Innovation and Design · City University of Macau",
           avatarUrl: "/avatars/youzhenwei.png",
+          avatarObjectPosition: "50% 20%",
           profileUrl: "https://fiad.cityu.edu.mo/acad_ft/854",
         },
         {
@@ -116,6 +119,14 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
             : "Faculty of Data Science · City University of Macau",
           avatarUrl: "https://fds.cityu.edu.mo/uploads/userfiles/%E5%B7%A6%E6%97%AD%E5%90%AB.jpg",
           profileUrl: "https://fds.cityu.edu.mo/members/496",
+        },
+        {
+          name: isZh ? "苏中和" : "Chung-Ho Su",
+          affiliation: isZh
+            ? zh("澳门城市大学创新设计学院", "澳門城市大學創新設計學院")
+            : "Faculty of Innovation and Design · City University of Macau",
+          avatarUrl: "/avatars/suzhonghe.jpg",
+          profileUrl: "https://fiad.cityu.edu.mo/acad_ft/927",
         },
       ],
     },
@@ -134,6 +145,7 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
           name: isZh ? "王勇" : "Yong Wang",
           affiliation: isZh ? zh("南洋理工大学", "南洋理工大學") : "Nanyang Technological University (NTU)",
           avatarUrl: "https://yong-wang.org/images/wangyong-2020.jpg",
+          avatarObjectPosition: "50% 20%",
           profileUrl: "https://yong-wang.org/",
         },
         {
@@ -149,6 +161,7 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
             : "Faculty of Innovation and Design · City University of Macau",
           avatarUrl:
             "https://fiad.cityu.edu.mo/uploads_thumb/list/5a05a167595bae231c7959e7933b775d_1000X1000.jpg",
+          avatarObjectPosition: "50% 20%",
           profileUrl: "https://fiad.cityu.edu.mo/acad_ft/752",
         },
       ],
@@ -162,6 +175,7 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
           name: isZh ? "陈昕" : "Xin Chen",
           affiliation: isZh ? zh("深圳大学", "深圳大學") : "Shenzhen University",
           avatarUrl: "/avatars/chenxin.jpg",
+          avatarObjectPosition: "50% 20%",
           profileUrl: "https://art.szu.edu.cn/info/1196/4091.htm",
         },
         {
@@ -175,8 +189,7 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
           affiliation: isZh
             ? zh("澳门城市大学创新设计学院", "澳門城市大學創新設計學院")
             : "Faculty of Innovation and Design · City University of Macau",
-          avatarUrl:
-            "https://fiad.cityu.edu.mo/uploads_thumb/list/60df484dfdb37ca0483bc605d0b4fb41_1000X1000.jpg",
+          avatarUrl: "/avatars/nikang.jpg",
           profileUrl: "https://fiad.cityu.edu.mo/acad_ft/555",
         },
       ],
@@ -227,6 +240,7 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
           name: isZh ? "王韫" : "Yun Wang",
           affiliation: isZh ? zh("北京航空航天大学", "北京航空航天大學") : "Beihang University",
           avatarUrl: "https://shi.buaa.edu.cn/_resources/group1/M00/00/01/wKgAH2JDtUiAC-dzAAB31xXbtqA067.jpg",
+          avatarObjectPosition: "50% 20%",
           profileUrl: "https://shi.buaa.edu.cn/wangyun/zh_CN/index.htm",
         },
         {
@@ -253,14 +267,6 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
           profileUrl: "https://fiad.cityu.edu.mo/acad_ft/477",
         },
         {
-          name: isZh ? zh("屈弘", "屈弘") : "Hong Qu",
-          role: isZh ? zh("出版主席", "出版主席") : "Publication Chair",
-          affiliation: isZh
-            ? zh("澳门城市大学创新设计学院 · 助理教授（8 月入职）", "澳門城市大學創新設計學院 · 助理教授（8 月入職）")
-            : "Assistant Professor, Faculty of Innovation and Design · City University of Macau (starting in August)",
-          avatarUrl: "/avatars/quhong.jpg",
-        },
-        {
           name: isZh ? zh("肖博", "肖博") : "Robert Xiao",
           role: isZh ? zh("出版主席", "出版主席") : "Publication Chair",
           affiliation: isZh
@@ -274,6 +280,11 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
           role: isZh ? zh("技术主席", "技術主席") : "Technical Chair",
           affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
           avatarUrl: "/avatars/guochang.png",
+        },
+        {
+          name: isZh ? "丁文淏" : "Wenhao Ding",
+          role: isZh ? zh("技术主席", "技術主席") : "Technical Chair",
+          affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
         },
         {
           name: isZh ? "牛朝西" : "Chaoxi Niu",
@@ -304,6 +315,7 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
           role: isZh ? zh("财务主席", "財務主席") : "Finance Chair",
           affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
           avatarUrl: "/avatars/林浩屹.jpg",
+          avatarObjectPosition: "50% 20%",
         },
         {
           name: isZh ? zh("路遥", "路遙") : "Yao Lu",
@@ -316,6 +328,7 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
           role: isZh ? zh("宣传主席", "宣傳主席") : "Publicity Chair",
           affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
           avatarUrl: "/avatars/范馨文.jpg",
+          avatarObjectPosition: "50% 20%",
         },
         {
           name: isZh ? "王若梅" : "Ruomei Wang",
@@ -328,12 +341,14 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
           role: isZh ? zh("秘书处", "秘書處") : "Secretary",
           affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
           avatarUrl: "/avatars/李晨曦.jpg",
+          avatarObjectPosition: "50% 20%",
         },
         {
           name: isZh ? zh("苏锴", "蘇鍇") : "Kai Su",
           role: isZh ? zh("秘书处", "秘書處") : "Secretary",
           affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
           avatarUrl: "/avatars/苏锴.jpg",
+          avatarObjectPosition: "50% 20%",
         },
       ],
     },
@@ -368,6 +383,7 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
                       width={64}
                       height={64}
                       className={styles.avatar}
+                      style={{ objectPosition: m.avatarObjectPosition }}
                       unoptimized={true}
                     />
                   </div>
@@ -432,6 +448,7 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
                     width={120}
                     height={120}
                     className={styles.avatar}
+                    style={{ objectPosition: selectedPerson.avatarObjectPosition }}
                     unoptimized={true}
                   />
                 </div>

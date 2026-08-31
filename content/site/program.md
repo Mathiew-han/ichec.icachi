@@ -1,8 +1,8 @@
 # 大会日程（草案）
 
-说明：筹备材料中给出了 2025 版本的 Program Overview 作为参考。Chinese CHI 2026 的最终日程将以正式发布为准。
+说明：Chinese CHI 2026 的最终日程将以正式发布为准。
 
-## 参考结构（2025 版）
+## 参考结构
 
 ### Day 1 · 11/23（Mon）
 
@@ -13,7 +13,7 @@
 ### Day 2 · 11/24（Tue）
 
 - Opening + Keynote（开幕与主题演讲）
-- Coffee Break + Poster Session（茶歇与海报）
+- Coffee Break + Short Paper Session（茶歇与短论文）
 - Paper Sessions（论文分会 1–4）
 - Panel（圆桌/论坛）
 - Banquet（晚宴）
@@ -28,7 +28,7 @@
 
 ## Chinese CHI 2026（占位）
 
-我们将沿用“开幕/主题演讲/论文分会/海报交流/论坛/社交活动”的主结构，并根据场地与规模优化分会厅安排。
+我们将沿用“开幕/主题演讲/论文分会/短论文交流/论坛/社交活动”的主结构，并根据场地与规模优化分会厅安排。
 
 ### 2026 详细日程（待甲方确认）
 
@@ -38,4 +38,4 @@
 - AAAAAAAAAAAAAAAAAAAA（Day 4 详细安排：如有工作坊/参访/特别活动等）
 
 - 会期：2026 年 11 月 23–26 日
-- 地点：澳门 · Wynn Palace
+- 地点：澳门 · Macau Wynn

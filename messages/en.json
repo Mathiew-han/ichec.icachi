@@ -61,14 +61,14 @@
     "title": "ICHEC 2026",
     "tagline": "Inclusivity · Experience · Innovation",
     "date": "November 23–26, 2026",
-    "location": "Wynn Palace",
+    "location": "Macau Wynn",
     "importantDates": "Important Dates",
     "cfp": "Call for Papers",
     "program": "Program",
     "aboutTitle": "About ICHEC 2026",
     "aboutSubtitle": "An Open, Inclusive, and Future-Oriented HCI Community",
     "aboutBrief": "Meet in Macau, connect research, design, and industry.",
-    "aboutP1": "The International Chinese Association of Computer Human Interaction (ICACHI) is delighted to announce that the International Conference on Human-Engaged Computing (ICHEC 2026) will be hosted by the City University of Macau and held at Wynn Palace, Macau, China, from November 23 to 26, 2026. The conference theme is “Inclusivity, Experience, Innovation”.",
+    "aboutP1": "The International Chinese Association of Computer Human Interaction (ICACHI) is delighted to announce that the International Conference on Human-Engaged Computing (ICHEC 2026) will be hosted by the City University of Macau and held at Macau Wynn, Macau, China, from November 23 to 26, 2026. The conference theme is “Inclusivity, Experience, Innovation”.",
     "aboutP2": "ICHEC (formerly known as “Chinese CHI”) was initiated by ICACHI and has become a premier venue connecting HCI scholars, practitioners, and industry leaders worldwide. Since 2012, Chinese CHI has been successfully held in Paris, Toronto, Seoul, Silicon Valley, Guangzhou, Montreal, Xiamen, Bali, Shenzhen, and Singapore. The papers accepted at the conference in the past years have been published annually in the ACM Digital Library and are indexed by EI Compendex.",
     "aboutP3": "The conference was officially renamed ICHEC in 2025 to reflect its broader inclusiveness and international participation. In 2026, we cordially invite leading scholars, researchers, and industry leaders from around the world to share their latest research progress and practical experiences, foster intellectual exchange and research collaboration, and explore the boundless possibilities that lie ahead in the future development of HCI.",
     "registerNow": "Register Now",
@@ -113,7 +113,7 @@
     "resources": {
       "title": "Resources",
       "heading": "Templates & Policies",
-      "template": "ACM format & TAPS workflow",
+      "template": "ACM publication format",
       "check": "ACM integrity and AI check guidance",
       "website": "Conference website CFP",
       "registration": "Registration & Fees",
@@ -140,9 +140,8 @@
         "title": "Full Papers",
         "kicker": "Research track",
         "desc": "Complete original research with substantial contributions across HCI methods, systems, theory, design, and critical inquiry.",
-        "submissionStatus": "Round 1 submissions are closed. Round 2 will open soon.",
         "bestFor": "Mature research with clear evidence, analysis, and contribution.",
-        "deadline": "Round 1: Aug 10 / Aug 14; Round 2: Sep 10 / Sep 13, 2026.",
+        "deadline": "Round 1: Aug 10 / Aug 14; Round 2: Sep 10 / Sep 13, 2026; notification: Oct 1.",
         "materials": "Anonymous full paper PDF, ACM template, optional supplementary materials.",
         "topics": {
           "title": "Topics",
@@ -158,8 +157,8 @@
           "d2Date": "August 14, 2026, 23:59 AoE",
           "d3Label": "Round 2 abstract / full paper",
           "d3Date": "September 10 / September 13, 2026, 23:59 AoE",
-          "d4Label": "Production workflow",
-          "d4Date": "E-rights Oct 8; TAPS Oct 15; publication-ready Oct 22, 2026"
+          "d4Label": "Notification of acceptance",
+          "d4Date": "October 1, 2026, 23:59 AoE"
         },
         "requirements": {
           "title": "Requirements",
@@ -176,12 +175,12 @@
         }
       },
       "poster": {
-        "title": "Posters / Late Breaking Work",
+        "title": "Short Papers / Late Breaking Work",
         "kicker": "Discussion track",
         "desc": "Work-in-progress, early results, design prototypes, pilot studies, and perspective pieces that benefit from focused feedback.",
         "bestFor": "Developing work, early evidence, prototypes, methods, cases, and discussion papers.",
-        "deadline": "Submission date to be confirmed; notification: October 23, 2026.",
-        "materials": "Short paper or extended abstract PDF, poster-ready summary, optional demo/prototype links.",
+        "deadline": "Submission: September 21; notification: October 19; camera-ready: October 22, 2026.",
+        "materials": "Anonymous short paper PDF in the ACM single-column review format; no more than 5,000 words.",
         "topics": {
           "title": "Topics",
           "b1": "Preliminary findings, pilots, exploratory studies, and emerging research directions.",
@@ -191,11 +190,11 @@
         "timeline": {
           "title": "Timeline",
           "d1Label": "Submission",
-          "d1Date": "To be confirmed in the final notice",
+          "d1Date": "September 21, 2026, 23:59 AoE",
           "d2Label": "Notification",
-          "d2Date": "October 23, 2026, 23:59 AoE",
-          "d3Label": "Camera-ready / poster prep",
-          "d3Date": "To be confirmed in the final notice",
+          "d2Date": "October 19, 2026, 23:59 AoE",
+          "d3Label": "Camera-ready deadline",
+          "d3Date": "October 22, 2026, 23:59 AoE",
           "d4Label": "Presentation",
           "d4Date": "Dedicated poster session during ICHEC 2026"
         },
@@ -203,12 +202,12 @@
           "title": "Requirements",
           "b1": "English submissions only.",
           "b2": "Use the ACM template in single-column review format.",
-          "b3": "Late Breaking Work should not exceed 5,000 words, excluding references.",
-          "b4": "Remove author-identifying information when the track is reviewed anonymously."
+          "b3": "The main text must not exceed 5,000 words in a single-column layout.",
+          "b4": "Double-blind review: remove author-identifying information from the paper and supplements."
         },
         "outcome": {
           "title": "Presentation",
-          "b1": "Accepted submissions will be shown in a dedicated poster / Late Breaking Work session.",
+          "b1": "Accepted submissions will be presented in a dedicated Short Paper / Late Breaking Work session.",
           "b2": "The session is organized separately from full-paper oral presentations.",
           "b3": "At least one author should register and attend to present the work."
         }
@@ -252,35 +251,35 @@
         }
       },
       "artdemo": {
-        "title": "Art & Demo",
-        "kicker": "Experience track",
-        "desc": "Interactive systems, creative works, demonstrations, and installations that make the conference theme tangible on site.",
-        "bestFor": "Interactive demos, deployable systems, art pieces, installations, and public-facing experiences.",
-        "deadline": "Art & Demo dates will be announced separately.",
-        "materials": "Extended abstract, still image, short video, and technical / space requirements.",
+        "title": "Call for Artworks",
+        "kicker": "Artworks track",
+        "desc": "Artwork proposals for interactive, immersive, and innovative experiences that invite participation at the conference.",
+        "bestFor": "Human-engaged interfaces and prototypes, immersive installations, human-AI collaboration, affective interactive devices, and cultural technology works.",
+        "deadline": "Submission: September 30; notification: October 10; camera-ready: November 22, 2026.",
+        "materials": "Artwork abstract of no more than four A4 PDF pages, at least one still image, optional video, and technical requirements.",
         "topics": {
           "title": "Topics",
-          "b1": "Interactive systems, embodied experiences, creative AI, mixed reality, tangible interfaces, and design probes.",
-          "b2": "Artworks and demos that engage participants with inclusivity, experience, innovation, and cultural context.",
-          "b3": "Deployable prototypes that can be safely shown in a conference venue."
+          "b1": "Human-engaged interfaces and prototypes; immersive experience installations; innovative products for human-AI collaboration.",
+          "b2": "Affective computing interactive devices and cultural technology integration with multimedia works.",
+          "b3": "Other innovative interactive experiences."
         },
         "timeline": {
           "title": "Timeline",
           "d1Label": "Submission deadline",
-          "d1Date": "To be announced",
+          "d1Date": "September 30, 2026, 23:59 AoE",
           "d2Label": "Notification",
-          "d2Date": "To be announced",
-          "d3Label": "Technical confirmation",
-          "d3Date": "To be coordinated after acceptance",
-          "d4Label": "Exhibition / demo",
-          "d4Date": "During ICHEC 2026"
+          "d2Date": "October 10, 2026, 23:59 AoE",
+          "d3Label": "Camera-ready deadline",
+          "d3Date": "November 22, 2026, 23:59 AoE",
+          "d4Label": "Exhibition starts",
+          "d4Date": "November 23, 2026"
         },
         "requirements": {
           "title": "Requirements",
-          "b1": "Provide an extended abstract describing the work, motivation, and relationship to HCI or human-engaged computing.",
-          "b2": "Include at least one still image and a short video or accessible demo link where possible.",
-          "b3": "Submit technical requirements covering space, furniture, power, network, lighting, and equipment.",
-          "b4": "Identify safety, privacy, accessibility, or operational risks and how they will be managed."
+          "b1": "Artwork abstract: no more than four A4 PDF pages.",
+          "b2": "Still images: at least one image (at least 800 x 600).",
+          "b3": "Video: optional, no more than two minutes; submit technical requirements and instructions in PDF.",
+          "b4": "Non-anonymous submission. At least one author must register and present the work on site."
         },
         "outcome": {
           "title": "Review & Exhibition",
@@ -298,9 +297,7 @@
       "step3": { "title": "Round 2 Abstract", "date": "September 10, 2026" },
       "step4": { "title": "Round 2 Full Paper", "date": "September 13, 2026" },
       "step5": { "title": "Results Announced", "date": "October 1, 2026" },
-      "step6": { "title": "E-rights Completion", "date": "October 8, 2026" },
-      "step7": { "title": "Initial TAPS Upload", "date": "October 15, 2026" },
-      "step8": { "title": "Publication-ready Deadline", "date": "October 22, 2026" }
+      "step6": { "title": "Publication-ready Deadline", "date": "October 22, 2026" }
     },
     "guide": {
       "title": "Guide",
@@ -447,10 +444,11 @@
     "homepage": "Homepage",
     "venue": "Venue & Event Spaces",
     "overview": "Program Overview",
-    "toBeUpdated": "⚠️ 2025 version for reference - To be updated for 2026",
+    "toBeUpdated": "",
     "detailedProgram": "Detailed Program",
     "day1": "Day 1",
     "day2": "Day 2",
     "day3": "Day 3"
   }
 }
+

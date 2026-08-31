@@ -23,7 +23,7 @@ Submissions focusing on Macao characteristics, local innovation, regional cultur
 - **Formatting**: Paper-based submissions should use the ACM Conference Proceedings Primary Article Template in single-column review format.
 - **Registration**: At least one author or contributor of each accepted submission is expected to register and attend when presentation, exhibition, or workshop facilitation is required.
 
-## Templates and Publication Workflow
+## Templates and Publication
 
 Formatting and production guidance should follow the official ACM workflow:
 
@@ -32,7 +32,7 @@ Formatting and production guidance should follow the official ACM workflow:
 - LaTeX template: [https://portalparts.acm.org/hippo/latex_templates/acmart-primary.zip](https://portalparts.acm.org/hippo/latex_templates/acmart-primary.zip)
 - Overleaf template: [https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc](https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc)
 
-Accepted paper submissions that enter the ACM publication workflow should complete the required rights and production steps by the dates listed in the Full Paper track.
+Accepted paper submissions should follow the ACM publication instructions provided after acceptance.
 
 ## Generative AI and Academic Integrity
 
@@ -52,4 +52,4 @@ ACM has introduced an open access publishing model. Depending on whether the cor
 
 ## Items to Be Confirmed
 
-Poster / Late Breaking Work, Workshop, and Art & Demo dates and final material formats will be updated in the track sections once the final call is released. If any date differs between earlier draft documents and the official website, the latest official ICHEC 2026 announcement should prevail.
+Workshop dates and any final material formats will be updated in the track sections once the final call is released. If any date differs between earlier draft documents and the official website, the latest official ICHEC 2026 announcement should prevail.

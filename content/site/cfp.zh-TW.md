@@ -23,7 +23,7 @@ ICHEC 2026 歡迎人機互動與 Human-Engaged Computing 全領域投稿，包�
 - **格式要求**：論文類材料應使用 ACM Conference Proceedings Primary Article Template，投稿階段採用單欄評審格式。
 - **註冊參會**：錄用稿件或作品如需報告、展示、展出或組織活動，至少一名作者 / 貢獻者應註冊並到場參與。
 
-## 模板與出版流程
+## 模板與出版
 
 格式與出版製作請參考 ACM 官方流程：
 
@@ -32,7 +32,7 @@ ICHEC 2026 歡迎人機互動與 Human-Engaged Computing 全領域投稿，包�
 - LaTeX 模板：[https://portalparts.acm.org/hippo/latex_templates/acmart-primary.zip](https://portalparts.acm.org/hippo/latex_templates/acmart-primary.zip)
 - Overleaf 模板：[https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc](https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc)
 
-進入 ACM 出版流程的錄用論文，應按照 Full Paper 類別中列出的時間完成版權簽署、TAPS 上傳與出版就緒稿確認。
+錄用論文應按照 ACM 在錄用後提供的出版說明完成後續流程。
 
 ## 生成式 AI 與學術誠信
 
@@ -52,4 +52,4 @@ ACM 已引入開放獲取出版模式。根據通訊作者所在機構是否加�
 
 ## 待確認事項
 
-Poster / Late Breaking Work、Workshop、Art & Demo 的最終日期和材料格式將在正式通知發布後更新至各自類別中。若早期草稿文件與官網正式公告存在差異，請以 ICHEC 2026 最新官方公告為準。
+Workshop 的最終日期和材料格式將在正式通知發布後更新至對應類別中。若早期草稿文件與官網正式公告存在差異，請以 ICHEC 2026 最新官方公告為準。

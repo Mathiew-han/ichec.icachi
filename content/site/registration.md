@@ -40,3 +40,4 @@ Registration inclusions (access, meals, social events) will be updated once fina
 ### Venue & Accommodation
 
 See [Venue](/venue) for venue notes and accommodation guidance. Transportation and recommended hotels will be added when available.
+

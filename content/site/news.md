@@ -3,7 +3,7 @@
 ## 2026-11-23–26 · Chinese CHI 2026 in Macau
 
 - Chinese CHI 2026 将于 2026 年 11 月 23–26 日在澳门举办。
-- 场地：Wynn Palace（澳门永利皇宫）。
+- 场地：Macau Wynn（永利澳门）。
 - 重要节点与筹备节奏见 [重要日期](/important-dates)。
 
 ## TODO

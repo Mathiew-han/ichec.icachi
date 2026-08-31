@@ -73,8 +73,6 @@ function getTimelineCopy(locale: string): TimelineCopy {
           period: "10 月",
           tech: [
             "10 月 1 日：結果公布",
-            "10 月 8 日：E-rights 完成截止",
-            "10 月 15 日：TAPS 初次上傳截止",
             "10 月 22 日：出版就緒稿截止",
             "詳細議程規劃",
             "藝術展/畫廊安排",
@@ -155,8 +153,6 @@ function getTimelineCopy(locale: string): TimelineCopy {
           period: "10 月",
           tech: [
             "10 月 1 日：结果公布",
-            "10 月 8 日：E-rights 完成截止",
-            "10 月 15 日：TAPS 初次上传截止",
             "10 月 22 日：出版就绪稿截止",
             "详细议程规划",
             "艺术展/画廊安排",
@@ -233,8 +229,6 @@ function getTimelineCopy(locale: string): TimelineCopy {
           period: "Outubro",
           tech: [
             "1 de Outubro: anúncio dos resultados",
-            "8 de Outubro: prazo de conclusão do E-rights",
-            "15 de Outubro: prazo do upload inicial no TAPS",
             "22 de Outubro: prazo da versão pronta para publicação",
             "Planejamento detalhado do programa",
             "Arranjos da galeria de arte",
@@ -310,8 +304,6 @@ function getTimelineCopy(locale: string): TimelineCopy {
         period: "October",
         tech: [
           "October 1: Results announced",
-          "October 8: E-rights completion deadline",
-          "October 15: Initial TAPS upload deadline",
           "October 22: Publication-ready deadline",
           "Detailed Program Planning",
           "Art Gallery Arrangements",
