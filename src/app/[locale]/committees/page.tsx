@@ -285,6 +285,7 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
           name: isZh ? "丁文淏" : "Wenhao Ding",
           role: isZh ? zh("技术主席", "技術主席") : "Technical Chair",
           affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
+          avatarUrl: "/avatars/dingwenhao.jpg",
         },
         {
           name: isZh ? "牛朝西" : "Chaoxi Niu",
