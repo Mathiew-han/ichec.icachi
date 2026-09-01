@@ -256,7 +256,7 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
     {
       id: "ops_support",
       label: { zh: zh("出版 / 技术 / 志愿者", "出版 / 技術 / 志願者"), en: "Publication / Technical / Volunteer" },
-      layout: "three",
+      layout: "four",
       members: [
         {
           name: isZh ? "安舜" : "Shun An",

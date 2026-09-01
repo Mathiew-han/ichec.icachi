@@ -277,7 +277,7 @@
   }
 
   .gridFour {
-    grid-template-columns: repeat(3, minmax(0, 18rem));
+    grid-template-columns: repeat(4, minmax(0, 15rem));
   }
 
 }
