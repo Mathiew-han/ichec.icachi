@@ -255,7 +255,7 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
     },
     {
       id: "ops_support",
-      label: { zh: zh("出版 / 技术 / 志愿者", "出版 / 技術 / 志願者"), en: "Publication / Technical / Volunteer" },
+      label: { zh: zh("出版 / 技术", "出版 / 技術"), en: "Publication / Technical" },
       layout: "four",
       members: [
         {
@@ -287,6 +287,13 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
           affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
           avatarUrl: "/avatars/dingwenhao.jpg",
         },
+      ],
+    },
+    {
+      id: "volunteer",
+      label: { zh: zh("志愿者主席", "志願者主席"), en: "Volunteer Chairs" },
+      layout: "two",
+      members: [
         {
           name: isZh ? "牛朝西" : "Chaoxi Niu",
           role: isZh ? zh("志愿者主席", "志願者主席") : "Volunteer Chair",
@@ -308,7 +315,7 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
     },
     {
       id: "finance_comms",
-      label: { zh: zh("财务 / 宣传 / 秘书处", "財務 / 宣傳 / 秘書處"), en: "Finance / Publicity / Secretaries" },
+      label: { zh: zh("财务 / 宣传", "財務 / 宣傳"), en: "Finance / Publicity" },
       layout: "four",
       members: [
         {
@@ -337,6 +344,13 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
           affiliation: isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau",
           avatarUrl: "/avatars/王若梅.jpg",
         },
+      ],
+    },
+    {
+      id: "secretariat",
+      label: { zh: zh("秘书处", "秘書處"), en: "Secretariat" },
+      layout: "two",
+      members: [
         {
           name: isZh ? "李晨曦" : "Chenxi Li",
           role: isZh ? zh("秘书处", "秘書處") : "Secretary",
