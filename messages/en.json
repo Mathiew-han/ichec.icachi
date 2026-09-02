@@ -352,8 +352,8 @@
       },
       "cards": {
         "standard": {
-          "title": "Standard",
-          "desc": "Standard registration to cover one paper (subject to final policy).",
+          "title": "On-site registration",
+          "desc": "On-site registration to cover one paper (subject to final policy).",
           "price": "USD 600",
           "unit": "/ per paper"
         },

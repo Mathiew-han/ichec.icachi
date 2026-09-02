@@ -25,8 +25,8 @@ Fees are organized by registration period. Final payment instructions will be pu
 
 ### 1. Authors of Accepted FULL Papers (Policy TBA)
 
-- At least one author of each accepted FULL (long) paper is expected to complete a **Standard** registration (deadline TBA)
-- Each FULL (long) paper must be covered by a **distinct Standard registration**
+- At least one author of each accepted FULL (long) paper is expected to complete registration (deadline TBA)
+- Each FULL (long) paper must be covered by a distinct registration
 - Final applicability to other tracks (short papers, posters, demos) will be announced officially
 
 ### 2. Refund Policy (TBA)
