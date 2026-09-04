@@ -38,4 +38,4 @@
 - AAAAAAAAAAAAAAAAAAAA（Day 4 详细安排：如有工作坊/参访/特别活动等）
 
 - 会期：2026 年 11 月 23–26 日
-- 地点：澳门 · Macau Wynn
+- 地点：澳门 · Wynn Macau

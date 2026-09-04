@@ -93,7 +93,7 @@ export default function Home() {
           <div className={styles.heroRule} />
           <p className={styles.heroDate}>{t("date")}</p>
           <p className={styles.heroPlace}>
-            {isZh ? zh("中国澳门，永利澳门", "中國澳門，永利澳門") : "Macau Wynn, Macau, China"}
+            {isZh ? zh("中国澳门，永利澳门", "中國澳門，永利澳門") : "Wynn Macau, Macau, China"}
           </p>
         </div>
         <div className="hero-wave" aria-hidden="true">
@@ -173,14 +173,14 @@ export default function Home() {
                     "会议将在中国澳门永利澳门举行，由澳门城市大学承办，兼具国际会务条件与城市文化体验。",
                     "會議將在中國澳門永利澳門舉行，由澳門城市大學承辦，兼具國際會務條件與城市文化體驗。",
                   )
-                : "ICHEC 2026 will be held at Macau Wynn, Macau, hosted by City University of Macau."}
+                : "ICHEC 2026 will be held at Wynn Macau, Macau, hosted by City University of Macau."}
             </p>
             <Link href="/venue" className={styles.textLink}>
               {isZh ? zh("查看场地信息", "查看場地資訊") : "View venue details"}
             </Link>
           </div>
           <figure className={styles.venueImage}>
-            <img src="/venue/wynn-palace.png" alt={isZh ? zh("永利澳门", "永利澳門") : "Macau Wynn"} />
+            <img src="/venue/wynn-palace.png" alt={isZh ? zh("永利澳门", "永利澳門") : "Wynn Macau"} />
           </figure>
         </section>
 
