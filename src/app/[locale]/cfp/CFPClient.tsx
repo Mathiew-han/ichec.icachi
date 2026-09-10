@@ -25,13 +25,18 @@ const slideInRight: Variants = {
 
 const tracks = ["paper", "poster", "workshop", "artdemo"] as const;
 const detailSections = ["topics", "timeline", "requirements", "outcome"] as const;
+const workshopSections = ["topics", "timeline", "requirements", "support", "participation", "chairs"] as const;
+const workshopItemCounts = { topics: 4, requirements: 3, support: 5, participation: 4, chairs: 2 };
+const workshopFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfqd0YCnKP056a-Gmv8luVLSnO6_CL56LuL3aFGpODmlSIgSA/viewform?usp=publish-editor";
+const workshopTemplateUrl = "https://docs.google.com/document/d/1c1IM1TA6uayPuOaBB1kIwGNpzgZC8PcXyP4-h9XbMUo/edit?usp=sharing";
+const workshopChairEmails = ["wang_yun@buaa.edu.cn", "yjgao@cityu.edu.mo"];
 
 function TrackDetailList({
   track,
   section,
 }: {
   track: (typeof tracks)[number];
-  section: (typeof detailSections)[number];
+  section: (typeof detailSections)[number] | (typeof workshopSections)[number];
 }) {
   const t = useTranslations("CFP");
 
@@ -56,13 +61,36 @@ function TrackDetailList({
     );
   }
 
-  const itemCount = section === "requirements" ? 4 : 3;
+  const itemCount = track === "workshop" && section !== "outcome"
+    ? workshopItemCounts[section]
+    : section === "requirements" ? 4 : 3;
 
   return (
     <ul className={styles.bullets}>
       {Array.from({ length: itemCount }, (_, index) => {
         const step = index + 1;
-        return <li key={step}>{t(`tracks.${track}.${section}.b${step}`)}</li>;
+        const href = track === "workshop"
+          ? section === "requirements" && step === 2 ? workshopTemplateUrl
+            : section === "requirements" && step === 3 ? workshopFormUrl
+              : undefined
+          : undefined;
+        return (
+          <li key={step}>
+            {href ? (
+              <a href={href} className={styles.secondaryLink} target="_blank" rel="noreferrer">
+                {t(`tracks.${track}.${section}.b${step}`)}
+              </a>
+            ) : t(`tracks.${track}.${section}.b${step}`)}
+            {track === "workshop" && section === "chairs" && (
+              <>
+                <br />
+                <a className={styles.secondaryLink} href={`mailto:${workshopChairEmails[index]}`}>
+                  {workshopChairEmails[index]}
+                </a>
+              </>
+            )}
+          </li>
+        );
       })}
     </ul>
   );
@@ -162,14 +190,20 @@ export function CFPClient({ content }: { content: string }) {
                   <div className={styles.trackKicker}>{t(`tracks.${track}.kicker`)}</div>
                   <h3 className={styles.trackDetailTitle}>{t(`tracks.${track}.title`)}</h3>
                 </div>
-                <a href="https://easychair.org/my/conference?conf=ichec2026" className={styles.secondaryLink}>
-                  {t("tracks.submit")}
+                <a
+                  href={track === "workshop" ? workshopFormUrl : "https://easychair.org/my/conference?conf=ichec2026"}
+                  className={styles.secondaryLink}
+                >
+                  {t(track === "workshop" ? "tracks.workshop.submit" : "tracks.submit")}
                 </a>
               </div>
               <p className={styles.trackDetailLead}>{t(`tracks.${track}.desc`)}</p>
+              {track === "workshop" && (
+                <p className={styles.trackDetailLead}>{t("tracks.workshop.overview")}</p>
+              )}
 
               <div className={styles.detailGrid}>
-                {detailSections.map((section) => (
+                {(track === "workshop" ? workshopSections : detailSections).map((section) => (
                   <section key={section} className={styles.detailBlock}>
                     <h4>{t(`tracks.${track}.${section}.title`)}</h4>
                     <TrackDetailList track={track} section={section} />
@@ -204,6 +238,9 @@ export function CFPClient({ content }: { content: string }) {
               </a>
               <a href="https://easychair.org/my/conference?conf=ichec2026" className={styles.secondaryLink}>
                 {t("submit.easychair")}
+              </a>
+              <a href={workshopFormUrl} className={styles.secondaryLink}>
+                {t("tracks.workshop.submit")}
               </a>
             </div>
           </motion.div>

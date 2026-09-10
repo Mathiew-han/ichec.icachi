@@ -105,8 +105,8 @@
     "subtitle": "We welcome high-quality submissions across research, design, art, and industry practice. ICHEC emphasizes human-centered and responsible technology, and encourages interdisciplinary and cross-cultural collaboration.",
     "submit": {
       "title": "Submit",
-      "heading": "Submit via EasyChair",
-      "desc": "Sign in first and proceed to the submission system. Please verify formatting and (if applicable) anonymity requirements before submission.",
+      "heading": "Submission Portals",
+      "desc": "Papers and artworks use EasyChair. Workshop proposals use the dedicated Google Form and workshop template linked above. Check the requirements for your track before submitting.",
       "cta": "Sign in to submit",
       "easychair": "Open EasyChair"
     },
@@ -214,40 +214,56 @@
       },
       "workshop": {
         "title": "Workshops",
-        "kicker": "Organizer track",
-        "desc": "Focused sessions that convene communities around emerging HCI topics, shared methods, and collaborative discussion.",
-        "bestFor": "Organizers proposing a theme, format, audience, and planned workshop outcomes.",
-        "deadline": "Workshop proposal dates will be announced separately.",
-        "materials": "Workshop proposal, organizer bios, target audience, agenda, and participation plan.",
+        "kicker": "Call for Workshops",
+        "desc": "We invite proposals addressing contemporary and emerging HCI areas through structured discussion, making, critique, or community building.",
+        "overview": "Organized by the International Chinese Association of Computer Human Interaction (ICACHI) and hosted by City University of Macau, ICHEC 2026 will take place at Wynn Macau, Macau, China, on November 23–26, 2026. Conference themes: Inclusivity, Experience, Innovation.",
+        "bestFor": "Organizers proposing workshops on emerging HCI topics, design practices, and interdisciplinary or international research communities.",
+        "deadline": "Proposal: September 18; notification: September 25; call for participants: October 1; final materials: November 20, 2026. All deadlines: 23:59 AoE.",
+        "materials": "English PDF proposal, maximum 3 pages excluding references, using the provided proposal template; submit via Google Form.",
+        "submit": "Submit workshop proposal via Google Form",
         "topics": {
-          "title": "Topics",
-          "b1": "Emerging research communities, cross-disciplinary HCI themes, and regional or cultural perspectives.",
-          "b2": "Methods, design practice, responsible AI, accessibility, health, education, creative tools, and social impact.",
-          "b3": "Formats that support structured discussion, making, critique, or community building."
+          "title": "Topics and Scope",
+          "b1": "Emerging interaction paradigms and user experience design.",
+          "b2": "Emerging HCI methods and design practices.",
+          "b3": "Emerging research communities, interdisciplinary HCI themes, and regional or cultural perspectives.",
+          "b4": "Responsible AI, accessibility, health, education, creative tools, and social impact."
         },
         "timeline": {
-          "title": "Timeline",
-          "d1Label": "Proposal deadline",
-          "d1Date": "To be announced",
-          "d2Label": "Notification",
-          "d2Date": "To be announced",
-          "d3Label": "Workshop CFP / website",
-          "d3Date": "To be coordinated after acceptance",
-          "d4Label": "Workshop date",
-          "d4Date": "During ICHEC 2026"
+          "title": "Important Dates (23:59 AoE)",
+          "d1Label": "Proposal submission deadline",
+          "d1Date": "September 18, 2026, 23:59 AoE",
+          "d2Label": "Notification of acceptance",
+          "d2Date": "September 25, 2026, 23:59 AoE",
+          "d3Label": "Call for participants",
+          "d3Date": "October 1, 2026, 23:59 AoE",
+          "d4Label": "Final materials submission",
+          "d4Date": "November 20, 2026, 23:59 AoE"
         },
         "requirements": {
-          "title": "Requirements",
-          "b1": "Describe the workshop theme, motivation, intended audience, and expected outcomes.",
-          "b2": "Include organizer names, affiliations, roles, and relevant experience.",
-          "b3": "Provide a proposed agenda, participation format, and plan for recruiting participants.",
-          "b4": "State space, equipment, accessibility, hybrid, or facilitation needs if applicable."
+          "title": "Submission Guidelines",
+          "b1": "Maximum 3 pages, excluding references. Write the proposal in English and submit a PDF.",
+          "b2": "Use the workshop proposal template (Google Docs).",
+          "b3": "Submit your PDF proposal via Google Form; complete the form in English."
         },
-        "outcome": {
-          "title": "Organizer Responsibilities",
-          "b1": "Accepted organizers are expected to publicize the workshop and manage participant selection.",
-          "b2": "Organizers should coordinate final schedule, room needs, and materials with the conference team.",
-          "b3": "Post-workshop outcomes may include summaries, community plans, or follow-up publication proposals."
+        "support": {
+          "title": "We Provide",
+          "b1": "A dedicated half-day (3-hour) or full-day (2 × 3-hour) session.",
+          "b2": "Standard meeting room setup, including projector, microphone, and Wi-Fi.",
+          "b3": "A workshop page on the conference website and inclusion in the proceedings.",
+          "b4": "Opportunities to engage with active local and regional HCI communities.",
+          "b5": "Networking opportunities with international attendees."
+        },
+        "participation": {
+          "title": "Participation Requirements",
+          "b1": "Workshop organizers and participants must register for both the workshop and the main conference.",
+          "b2": "No additional workshop fee; participation is included in the conference registration fee.",
+          "b3": "A minimum of 10 on-site participants is required.",
+          "b4": "Preference will be given to workshops with strong international appeal."
+        },
+        "chairs": {
+          "title": "Workshop Chairs",
+          "b1": "Yun Wang, Beihang University",
+          "b2": "Yongjie Gao, City University of Macau"
         }
       },
       "artdemo": {

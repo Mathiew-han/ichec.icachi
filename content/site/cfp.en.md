@@ -17,11 +17,11 @@ Submissions focusing on Macao characteristics, local innovation, regional cultur
 ## Shared Submission Policies
 
 - **Language**: ICHEC 2026 accepts English submissions only.
-- **Submission portal**: All submissions should be made through EasyChair: [https://easychair.org/my/conference?conf=ichec2026](https://easychair.org/my/conference?conf=ichec2026).
+- **Submission portal**: Papers and artworks should be submitted through [EasyChair](https://easychair.org/my/conference?conf=ichec2026). Workshop proposals must be submitted through the dedicated [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSfqd0YCnKP056a-Gmv8luVLSnO6_CL56LuL3aFGpODmlSIgSA/viewform?usp=publish-editor).
 - **Originality**: Submissions must not have been previously published and must not be under concurrent review by another conference or journal.
 - **Anonymity**: Tracks that use blinded review require authors to remove identifying information from the paper and supplementary materials.
-- **Formatting**: Paper-based submissions should use the ACM Conference Proceedings Primary Article Template in single-column review format.
-- **Registration**: At least one author or contributor of each accepted submission is expected to register and attend when presentation, exhibition, or workshop facilitation is required.
+- **Formatting**: Paper submissions should use the ACM Conference Proceedings Primary Article Template in single-column review format. Workshop proposals use the [workshop proposal template](https://docs.google.com/document/d/1c1IM1TA6uayPuOaBB1kIwGNpzgZC8PcXyP4-h9XbMUo/edit?usp=sharing): maximum 3 pages, excluding references, in English PDF format.
+- **Registration**: At least one author or contributor of each accepted paper or artwork is expected to register and attend to present or exhibit. All workshop organizers and participants must register for both the workshop and the main conference; no additional workshop fee applies.
 
 ## Templates and Publication
 
@@ -50,6 +50,6 @@ ACM has introduced an open access publishing model. Depending on whether the cor
 - ACM Open Access guidance for ICPS authors: [https://www.acm.org/publications/icps/author-guidance](https://www.acm.org/publications/icps/author-guidance)
 - FAQ: [https://www.acm.org/publications/icps/faq](https://www.acm.org/publications/icps/faq)
 
-## Items to Be Confirmed
+## Workshop Call
 
-Workshop dates and any final material formats will be updated in the track sections once the final call is released. If any date differs between earlier draft documents and the official website, the latest official ICHEC 2026 announcement should prevail.
+The workshop proposal deadline is September 18, 2026; acceptance notification is September 25; the call for participants is October 1; and final materials are due November 20. All deadlines are 23:59 AoE (Anywhere on Earth). See the Workshop section above for the proposal template, Google Form, participation requirements, and chairs’ contact details.

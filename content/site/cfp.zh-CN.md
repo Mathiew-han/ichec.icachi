@@ -17,11 +17,11 @@ ICHEC 2026 欢迎人机交互与 Human-Engaged Computing 全领域投稿，包�
 ## 所有类别共用政策
 
 - **语言**：ICHEC 2026 仅接受英文投稿。
-- **投稿入口**：所有投稿应通过 EasyChair 提交：[https://easychair.org/my/conference?conf=ichec2026](https://easychair.org/my/conference?conf=ichec2026)。
+- **投稿入口**：论文与艺术作品通过 [EasyChair](https://easychair.org/my/conference?conf=ichec2026) 提交。工作坊提案须通过专用 [Google 表单](https://docs.google.com/forms/d/e/1FAIpQLSfqd0YCnKP056a-Gmv8luVLSnO6_CL56LuL3aFGpODmlSIgSA/viewform?usp=publish-editor) 提交。
 - **原创性**：投稿不得已公开发表，也不得同时投往其他会议或期刊。
 - **匿名要求**：采用匿名评审的类别，需要从正文和补充材料中移除作者身份信息。
-- **格式要求**：论文类材料应使用 ACM Conference Proceedings Primary Article Template，投稿阶段采用单栏评审格式。
-- **注册参会**：录用稿件或作品如需报告、展示、展出或组织活动，至少一名作者 / 贡献者应注册并到场参与。
+- **格式要求**：论文使用 ACM Conference Proceedings Primary Article Template，投稿阶段采用单栏评审格式。工作坊提案使用[指定工作坊模板](https://docs.google.com/document/d/1c1IM1TA6uayPuOaBB1kIwGNpzgZC8PcXyP4-h9XbMUo/edit?usp=sharing)，以英文撰写，最多 3 页（不含参考文献），提交 PDF。
+- **注册参会**：录用论文或作品如需报告、展示或展出，至少一名作者 / 贡献者应注册并到场参与。所有工作坊组织者和参与者须同时注册工作坊和主会议，无额外工作坊费用。
 
 ## 模板与出版
 
@@ -50,6 +50,6 @@ ACM 已引入开放获取出版模式。根据通讯作者所在机构是否加�
 - ACM Open Access Guidance for ICPS Authors：[https://www.acm.org/publications/icps/author-guidance](https://www.acm.org/publications/icps/author-guidance)
 - FAQ：[https://www.acm.org/publications/icps/faq](https://www.acm.org/publications/icps/faq)
 
-## 待确认事项
+## 工作坊征集
 
-Workshop 的最终日期和材料格式将在正式通知发布后更新至对应类别中。若早期草稿文件与官网正式公告存在差异，请以 ICHEC 2026 最新官方公告为准。
+工作坊提案提交截止为 2026 年 9 月 18 日，9 月 25 日发出录取通知，10 月 1 日发布参与征集，11 月 20 日提交最终材料。所有截止时间均为 23:59 AoE（Anywhere on Earth）。指定模板、Google 表单、参与要求及主席联系方式见上方工作坊详情。

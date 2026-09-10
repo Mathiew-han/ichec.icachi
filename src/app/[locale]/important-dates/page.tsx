@@ -65,7 +65,7 @@ function getTimelineCopy(locale: string): TimelineCopy {
         },
         {
           period: "9 月",
-          tech: ["9 月 10 日：第二輪摘要截止", "9 月 13 日：第二輪全文截止"],
+          tech: ["9 月 10 日：第二輪摘要截止", "9 月 13 日：第二輪全文截止", "9 月 18 日：工作坊提案截止（23:59 AoE）", "9 月 25 日：工作坊錄取通知（23:59 AoE）"],
           org: ["參會指南發布（場地、住宿、交通等）"],
           tone: "warn",
         },
@@ -73,6 +73,7 @@ function getTimelineCopy(locale: string): TimelineCopy {
           period: "10 月",
           tech: [
             "10 月 1 日：結果公布",
+            "10 月 1 日：發布工作坊參與徵集（23:59 AoE）",
             "10 月 22 日：出版就緒稿截止",
             "詳細議程規劃",
             "藝術展/畫廊安排",
@@ -85,7 +86,7 @@ function getTimelineCopy(locale: string): TimelineCopy {
         },
         {
           period: "11 月",
-          tech: ["分會場主席邀請"],
+          tech: ["分會場主席邀請", "11 月 20 日：工作坊最終材料提交（23:59 AoE）"],
           org: ["11 月 13 日（AoE，週五）：常規註冊截止", "設計與製作", "學生志工招募"],
         },
         {
@@ -145,7 +146,7 @@ function getTimelineCopy(locale: string): TimelineCopy {
         },
         {
           period: "9 月",
-          tech: ["9 月 10 日：第二轮摘要截止", "9 月 13 日：第二轮全文截止"],
+          tech: ["9 月 10 日：第二轮摘要截止", "9 月 13 日：第二轮全文截止", "9 月 18 日：工作坊提案截止（23:59 AoE）", "9 月 25 日：工作坊录取通知（23:59 AoE）"],
           org: ["参会指南发布（场地、住宿、交通等）"],
           tone: "warn",
         },
@@ -153,6 +154,7 @@ function getTimelineCopy(locale: string): TimelineCopy {
           period: "10 月",
           tech: [
             "10 月 1 日：结果公布",
+            "10 月 1 日：发布工作坊参与征集（23:59 AoE）",
             "10 月 22 日：出版就绪稿截止",
             "详细议程规划",
             "艺术展/画廊安排",
@@ -165,7 +167,7 @@ function getTimelineCopy(locale: string): TimelineCopy {
         },
         {
           period: "11 月",
-          tech: ["分会场主席邀请"],
+          tech: ["分会场主席邀请", "11 月 20 日：工作坊最终材料提交（23:59 AoE）"],
           org: ["11 月 13 日（AoE，周五）：常规注册截止", "设计与制作", "学生志愿者招募"],
         },
         {
@@ -296,7 +298,7 @@ function getTimelineCopy(locale: string): TimelineCopy {
       },
       {
         period: "September",
-        tech: ["September 10: Round 2 Abstract deadline", "September 13: Round 2 Full paper deadline"],
+        tech: ["September 10: Round 2 Abstract deadline", "September 13: Round 2 Full paper deadline", "September 18: Workshop proposal deadline (23:59 AoE)", "September 25: Workshop notification (23:59 AoE)"],
         org: ["Participation Guide Release (Venue, Accommodation, Transportation, etc.)"],
         tone: "warn",
       },
@@ -304,6 +306,7 @@ function getTimelineCopy(locale: string): TimelineCopy {
         period: "October",
         tech: [
           "October 1: Results announced",
+          "October 1: Workshop call for participants (23:59 AoE)",
           "October 22: Publication-ready deadline",
           "Detailed Program Planning",
           "Art Gallery Arrangements",
@@ -316,7 +319,7 @@ function getTimelineCopy(locale: string): TimelineCopy {
       },
       {
         period: "November",
-        tech: ["Session Chairs Invitation"],
+        tech: ["Session Chairs Invitation", "November 20: Workshop final materials submission (23:59 AoE)"],
         org: ["November 13, AoE (Fri): Normal Registration Due", "Design and Production", "Student Volunteer Recruitment"],
       },
       {
