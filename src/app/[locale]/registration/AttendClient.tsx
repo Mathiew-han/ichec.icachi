@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import type { AttendContent, AttendPlace, AttendTourStop } from "@/lib/attend-content";
 import styles from "./attend.module.css";
 
@@ -41,17 +41,12 @@ function CarouselControls({ index, count, onChange, labels, panel }: { index: nu
   </div>;
 }
 
-function HotelCarousel({ content }: { content: AttendContent }) {
-  const { labels, hotels } = content;
-  const [selected, setSelected] = useState(0);
-  const [detailsOpen, setDetailsOpen] = useState(false);
+function DetailOverlay({ open, onClose, title, labels, children }: { open: boolean; onClose: () => void; title: string; labels: AttendContent["labels"]; children: ReactNode }) {
   const dialog = useRef<HTMLDialogElement>(null);
-  const hotel = hotels[selected];
-  const previews = [1, 2].map((offset) => (selected + offset) % hotels.length);
-
+  const titleId = useId();
   useEffect(() => {
     const element = dialog.current;
-    if (!detailsOpen) {
+    if (!open) {
       if (element?.open) element.close();
       return;
     }
@@ -59,44 +54,51 @@ function HotelCarousel({ content }: { content: AttendContent }) {
     document.body.style.overflow = "hidden";
     if (element && !element.open) element.showModal();
     return () => { document.body.style.overflow = overflow; };
-  }, [detailsOpen]);
+  }, [open]);
+  return <dialog ref={dialog} className={styles.hotelDialog} aria-labelledby={titleId} onClose={onClose} onClick={(event) => { if (event.target === event.currentTarget) onClose(); }}>
+    {open && <div className={styles.hotelDetailPage}>
+      <div className={styles.hotelDetailBar}><span>{title}</span><button type="button" onClick={onClose} aria-label={labels.closeDetails}><span aria-hidden="true">×</span></button></div>
+      <div className={styles.hotelDetailContent}><h2 id={titleId}>{title}</h2>{children}</div>
+    </div>}
+  </dialog>;
+}
+
+function HotelCarousel({ content }: { content: AttendContent }) {
+  const { labels, hotels } = content;
+  const [selected, setSelected] = useState(0);
+  const [detailsOpen, setDetailsOpen] = useState(false);
+  const shapeId = useId();
+  const hotel = hotels[selected];
+  const previews = [1, 2].map((offset) => (selected + offset) % hotels.length);
 
   return <>
     <div className={styles.stayCarousel} role="region" aria-roledescription={labels.carousel} aria-label={labels.nav[2]}>
+      <article id="attend-hotel-slide" className={styles.hotelComposition}>
+        <svg className={styles.shapeDefinitions} aria-hidden="true"><defs><clipPath id={shapeId} clipPathUnits="objectBoundingBox"><path d="M .035 .28 H .21 Q .245 .28 .245 .24 Q .245 .20 .28 .20 H .625 Q .66 .20 .66 .26 Q .66 .335 .7 .335 H .965 Q 1 .335 1 .39 V .945 Q 1 1 .965 1 H .425 Q .395 1 .395 .955 Q .395 .91 .36 .91 H .035 Q 0 .91 0 .855 V .335 Q 0 .28 .035 .28 Z" /></clipPath></defs></svg>
+        <div className={styles.hotelHero} style={{ clipPath: `url(#${shapeId})` }} key={hotel.id}>
+          <StaticPhoto src={hotel.images[0]} title={hotel.name} />
+        </div>
       <div className={styles.stayHeader}>
         <Heading content={content} index={2} />
         <div className={styles.hotelPreviews}>
           {previews.map((index, slot) => <button key={slot} type="button" className={styles.hotelPreview} aria-label={`${labels.showHotel}: ${hotels[index].displayName}`} aria-controls="attend-hotel-slide" onClick={() => setSelected(index)}>
             <Image src={hotels[index].images[0]} alt="" fill sizes="(max-width: 720px) 40vw, 170px" />
-            <span>{hotels[index].displayName}<span aria-hidden="true">↗</span></span>
+            <span className={styles.srOnly}>{hotels[index].displayName}</span>
           </button>)}
         </div>
       </div>
-      <article id="attend-hotel-slide" className={styles.hotelSlide}>
-        <div className={styles.hotelHero} key={hotel.id}>
-          <StaticPhoto src={hotel.images[0]} title={hotel.name} />
-          <span className={styles.distance}>{labels.distance[selected]}</span>
-        </div>
-        <div className={styles.hotelSummary}>
-          <div aria-live="polite" aria-atomic="true"><p className={styles.eyebrow}>{labels.eyebrows[2]}</p><h3>{hotel.displayName}</h3><p className={styles.address}><Icon type="pin" />{hotel.address}</p></div>
-          <div className={styles.hotelDescription}><p className={styles.excerpt}>{hotel.paragraphs[0]}</p><button type="button" className={styles.textLink} aria-haspopup="dialog" onClick={() => setDetailsOpen(true)}>{labels.hotelDetails}<span aria-hidden="true">↗</span></button></div>
-        </div>
+        <div className={styles.hotelSummary} aria-live="polite" aria-atomic="true"><p className={styles.hotelDistance}>{labels.distance[selected]}</p><h3>{hotel.displayName}</h3><p className={styles.address}><Icon type="pin" />{hotel.address}</p></div>
+        <button type="button" className={styles.hotelDetailTrigger} aria-haspopup="dialog" onClick={() => setDetailsOpen(true)}>{labels.hotelDetails}<span aria-hidden="true">↗</span></button>
       </article>
-      <div className={styles.carouselFooter}><ExternalLink href={content.tourismUrl}>{labels.moreHotels}</ExternalLink><CarouselControls index={selected} count={hotels.length} onChange={setSelected} labels={labels} panel="attend-hotel-slide" /></div>
+      <div className={styles.stayFooter}><ExternalLink href={content.tourismUrl}>{labels.moreHotels}</ExternalLink></div>
     </div>
-    <dialog ref={dialog} className={styles.hotelDialog} aria-labelledby="attend-hotel-title" onClose={() => setDetailsOpen(false)} onClick={(event) => { if (event.target === event.currentTarget) setDetailsOpen(false); }}>
-      {detailsOpen && <div className={styles.hotelDetailPage}>
-        <div className={styles.hotelDetailBar}><span>{labels.hotelDetails}</span><button type="button" onClick={() => setDetailsOpen(false)} aria-label={labels.closeDetails}>{labels.closeDetails}<span aria-hidden="true">×</span></button></div>
-        <div className={styles.hotelDetailContent}>
+    <DetailOverlay open={detailsOpen} onClose={() => setDetailsOpen(false)} title={hotel.name} labels={labels}>
           <p className={styles.eyebrow}>{labels.eyebrows[2]} · {labels.distance[selected]}</p>
-          <h2 id="attend-hotel-title">{hotel.name}</h2>
           <p className={styles.address}><Icon type="pin" />{hotel.address}</p>
           <div className={styles.hotelDetailImages}>{hotel.images.map((src, i) => <StaticPhoto key={src} src={src} title={`${hotel.name} — ${labels.hotelPhotoCaptions[i]}`} />)}</div>
           <div className={styles.hotelDetailText}>{hotel.paragraphs.map((paragraph, i) => <p key={i}>{paragraph}</p>)}</div>
           <div className={styles.linkRow}><ExternalLink href={hotel.website} primary>{labels.hotelWebsite}</ExternalLink>{hotel.booking && <ExternalLink href={hotel.booking}>{selected === 0 ? "Trip.com" : "Booking.com"}</ExternalLink>}</div>
-        </div>
-      </div>}
-    </dialog>
+    </DetailOverlay>
   </>;
 }
 
@@ -132,6 +134,7 @@ function Photo({ images, title, labels, onOpen, className = "", start = 0, prior
   }
 
 function PlaceCard({ place, labels, onOpen }: { place: AttendPlace | AttendTourStop; labels: AttendContent["labels"]; onOpen: (gallery: Gallery) => void }) {
+    const [detailsOpen, setDetailsOpen] = useState(false);
     return (
       <article className={styles.placeCard}>
         <Photo labels={labels} onOpen={onOpen} images={place.images} title={place.name} />
@@ -140,13 +143,14 @@ function PlaceCard({ place, labels, onOpen }: { place: AttendPlace | AttendTourS
           {place.facts.length > 0 && <p className={styles.placeFact}>{place.facts[0]}</p>}
           {place.facts[1] && <p className={styles.placeHours}><Icon type="clock" />{place.facts[1]}</p>}
           <p className={styles.excerpt}>{place.paragraphs[0]}</p>
-          <details className={styles.details}>
-            <summary><span className={styles.whenClosed}>{labels.details}</span><span className={styles.whenOpen}>{labels.hideDetails}</span><span className={styles.plus} aria-hidden="true">+</span></summary>
-            <div className={styles.fullText}>
-              {place.facts.slice(1).map((fact) => <p key={fact} className={styles.fact}>{fact}</p>)}
+          <button type="button" className={styles.textLink} aria-haspopup="dialog" onClick={() => setDetailsOpen(true)}>{labels.details}<span aria-hidden="true">↗</span></button>
+          <DetailOverlay open={detailsOpen} onClose={() => setDetailsOpen(false)} title={place.name} labels={labels}>
+            <div className={styles.hotelDetailImages}>{place.images.map((src) => <StaticPhoto key={src} src={src} title={place.name} />)}</div>
+            <div className={styles.hotelDetailText}>
+              {place.facts.map((fact) => <p key={fact} className={styles.fact}>{fact}</p>)}
               {place.paragraphs.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
             </div>
-          </details>
+          </DetailOverlay>
         </div>
       </article>
     );
