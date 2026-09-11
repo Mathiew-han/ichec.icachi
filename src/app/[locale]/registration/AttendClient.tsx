@@ -90,7 +90,7 @@ function HotelCarousel({ content }: { content: AttendContent }) {
         <div className={styles.hotelSummary} aria-live="polite" aria-atomic="true"><p className={styles.hotelDistance}>{labels.distance[selected]}</p><h3>{hotel.displayName}</h3><p className={styles.address}><Icon type="pin" />{hotel.address}</p></div>
         <button type="button" className={styles.hotelDetailTrigger} aria-haspopup="dialog" onClick={() => setDetailsOpen(true)}>{labels.hotelDetails}<span aria-hidden="true">↗</span></button>
       </article>
-      <div className={styles.stayFooter}><ExternalLink href={content.tourismUrl}>{labels.moreHotels}</ExternalLink></div>
+      <div className={styles.stayFooter}><p className={styles.otherHotels}>{content.otherHotels}</p><ExternalLink href={content.tourismUrl}>{labels.moreHotels}</ExternalLink></div>
     </div>
     <DetailOverlay open={detailsOpen} onClose={() => setDetailsOpen(false)} title={hotel.name} labels={labels}>
           <p className={styles.eyebrow}>{labels.eyebrows[2]} · {labels.distance[selected]}</p>
@@ -238,7 +238,6 @@ export function AttendClient({ content, children }: { content: AttendContent; ch
       <section id={sections[2]} className={styles.section} aria-label={labels.nav[2]}>
         <div className={styles.container}>
           <HotelCarousel content={content} />
-          <p className={styles.otherHotels}>{content.otherHotels}</p>
         </div>
       </section>
 
