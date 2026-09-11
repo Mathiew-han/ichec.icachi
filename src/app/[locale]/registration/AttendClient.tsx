@@ -29,6 +29,99 @@ function Heading({ content, index }: { content: AttendContent; index: number }) 
 
 type Gallery = { title: string; images: string[]; index: number };
 
+function StaticPhoto({ src, title, className = "", priority = false }: { src: string; title: string; className?: string; priority?: boolean }) {
+  return <div className={`${styles.staticPhoto} ${className}`}><Image src={src} alt={title} fill sizes="(max-width: 720px) 92vw, 1062px" priority={priority} /></div>;
+}
+
+function CarouselControls({ index, count, onChange, labels, panel }: { index: number; count: number; onChange: (index: number) => void; labels: AttendContent["labels"]; panel: string }) {
+  return <div className={styles.carouselControls}>
+    <span className={styles.carouselCount} aria-live="polite" aria-atomic="true">{String(index + 1).padStart(2, "0")}<span> / {String(count).padStart(2, "0")}</span></span>
+    <button type="button" aria-label={labels.previousSlide} aria-controls={panel} onClick={() => onChange((index + count - 1) % count)}>←</button>
+    <button type="button" aria-label={labels.nextSlide} aria-controls={panel} onClick={() => onChange((index + 1) % count)}>→</button>
+  </div>;
+}
+
+function HotelCarousel({ content }: { content: AttendContent }) {
+  const { labels, hotels } = content;
+  const [selected, setSelected] = useState(0);
+  const [detailsOpen, setDetailsOpen] = useState(false);
+  const dialog = useRef<HTMLDialogElement>(null);
+  const hotel = hotels[selected];
+  const previews = [1, 2].map((offset) => (selected + offset) % hotels.length);
+
+  useEffect(() => {
+    const element = dialog.current;
+    if (!detailsOpen) {
+      if (element?.open) element.close();
+      return;
+    }
+    const overflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    if (element && !element.open) element.showModal();
+    return () => { document.body.style.overflow = overflow; };
+  }, [detailsOpen]);
+
+  return <>
+    <div className={styles.stayCarousel} role="region" aria-roledescription={labels.carousel} aria-label={labels.nav[2]}>
+      <div className={styles.stayHeader}>
+        <Heading content={content} index={2} />
+        <div className={styles.hotelPreviews}>
+          {previews.map((index, slot) => <button key={slot} type="button" className={styles.hotelPreview} aria-label={`${labels.showHotel}: ${hotels[index].displayName}`} aria-controls="attend-hotel-slide" onClick={() => setSelected(index)}>
+            <Image src={hotels[index].images[0]} alt="" fill sizes="(max-width: 720px) 40vw, 170px" />
+            <span>{hotels[index].displayName}<span aria-hidden="true">↗</span></span>
+          </button>)}
+        </div>
+      </div>
+      <article id="attend-hotel-slide" className={styles.hotelSlide}>
+        <div className={styles.hotelHero} key={hotel.id}>
+          <StaticPhoto src={hotel.images[0]} title={hotel.name} />
+          <span className={styles.distance}>{labels.distance[selected]}</span>
+        </div>
+        <div className={styles.hotelSummary}>
+          <div aria-live="polite" aria-atomic="true"><p className={styles.eyebrow}>{labels.eyebrows[2]}</p><h3>{hotel.displayName}</h3><p className={styles.address}><Icon type="pin" />{hotel.address}</p></div>
+          <div className={styles.hotelDescription}><p className={styles.excerpt}>{hotel.paragraphs[0]}</p><button type="button" className={styles.textLink} aria-haspopup="dialog" onClick={() => setDetailsOpen(true)}>{labels.hotelDetails}<span aria-hidden="true">↗</span></button></div>
+        </div>
+      </article>
+      <div className={styles.carouselFooter}><ExternalLink href={content.tourismUrl}>{labels.moreHotels}</ExternalLink><CarouselControls index={selected} count={hotels.length} onChange={setSelected} labels={labels} panel="attend-hotel-slide" /></div>
+    </div>
+    <dialog ref={dialog} className={styles.hotelDialog} aria-labelledby="attend-hotel-title" onClose={() => setDetailsOpen(false)} onClick={(event) => { if (event.target === event.currentTarget) setDetailsOpen(false); }}>
+      {detailsOpen && <div className={styles.hotelDetailPage}>
+        <div className={styles.hotelDetailBar}><span>{labels.hotelDetails}</span><button type="button" onClick={() => setDetailsOpen(false)} aria-label={labels.closeDetails}>{labels.closeDetails}<span aria-hidden="true">×</span></button></div>
+        <div className={styles.hotelDetailContent}>
+          <p className={styles.eyebrow}>{labels.eyebrows[2]} · {labels.distance[selected]}</p>
+          <h2 id="attend-hotel-title">{hotel.name}</h2>
+          <p className={styles.address}><Icon type="pin" />{hotel.address}</p>
+          <div className={styles.hotelDetailImages}>{hotel.images.map((src, i) => <StaticPhoto key={src} src={src} title={`${hotel.name} — ${labels.hotelPhotoCaptions[i]}`} />)}</div>
+          <div className={styles.hotelDetailText}>{hotel.paragraphs.map((paragraph, i) => <p key={i}>{paragraph}</p>)}</div>
+          <div className={styles.linkRow}><ExternalLink href={hotel.website} primary>{labels.hotelWebsite}</ExternalLink>{hotel.booking && <ExternalLink href={hotel.booking}>{selected === 0 ? "Trip.com" : "Booking.com"}</ExternalLink>}</div>
+        </div>
+      </div>}
+    </dialog>
+  </>;
+}
+
+function DiningCarousel({ content }: { content: AttendContent }) {
+  const { labels, restaurants } = content;
+  const [selected, setSelected] = useState(0);
+  const restaurant = restaurants[selected];
+  return <div role="region" aria-roledescription={labels.carousel} aria-label={labels.nav[5]}>
+    <article className={styles.diningSlide} id="attend-dining-slide">
+      <div className={styles.diningVisual} key={restaurant.id}><StaticPhoto src={restaurant.images[0]} title={restaurant.name} /></div>
+      <div className={styles.diningCopy} aria-live="polite" aria-atomic="true">
+        <p className={styles.eyebrow}>{labels.eyebrows[5]} / {String(selected + 1).padStart(2, "0")}</p>
+        <h3>{restaurant.name}</h3><p className={styles.budget}>{restaurant.price}</p>
+        <p className={styles.restaurantInfo}><Icon type="clock" />{restaurant.hours}</p>
+        <p className={styles.restaurantInfo}><Icon type="pin" />{restaurant.address}</p>
+        <a className={styles.textLink} href={`tel:${restaurant.phone.replace(/[^+\d]/g, "")}`} aria-label={`${labels.call}: ${restaurant.name}, ${restaurant.phone}`}>{restaurant.phone}<span aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+    <div className={styles.diningFooter}>
+      <div className={styles.diningSelectors} role="group" aria-label={labels.chooseRestaurant}>{restaurants.map((item, index) => <button type="button" key={item.id} aria-label={`${labels.showRestaurant}: ${item.name}`} aria-pressed={selected === index} aria-controls="attend-dining-slide" onClick={() => setSelected(index)}><span className={styles.diningThumb}><Image src={item.images[0]} alt="" fill sizes="72px" /></span><span className={styles.diningThumbName}>{item.name}</span></button>)}</div>
+      <CarouselControls index={selected} count={restaurants.length} onChange={setSelected} labels={labels} panel="attend-dining-slide" />
+    </div>
+  </div>;
+}
+
 function Photo({ images, title, labels, onOpen, className = "", start = 0, priority = false }: { images: string[]; title: string; labels: AttendContent["labels"]; onOpen: (gallery: Gallery) => void; className?: string; start?: number; priority?: boolean }) {
     return (
       <button type="button" className={`${styles.photo} ${className}`} aria-label={`${labels.photo}: ${title}`} onClick={() => onOpen({ title, images, index: start })}>
@@ -108,9 +201,9 @@ export function AttendClient({ content, children }: { content: AttendContent; ch
             <div className={styles.linkRow}><ExternalLink href={venue.website} primary>{labels.hotelWebsite}</ExternalLink><ExternalLink href={venue.map}>{labels.map}</ExternalLink></div>
           </div>
           <div className={styles.venueGallery}>
-            <Photo labels={labels} onOpen={setGallery} images={venue.images} title={labels.venueCaptions[0]} className={styles.venueMain} priority />
+            <StaticPhoto src={venue.images[0]} title={labels.venueCaptions[0]} className={styles.venueMain} priority />
             <div className={styles.venueThumbnails}>
-              {[1, 2].map((i) => <figure key={i}><Photo labels={labels} onOpen={setGallery} images={venue.images} title={labels.venueCaptions[i]} start={i} /><figcaption>{labels.venueCaptions[i]}</figcaption></figure>)}
+              {[1, 2].map((i) => <figure key={i}><StaticPhoto src={venue.images[i]} title={labels.venueCaptions[i]} /><figcaption>{labels.venueCaptions[i]}</figcaption></figure>)}
             </div>
           </div>
         </div>
@@ -140,20 +233,7 @@ export function AttendClient({ content, children }: { content: AttendContent; ch
 
       <section id={sections[2]} className={styles.section} aria-label={labels.nav[2]}>
         <div className={styles.container}>
-          <div className={styles.sectionTop}><Heading content={content} index={2} /><ExternalLink href={content.tourismUrl}>{labels.moreHotels}</ExternalLink></div>
-          <div className={styles.cardGrid}>
-            {content.hotels.map((hotel, i) => (
-              <article key={hotel.id} className={styles.hotelCard}>
-                <div className={styles.hotelPhoto}><Photo labels={labels} onOpen={setGallery} images={hotel.images} title={hotel.name} /><span className={styles.distance}>{labels.distance[i]}</span></div>
-                <div className={styles.cardBody}>
-                  <h3>{hotel.displayName}</h3><p className={styles.address}><Icon type="pin" />{hotel.address}</p>
-                  <p className={styles.excerpt}>{hotel.paragraphs[0]}</p>
-                  <details className={styles.details}><summary><span className={styles.whenClosed}>{labels.hotelDetails}</span><span className={styles.whenOpen}>{labels.hideDetails}</span><span className={styles.plus} aria-hidden="true">+</span></summary><div className={styles.fullText}>{hotel.paragraphs.map((p, index) => <p key={index}>{p}</p>)}</div></details>
-                  <div className={styles.cardLinks}><ExternalLink href={hotel.website}>{labels.website}</ExternalLink>{hotel.booking && <ExternalLink href={hotel.booking}>{i === 0 ? "Trip.com" : "Booking.com"}</ExternalLink>}</div>
-                </div>
-              </article>
-            ))}
-          </div>
+          <HotelCarousel content={content} />
           <p className={styles.otherHotels}>{content.otherHotels}</p>
         </div>
       </section>
@@ -179,12 +259,7 @@ export function AttendClient({ content, children }: { content: AttendContent; ch
       <section id={sections[5]} className={`${styles.section} ${styles.diningSection}`} aria-label={labels.nav[5]}>
         <div className={styles.container}>
           <Heading content={content} index={5} /><p className={styles.sectionIntro}>{content.diningIntro}</p>
-          <div className={styles.diningGrid}>
-            {content.restaurants.map((restaurant) => <article className={styles.diningCard} key={restaurant.id}>
-              <Photo labels={labels} onOpen={setGallery} images={restaurant.images} title={restaurant.name} />
-              <div className={styles.cardBody}><h3>{restaurant.name}</h3><p className={styles.budget}>{restaurant.price}</p><p className={styles.restaurantInfo}><Icon type="clock" />{restaurant.hours}</p><p className={styles.restaurantInfo}><Icon type="pin" />{restaurant.address}</p><a className={styles.textLink} href={`tel:${restaurant.phone.replace(/[^+\d]/g, "")}`} aria-label={`${labels.call}: ${restaurant.name}, ${restaurant.phone}`}>{restaurant.phone}</a></div>
-            </article>)}
-          </div>
+          <DiningCarousel content={content} />
         </div>
       </section>
 

@@ -88,7 +88,18 @@
       "市政署大楼",
       "妈阁庙",
       "永利澳门"
-    ]
+    ],
+    "previousSlide": "上一个推荐",
+    "nextSlide": "下一个推荐",
+    "carousel": "轮播",
+    "showHotel": "查看酒店",
+    "closeDetails": "关闭详情",
+    "hotelPhotoCaptions": [
+      "酒店外观",
+      "客房"
+    ],
+    "chooseRestaurant": "选择餐厅",
+    "showRestaurant": "查看餐厅"
   },
   "venue": {
     "name": "澳门永利酒店 (Wynn Macau)",

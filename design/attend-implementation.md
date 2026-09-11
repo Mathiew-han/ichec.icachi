@@ -5,7 +5,7 @@
 - Prompt: `attend-style-prompt.md`.
 - Prototype: `attend-prototype.png`, generated with the built-in imagegen tool on 2026-09-11.
 - Route: `/en/registration/`, `/zh-CN/registration/`, `/zh-TW/registration/`.
-- The existing `SiteShell` poster, navigation, background asset, hero copy and global styles are preserved. The new body follows the prototype's section navigation, venue gallery, transport selector, hotel cards, sage tour panel, attraction filters and dining cards.
+- The existing `SiteShell` poster, navigation, background asset, hero copy and global styles are preserved. The body follows the prototype's section navigation, venue gallery, transport selector, sage tour panel and attraction filters. Accommodation and dining were subsequently refined into carousels using the supplied screenshot references.
 - Photographs and text in the implementation come from the source documents. Inaccurate photo assignments and small text generated inside the prototype are not source content.
 
 ## Content sources
@@ -13,8 +13,16 @@
 - `ICHEC2026_Attending(1).docx` — English.
 - `ICHEC2026_Attending_Simplified_Chinese.docx` — simplified Chinese, found alongside the two attached documents.
 - `ICHEC2026_Attending_Traditional_Chinese.docx` — traditional Chinese.
-- All 38 embedded photographs are used, with secondary images accessible in the photo viewer. WebP copies in `public/images/attend/` retain original composition; display cropping uses CSS. Original extracted images are retained in the local working output.
-- Three hotels, four arrival points, six described tour stops, thirteen exploration destinations and four restaurants are included in each locale. Full descriptions remain available in native expandable details. Existing registration information remains accessible in the final collapsed section.
+- All 38 embedded photographs are used. Venue photographs are static, hotel exterior and room photographs appear in the hotel detail overlay, and secondary attraction photographs remain accessible in the photo viewer. WebP copies in `public/images/attend/` retain original composition; display cropping uses CSS. Original extracted images are retained in the local working output.
+- Three hotels, four arrival points, six described tour stops, thirteen exploration destinations and four restaurants are included in each locale. Full hotel descriptions appear in a page-like modal; tour and attraction descriptions remain available in native expandable details. Existing registration information remains accessible in the final collapsed section.
+
+## Carousel refinement — 2026-09-11
+
+- Accommodation uses a broad rounded main photograph with two upper-right thumbnails showing the other hotels. Either thumbnail changes the hotel photograph, name, address, distance and description together. Previous/next buttons wrap through all three recommendations.
+- Hotel details open in a native top-layer dialog, with exterior and room photographs, the complete description, official website and available booking link. The overlay becomes a full-screen page on mobile. Escape and the close button restore focus to the trigger; background scrolling is locked while open.
+- Dining uses a photo-and-information carousel with four thumbnail selectors and previous/next controls. Restaurant image collages use `object-fit: contain` to preserve their content.
+- Venue images have no image-count badges or click-to-enlarge controls. Text actions use a continuous bottom border beneath both the label and its arrow, including their spacing.
+- English, simplified Chinese and traditional Chinese passed browser checks at 1440 px and 390 px: thumbnail switching, wraparound, detail contents, focus restoration, image loading and horizontal overflow. The desktop poster is pixel-identical to the original baseline. Lint, TypeScript and the static production build passed.
 
 ## Editorial corrections
 

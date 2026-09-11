@@ -88,7 +88,18 @@
       "IAM Building",
       "A-Ma Temple",
       "Wynn Macau"
-    ]
+    ],
+    "previousSlide": "Previous recommendation",
+    "nextSlide": "Next recommendation",
+    "carousel": "carousel",
+    "showHotel": "Show hotel",
+    "closeDetails": "Close details",
+    "hotelPhotoCaptions": [
+      "Exterior",
+      "Guest room"
+    ],
+    "chooseRestaurant": "Choose a restaurant",
+    "showRestaurant": "Show restaurant"
   },
   "venue": {
     "name": "Wynn Macau",

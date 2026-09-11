@@ -25,14 +25,17 @@
 .photo { position: relative; display: block; width: 100%; aspect-ratio: 1.65; border: 0; border-radius: 10px; overflow: hidden; padding: 0; background: #e9eeea; cursor: zoom-in; }
 .photo img { object-fit: cover; transition: transform 300ms ease; }
 .photo:hover img { transform: scale(1.025); }
+.staticPhoto { position: relative; width: 100%; aspect-ratio: 1.65; border-radius: 10px; overflow: hidden; background: #e9eeea; }
+.staticPhoto img { object-fit: cover; }
 .photoHint { position: absolute; bottom: 10px; right: 10px; border-radius: 4px; background: rgb(12 36 27 / 76%); color: white; padding: 2px 8px; font-size: 11px; line-height: 1.7; }
 .venueMain { aspect-ratio: 1.75; }
 .venueThumbnails { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
 .venueThumbnails figure { margin: 0; min-width: 0; }
-.venueThumbnails .photo { aspect-ratio: 1.9; }
+.venueThumbnails .staticPhoto { aspect-ratio: 1.9; }
 .venueThumbnails figcaption { font-size: 11px; color: var(--muted); margin-top: 5px; }
 .linkRow { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 25px; margin-top: 22px; }
-.textLink, .primaryLink { display: inline-flex; align-items: center; justify-content: center; gap: 9px; color: var(--green); font-size: 13px; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
+.textLink, .primaryLink { display: inline-flex; align-items: center; justify-content: center; gap: 9px; color: var(--green); font-size: 13px; font-weight: 600; text-decoration: none; }
+.textLink { width: fit-content; max-width: 100%; padding: 0 0 2px; border: 0; border-bottom: 1px solid currentColor; background: transparent; cursor: pointer; }
 .textLink:hover { color: #084f3b; }
 .primaryLink { text-decoration: none; padding: 10px 19px; border-radius: 5px; background: var(--green); color: white; }
 .primaryLink:hover, .moreButton:hover { background: #0b6048; }
@@ -65,17 +68,14 @@
 .routeFoot p, .referenceNote { font-size: 12px; color: var(--muted); margin: 0; }
 .routeFoot .linkRow { margin-top: 9px; }
 .cardGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 20px; align-items: start; }
-.hotelCard, .placeCard, .diningCard { min-width: 0; background: #fff; border: 1px solid #e5e9e4; border-radius: 11px; overflow: hidden; }
-.hotelPhoto { position: relative; }
-.hotelPhoto .photo, .placeCard .photo, .diningCard .photo { border-radius: 0; }
-.hotelPhoto .photo { aspect-ratio: 1.48; }
+.placeCard { min-width: 0; background: #fff; border: 1px solid #e5e9e4; border-radius: 11px; overflow: hidden; }
+.placeCard .photo { border-radius: 0; }
 .distance { position: absolute; bottom: 12px; left: 12px; border-radius: 30px; background: var(--green); color: #fff; padding: 4px 10px; font-size: 11px; font-weight: 600; pointer-events: none; }
-.hotelPhoto .photoHint { bottom: auto; top: 10px; }
 .cardBody { padding: 18px; }
 .cardBody .address { font-size: 12px; margin-bottom: 10px; }
 .cardBody h3 { font-size: 18px; }
 .excerpt { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin: 9px 0 10px; color: var(--muted); font-size: 13px; line-height: 1.75; }
-.details > summary { display: flex; align-items: center; gap: 7px; cursor: pointer; list-style: none; font-size: 12px; color: var(--green); font-weight: 600; text-decoration: underline; text-underline-offset: 4px; width: fit-content; }
+.details > summary { display: flex; align-items: center; gap: 7px; cursor: pointer; list-style: none; font-size: 12px; color: var(--green); font-weight: 600; border-bottom: 1px solid currentColor; padding-bottom: 2px; width: fit-content; }
 .details summary::-webkit-details-marker, .fees summary::-webkit-details-marker { display: none; }
 .plus { display: inline-block; font-size: 19px; font-weight: 400; line-height: 1; transition: transform 200ms; }
 .whenOpen { display: none; }
@@ -85,8 +85,40 @@
 .fullText { margin-top: 13px; padding-top: 4px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; line-height: 1.85; overflow-wrap: anywhere; }
 .fullText p { margin: 10px 0; }
 .fact { font-weight: 600; color: var(--ink); }
-.cardLinks { display: flex; flex-wrap: wrap; gap: 7px 16px; margin-top: 15px; padding-top: 12px; border-top: 1px solid var(--line); }
-.cardLinks .textLink { font-size: 12px; }
+.stayHeader { display: grid; grid-template-columns: minmax(0, 1fr) 352px; align-items: center; gap: 40px; margin-bottom: 22px; }
+.stayHeader .heading { margin-bottom: 0; }
+.hotelPreviews { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.hotelPreview { position: relative; aspect-ratio: 1.1; border: 0; border-radius: 22px; overflow: hidden; background: #e9eeea; padding: 0; cursor: pointer; text-align: left; }
+.hotelPreview img { object-fit: cover; transition: transform 250ms ease; }
+.hotelPreview:hover img { transform: scale(1.05); }
+.hotelPreview > span { position: absolute; inset: auto 0 0; display: flex; align-items: end; justify-content: space-between; gap: 8px; padding: 26px 13px 12px; background: linear-gradient(transparent, rgb(9 28 20 / 85%)); color: #fff; font-size: 11px; line-height: 1.5; }
+.hotelPreview > span > span { font-size: 18px; }
+.hotelHero { position: relative; animation: revealPhoto 350ms ease both; }
+.hotelHero .staticPhoto { aspect-ratio: 2.4; border-radius: 24px; }
+.hotelHero .distance { bottom: 20px; left: 22px; font-size: 12px; padding: 6px 14px; }
+.hotelSummary { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 48px; padding: 26px 0 23px; }
+.hotelSummary .eyebrow { margin-bottom: 9px; }
+.page .hotelSummary h3 { font-size: clamp(24px, 2.7vw, 34px); font-weight: 500; letter-spacing: -.02em; margin-bottom: 12px; }
+.hotelSummary .address { margin: 0; }
+.hotelDescription .excerpt { margin: 0 0 14px; font-size: 14px; }
+.carouselFooter { display: flex; justify-content: space-between; align-items: center; gap: 20px; border-top: 1px solid var(--line); padding-top: 18px; }
+.carouselControls { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.carouselCount { font-size: 13px; font-variant-numeric: tabular-nums; letter-spacing: .08em; margin-right: 12px; color: var(--green); }
+.carouselCount > span { color: var(--muted); }
+.carouselControls button { width: 42px; height: 42px; border: 1px solid #a9bcb1; border-radius: 50%; background: transparent; color: var(--green); font-size: 20px; cursor: pointer; }
+.carouselControls button:hover { background: var(--green); color: white; border-color: var(--green); }
+.hotelDialog { position: fixed; margin: auto; padding: 0; width: min(1080px, 94vw); max-width: 94vw; max-height: 92dvh; border: 0; border-radius: 16px; background: #fff; color: var(--ink); overscroll-behavior: contain; }
+.hotelDialog::backdrop { background: rgb(9 28 20 / 65%); backdrop-filter: blur(6px); }
+.hotelDetailBar { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 15px 34px; border-bottom: 1px solid var(--line); background: #fff; color: var(--muted); font-size: 13px; }
+.hotelDetailBar button { display: flex; align-items: center; gap: 16px; min-height: 40px; border: 0; background: transparent; color: var(--green); cursor: pointer; font-size: 13px; }
+.hotelDetailBar button > span { font-size: 28px; line-height: 1; }
+.hotelDetailContent { padding: 32px 42px 44px; }
+.hotelDetailContent h2 { font-size: clamp(26px, 3vw, 40px); font-weight: 500; line-height: 1.25; margin: 0 0 14px; }
+.hotelDetailImages { display: grid; grid-template-columns: 1.15fr 1fr; gap: 16px; margin: 26px 0; }
+.hotelDetailImages .staticPhoto { aspect-ratio: 1.4; height: 100%; }
+.hotelDetailText { max-width: 850px; color: var(--muted); font-size: 15px; line-height: 1.9; }
+.hotelDetailText p { margin: 0 0 18px; }
+@keyframes revealPhoto { from { opacity: .35; } to { opacity: 1; } }
 .otherHotels { margin: 24px 0 0; color: var(--muted); font-size: 13px; max-width: 900px; }
 .tourSection { background: #edf4ee; }
 .sectionIntro { font-size: 14px; color: var(--muted); max-width: 900px; margin: -10px 0 27px; }
@@ -104,14 +136,25 @@
 .placeHours .icon { width: 13px; height: 15px; margin-top: 1px; }
 .referenceNote { margin-top: 22px; }
 .diningSection { background: #faf8f4; }
-.diningGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; align-items: start; }
-.diningCard .photo { aspect-ratio: 1.25; }
-.diningCard .cardBody { padding: 15px; }
-.diningCard h3 { font-size: 16px; }
+.diningSlide { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); border-radius: 22px; overflow: hidden; background: white; }
+.diningVisual { min-width: 0; background: #e9eeea; animation: revealPhoto 350ms ease both; }
+.diningVisual .staticPhoto { height: 100%; min-height: 390px; aspect-ratio: 1.4; border-radius: 0; }
+.diningVisual img { object-fit: contain; }
+.diningCopy { padding: 36px; align-self: center; }
+.page .diningCopy h3 { font-size: clamp(24px, 2.5vw, 32px); font-weight: 500; margin-bottom: 18px; }
+.diningCopy .budget { margin: 0 0 20px; }
+.diningCopy .restaurantInfo { font-size: 13px; margin-block: 14px; }
+.diningCopy .textLink { margin-top: 12px; }
+.diningFooter { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-top: 22px; }
+.diningSelectors { display: flex; gap: 14px; min-width: 0; }
+.diningSelectors button { display: flex; align-items: center; gap: 10px; min-width: 0; padding: 0 0 8px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--muted); cursor: pointer; text-align: left; }
+.diningSelectors button[aria-pressed="true"] { border-bottom-color: var(--green); color: var(--green); }
+.diningThumb { display: block; position: relative; width: 66px; height: 54px; flex-shrink: 0; border-radius: 8px; overflow: hidden; }
+.diningThumb img { object-fit: cover; }
+.diningThumbName { max-width: 100px; font-size: 11px; line-height: 1.5; }
 .budget { margin: 10px 0; color: var(--green); font-size: 13px; font-weight: 650; }
 .restaurantInfo { display: flex; align-items: start; gap: 7px; margin: 10px 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
 .restaurantInfo .icon { width: 14px; height: 17px; margin-top: 2px; }
-.diningCard .textLink { font-size: 12px; margin-top: 3px; }
 .feesWrap { padding-block: 34px 0; }
 .fees { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
 .fees > summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px 24px; background: #f5f6f4; font-size: 15px; font-weight: 600; cursor: pointer; list-style: none; }
@@ -137,8 +180,9 @@
   .venueGrid { gap: 28px; grid-template-columns: 1fr 1fr; }
   .routesGrid { grid-template-columns: 190px minmax(0, 1fr); gap: 20px; }
   .routeTable th, .routeTable td { padding-inline: 7px; }
-  .diningGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .diningCard .photo { aspect-ratio: 1.65; }
+  .stayHeader { grid-template-columns: minmax(0, 1fr) 290px; gap: 25px; }
+  .diningThumbName { display: none; }
+  .diningCopy { padding: 26px; }
   .itinerary { overflow-x: auto; padding-bottom: 10px; grid-template-columns: repeat(8, 110px); }
 }
 @media (max-width: 720px) {
@@ -151,7 +195,27 @@
   .heading { margin-bottom: 20px; }
   .venueGrid { grid-template-columns: 1fr; gap: 28px; }
   .venueMain { aspect-ratio: 1.8; }
-  .venueThumbnails .photo { aspect-ratio: 1.65; }
+  .venueThumbnails .staticPhoto { aspect-ratio: 1.65; }
+  .stayHeader { grid-template-columns: 1fr; gap: 22px; }
+  .hotelPreviews { width: min(310px, 100%); justify-self: end; gap: 12px; }
+  .hotelPreview { aspect-ratio: 1.35; border-radius: 16px; }
+  .hotelHero .staticPhoto { aspect-ratio: 1.45; border-radius: 18px; }
+  .hotelSummary { grid-template-columns: 1fr; gap: 18px; padding-block: 23px; }
+  .hotelDescription .excerpt { -webkit-line-clamp: 3; }
+  .hotelHero .distance { bottom: 14px; left: 14px; }
+  .carouselFooter { flex-wrap: wrap; }
+  .hotelDialog { width: 100vw; max-width: 100vw; height: 100dvh; max-height: 100dvh; border-radius: 0; }
+  .hotelDetailBar { padding: 10px 20px; }
+  .hotelDetailContent { padding: 26px 22px 34px; }
+  .hotelDetailImages { grid-template-columns: 1fr; gap: 12px; }
+  .hotelDetailImages .staticPhoto { aspect-ratio: 1.6; }
+  .diningSlide { grid-template-columns: 1fr; border-radius: 18px; }
+  .diningVisual .staticPhoto { min-height: 0; height: auto; aspect-ratio: 1.4; }
+  .diningCopy { min-height: 330px; padding: 25px; }
+  .diningFooter { flex-wrap: wrap; gap: 18px; }
+  .diningSelectors { gap: 12px; }
+  .diningThumb { width: 60px; height: 50px; }
+  .diningFooter .carouselControls { margin-left: auto; }
   .sectionTop { align-items: start; gap: 19px; }
   .routesGrid { grid-template-columns: 1fr; gap: 18px; }
   .routeIntro { display: grid; grid-template-columns: 32px 1fr; gap: 0 12px; border: 0; padding: 0; }
@@ -163,7 +227,6 @@
   .tabs { gap: 6px; }
   .tabs button { padding: 9px 10px; }
   .cardGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-  .hotelPhoto .photo { aspect-ratio: 1.6; }
   .itinerary { grid-template-columns: repeat(8, 105px); }
   .cardBody { padding: 15px; }
   .cardBody h3 { font-size: 17px; }
@@ -171,15 +234,14 @@
   .legacyContent { padding-inline: 12px; }
 }
 @media (max-width: 480px) {
-  .cardGrid, .diningGrid { grid-template-columns: 1fr; }
+  .cardGrid { grid-template-columns: 1fr; }
   .photo { aspect-ratio: 1.8; }
-  .diningCard .photo { aspect-ratio: 1.7; }
   .cardBody { padding: 18px; }
   .cardBody h3 { font-size: 19px; }
-  .diningCard .cardBody { padding: 18px; }
   .routeFoot .linkRow { gap: 12px; }
   .lightboxCaption { flex-wrap: wrap; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .photo img, .plus { transition: none; }
+  .photo img, .plus, .hotelPreview img { transition: none; }
+  .hotelHero, .diningVisual { animation: none; }
 }

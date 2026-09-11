@@ -88,7 +88,18 @@
       "市政署大樓",
       "媽閣廟",
       "永利澳門"
-    ]
+    ],
+    "previousSlide": "上一個推薦",
+    "nextSlide": "下一個推薦",
+    "carousel": "輪播",
+    "showHotel": "查看酒店",
+    "closeDetails": "關閉詳情",
+    "hotelPhotoCaptions": [
+      "酒店外觀",
+      "客房"
+    ],
+    "chooseRestaurant": "選擇餐廳",
+    "showRestaurant": "查看餐廳"
   },
   "venue": {
     "name": "澳門永利酒店 (Wynn Macau)",
