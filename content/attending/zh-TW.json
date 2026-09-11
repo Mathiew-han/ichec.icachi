@@ -1,0 +1,569 @@
+{
+  "labels": {
+    "nav": [
+      "會議地點",
+      "交通指南",
+      "當地住宿",
+      "會議遊覽",
+      "探索澳門",
+      "美食推薦"
+    ],
+    "headings": [
+      "相聚澳門，\n共赴學術之約。",
+      "前往永利澳門。",
+      "近享舒適，從容參會。",
+      "沿著城市文脈，探索澳門。",
+      "會議之外，發現更多。",
+      "品味澳門。"
+    ],
+    "eyebrows": [
+      "會議地點",
+      "交通指南",
+      "當地住宿",
+      "會議遊覽",
+      "探索澳門",
+      "美食推薦"
+    ],
+    "origins": [
+      "香港機場",
+      "澳門機場",
+      "拱北口岸",
+      "橫琴口岸"
+    ],
+    "filters": [
+      "全部",
+      "文化遺產",
+      "度假與演出",
+      "戶外風光"
+    ],
+    "details": "查看詳情",
+    "hideDetails": "收起詳情",
+    "hotelDetails": "酒店詳情",
+    "website": "官方網站",
+    "hotelWebsite": "酒店官網",
+    "map": "查看地圖",
+    "shuttle": "官方穿梭巴士資訊",
+    "transportSource": "港珠澳大橋官方票價",
+    "moreHotels": "更多澳門住宿選擇",
+    "allStops": "查看全部 6 個景點",
+    "fewerStops": "收起部分景點",
+    "allPlaces": "查看全部 13 個地點",
+    "fewerPlaces": "收起部分地點",
+    "transportHeaders": [
+      "交通方式",
+      "預計時間",
+      "參考票價",
+      "路線說明"
+    ],
+    "referenceNote": "交通時間、票價、景點門票及開放時間僅供參考，出行前請向營運商或場所確認最新安排。",
+    "tourNote": "跟隨會議遊覽路線，走進澳門的城市地標與文化記憶。",
+    "photo": "查看圖片",
+    "close": "關閉圖片瀏覽",
+    "previous": "上一張圖片",
+    "next": "下一張圖片",
+    "fees": "註冊與費用",
+    "feesNote": "註冊時間、費用、報到及相關政策",
+    "venueCaptions": [
+      "永利澳門",
+      "會議廳",
+      "宴會廳"
+    ],
+    "distance": [
+      "距離不足 500 米",
+      "距離不足 500 米",
+      "距離不足 300 米"
+    ],
+    "call": "致電餐廳",
+    "gallery": "張照片",
+    "navLabel": "參會頁面分區",
+    "routeLabel": "選擇抵達地點",
+    "filterLabel": "篩選景點",
+    "routeHint": "選擇抵達地點，對比前往會議酒店的交通方案。",
+    "tourRoute": [
+      "永利澳門",
+      "金蓮花廣場",
+      "回歸賀禮陳列館 + 藝術博物館",
+      "大三巴牌坊 + 大炮台",
+      "議事亭前地",
+      "市政署大樓",
+      "媽閣廟",
+      "永利澳門"
+    ]
+  },
+  "venue": {
+    "name": "澳門永利酒店 (Wynn Macau)",
+    "address": "澳門外港填海區仙德麗街",
+    "paragraphs": [
+      "ICHEC 2026 將在澳門永利酒店舉行。永利酒店是一家位於澳門半島核心地帶的標誌性奢華度假村。酒店以其華麗的設計和世界一流的款待而聞名，提供優雅的環境，可盡覽城市天際線和南灣湖的迷人景致。賓客可享受豐富多樣的頂級餐飲選擇，包括屢獲殊榮的中餐廳、西餐廳及日本料理，確保精緻的美味體驗。",
+      "其優越的地理位置方便前往各大交通樞紐，包括澳門外港客運碼頭和港珠澳大橋，極大地便利了與粵港澳大灣區各地的連接。周邊熱門景點如大三巴牌坊、議事亭前地、媽閣廟和澳門旅遊塔，為文化探索和休閒活動提供了豐富的選擇。"
+    ],
+    "images": [
+      "/images/attend/wynn-macau-exterior.webp",
+      "/images/attend/wynn-conference-hall.webp",
+      "/images/attend/wynn-banquet-hall.webp"
+    ],
+    "website": "https://www.wynnresortsmacau.com/zh-hant/wynn-macau",
+    "map": "https://www.google.com/maps/search/?api=1&query=Wynn+Macau"
+  },
+  "routes": [
+    {
+      "name": "從香港國際機場出發",
+      "rows": [
+        {
+          "mode": "噴射飛航 (TurboJET)",
+          "time": "~70 分鐘",
+          "fare": "HK$160-220",
+          "remarks": "機場 → 澳門外港客運碼頭 → 乘的士 (~10分鐘) 至澳門永利酒店。船班頻率：每30分鐘一班。營運時間：07:00 – 23:59"
+        },
+        {
+          "mode": "巴士 + 的士",
+          "time": "~90 分鐘",
+          "fare": "金巴：日間 HK$65／夜間 HK$70；接駁另計",
+          "remarks": "乘坐城巴 B4 至港珠澳大橋香港口岸→乘搭金巴→乘搭的士 (~10分鐘) 至澳門永利酒店"
+        },
+        {
+          "mode": "的士 (跨境)",
+          "time": "~60 分鐘",
+          "fare": "~HK$800-1,000",
+          "remarks": "經港珠澳大橋直達的士。乘客只需告知司機“澳門永利酒店，新口岸”"
+        }
+      ]
+    },
+    {
+      "name": "從澳門國際機場出發",
+      "rows": [
+        {
+          "mode": "的士",
+          "time": "~15 分鐘",
+          "fare": "~MOP$80-100",
+          "remarks": "直達澳門永利酒店。乘客只需告知司機“永利澳門”"
+        },
+        {
+          "mode": "公共巴士 (MT1)",
+          "time": "~30 分鐘",
+          "fare": "MOP$6",
+          "remarks": "於亞馬喇前地下車→ 步行5分鐘"
+        },
+        {
+          "mode": "酒店專車/禮賓車",
+          "time": "~15 分鐘",
+          "fare": "聯繫酒店",
+          "remarks": "通過澳門永利酒店禮賓部安排。建議提前預訂"
+        }
+      ]
+    },
+    {
+      "name": "從拱北口岸（珠海）出發",
+      "rows": [
+        {
+          "mode": "的士",
+          "time": "~15 分鐘",
+          "fare": "~MOP$60-80",
+          "remarks": "直達澳門永利酒店"
+        },
+        {
+          "mode": "公共巴士 (3X/3/3A/10/25)",
+          "time": "~25 分鐘",
+          "fare": "MOP$6",
+          "remarks": "關閘 →亞馬喇前地→ 步行5分鐘"
+        },
+        {
+          "mode": "免費娛樂場穿梭巴士",
+          "time": "~30 分鐘",
+          "fare": "免費",
+          "remarks": "在關閘尋找澳門永利酒店穿梭巴士"
+        }
+      ]
+    },
+    {
+      "name": "從橫琴口岸（珠海）出發",
+      "rows": [
+        {
+          "mode": "的士",
+          "time": "~25 分鐘",
+          "fare": "~MOP$100-130",
+          "remarks": "經蓮花大橋直達澳門永利酒店"
+        },
+        {
+          "mode": "公共巴士 (25B)",
+          "time": "~40 分鐘",
+          "fare": "MOP$6",
+          "remarks": "橫琴口岸 →亞馬喇前地→ 步行5分鐘"
+        },
+        {
+          "mode": "免費娛樂場穿梭巴士",
+          "time": "請預留轉乘時間",
+          "fare": "免費",
+          "remarks": "橫琴口岸 → 永利皇宮 → 轉乘前往永利澳門；請查閱官方班次。"
+        }
+      ]
+    }
+  ],
+  "shuttleUrl": "https://www.wynnresortsmacau.com/zh-hant/wynn-macau/shuttle-bus",
+  "hotels": [
+    {
+      "id": "landmark-exterior",
+      "name": "新東方置地酒店 (New Orient Landmark Hotel)",
+      "address": "澳門友誼大馬路555號",
+      "paragraphs": [
+        "五星級豪華酒店“澳門置地廣場酒店”於2018年9月被新東方集團更名為“新東方置地酒店”。該酒店自2003年11月開業並作為第50屆澳門格蘭披治大賽車金禧紀念官方指定酒店以來，憑藉卓越個性化的服務和奢華舒適的體驗，已成為澳門首選酒店之一。23層高的酒店建築地理位置優越，位於市中心（距離澳門外港客運碼頭僅10分鐘車程，距離澳門國際機場20分鐘車程），毗鄰大多數旅遊景點。"
+      ],
+      "images": [
+        "/images/attend/landmark-exterior.webp",
+        "/images/attend/landmark-room.webp"
+      ],
+      "website": "http://www.landmarkhotel.com.mo/en/",
+      "booking": "https://hk.trip.com/hotels/macau-hotel-detail-425795/new-orient-landmark-hotel/",
+      "displayName": "新東方置地酒店"
+    },
+    {
+      "id": "yoho-exterior",
+      "name": "YOHO 金銀島名勝世界酒店 (YOHO TREASURE ISLAND RESORTS WORLD HOTEL)",
+      "address": "澳門半島南灣湖1號",
+      "paragraphs": [
+        "YOHO金銀島酒店坐落於澳門市中心優越位置，配備空調客房、室外游泳池、免費WiFi和健身中心。酒店緊鄰多處知名景點，距離鄭家大屋步行15分鐘，距離港務局大樓1英里，距離大炮台步行17分鐘。酒店為客人提供24小時前台、禮賓服務和外幣兌換。客房內備有衣櫃、電熱水壺以及帶花灑和免費洗浴用品的私人浴室，部分客房還設有帶冰箱的微潔簡廚。每間客房均配備平板電視和保險箱。住宿提供自助早餐，酒店餐廳擅長烹飪中餐、海鮮及本地美食。酒店還提供帶桑拿設施的五星級住宿體驗。"
+      ],
+      "images": [
+        "/images/attend/yoho-exterior.webp",
+        "/images/attend/yoho-room.webp"
+      ],
+      "website": "https://www.treasureislandresortsworld.com/",
+      "booking": null,
+      "displayName": "YOHO 金銀島名勝世界酒店"
+    },
+    {
+      "id": "lisboa-exterior",
+      "name": "葡京酒店 (Hotel Lisboa)",
+      "address": "澳門葡京路2-4號",
+      "paragraphs": [
+        "葡京酒店地理位置極佳，提供帶空調的客房、健身中心、免費WiFi和餐廳。這家五星級酒店提供免費穿梭巴士服務和客房服務。酒店設有室內游泳池和24小時前台。所有客房均配備有線平板電視、迷你吧、電熱水壺、浴缸、免費洗浴用品和書桌。所有客房均附設帶吹風機和拖鞋的私人浴室。"
+      ],
+      "images": [
+        "/images/attend/lisboa-exterior.webp",
+        "/images/attend/lisboa-room.webp"
+      ],
+      "website": "https://hotelisboa.com/?lang=zh-hant",
+      "booking": "https://www.booking.com/hotel/mo/lisboa-macau.html",
+      "displayName": "葡京酒店"
+    }
+  ],
+  "otherHotels": "遊客可以輕鬆在澳門找到滿足特定需求和預算範圍的住宿——從提供購物中心和休閒設施的國際五星級品牌酒店到時尚的中型酒店。尋求基礎住宿的遊客可以在澳門市中心找到各種經濟型酒店。",
+  "tourismUrl": "https://www.macaotourism.gov.mo/zh-hant/accommodation/search",
+  "tour": [
+    {
+      "id": "lotus-square",
+      "name": "金蓮花廣場 (Lotus Square)",
+      "paragraphs": [
+        "矗立於綜藝館旁金蓮花廣場上的大型雕塑“盛開的蓮花”，是中華人民共和國國務院於1999年贈送的，標誌著澳門主權的回歸。雕塑由青銅鑄造，表面鍍金，重6.5噸，高6米，花朵最大直徑為3.6米。主體由花莖、花瓣和花蕊組成，共16個部件。花朵基部由23塊紅色花崗岩組成。盛開的蓮花象徵著澳門的永遠繁榮。基座的三層紅色花崗岩呈蓮葉形狀，象徵著澳門半島、氹仔島和路環島。"
+      ],
+      "images": [
+        "/images/attend/lotus-square.webp"
+      ],
+      "facts": []
+    },
+    {
+      "id": "handover-gifts-museum",
+      "name": "澳門回歸賀禮陳列館 (Handover Gifts Museum of Macao)",
+      "paragraphs": [
+        "澳門回歸賀禮陳列館建於中葡政府澳門政權交接儀式舊址，現為回歸賀禮展出的場地。館內展出了56個民族為慶祝澳門特別行政區成立而贈送的吉祥賀禮。這些賀禮設計精美，融合了各民族獨特的藝術地域風格，寄託了全國各族人民對澳門繁榮昌盛的美好祝願。"
+      ],
+      "images": [
+        "/images/attend/handover-gifts-museum.webp"
+      ],
+      "facts": []
+    },
+    {
+      "id": "st-pauls-tour",
+      "name": "大三巴牌坊 (Ruins of St. Paul's)",
+      "paragraphs": [
+        "大三巴牌坊是指始建於1602-1640年的聖母天主教堂的前壁遺蹟（1835年毀於火災）以及緊鄰教堂的聖保祿學院遺址。整體而言，舊聖母天主教堂、聖保祿學院和大炮台均為耶穌會建築，構成了澳門的“衛城”。附近聖保祿學院舊址的考古遺蹟，見證了遠東地區第一所具有完整學術課程的西式大學。如今，大三巴牌坊在象徵意義上成為了這座城市的祭壇。"
+      ],
+      "images": [
+        "/images/attend/st-pauls-tour.webp"
+      ],
+      "facts": []
+    },
+    {
+      "id": "mount-fortress-tour",
+      "name": "大炮台 (Mount Fortress)",
+      "paragraphs": [
+        "大炮台於1617年至1626年間由耶穌會協同興建，是當時澳門核心的軍事防禦設施。炮台配備有大炮、軍營、水井和彈藥庫，儲備有足夠的彈藥和物資，足以抵禦長達兩年的圍攻。炮台佔地面積10,000平方米，呈梯形。四個角向外突出形成堡壘。"
+      ],
+      "images": [
+        "/images/attend/mount-fortress-tour.webp"
+      ],
+      "facts": []
+    },
+    {
+      "id": "iam-building",
+      "name": "‘議事亭’大樓（現稱市政署大樓） ('Leal Senado' Building)",
+      "paragraphs": [
+        "大樓最初建於1784年，是澳門第一個市政廳，並一直保持這一功能至今。“Leal Senado”（忠誠議會）一詞源於葡萄牙國王約翰四世於1654年賜予的稱號“無比忠誠的上帝之名之城澳門”。市政署大樓採用新古典主義設計，保留了所有原始的主牆和基本佈局，包括後院花園。大樓二樓設有一個議事廳，通往一個造型精美的雕刻圖書館（仿照葡萄牙馬夫拉修道院圖書館風格）和一個小教堂。"
+      ],
+      "images": [
+        "/images/attend/iam-building.webp"
+      ],
+      "facts": []
+    },
+    {
+      "id": "a-ma-temple",
+      "name": "媽閣廟 (A-Ma Temple)",
+      "paragraphs": [
+        "在澳門城建立之前，媽閣廟就已經存在。它由正門閣、牌坊、正殿、弘仁殿、觀音閣和正覺禪林組成。在一個建築群內供奉不同神祗的格局，使媽閣廟成為受儒、釋、道及多種民間信仰啟發的中原文化的傑出代表。"
+      ],
+      "images": [
+        "/images/attend/a-ma-temple.webp"
+      ],
+      "facts": []
+    }
+  ],
+  "places": [
+    {
+      "id": "st-pauls-facade",
+      "name": "大三巴牌坊",
+      "facts": [
+        "門票：免費",
+        "開放時間：全天開放"
+      ],
+      "paragraphs": [
+        "大三巴牌坊名列“澳門八景”之首，也是聯合國教科文組織世界文化遺產。它原本是聖保祿教堂的前壁及相鄰聖保祿學院（遠東第一所西式大學）的一部分，在1594年至1762年間是傳教士培訓的重要中心。高25.5米的花崗岩前壁雕刻精緻，融匯了歐洲巴洛克與東方元素，被譽為“立體的聖經”。1835年大火燒毀教堂後僅存前壁，形似中國傳統牌坊，故名“大三巴牌坊”。"
+      ],
+      "images": [
+        "/images/attend/st-pauls-facade.webp",
+        "/images/attend/st-pauls-view.webp"
+      ],
+      "category": "heritage"
+    },
+    {
+      "id": "mount-fortress-view",
+      "name": "大炮台 (Fortaleza do Monte)",
+      "facts": [
+        "門票：免費",
+        "開放時間：07:00–19:00"
+      ],
+      "paragraphs": [
+        "又稱聖保祿炮台，是中國最古老的西式炮台之一，同為世界文化遺產。建於1617至1626年間，位於海拔52米的柿山上，可俯瞰澳門半島全景。炮台由花崗岩和混有蚝殼灰的夯土建成，各角設棱堡以增強防禦。曾設有軍營、水井和彈藥庫，是澳門防禦體系的核心。"
+      ],
+      "images": [
+        "/images/attend/mount-fortress-view.webp",
+        "/images/attend/mount-fortress-cannon.webp"
+      ],
+      "category": "heritage"
+    },
+    {
+      "id": "macao-museum-exterior",
+      "name": "澳門博物館",
+      "facts": [
+        "門票：MOP 15（學生 MOP 8）；每週二及每月15日免費",
+        "開放時間：週二至週日 10:00–18:00（17:30停止入場）"
+      ],
+      "paragraphs": [
+        "澳門博物館位於大炮台之上，佔地2,800平方米，館藏3,000多件文物。博物館分為三層：一樓展出澳門早期歷史（新石器時代至19世紀）；二樓展現本地民俗文化、節日、傳統手工藝及造船、製香等行業；三樓為當代澳門，設有城市規劃模型、多媒體展品及文化藝術作品。"
+      ],
+      "images": [
+        "/images/attend/macao-museum-exterior.webp",
+        "/images/attend/macao-museum-interior.webp"
+      ],
+      "category": "heritage"
+    },
+    {
+      "id": "senado-square",
+      "name": "議事亭前地 (Largo do Senado)",
+      "facts": [
+        "門票：免費",
+        "開放時間：全天開放"
+      ],
+      "paragraphs": [
+        "議事亭前地位於澳門市中心，被當地人親切地稱為“噴水池”，長期以來一直是政治和商業中心。廣場鋪設著波浪形黑白石子，四周環繞著柔和色彩的葡式殖民建築，濃郁的南歐風情躍然紙上。"
+      ],
+      "images": [
+        "/images/attend/senado-square.webp"
+      ],
+      "category": "heritage"
+    },
+    {
+      "id": "st-dominics-exterior",
+      "name": "玫瑰聖母堂",
+      "facts": [
+        "門票：免費",
+        "開放時間：10:00–18:00（週四及週六15:00後關閉）"
+      ],
+      "paragraphs": [
+        "距議事亭前地僅幾步之遙，這座巴洛克風格教堂由多明會於1587年創建，是遠東最古老天主教堂之一。內部設有金色祭壇和彩色玻璃窗。緊鄰的“聖物寶庫”展出了300多件天主教珍貴文物。"
+      ],
+      "images": [
+        "/images/attend/st-dominics-exterior.webp",
+        "/images/attend/st-dominics-interior.webp"
+      ],
+      "category": "heritage"
+    },
+    {
+      "id": "macau-tower",
+      "name": "澳門旅遊塔",
+      "facts": [
+        "門票（觀光層）：MOP 208",
+        "開放時間：週一至週五 10:00–19:00，週六至週日 10:00–20:00"
+      ],
+      "paragraphs": [
+        "澳門旅遊塔高338米，是澳門的標誌性建築，在其223米主觀光層可享受360度全景視野。"
+      ],
+      "images": [
+        "/images/attend/macau-tower.webp"
+      ],
+      "category": "resorts"
+    },
+    {
+      "id": "fishermans-wharf",
+      "name": "漁人碼頭",
+      "facts": [
+        "門票：免費",
+        "開放時間：全天開放（商店 10:00–22:00）"
+      ],
+      "paragraphs": [
+        "澳門首個主題娛樂綜合體，佔地13萬多平方米，分為三大區域：唐城（中國古典建築）、東西匯聚（古羅馬表演場、希臘式建築、人造火山）、勵駿碼頭（歐陸及拉美風情海岸街區）。"
+      ],
+      "images": [
+        "/images/attend/fishermans-wharf.webp",
+        "/images/attend/fishermans-amphitheatre.webp"
+      ],
+      "category": "resorts"
+    },
+    {
+      "id": "cotai-strip",
+      "name": "路氹金光大道",
+      "facts": [
+        "門票：免費",
+        "開放時間：全天開放"
+      ],
+      "paragraphs": [
+        "被譽為“東方拉斯維加斯”的金光大道是連接氹仔與路環的現代度假區大道，匯聚奢華酒店、頂級餐飲、購物及娛樂設施。· 威尼斯人：室內運河貢多拉之旅（MOP 145）；大運河開放時間 11:00–22:00· 巴黎人：艾菲爾鐵塔觀景台（MOP 75）；燈光秀：18:15–24:00，每15分鐘一次（免費）· 倫敦人：大本鐘及皇家衛隊換崗儀式；時間：週二至週四 19:30, 21:30；週五至週日 16:00, 19:30, 21:30（免費）"
+      ],
+      "images": [
+        "/images/attend/cotai-strip.webp",
+        "/images/attend/cotai-night.webp"
+      ],
+      "category": "resorts"
+    },
+    {
+      "id": "house-of-dancing-water",
+      "name": "新濠天地 - 水舞間",
+      "facts": [
+        "門票：MOP 550",
+        "演出時間：週四至週一 17:00 或 20:00"
+      ],
+      "paragraphs": [
+        "在270度沉浸式劇場呈獻的集水、火、聲、光於一體的驚艷水上匯演。"
+      ],
+      "images": [
+        "/images/attend/house-of-dancing-water.webp"
+      ],
+      "category": "resorts"
+    },
+    {
+      "id": "wynn-palace",
+      "name": "永利皇宮 - 音樂噴泉表演",
+      "facts": [
+        "門票：免費",
+        "開放時間：12:00–18:00（每30分鐘一次），18:00–24:00（每20分鐘一次）"
+      ],
+      "paragraphs": [
+        "遊客可免費乘坐觀光纜車環繞表演湖，欣賞配合音樂與燈光起舞的噴泉表演。"
+      ],
+      "images": [
+        "/images/attend/wynn-palace.webp"
+      ],
+      "category": "resorts"
+    },
+    {
+      "id": "mgm-cotai",
+      "name": "美獅美高梅 - 飛蜂表演",
+      "facts": [
+        "門票：免費",
+        "演出時間：13:00, 15:00, 17:00, 19:00"
+      ],
+      "paragraphs": [
+        "擁有健力士世界紀錄的無柱無支撐天幕，並陳列有300多件藝術品，使酒店猶如一座活生生的博物館。"
+      ],
+      "images": [
+        "/images/attend/mgm-cotai.webp"
+      ],
+      "category": "resorts"
+    },
+    {
+      "id": "galaxy-macau",
+      "name": "澳門銀河",
+      "facts": [
+        "門票：免費"
+      ],
+      "paragraphs": [
+        "運財銀鑽秀：週一至週四 12:00–22:00；週五至週日 10:00–24:00（每30分鐘一次）水晶蓮花秀：週一至週四 12:15–21:45；週五至週日 10:15–23:45（每30分鐘一次）擁有亞洲最長空中激流（575米）、200多家商店及澳門最大室內競技場的奢華度假城。"
+      ],
+      "images": [
+        "/images/attend/galaxy-macau.webp"
+      ],
+      "category": "resorts"
+    },
+    {
+      "id": "cheoc-van-beach",
+      "name": "竹灣海灘",
+      "facts": [
+        "門票：免費",
+        "開放時間：全天開放"
+      ],
+      "paragraphs": [
+        "環境寧靜的小型金色沙灘。附近的竹灣酒店呈葡式建築風格，設有海景露台，非常適合度假拍照。"
+      ],
+      "images": [
+        "/images/attend/cheoc-van-beach.webp"
+      ],
+      "category": "outdoors"
+    }
+  ],
+  "diningIntro": "澳門擁有眾多米芝蓮星級及精緻餐廳，部分餐廳需提前預訂。人均消費約為 MOP 300–500（部分餐廳可能會加收10%的服務費）。",
+  "restaurants": [
+    {
+      "id": "laurel-restaurant",
+      "name": "丹桂軒 (Laurel Restaurant)",
+      "hours": "週一至週五 10:30 - 23:00，週六至週日 10:00 – 23:00",
+      "address": "星際酒店2樓",
+      "phone": "+853 82908628",
+      "price": "MOP 300",
+      "images": [
+        "/images/attend/laurel-restaurant.webp"
+      ]
+    },
+    {
+      "id": "naughty-nuris",
+      "name": "Naughty Nuri's 豬扒包/烤豬排",
+      "hours": "12:30 - 22:00",
+      "address": "新馬路福隆新街7號地下",
+      "phone": "+853-28530425",
+      "price": "MOP 200",
+      "images": [
+        "/images/attend/naughty-nuris.webp"
+      ]
+    },
+    {
+      "id": "goobne-chicken",
+      "name": "貢乃炸雞 (Goobne Chicken)",
+      "hours": "12:00-15:00 / 18:00-24:00",
+      "address": "澳門林茂海邊大馬路信譽灣畔地下C/E鋪",
+      "phone": "+853-28252890",
+      "price": "MOP 200",
+      "images": [
+        "/images/attend/goobne-chicken.webp"
+      ]
+    },
+    {
+      "id": "clube-militar",
+      "name": "澳門陸軍俱樂部 (Clube Militar De Macau)",
+      "hours": "週一至週五 12:30 - 14:45、18:30 - 22:00，週六至週日 12:00 - 15:00、18:30 - 22:00",
+      "address": "澳門半島南灣大馬路975號",
+      "phone": "+853-28714004",
+      "price": "MOP 200~300",
+      "images": [
+        "/images/attend/clube-militar.webp"
+      ]
+    }
+  ]
+}

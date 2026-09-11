@@ -1,0 +1,569 @@
+{
+  "labels": {
+    "nav": [
+      "会议地点",
+      "交通指南",
+      "当地住宿",
+      "会议游览",
+      "探索澳门",
+      "美食推荐"
+    ],
+    "headings": [
+      "相聚澳门，\n共赴学术之约。",
+      "前往永利澳门。",
+      "近享舒适，从容参会。",
+      "沿着城市文脉，探索澳门。",
+      "会议之外，发现更多。",
+      "品味澳门。"
+    ],
+    "eyebrows": [
+      "会议地点",
+      "交通指南",
+      "当地住宿",
+      "会议游览",
+      "探索澳门",
+      "美食推荐"
+    ],
+    "origins": [
+      "香港机场",
+      "澳门机场",
+      "拱北口岸",
+      "横琴口岸"
+    ],
+    "filters": [
+      "全部",
+      "文化遗产",
+      "度假与演出",
+      "户外风光"
+    ],
+    "details": "查看详情",
+    "hideDetails": "收起详情",
+    "hotelDetails": "酒店详情",
+    "website": "官方网站",
+    "hotelWebsite": "酒店官网",
+    "map": "查看地图",
+    "shuttle": "官方穿梭巴士信息",
+    "transportSource": "港珠澳大桥官方票价",
+    "moreHotels": "更多澳门住宿选择",
+    "allStops": "查看全部 6 个景点",
+    "fewerStops": "收起部分景点",
+    "allPlaces": "查看全部 13 个地点",
+    "fewerPlaces": "收起部分地点",
+    "transportHeaders": [
+      "交通方式",
+      "预计时间",
+      "参考票价",
+      "路线说明"
+    ],
+    "referenceNote": "交通时间、票价、景点门票及开放时间仅供参考，出行前请向运营商或场所确认最新安排。",
+    "tourNote": "跟随会议游览路线，走进澳门的城市地标与文化记忆。",
+    "photo": "查看图片",
+    "close": "关闭图片浏览",
+    "previous": "上一张图片",
+    "next": "下一张图片",
+    "fees": "注册与费用",
+    "feesNote": "注册时间、费用、报到及相关政策",
+    "venueCaptions": [
+      "永利澳门",
+      "会议厅",
+      "宴会厅"
+    ],
+    "distance": [
+      "距离不足 500 米",
+      "距离不足 500 米",
+      "距离不足 300 米"
+    ],
+    "call": "致电餐厅",
+    "gallery": "张照片",
+    "navLabel": "参会页面分区",
+    "routeLabel": "选择抵达地点",
+    "filterLabel": "筛选景点",
+    "routeHint": "选择抵达地点，对比前往会议酒店的交通方案。",
+    "tourRoute": [
+      "永利澳门",
+      "金莲花广场",
+      "回归贺礼陈列馆 + 艺术博物馆",
+      "大三巴牌坊 + 大炮台",
+      "议事亭前地",
+      "市政署大楼",
+      "妈阁庙",
+      "永利澳门"
+    ]
+  },
+  "venue": {
+    "name": "澳门永利酒店 (Wynn Macau)",
+    "address": "澳门外港填海区仙德丽街",
+    "paragraphs": [
+      "ICHEC 2026 将在澳门永利酒店举行。永利酒店是一家位于澳门半岛核心地带的标志性奢华度假村。酒店以其华丽的设计和世界一流的款待而闻名，提供优雅的环境，可尽览城市天际线和南湾湖的迷人景致。宾客可享受丰富多样的顶级餐饮选择，包括屡获殊荣的中餐厅、西餐厅及日本料理，确保精致的美味体验。",
+      "其优越的地理位置方便前往各大交通枢纽，包括澳门外港客运码头和港珠澳大桥，极大地便利了与粤港澳大湾区各地的连接。周边热门景点如大三巴牌坊、议事亭前地、妈阁庙和澳门旅游塔，为文化探索和休闲活动提供了丰富的选择。"
+    ],
+    "images": [
+      "/images/attend/wynn-macau-exterior.webp",
+      "/images/attend/wynn-conference-hall.webp",
+      "/images/attend/wynn-banquet-hall.webp"
+    ],
+    "website": "https://www.wynnresortsmacau.com/zh-hant/wynn-macau",
+    "map": "https://www.google.com/maps/search/?api=1&query=Wynn+Macau"
+  },
+  "routes": [
+    {
+      "name": "从香港国际机场出发",
+      "rows": [
+        {
+          "mode": "轮船(TurboJET)",
+          "time": "~70 分钟",
+          "fare": "HK$160-220",
+          "remarks": "机场 → 澳门外港客运码头 → 乘出租车 (~10分钟) 至澳门永利酒店。船班频率：每30分钟一班。运营时间：07:00 – 23:59"
+        },
+        {
+          "mode": "巴士 + 出租车",
+          "time": "~90 分钟",
+          "fare": "金巴：日间 HK$65／夜间 HK$70；接驳另计",
+          "remarks": "乘坐城巴 B4 至港珠澳大桥香港口岸→乘搭金巴→乘出租车 (~10分钟) 至澳门永利酒店"
+        },
+        {
+          "mode": "出租车 (跨境)",
+          "time": "~60 分钟",
+          "fare": "~HK$800-1,000",
+          "remarks": "经港珠澳大桥直达出租车。乘客只需告知司机“澳门永利酒店，新口岸”"
+        }
+      ]
+    },
+    {
+      "name": "从澳门国际机场出发",
+      "rows": [
+        {
+          "mode": "出租车",
+          "time": "~15 分钟",
+          "fare": "~MOP$80-100",
+          "remarks": "直达澳门永利酒店。乘客只需告知司机“永利澳门”"
+        },
+        {
+          "mode": "公共巴士 (MT1)",
+          "time": "~30 分钟",
+          "fare": "MOP$6",
+          "remarks": "在亚马喇前地下车 → 步行5分钟"
+        },
+        {
+          "mode": "酒店专车/礼宾车",
+          "time": "~15 分钟",
+          "fare": "联系酒店",
+          "remarks": "通过澳门永利酒店礼宾部安排。建议提前预订"
+        }
+      ]
+    },
+    {
+      "name": "从拱北口岸（珠海）出发",
+      "rows": [
+        {
+          "mode": "出租车",
+          "time": "~15 分钟",
+          "fare": "~MOP$60-80",
+          "remarks": "直达澳门永利酒店"
+        },
+        {
+          "mode": "公共巴士 (3X/3/3A/10/25)",
+          "time": "~25 分钟",
+          "fare": "MOP$6",
+          "remarks": "关闸 →亚马喇前地→ 步行5分钟"
+        },
+        {
+          "mode": "免费娱乐场穿梭巴士",
+          "time": "~30 分钟",
+          "fare": "免费",
+          "remarks": "在关闸寻找澳门永利酒店穿梭巴士"
+        }
+      ]
+    },
+    {
+      "name": "从横琴口岸（珠海）出发",
+      "rows": [
+        {
+          "mode": "出租车",
+          "time": "~25 分钟",
+          "fare": "~MOP$100-130",
+          "remarks": "经莲花大桥直达澳门永利酒店"
+        },
+        {
+          "mode": "公共巴士 (25B)",
+          "time": "~40 分钟",
+          "fare": "MOP$6",
+          "remarks": "横琴口岸 →亚马喇前地 → 步行5分钟"
+        },
+        {
+          "mode": "免费娱乐场穿梭巴士",
+          "time": "请预留换乘时间",
+          "fare": "免费",
+          "remarks": "横琴口岸 → 永利皇宫 → 换乘前往永利澳门；请查阅官方班次。"
+        }
+      ]
+    }
+  ],
+  "shuttleUrl": "https://www.wynnresortsmacau.com/zh-hant/wynn-macau/shuttle-bus",
+  "hotels": [
+    {
+      "id": "landmark-exterior",
+      "name": "新东方置地酒店 (New Orient Landmark Hotel)",
+      "address": "澳门友谊大马路555号",
+      "paragraphs": [
+        "五星级豪华酒店“澳门置地广场酒店”于2018年9月被新东方集团更名为“新东方置地酒店”。该酒店自2003年11月开业并作为第50届澳门格兰披治大赛车金禧纪念官方指定酒店以来，凭借卓越个性化的服务和奢华舒适的体验，已成为澳门首选酒店之一。23层高的酒店建筑地理位置优越，位于市中心（距离澳门外港客运码头仅10分钟车程，距离澳门国际机场20分钟车程），毗邻大多数旅游景点。"
+      ],
+      "images": [
+        "/images/attend/landmark-exterior.webp",
+        "/images/attend/landmark-room.webp"
+      ],
+      "website": "http://www.landmarkhotel.com.mo/en/",
+      "booking": "https://hk.trip.com/hotels/macau-hotel-detail-425795/new-orient-landmark-hotel/",
+      "displayName": "新东方置地酒店"
+    },
+    {
+      "id": "yoho-exterior",
+      "name": "YOHO 金银岛名胜世界酒店 (YOHO TREASURE ISLAND RESORTS WORLD HOTEL)",
+      "address": "澳门半岛南湾湖1号",
+      "paragraphs": [
+        "YOHO金银岛酒店坐落于澳门市中心优越位置，配备空调客房、室外游泳池、免费WiFi和健身中心。酒店紧邻多处知名景点，距离郑家大屋步行15分钟，距离港务局大楼1英里，距离大炮台步行17分钟。酒店为客人提供24小时前台、礼宾服务和外币兑换。客房内备有衣柜、电热水壶以及带花洒和免费洗浴用品的私人浴室，部分客房还设有带冰箱的微洁简厨。每间客房均配备平板电视和保险箱。住宿提供自助早餐，酒店餐厅擅长烹饪中餐、海鲜及本地美食。酒店还提供带桑拿设施的五星级住宿体验。"
+      ],
+      "images": [
+        "/images/attend/yoho-exterior.webp",
+        "/images/attend/yoho-room.webp"
+      ],
+      "website": "https://www.treasureislandresortsworld.com/",
+      "booking": null,
+      "displayName": "YOHO 金银岛名胜世界酒店"
+    },
+    {
+      "id": "lisboa-exterior",
+      "name": "葡京酒店 (Hotel Lisboa)",
+      "address": "澳门葡京路2-4号",
+      "paragraphs": [
+        "葡京酒店地理位置极佳，提供带空调的客房、健身中心、免费WiFi和餐厅。这家五星级酒店提供免费穿梭巴士服务和客房服务。酒店设有室内游泳池和24小时前台。所有客房均配备有线平板电视、迷你吧、电热水壶、浴缸、免费洗浴用品和书桌。所有客房均附设带吹风机和拖鞋的私人浴室。"
+      ],
+      "images": [
+        "/images/attend/lisboa-exterior.webp",
+        "/images/attend/lisboa-room.webp"
+      ],
+      "website": "https://hotelisboa.com/?lang=zh-hant",
+      "booking": "https://www.booking.com/hotel/mo/lisboa-macau.html",
+      "displayName": "葡京酒店"
+    }
+  ],
+  "otherHotels": "游客可以轻松在澳门找到满足特定需求和预算范围的住宿——从提供购物中心和休闲设施的国际五星级品牌酒店到时尚的中型酒店。寻求基础住宿的游客可以在澳门市中心找到各种经济型酒店。",
+  "tourismUrl": "https://www.macaotourism.gov.mo/zh-hans/accommodation/search",
+  "tour": [
+    {
+      "id": "lotus-square",
+      "name": "金莲花广场 (Lotus Square)",
+      "paragraphs": [
+        "矗立于综艺馆旁金莲花广场上的大型雕塑“盛开的莲花”，是中华人民共和国国务院于1999年赠送的，标志着澳门主权的回归。雕塑由青铜铸造，表面镀金，重6.5吨，高6米，花朵最大直径为3.6米。主体由花茎、花瓣和花蕊组成，共16个部件。花朵基部由23块红色花岗岩组成。盛开的莲花象征着澳门的永远繁荣。基座的三层红色花岗岩呈莲叶形状，象征着澳门半岛、氹仔岛和路环岛。"
+      ],
+      "images": [
+        "/images/attend/lotus-square.webp"
+      ],
+      "facts": []
+    },
+    {
+      "id": "handover-gifts-museum",
+      "name": "澳门回归贺礼陈列馆 (Handover Gifts Museum of Macao)",
+      "paragraphs": [
+        "澳门回归贺礼陈列馆建于中葡政府澳门政权交接仪式旧址，现为回归贺礼展出的场地。馆内展出了56个民族为庆祝澳门特别行政区成立而赠送的吉祥贺礼。这些贺礼设计精美，融合了各民族独特的艺术地域风格，寄托了全国各族人民对澳门繁荣昌盛的美好祝愿。"
+      ],
+      "images": [
+        "/images/attend/handover-gifts-museum.webp"
+      ],
+      "facts": []
+    },
+    {
+      "id": "st-pauls-tour",
+      "name": "大三巴牌坊 (Ruins of St. Paul's)",
+      "paragraphs": [
+        "大三巴牌坊是指始建于1602-1640年的圣母天主教堂的前壁遗迹（1835年毁于火灾）以及紧邻教堂的圣保禄学院遗址。整体而言，旧圣母天主教堂、圣保禄学院和大炮台均为耶稣会建筑，构成了澳门的“卫城”。附近圣保禄学院旧址的考古遗迹，见证了远东地区第一所具有完整学术课程的西式大学。如今，大三巴牌坊在象征意义上成为了这座城市的祭坛。"
+      ],
+      "images": [
+        "/images/attend/st-pauls-tour.webp"
+      ],
+      "facts": []
+    },
+    {
+      "id": "mount-fortress-tour",
+      "name": "大炮台 (Mount Fortress)",
+      "paragraphs": [
+        "大炮台于1617年至1626年间由耶稣会协同兴建，是当时澳门核心的军事防御设施。炮台配备有大炮、军营、水井和弹药库，储备有足够的弹药和物资，足以抵御长达两年的围攻。炮台占地面积10,000平方米，呈梯形。四个角向外突出形成堡垒。"
+      ],
+      "images": [
+        "/images/attend/mount-fortress-tour.webp"
+      ],
+      "facts": []
+    },
+    {
+      "id": "iam-building",
+      "name": "‘议事亭’大楼（现称市政署大楼） ('Leal Senado' Building)",
+      "paragraphs": [
+        "大楼最初建于1784年，是澳门第一个市政厅，并一直保持这一功能至今。“Leal Senado”（忠诚议会）一词源于葡萄牙国王约翰四世于1654年赐予的称号“无比忠诚的上帝之名之城澳门”。市政署大楼采用新古典主义设计，保留了所有原始的主墙和基本布局，包括后院花园。大楼二楼设有一个议事厅，通往一个造型精美的雕刻图书馆（仿照葡萄牙马夫拉修道院图书馆风格）和一个小教堂。"
+      ],
+      "images": [
+        "/images/attend/iam-building.webp"
+      ],
+      "facts": []
+    },
+    {
+      "id": "a-ma-temple",
+      "name": "妈阁庙 (A-Ma Temple)",
+      "paragraphs": [
+        "在澳门城建立之前，妈阁庙就已经存在。它由正门阁、牌坊、正殿、弘仁殿、观音阁和正觉禅林组成。在一个建筑群内供奉不同神祗的格局，使妈阁庙成为受儒、释、道及多种民间信仰启发的中原文化的杰出代表。"
+      ],
+      "images": [
+        "/images/attend/a-ma-temple.webp"
+      ],
+      "facts": []
+    }
+  ],
+  "places": [
+    {
+      "id": "st-pauls-facade",
+      "name": "大三巴牌坊",
+      "facts": [
+        "门票：免费",
+        "开放时间：全天开放"
+      ],
+      "paragraphs": [
+        "大三巴牌坊名列“澳门八景”之首，也是联合国教科文组织世界文化遗产。它原本是圣保禄教堂的前壁及相邻圣保禄学院（远东第一所西式大学）的一部分，在1594年至1762年间是传教士培训的重要中心。高25.5米的花岗岩前壁雕刻精致，融汇了欧洲巴洛克与东方元素，被称为“立体的圣经”。1835年大火烧毁教堂后仅存前壁，形似中国传统牌坊，故名“大三巴牌坊”。"
+      ],
+      "images": [
+        "/images/attend/st-pauls-facade.webp",
+        "/images/attend/st-pauls-view.webp"
+      ],
+      "category": "heritage"
+    },
+    {
+      "id": "mount-fortress-view",
+      "name": "大炮台 (Fortaleza do Monte)",
+      "facts": [
+        "门票：免费",
+        "开放时间：07:00–19:00"
+      ],
+      "paragraphs": [
+        "又称圣保禄炮台，是中国最古老的西式炮台之一，同为世界文化遗产。建于1617至1626年间，位于海拔52米的柿山上，可俯瞰澳门半岛全景。炮台由花岗岩和混有蚝壳灰的夯土建成，各角设棱堡以增强防御。曾设有军营、水井和弹药库，是澳门防御体系的核心。"
+      ],
+      "images": [
+        "/images/attend/mount-fortress-view.webp",
+        "/images/attend/mount-fortress-cannon.webp"
+      ],
+      "category": "heritage"
+    },
+    {
+      "id": "macao-museum-exterior",
+      "name": "澳门博物馆",
+      "facts": [
+        "门票：MOP 15（学生 MOP 8）；每周二及每月15日免费",
+        "开放时间：周二至周日 10:00–18:00（17:30停止入场）"
+      ],
+      "paragraphs": [
+        "澳门博物馆位于大炮台之上，占地2,800平方米，馆藏3,000多件文物。博物馆分为三层：一楼展出澳门早期历史（新石器时代至19世纪）；二楼展现本地民俗文化、节日、传统手工艺及造船、制香等行业；三楼为当代澳门，设有城市规划模型、多媒体展品及文化艺术作品。"
+      ],
+      "images": [
+        "/images/attend/macao-museum-exterior.webp",
+        "/images/attend/macao-museum-interior.webp"
+      ],
+      "category": "heritage"
+    },
+    {
+      "id": "senado-square",
+      "name": "议事亭前地 (Largo do Senado)",
+      "facts": [
+        "门票：免费",
+        "开放时间：全天开放"
+      ],
+      "paragraphs": [
+        "议事亭前地位于澳门市中心，被当地人亲切地称为“喷水池”，长期以来一直是政治和商业中心。广场铺设着波浪形黑白石子，四周环绕着柔和色彩的葡式殖民建筑，浓郁的南欧风情跃然纸上。"
+      ],
+      "images": [
+        "/images/attend/senado-square.webp"
+      ],
+      "category": "heritage"
+    },
+    {
+      "id": "st-dominics-exterior",
+      "name": "玫瑰圣母堂",
+      "facts": [
+        "门票：免费",
+        "开放时间：10:00–18:00（周四及周六15:00后关闭）"
+      ],
+      "paragraphs": [
+        "距议事亭前地仅几步之遥，这座巴洛克风格教堂由多明我会于1587年创建，是远东最古老天主教堂之一。内部设有金色祭坛和彩色玻璃窗。紧邻的“圣物宝库”展出了300多件天主教珍贵文物。"
+      ],
+      "images": [
+        "/images/attend/st-dominics-exterior.webp",
+        "/images/attend/st-dominics-interior.webp"
+      ],
+      "category": "heritage"
+    },
+    {
+      "id": "macau-tower",
+      "name": "澳门旅游塔",
+      "facts": [
+        "门票（观光层）：MOP 208",
+        "开放时间：周一至周五 10:00–19:00，周六至周日 10:00–20:00"
+      ],
+      "paragraphs": [
+        "澳门旅游塔高338米，是澳门的标志性建筑，在其223米主观光层可享受360度全景视野"
+      ],
+      "images": [
+        "/images/attend/macau-tower.webp"
+      ],
+      "category": "resorts"
+    },
+    {
+      "id": "fishermans-wharf",
+      "name": "渔人码头",
+      "facts": [
+        "门票：免费",
+        "开放时间：全天开放（商店 10:00–22:00）"
+      ],
+      "paragraphs": [
+        "澳门首个主题娱乐综合体，占地13万多平方米，分为三大区域：唐城（中国古典建筑）、东西汇聚（古罗马表演场、希腊式建筑、人造火山）、励骏码头（欧陆及拉美风情海岸街区）。"
+      ],
+      "images": [
+        "/images/attend/fishermans-wharf.webp",
+        "/images/attend/fishermans-amphitheatre.webp"
+      ],
+      "category": "resorts"
+    },
+    {
+      "id": "cotai-strip",
+      "name": "路氹金光大道",
+      "facts": [
+        "门票：免费",
+        "开放时间：全天开放"
+      ],
+      "paragraphs": [
+        "被称为“东方拉斯维加斯”的金光大道是连接氹仔与路环的现代度假区大道，汇聚奢华酒店、顶级餐饮、购物及娱乐设施。· 威尼斯人：室内运河贡多拉之旅（MOP 145）；大运河开放时间 11:00–22:00· 巴黎人：埃菲尔铁塔观景台（MOP 75）；灯光秀：18:15–24:00，每15分钟一次（免费）· 伦敦人：大本钟及皇家卫队换岗仪式；时间：周二至周四 19:30, 21:30；周五至周日 16:00, 19:30, 21:30（免费）"
+      ],
+      "images": [
+        "/images/attend/cotai-strip.webp",
+        "/images/attend/cotai-night.webp"
+      ],
+      "category": "resorts"
+    },
+    {
+      "id": "house-of-dancing-water",
+      "name": "新濠天地 - 水舞间",
+      "facts": [
+        "门票：MOP 550",
+        "演出时间：周四至周一 17:00 或 20:00"
+      ],
+      "paragraphs": [
+        "在270度沉浸式剧场呈献的集水、火、声、光于一体的惊艳水上汇演。"
+      ],
+      "images": [
+        "/images/attend/house-of-dancing-water.webp"
+      ],
+      "category": "resorts"
+    },
+    {
+      "id": "wynn-palace",
+      "name": "永利皇宫 - 音乐喷泉表演",
+      "facts": [
+        "门票：免费",
+        "开放时间：12:00–18:00（每30分钟一次），18:00–24:00（每20分钟一次）"
+      ],
+      "paragraphs": [
+        "游客可免费乘坐观光缆车环绕表演湖，欣赏配合音乐与灯光起舞的喷泉表演。"
+      ],
+      "images": [
+        "/images/attend/wynn-palace.webp"
+      ],
+      "category": "resorts"
+    },
+    {
+      "id": "mgm-cotai",
+      "name": "美狮美高梅 - 飞蜂表演",
+      "facts": [
+        "门票：免费",
+        "演出时间：13:00, 15:00, 17:00, 19:00"
+      ],
+      "paragraphs": [
+        "拥有吉尼斯世界纪录的无柱无支撑天幕，并陈列有300多件艺术品，使酒店犹如一座活生生的博物馆。"
+      ],
+      "images": [
+        "/images/attend/mgm-cotai.webp"
+      ],
+      "category": "resorts"
+    },
+    {
+      "id": "galaxy-macau",
+      "name": "澳门银河",
+      "facts": [
+        "门票：免费"
+      ],
+      "paragraphs": [
+        "运财银钻秀：周一至周四 12:00–22:00；周五至周日 10:00–24:00（每30分钟一次）水晶莲花秀：周一至周四 12:15–21:45；周五至周日 10:15–23:45（每30分钟一次）拥有亚洲最长空中激流（575米）、200多家商店及澳门最大室内竞技场的奢华度假城"
+      ],
+      "images": [
+        "/images/attend/galaxy-macau.webp"
+      ],
+      "category": "resorts"
+    },
+    {
+      "id": "cheoc-van-beach",
+      "name": "竹湾海滩",
+      "facts": [
+        "门票：免费",
+        "开放时间：全天开放"
+      ],
+      "paragraphs": [
+        "环境宁静的小型金色沙滩。附近的竹湾酒店呈葡式建筑风格，设有海景露台，非常适合度假拍照。"
+      ],
+      "images": [
+        "/images/attend/cheoc-van-beach.webp"
+      ],
+      "category": "outdoors"
+    }
+  ],
+  "diningIntro": "澳门拥有众多米其林星级及精致餐厅，部分餐厅需提前预订。人均消费约为 MOP 300–500（部分餐厅可能会加收10%的服务费）。",
+  "restaurants": [
+    {
+      "id": "laurel-restaurant",
+      "name": "丹桂轩 (Laurel Restaurant)",
+      "hours": "周一至周五 10:30 - 23:00，周六至周日 10:00 – 23:00",
+      "address": "星际酒店2楼",
+      "phone": "+853 82908628",
+      "price": "MOP 300",
+      "images": [
+        "/images/attend/laurel-restaurant.webp"
+      ]
+    },
+    {
+      "id": "naughty-nuris",
+      "name": "Naughty Nuri's 猪扒包/烤猪排",
+      "hours": "12:30 - 22:00",
+      "address": "新马路福隆新街7号地下",
+      "phone": "+853-28530425",
+      "price": "MOP 200",
+      "images": [
+        "/images/attend/naughty-nuris.webp"
+      ]
+    },
+    {
+      "id": "goobne-chicken",
+      "name": "贡乃炸鸡 (Goobne Chicken)",
+      "hours": "12:00-15:00 / 18:00-24:00",
+      "address": "澳门林茂海边大马路信誉湾畔地下C/E铺",
+      "phone": "+853-28252890",
+      "price": "MOP 200",
+      "images": [
+        "/images/attend/goobne-chicken.webp"
+      ]
+    },
+    {
+      "id": "clube-militar",
+      "name": "澳门陆军俱乐部 (Clube Militar De Macau)",
+      "hours": "周一至周五 12:30 - 14:45、18:30 - 22:00，周六至周日 12:00 - 15:00、18:30 - 22:00",
+      "address": "澳门半岛南湾大马路975号",
+      "phone": "+853-28714004",
+      "price": "MOP 200~300",
+      "images": [
+        "/images/attend/clube-militar.webp"
+      ]
+    }
+  ]
+}

@@ -3,7 +3,7 @@ Welcome to the **ICHEC 2026** registration page.
 ### Key Information
 
 - **Dates:** **November 23–26, 2026**
-- **Venue:** **City University of Macau**
+- **Venue:** **Wynn Macau**
 - **Hosts:** Faculty of Innovation and Design + Faculty of Data Science (joint)
 
 ### Registration Notes
@@ -39,5 +39,5 @@ Registration inclusions (access, meals, social events) will be updated once fina
 
 ### Venue & Accommodation
 
-See [Venue](/venue) for venue notes and accommodation guidance. Transportation and recommended hotels will be added when available.
+See the Venue, Getting here and Stay sections above for the conference venue, transport options, recommended hotels and map links.
 

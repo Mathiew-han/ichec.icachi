@@ -1,0 +1,588 @@
+{
+  "labels": {
+    "nav": [
+      "Venue",
+      "Getting here",
+      "Stay",
+      "Conference tour",
+      "Explore Macau",
+      "Dining"
+    ],
+    "headings": [
+      "Your conference,\nin the heart of Macau.",
+      "Getting to Wynn Macau.",
+      "Stay close. Settle in.",
+      "A journey through Macau.",
+      "Beyond the conference.",
+      "A taste of Macau."
+    ],
+    "eyebrows": [
+      "Conference venue",
+      "Getting here",
+      "Local accommodation",
+      "Conference tour",
+      "Explore Macau",
+      "Dining"
+    ],
+    "origins": [
+      "Hong Kong Airport",
+      "Macau Airport",
+      "Gongbei",
+      "Hengqin"
+    ],
+    "filters": [
+      "All",
+      "Heritage",
+      "Resorts & shows",
+      "Outdoors"
+    ],
+    "details": "Details",
+    "hideDetails": "Close details",
+    "hotelDetails": "Hotel details",
+    "website": "Official website",
+    "hotelWebsite": "Hotel website",
+    "map": "Open map",
+    "shuttle": "Official shuttle information",
+    "transportSource": "Official bridge fares",
+    "moreHotels": "More accommodation options in Macau",
+    "allStops": "View all 6 stops",
+    "fewerStops": "Show fewer stops",
+    "allPlaces": "Show all 13 places",
+    "fewerPlaces": "Show fewer places",
+    "transportHeaders": [
+      "Transport",
+      "Travel time",
+      "Reference fare",
+      "Route"
+    ],
+    "referenceNote": "Travel times, fares, admission fees and opening hours are for reference. Confirm current arrangements with the operator or venue before travelling.",
+    "tourNote": "Follow the conference tour route through Macau’s landmarks and cultural heritage.",
+    "photo": "View photo",
+    "close": "Close photo viewer",
+    "previous": "Previous photo",
+    "next": "Next photo",
+    "fees": "Registration & fees",
+    "feesNote": "Registration windows, fees, check-in and policies",
+    "venueCaptions": [
+      "Wynn Macau",
+      "Conference hall",
+      "Banquet hall"
+    ],
+    "distance": [
+      "Under 500 m",
+      "Under 500 m",
+      "Under 300 m"
+    ],
+    "call": "Call restaurant",
+    "gallery": "photos",
+    "navLabel": "Attend page sections",
+    "routeLabel": "Choose your arrival point",
+    "filterLabel": "Filter places",
+    "routeHint": "Choose your arrival point to compare the route options.",
+    "tourRoute": [
+      "Wynn Macau",
+      "Lotus Square",
+      "Handover Gifts Museum + Art Museum",
+      "Ruins of St. Paul’s + Mount Fortress",
+      "Senado Square",
+      "IAM Building",
+      "A-Ma Temple",
+      "Wynn Macau"
+    ]
+  },
+  "venue": {
+    "name": "Wynn Macau",
+    "address": "Rua Cidade de Sintra, Nape, Macau",
+    "paragraphs": [
+      "ICHEC 2026 will be held at the Wynn Macau, an iconic luxury resort located in the heart of the Macau Peninsula. Renowned for its opulent design and world-class hospitality, the hotel offers an elegant environment with stunning views of the city skyline and Nam Van Lake. Guests can indulge in a variety of exceptional dining options, including award-winning Chinese, Western, and Japanese restaurants, ensuring a refined culinary experience.",
+      "Its prime location provides easy access to major transportation hubs, including the Macau Ferry Terminal and the Hong Kong-Zhuhai-Macau Bridge, facilitating convenient connections to various parts of the Greater Bay Area. Nearby attractions such as the Ruins of St. Paul's, Senado Square, A-Ma Temple, and the Macau Tower offer ample opportunities for cultural exploration and leisure activities."
+    ],
+    "images": [
+      "/images/attend/wynn-macau-exterior.webp",
+      "/images/attend/wynn-conference-hall.webp",
+      "/images/attend/wynn-banquet-hall.webp"
+    ],
+    "website": "https://www.wynnresortsmacau.com/en/wynn-macau",
+    "map": "https://www.google.com/maps/search/?api=1&query=Wynn+Macau"
+  },
+  "routes": [
+    {
+      "name": "From Hong Kong International Airport",
+      "rows": [
+        {
+          "mode": "Ferry (TurboJET)",
+          "time": "~70 minutes",
+          "fare": "HK$160-220",
+          "remarks": "Airport → Macau Ferry Terminal → Taxi (~10 min) to Wynn Macau. Ferry frequency: every 30 minutes. Operating hours: 07:00 – 23:59"
+        },
+        {
+          "mode": "Bus + Taxi",
+          "time": "~90 minutes",
+          "fare": "Golden Bus: HK$65 day / HK$70 night; connections extra",
+          "remarks": "Take Citybus B4 to HZMB Hong Kong Port →Golden Bus→ Taxi (~10 min) to Wynn Macau"
+        },
+        {
+          "mode": "Taxi (Cross-Boundary)",
+          "time": "~60 minutes",
+          "fare": "~HK$800-1,000",
+          "remarks": "Direct taxi via Hong Kong-Zhuhai-Macau Bridge. Passengers could simply tell the driver \"Wynn Macau, Nape\""
+        }
+      ]
+    },
+    {
+      "name": "From Macau International Airport",
+      "rows": [
+        {
+          "mode": "Taxi",
+          "time": "~15 minutes",
+          "fare": "~MOP$80-100",
+          "remarks": "Direct to Wynn Macau. Passengers could simply tell the driver \"永利澳門\""
+        },
+        {
+          "mode": "Public Bus (MT1)",
+          "time": "~30 minutes",
+          "fare": "MOP$6",
+          "remarks": "Stop at Praça Ferreira Amaral → 5-min walk to Wynn Macau"
+        },
+        {
+          "mode": "Hotel Limousine",
+          "time": "~15 minutes",
+          "fare": "Contact hotel",
+          "remarks": "Arranged through Wynn Macau concierge. Reservation recommended"
+        }
+      ]
+    },
+    {
+      "name": "From Gongbei Border Gate (Zhuhai)",
+      "rows": [
+        {
+          "mode": "Taxi",
+          "time": "~15 minutes",
+          "fare": "~MOP$60-80",
+          "remarks": "Direct to Wynn Macau"
+        },
+        {
+          "mode": "Public Bus (3X/3/3A/10/25)",
+          "time": "~25 minutes",
+          "fare": "MOP$6",
+          "remarks": "Border Gate → Bus stop near Wynn Macau → 5-min walk"
+        },
+        {
+          "mode": "Free Casino Shuttle",
+          "time": "~30 minutes",
+          "fare": "Free",
+          "remarks": "Look for Wynn Macau shuttle at Border Gate"
+        }
+      ]
+    },
+    {
+      "name": "From Hengqin Border Gate (Zhuhai)",
+      "rows": [
+        {
+          "mode": "Taxi",
+          "time": "~25 minutes",
+          "fare": "~MOP$100-130",
+          "remarks": "Direct to Wynn Macau via Lotus Bridge"
+        },
+        {
+          "mode": "Public Bus (25B)",
+          "time": "~40 minutes",
+          "fare": "MOP$6",
+          "remarks": "Hengqin Border Gate → Bus stop near Wynn Macau → 5-min walk"
+        },
+        {
+          "mode": "Free Casino Shuttle",
+          "time": "Allow time for transfer",
+          "fare": "Free",
+          "remarks": "Hengqin Port → Wynn Palace → transfer to Wynn Macau. Check the official shuttle timetable."
+        }
+      ]
+    }
+  ],
+  "shuttleUrl": "https://www.wynnresortsmacau.com/en/wynn-macau/shuttle-bus",
+  "hotels": [
+    {
+      "id": "landmark-exterior",
+      "name": "New Orient Landmark Hotel",
+      "address": "555 Avenida da Amizade, Macau",
+      "paragraphs": [
+        "Five-star deluxe hotel The Landmark Macau has been renamed as New Orient Landmark Hotel by New Orient Group in September 2018. Renowned for the exceptional personalized services and luxurious comfort, New Orient Landmark Hotel has become one of the best hotel choices in Macau since it started operation in November 2003 as the official hotel of the 50th Macau Grand Prix Golden Jubilee. The 23-storey hotel building is perfectly located in the city centre (just 10-minute distance away and 20-minute distance away apart from the Macau Ferry Terminal and Macau International Airport) and close to most tourist attractions."
+      ],
+      "images": [
+        "/images/attend/landmark-exterior.webp",
+        "/images/attend/landmark-room.webp"
+      ],
+      "website": "http://www.landmarkhotel.com.mo/en/",
+      "booking": "https://hk.trip.com/hotels/macau-hotel-detail-425795/new-orient-landmark-hotel/",
+      "displayName": "New Orient Landmark Hotel"
+    },
+    {
+      "id": "yoho-exterior",
+      "name": "YOHO TREASURE ISLAND RESORTS WORLD HOTEL",
+      "address": "Lago 1, Nam Van Lake, Macau Peninsula, Macau, China, Macau",
+      "paragraphs": [
+        "Attractively set in the center of Macau, YOHO Treasure Island Hotel has air-conditioned rooms, an outdoor swimming pool, free WiFi and a fitness center. The property is close to several well-known attractions, a 15-minute walk from Mandarin's House, one mile from Moorish Barracks and a 17-minute walk from Monte Forte. The property provides a 24-hour front desk, a concierge service and currency exchange for guests. At the hotel, rooms contain a closet. Rooms have an electric tea pot and a private bathroom with a shower and free toiletries, while certain rooms come with a kitchenette equipped with a fridge. At YOHO Treasure Island Hotel, the rooms have a flat-screen TV and a safety deposit box. A buffet breakfast is available at the accommodation. The restaurant at YOHO Treasure Island Hotel specializes in Chinese, Seafood and Local cuisine. The hotel offers 5-star accommodations with a sauna."
+      ],
+      "images": [
+        "/images/attend/yoho-exterior.webp",
+        "/images/attend/yoho-room.webp"
+      ],
+      "website": "https://www.treasureislandresortsworld.com/",
+      "booking": null,
+      "displayName": "YOHO Treasure Island"
+    },
+    {
+      "id": "lisboa-exterior",
+      "name": "Hotel Lisboa",
+      "address": "2-4 Avenida de Lisboa, Macau, Macau",
+      "paragraphs": [
+        "In a prime location in Macau, Hotel Lisboa provides air-conditioned rooms, a fitness center, free WiFi and a restaurant. This 5-star hotel offers free shuttle service and room service. The hotel has an indoor pool and a 24-hour front desk.All guest rooms are equipped with a flat-screen TV with cable channels, minibar, an electric tea pot, a bath, free toiletries and a desk. At the hotel, all rooms are equipped with a private bathroom with a hairdryer and slippers."
+      ],
+      "images": [
+        "/images/attend/lisboa-exterior.webp",
+        "/images/attend/lisboa-room.webp"
+      ],
+      "website": "https://hotelisboa.com/?lang=en",
+      "booking": "https://www.booking.com/hotel/mo/lisboa-macau.html",
+      "displayName": "Hotel Lisboa"
+    }
+  ],
+  "otherHotels": "Visitors can easily find accommodation in Macao which caters to their specific needs and preferred budget range – from international 5-star brand hotels offering shopping malls and leisure facilities to chic medium-sized hotels. Visitors seeking basic accommodation can find a variety of budget hotels in downtown Macao.",
+  "tourismUrl": "https://www.macaotourism.gov.mo/en/accommodation/search",
+  "tour": [
+    {
+      "id": "lotus-square",
+      "name": "Lotus Square",
+      "paragraphs": [
+        "Standing in Lotus Square next to the Forum, the large sculpture of \"Lotus Flower In Full Bloom\" presented by the State Council of China in 1999, marks the return of sovereignty of Macao.",
+        "The sculpture, made of gilded bronze and weights 6.5 tons, is 6 meters high and the diameter of the flower is 3.6 meters at maximum. The major part is composed of a stem, petals and pistil, with a total of 16 components. The base of the flower consists of 23 pieces of red granite.",
+        "The lotus flower, which is in full bloom, symbolizes the everlasting prosperity of Macao. There are three layers of red granite at the base, which are in the shape of lotus leaves, signifying the Macao Peninsula, Taipa Island and Coloane Island."
+      ],
+      "images": [
+        "/images/attend/lotus-square.webp"
+      ],
+      "facts": []
+    },
+    {
+      "id": "handover-gifts-museum",
+      "name": "Handover Gifts Museum of Macao",
+      "paragraphs": [
+        "The Handover Gifts Museum of Macao is built on the site of the Macao Handover Ceremony of the Sino-Portuguese Governments. Now, it is the location for the exhibition of the handover gifts.",
+        "Inside, visitors can see the auspicious gifts offered by the 56 ethnics to celebrate the establishment of the Macao Special Administrative Region. These gifts were well designed with the nation's unique artistic regional styles and represent best wishes of the ethnic groups towards Macao's prosperous future."
+      ],
+      "images": [
+        "/images/attend/handover-gifts-museum.webp"
+      ],
+      "facts": []
+    },
+    {
+      "id": "st-pauls-tour",
+      "name": "Ruins of St. Paul's",
+      "paragraphs": [
+        "The Ruins of St. Paul's refer to the facade of what was originally the Church of Mater Dei built in 1602-1640, destroyed by fire in 1835, and the ruins of St. Paul's College, which stood adjacent to the Church. As a whole, the old Church of Mater Dei, St. Paul's College and Mount Fortress were all Jesuit constructions and formed what can be perceived as the Macao's \"acropolis\". Close by, the archaeological remains of the old College of St. Paul stand witness to what was the first western-style university in the Far East, with an elaborate academic program. Nowadays, the facade of the Ruins of St. Paul's functions symbolically as an altar to the city."
+      ],
+      "images": [
+        "/images/attend/st-pauls-tour.webp"
+      ],
+      "facts": []
+    },
+    {
+      "id": "mount-fortress-tour",
+      "name": "Mount Fortress",
+      "paragraphs": [
+        "Built in conjunction with the Jesuits from 1617 to 1626, this was the city's principal military defence structure. The fortress was equipped with cannons, military barracks, wells and an arsenal that held sufficient ammunition and supplies to endure a siege lasting up to two years. The fortress covers an area of 10,000 square metres, in the shape of a trapezoid. The four corners of the fortress protrude to form bulwarks."
+      ],
+      "images": [
+        "/images/attend/mount-fortress-tour.webp"
+      ],
+      "facts": []
+    },
+    {
+      "id": "iam-building",
+      "name": "'Leal Senado' Building (now known as IAM Building)",
+      "paragraphs": [
+        "Originally built in 1784, this was Macao's first municipal chamber, a function it maintains to the present. The name \"Leal Senado\" (\"Loyal Senate\") derives from the title \"City of Our Name of God Macao, There is None More Loyal\" which was bestowed by Portuguese King Dom John IV in 1654. The \"Leal Senado\" Building (now known as IAM Building) is neo-classical in design and has retained all its original master walls and primary layout, including the courtyard garden in the back. Inside the building on the first floor there is a ceremonial meeting room that opens onto an elaborate carved library styled after the library of Mafra Convent in Portugal, and a small chapel."
+      ],
+      "images": [
+        "/images/attend/iam-building.webp"
+      ],
+      "facts": []
+    },
+    {
+      "id": "a-ma-temple",
+      "name": "A-Ma Temple",
+      "paragraphs": [
+        "A-Ma Temple already existed before the city of Macao came into being. It consists of the Gate Pavilion, the Memorial Arch, the Prayer Hall, the Hall of Benevolence, the Hall of Guanyin, and Zhengjiao Chanlin (a Buddhist pavilion). The variety of pavilions dedicated to the worship of different deities in a single complex make A-Ma Temple an exemplary representation of Chinese culture inspired by Confucianism, Taoism, Buddhism and multiple folk beliefs."
+      ],
+      "images": [
+        "/images/attend/a-ma-temple.webp"
+      ],
+      "facts": []
+    }
+  ],
+  "places": [
+    {
+      "id": "st-pauls-facade",
+      "name": "Ruins of St. Paul’s",
+      "facts": [
+        "Admission: Free",
+        "Opening Hours: Open all day"
+      ],
+      "paragraphs": [
+        "The Ruins of St. Paul’s, ranked first among the “Eight Scenic Spots of Macau,” is also a UNESCO World Heritage Site. Originally the facade of St. Paul’s Church and part of the adjacent St. Paul’s College—the first Western-style university in the Far East—it served as a major center for missionary training from 1594 to 1762. Built with granite, the 25.5-meter-high facade features intricate carvings blending European Baroque and Eastern elements, earning it the nickname “The Bible in Stone.” After a fire in 1835 destroyed the church, only the facade remained, resembling a traditional Chinese paifang (archway), hence the name “Ruins of St. Paul’s."
+      ],
+      "images": [
+        "/images/attend/st-pauls-facade.webp",
+        "/images/attend/st-pauls-view.webp"
+      ],
+      "category": "heritage"
+    },
+    {
+      "id": "mount-fortress-view",
+      "name": "Mount Fortress (Fortaleza do Monte)",
+      "facts": [
+        "Admission: Free",
+        "Opening Hours: 07:00–19:00"
+      ],
+      "paragraphs": [
+        "Also known as St. Paul’s Fortress, this is one of the oldest Western-style fortresses in China and a UNESCO World Heritage Site. Constructed between 1617 and 1626, it sits atop Mount Hill at 52 meters above sea level, offering panoramic views of the Macau Peninsula. Built with granite and rammed earth mixed with oyster shell mortar, the fortress features bastions at each corner for improved defense. It once housed barracks, a cistern, and an armory, serving as the core of Macau’s defense system."
+      ],
+      "images": [
+        "/images/attend/mount-fortress-view.webp",
+        "/images/attend/mount-fortress-cannon.webp"
+      ],
+      "category": "heritage"
+    },
+    {
+      "id": "macao-museum-exterior",
+      "name": "Macao Museum",
+      "facts": [
+        "Admission: MOP 15 (students MOP 8); Free on Tuesdays and the 15th of each month",
+        "Opening Hours: Tue–Sun 10:00–18:00 (last entry 17:30)"
+      ],
+      "paragraphs": [
+        "Located atop Mount Fortress, the Macao Museum covers 2,800 sqm and houses over 3,000 artifacts. The museum has three levels:",
+        "Level 1: Early history of Macau, from the Neolithic Age to the 19th century.",
+        "Level 2: Local folk culture, festivals, crafts, and trades like shipbuilding and incense making.",
+        "Level 3: Contemporary Macau, with urban planning models, multimedia exhibitions, and cultural artworks."
+      ],
+      "images": [
+        "/images/attend/macao-museum-exterior.webp",
+        "/images/attend/macao-museum-interior.webp"
+      ],
+      "category": "heritage"
+    },
+    {
+      "id": "senado-square",
+      "name": "Senado Square (Largo do Senado)",
+      "facts": [
+        "Admission: Free",
+        "Opening Hours: Open all day"
+      ],
+      "paragraphs": [
+        "Located in central Macau, Senado Square—nicknamed \"Fountain Square\" by locals—has long been a political and commercial hub. The square is paved with wave-patterned black-and-white stones and surrounded by pastel-colored colonial buildings, reflecting strong Southern European charm."
+      ],
+      "images": [
+        "/images/attend/senado-square.webp"
+      ],
+      "category": "heritage"
+    },
+    {
+      "id": "st-dominics-exterior",
+      "name": "St. Dominic’s Church",
+      "facts": [
+        "Admission: Free",
+        "Opening Hours: 10:00–18:00 (Closed after 15:00 on Thursdays and Saturdays)"
+      ],
+      "paragraphs": [
+        "A short walk from Senado Square, this Baroque-style church was founded in 1587 by the Dominicans. It is one of the oldest Catholic churches in the Far East. The interior features a golden altar and stained glass windows. Adjacent is the “Treasury of Sacred Art,” showcasing over 300 Catholic relics."
+      ],
+      "images": [
+        "/images/attend/st-dominics-exterior.webp",
+        "/images/attend/st-dominics-interior.webp"
+      ],
+      "category": "heritage"
+    },
+    {
+      "id": "macau-tower",
+      "name": "Macau Tower",
+      "facts": [
+        "Admission (Observation Deck): MOP 208",
+        "Opening Hours: Mon–Fri 10:00–19:00, Sat–Sun 10:00–20:00"
+      ],
+      "paragraphs": [
+        "Standing 338 meters tall, Macau Tower is a landmark offering 360° panoramic views from its main observation deck at 223 meters."
+      ],
+      "images": [
+        "/images/attend/macau-tower.webp"
+      ],
+      "category": "resorts"
+    },
+    {
+      "id": "fishermans-wharf",
+      "name": "Fisherman’s Wharf",
+      "facts": [
+        "Admission: Free",
+        "Opening Hours: Open all day (Shops 10:00–22:00)"
+      ],
+      "paragraphs": [
+        "Macau’s first themed entertainment complex spans over 130,000 sqm, divided into three zones: Tang Dynasty Town (Chinese architecture), East Meets West (Roman amphitheater, Greek-style buildings, artificial volcano), Legend Wharf (European and Latin-style seaside streets)."
+      ],
+      "images": [
+        "/images/attend/fishermans-wharf.webp",
+        "/images/attend/fishermans-amphitheatre.webp"
+      ],
+      "category": "resorts"
+    },
+    {
+      "id": "cotai-strip",
+      "name": "Cotai Strip",
+      "facts": [
+        "Admission: Free",
+        "Opening Hours: Open all day"
+      ],
+      "paragraphs": [
+        "Known as the “Las Vegas of the East,” the Cotai Strip is a modern resort boulevard connecting Taipa and Coloane. It features luxury hotels, world-class dining, shopping, and entertainment.",
+        "The Venetian:",
+        "• Gondola rides through indoor canals (MOP 145);",
+        "• Canal Hours: Grand Canal 11:00–22:00",
+        "The Parisian:",
+        "• Eiffel Tower Observation Deck (MOP 75)",
+        "• Light Show: 18:15–24:00, every 15 minutes (Free)",
+        "The Londoner:",
+        "• Big Ben & Royal Guard Changing Ceremony",
+        "• Hours: Tue–Thu 19:30, 21:30; Fri–Sun 16:00, 19:30, 21:30 (Free)"
+      ],
+      "images": [
+        "/images/attend/cotai-strip.webp",
+        "/images/attend/cotai-night.webp"
+      ],
+      "category": "resorts"
+    },
+    {
+      "id": "house-of-dancing-water",
+      "name": "City of Dreams · House of Dancing Water",
+      "facts": [
+        "Admission: MOP 550",
+        "Showtimes: Thu–Mon: 17:00 or 20:00"
+      ],
+      "paragraphs": [
+        "A spectacular aquatic show with water, fire, sound, and lights in a 270-degree immersive theater."
+      ],
+      "images": [
+        "/images/attend/house-of-dancing-water.webp"
+      ],
+      "category": "resorts"
+    },
+    {
+      "id": "wynn-palace",
+      "name": "Wynn Palace",
+      "facts": [
+        "Musical Fountain Show: Free",
+        "Opening Hours: 12:00–18:00 (every 30 mins), 18:00–24:00 (every 20 mins)"
+      ],
+      "paragraphs": [
+        "Visitors can ride a free gondola around the artificial lake to enjoy the choreographed fountain show synchronized with music and lights."
+      ],
+      "images": [
+        "/images/attend/wynn-palace.webp"
+      ],
+      "category": "resorts"
+    },
+    {
+      "id": "mgm-cotai",
+      "name": "MGM Cotai",
+      "facts": [
+        "Bee Show: Free",
+        "Showtimes: 13:00, 15:00, 17:00, 19:00"
+      ],
+      "paragraphs": [
+        "Features the world’s largest free-span grid shell glass roof and over 300 art pieces, making the hotel a living museum."
+      ],
+      "images": [
+        "/images/attend/mgm-cotai.webp"
+      ],
+      "category": "resorts"
+    },
+    {
+      "id": "galaxy-macau",
+      "name": "Galaxy Macau",
+      "facts": [
+        "Admission: Free"
+      ],
+      "paragraphs": [
+        "Diamond Show:",
+        "Mon–Thu 12:00–22:00; Fri–Sun 10:00–24:00 (every 30 mins)",
+        "Crystal Lotus Show:",
+        "Mon–Thu 12:15–21:45; Fri–Sun 10:15–23:45 (every 30 mins)",
+        "A luxury resort complex with Asia’s longest sky-top water slide (575 meters), 200+ shops, and the largest indoor arena in Macau."
+      ],
+      "images": [
+        "/images/attend/galaxy-macau.webp"
+      ],
+      "category": "resorts"
+    },
+    {
+      "id": "cheoc-van-beach",
+      "name": "Cheoc Van Beach",
+      "facts": [
+        "Admission: Free",
+        "Opening Hours: Open all day"
+      ],
+      "paragraphs": [
+        "A small, golden-sand beach with a peaceful atmosphere. The nearby Pousada de Coloane hotel features Portuguese architecture with ocean-view terraces—perfect for vacation photos."
+      ],
+      "images": [
+        "/images/attend/cheoc-van-beach.webp"
+      ],
+      "category": "outdoors"
+    }
+  ],
+  "diningIntro": "Macau has Michelin-starred and fine-dining restaurants, some of which require advance reservations. The average cost per person is approximately MOP 300–500 (some restaurants may charge an additional 10% service fee).",
+  "restaurants": [
+    {
+      "id": "laurel-restaurant",
+      "name": "Laurel Restaurant",
+      "hours": "Monday - Friday: 10:30 - 23:00，Saturday - Sunday: 10:00 – 23:00",
+      "address": "StarWorld Hotel, 2nd Floor",
+      "phone": "+853 82908628",
+      "price": "MOP 300",
+      "images": [
+        "/images/attend/laurel-restaurant.webp"
+      ]
+    },
+    {
+      "id": "naughty-nuris",
+      "name": "Naughty Nuri's",
+      "hours": "12:30 - 22:00",
+      "address": "G/F, 7 R. da Felicidade, Avenida de Almeida Ribeiro",
+      "phone": "+853-28530425",
+      "price": "MOP 200",
+      "images": [
+        "/images/attend/naughty-nuris.webp"
+      ]
+    },
+    {
+      "id": "goobne-chicken",
+      "name": "Goobne Chicken",
+      "hours": "12:00-15:00 / 18:00-24:00",
+      "address": "Shop C/E, G/F, Le Jade, Avenida Marginal do Lam Mau, Macao",
+      "phone": "+853-28252890",
+      "price": "MOP 200",
+      "images": [
+        "/images/attend/goobne-chicken.webp"
+      ]
+    },
+    {
+      "id": "clube-militar",
+      "name": "Clube Militar De Macau",
+      "hours": "Monday - Friday:12:30 - 14:45、18:30 - 22:00，Saturday - Sunday:12:00 - 15:00、18:30 - 22:00",
+      "address": "975 Avenida da Praia Grande Macau Peninsula",
+      "phone": "+853-28714004",
+      "price": "MOP 200~300",
+      "images": [
+        "/images/attend/clube-militar.webp"
+      ]
+    }
+  ]
+}
