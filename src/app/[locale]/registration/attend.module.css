@@ -162,12 +162,10 @@
 .budget { margin: 10px 0; color: var(--green); font-size: 13px; font-weight: 650; }
 .restaurantInfo { display: flex; align-items: start; gap: 7px; margin: 10px 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
 .restaurantInfo .icon { width: 14px; height: 17px; margin-top: 2px; }
-.feesWrap { padding-block: 34px 0; }
-.fees { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
-.fees > summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px 24px; background: #f5f6f4; font-size: 15px; font-weight: 600; cursor: pointer; list-style: none; }
-.fees small { font-weight: 400; color: var(--muted); display: block; font-size: 12px; margin-top: 3px; }
-.legacyContent { min-width: 0; padding: 0 24px 24px; }
-.legacyContent > div { margin-top: 0; }
+.registrationSection { padding-top: 34px; border-bottom: 1px solid var(--line); }
+.registrationContent { min-width: 0; }
+.registrationContent > div > section { padding-inline: 0; }
+.registrationContent > div > section:first-child { padding-top: 0; }
 .lightbox { position: fixed; margin: auto; padding: 0; width: min(1200px, 94vw); max-width: 94vw; max-height: 94dvh; overflow: auto; border: 0; border-radius: 12px; background: #12221c; color: #fff; }
 .lightbox::backdrop { background: rgb(4 13 9 / 85%); }
 .lightboxInner { position: relative; padding: 42px 18px 10px; }
@@ -243,8 +241,6 @@
   .itinerary { grid-template-columns: repeat(8, 105px); }
   .cardBody { padding: 15px; }
   .cardBody h3 { font-size: 17px; }
-  .fees > summary { padding: 17px; }
-  .legacyContent { padding-inline: 12px; }
 }
 @media (max-width: 480px) {
   .cardGrid { grid-template-columns: 1fr; }

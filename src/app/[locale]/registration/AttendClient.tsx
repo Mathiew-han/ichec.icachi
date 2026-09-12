@@ -6,6 +6,7 @@ import type { AttendContent, AttendPlace, AttendTourStop } from "@/lib/attend-co
 import styles from "./attend.module.css";
 
 const sections = ["attend-venue", "attend-routes", "attend-stay", "attend-tour", "attend-explore", "attend-dining"];
+const navigationSections = ["attend-registration", ...sections];
 const categories = ["all", "heritage", "resorts", "outdoors"];
 
 function Icon({ type }: { type: "pin" | "plane" | "car" | "clock" | "arrow" }) {
@@ -24,7 +25,7 @@ function ExternalLink({ href, children, primary = false }: { href: string; child
 }
 
 function Heading({ content, index }: { content: AttendContent; index: number }) {
-  return <div className={styles.heading}><p className={styles.eyebrow}><span>{String(index + 1).padStart(2, "0")}</span>{content.labels.eyebrows[index]}</p><h2>{content.labels.headings[index]}</h2></div>;
+  return <div className={styles.heading}><p className={styles.eyebrow}><span>{String(index + 2).padStart(2, "0")}</span>{content.labels.eyebrows[index]}</p><h2>{content.labels.headings[index]}</h2></div>;
 }
 
 type Gallery = { title: string; images: string[]; index: number };
@@ -159,7 +160,7 @@ function PlaceCard({ place, labels, onOpen }: { place: AttendPlace | AttendTourS
 
 export function AttendClient({ content, children }: { content: AttendContent; children: ReactNode }) {
   const { labels, venue } = content;
-  const [activeSection, setActiveSection] = useState(sections[0]);
+  const [activeSection, setActiveSection] = useState(navigationSections[0]);
   const [origin, setOrigin] = useState(1);
   const [category, setCategory] = useState("all");
   const [allPlaces, setAllPlaces] = useState(false);
@@ -174,7 +175,7 @@ export function AttendClient({ content, children }: { content: AttendContent; ch
     const observer = new IntersectionObserver((entries) => {
       for (const entry of entries) if (entry.isIntersecting) setActiveSection(entry.target.id);
     }, { rootMargin: "-180px 0px -55% 0px", threshold: 0 });
-    for (const id of sections) {
+    for (const id of navigationSections) {
       const section = document.getElementById(id);
       if (section) observer.observe(section);
     }
@@ -191,9 +192,16 @@ export function AttendClient({ content, children }: { content: AttendContent; ch
     <div className={styles.page}>
       <nav className={styles.sectionNav} aria-label={labels.navLabel}>
         <div className={styles.navInner}>
-          {sections.map((id, i) => <a key={id} href={`#${id}`} onClick={() => setActiveSection(id)} aria-current={activeSection === id ? "location" : undefined}><span>{String(i + 1).padStart(2, "0")}</span>{labels.nav[i]}</a>)}
+          {navigationSections.map((id, i) => <a key={id} href={`#${id}`} onClick={() => setActiveSection(id)} aria-current={activeSection === id ? "location" : undefined}><span>{String(i + 1).padStart(2, "0")}</span>{i === 0 ? labels.registration : labels.nav[i - 1]}</a>)}
         </div>
       </nav>
+
+      <section id="attend-registration" className={`${styles.section} ${styles.registrationSection}`} aria-label={labels.registration}>
+        <div className={styles.container}>
+          <p className={styles.eyebrow}><span>01</span>{labels.registration}</p>
+          <div className={styles.registrationContent}>{children}</div>
+        </div>
+      </section>
 
       <section id={sections[0]} className={`${styles.section} ${styles.venue}`} aria-label={labels.nav[0]}>
         <div className={`${styles.container} ${styles.venueGrid}`}>
@@ -265,8 +273,6 @@ export function AttendClient({ content, children }: { content: AttendContent; ch
           <DiningCarousel content={content} />
         </div>
       </section>
-
-      <div className={`${styles.container} ${styles.feesWrap}`}><details className={styles.fees}><summary><span>{labels.fees}<small>{labels.feesNote}</small></span><span className={styles.plus} aria-hidden="true">+</span></summary><div className={styles.legacyContent}>{children}</div></details></div>
 
       <dialog ref={dialog} className={styles.lightbox} aria-label={gallery?.title ?? labels.photo} onClose={() => setGallery(null)} onClick={(event) => { if (event.target === event.currentTarget) setGallery(null); }}>
         {gallery && <div className={styles.lightboxInner}>

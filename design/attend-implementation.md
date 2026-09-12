@@ -14,7 +14,7 @@
 - `ICHEC2026_Attending_Simplified_Chinese.docx` — simplified Chinese, found alongside the two attached documents.
 - `ICHEC2026_Attending_Traditional_Chinese.docx` — traditional Chinese.
 - All 38 embedded photographs are used. Venue photographs are static, hotel exterior and room photographs appear in the hotel detail overlay, and secondary attraction photographs remain accessible in the photo viewer. WebP copies in `public/images/attend/` retain original composition; display cropping uses CSS. Original extracted images are retained in the local working output.
-- Three hotels, four arrival points, six described tour stops, thirteen exploration destinations and four restaurants are included in each locale. Full hotel, tour and attraction descriptions appear in page-like top-layer modals. Existing registration information remains accessible in the final collapsed section.
+- Three hotels, four arrival points, six described tour stops, thirteen exploration destinations and four restaurants are included in each locale. Full hotel, tour and attraction descriptions appear in page-like top-layer modals. Registration is the first always-visible section below the navigation. Its fee table precedes the supporting information and policies; navigation runs from 01 Registration to 07 Dining, with Accommodations and Tour as the updated English labels.
 
 ## Carousel refinement — 2026-09-11
 

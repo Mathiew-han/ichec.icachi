@@ -39,5 +39,5 @@ Registration inclusions (access, meals, social events) will be updated once fina
 
 ### Venue & Accommodation
 
-See the Venue, Getting here and Stay sections above for the conference venue, transport options, recommended hotels and map links.
+See the Venue, Getting here and Accommodations sections below for the conference venue, transport options, recommended hotels and map links.
 

@@ -3,8 +3,8 @@
     "nav": [
       "Venue",
       "Getting here",
-      "Stay",
-      "Conference tour",
+      "Accommodations",
+      "Tour",
       "Explore Macau",
       "Dining"
     ],
@@ -99,7 +99,8 @@
       "Guest room"
     ],
     "chooseRestaurant": "Choose a restaurant",
-    "showRestaurant": "Show restaurant"
+    "showRestaurant": "Show restaurant",
+    "registration": "Registration"
   },
   "venue": {
     "name": "Wynn Macau",

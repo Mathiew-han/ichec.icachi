@@ -78,12 +78,6 @@ export function RegistrationClient({ content }: { content: string }) {
   return (
     <div className={styles.page}>
       <section className={`${styles.section} ${styles.heroSection}`}>
-        {feesMarkdown.before ? (
-          <div className={styles.markdownWrap}>
-            <Markdown content={feesMarkdown.before} variant="registration" />
-          </div>
-        ) : null}
-
         <div className={styles.pricingShell}>
           <div className={styles.pricingTop}>
             <div className={styles.pricingCopy}>
@@ -133,6 +127,12 @@ export function RegistrationClient({ content }: { content: string }) {
             </a>
           </div>
         </div>
+
+        {feesMarkdown.before ? (
+          <div className={`${styles.markdownWrap} ${styles.afterMarkdownWrap}`}>
+            <Markdown content={feesMarkdown.before} variant="registration" />
+          </div>
+        ) : null}
 
         <div className={`${styles.markdownWrap} ${styles.afterMarkdownWrap}`}>
           <Markdown content={feesMarkdown.after} variant="registration" />
