@@ -254,9 +254,9 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
       ],
     },
     {
-      id: "ops_support",
-      label: { zh: zh("出版 / 技术", "出版 / 技術"), en: "Publication / Technical" },
-      layout: "four",
+      id: "publication",
+      label: { zh: "出版主席", en: "Publication Chairs" },
+      layout: "three",
       members: [
         {
           name: isZh ? "安舜" : "Shun An",
@@ -267,6 +267,14 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
           profileUrl: "https://fiad.cityu.edu.mo/acad_ft/477",
         },
         {
+          name: isZh ? "屈弘" : "Hong Qu",
+          role: isZh ? "出版主席" : "Publication Chair",
+          affiliation: isZh
+            ? zh("澳门城市大学创新设计学院 · 助理教授", "澳門城市大學創新設計學院 · 助理教授")
+            : "Assistant Professor, Faculty of Innovation and Design · City University of Macau",
+          avatarUrl: "/avatars/quhong.jpg",
+        },
+        {
           name: isZh ? zh("肖博", "肖博") : "Robert Xiao",
           role: isZh ? zh("出版主席", "出版主席") : "Publication Chair",
           affiliation: isZh
@@ -275,6 +283,13 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
           avatarUrl: "/avatars/robert-xiao.jpg",
           profileUrl: "https://robertxiao.ca",
         },
+      ],
+    },
+    {
+      id: "technical",
+      label: { zh: zh("技术主席", "技術主席"), en: "Technical Chairs" },
+      layout: "two",
+      members: [
         {
           name: isZh ? zh("郭畅", "郭暢") : "Chang Guo",
           role: isZh ? zh("技术主席", "技術主席") : "Technical Chair",
