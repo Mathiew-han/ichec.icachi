@@ -273,6 +273,7 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
             ? zh("澳门城市大学创新设计学院 · 助理教授", "澳門城市大學創新設計學院 · 助理教授")
             : "Assistant Professor, Faculty of Innovation and Design · City University of Macau",
           avatarUrl: "/avatars/quhong.jpg",
+          avatarObjectPosition: "50% 30%",
         },
         {
           name: isZh ? zh("肖博", "肖博") : "Robert Xiao",
