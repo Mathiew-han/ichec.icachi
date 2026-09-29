@@ -17,44 +17,83 @@
     "zh-TW": "Traditional Chinese"
   },
   "Sponsors": {
-    "title": "Sponsorship Opportunities",
-    "lead": "All sponsors will be acknowledged in the official program and proceedings with their sponsorship level. Sponsor logos will be displayed on the website with a hyperlink. Sponsors may provide limited materials for the registration kit. Each level includes the benefits of preceding level(s), plus additional visibility and engagement opportunities.",
+    "eyebrow": "Partner with ICHEC 2026",
+    "title": "Sponsorship opportunities",
+    "lead": "Partner with ICHEC 2026 in Macau and create meaningful visibility for your organization across the conference experience.",
+    "terms": "Sponsorship terms may be adjusted according to actual circumstances. The Conference Sponsorship Organizing Committee reserves the final right of interpretation.",
+    "hero": {
+      "date": "November 23–25, 2026",
+      "location": "Wynn Macau · Macao SAR"
+    },
+    "nav": {
+      "overview": "Overview",
+      "packages": "Sponsorship packages",
+      "terms": "Terms",
+      "contact": "Contact"
+    },
+    "packages": {
+      "eyebrow": "Sponsorship packages",
+      "title": "Choose your level of visibility.",
+      "lead": "Every package pairs on-site presence with promotional opportunities in the conference manual, materials and official website.",
+      "amountNote": "or equivalent in-kind value",
+      "featured": "Highlighted",
+      "action": "Discuss sponsorship"
+    },
     "tiers": {
       "bronze": {
         "name": "Bronze Sponsor",
-        "fee": "2,700 SGD (~USD 2,000)",
-        "p1": "1 complimentary conference registration",
-        "p2": "Acknowledged as a Coffee Break Sponsor"
+        "fee": "¥ 20,000",
+        "benefits": [
+          "Sponsor booth: 1 table and 2 chairs",
+          "One A4 company promotional page in the conference manual",
+          "Logo on on-site materials and the official conference website",
+          "1 complimentary conference registration"
+        ]
       },
       "silver": {
         "name": "Silver Sponsor",
-        "fee": "4,000 SGD (~USD 3,000)",
-        "meta": "Includes all Bronze benefits, plus:",
-        "p1": "1 additional complimentary registration (2 total registrations)",
-        "p2": "Acknowledged as a Lunch Break Sponsor",
-        "p3": "Company logo displayed at On-Site Registration",
-        "p4": "Opportunity to provide a Company brochure/handouts at registration"
+        "fee": "¥ 30,000",
+        "benefits": [
+          "Sponsor booth: 1 table and 2 chairs",
+          "Custom table runner with company logo",
+          "One A4 company promotional page in the conference manual",
+          "Logo on on-site materials and the official conference website",
+          "2 complimentary conference registrations"
+        ]
       },
       "gold": {
         "name": "Gold Sponsor",
-        "fee": "6,700 SGD (~USD 5,000)",
-        "meta": "Includes all Silver benefits, plus:",
-        "p1": "1 additional complimentary registration (3 total registrations)",
-        "p2": "Acknowledged as a Demo/Art Show Sponsor",
-        "p3": "Display board space during the art show, demo, and poster sessions",
-        "p4": "Recognized as Co-Sponsor of the Best Paper Awards"
+        "fee": "¥ 40,000",
+        "benefits": [
+          "Recognition during the opening address and gala dinner opening",
+          "Main-table seating with VIP guests at the gala dinner",
+          "Sponsor booth: 1 table and 2 chairs, with a custom logo table runner",
+          "Two A4 company promotional pages in the conference manual",
+          "Logo on on-site materials and the official conference website",
+          "3 complimentary conference registrations"
+        ]
       },
       "platinum": {
         "name": "Platinum Sponsor",
-        "fee": "10,000 SGD (~USD 7,500)",
-        "meta": "Includes all Gold benefits, plus:",
-        "p1": "1 additional complimentary registration (4 total registrations)",
-        "p2": "Acknowledged as Gala Dinner Co-Sponsor and/or Overall Conference Sponsor",
-        "p3": "Special recognition as a Platinum Sponsor during the event and in conference materials"
+        "fee": "¥ 50,000",
+        "benefits": [
+          "15-minute sponsor presentation slot",
+          "Recognition during the opening address and gala dinner opening",
+          "Main-table seating with VIP guests at the gala dinner",
+          "Sponsor booth: 1 table and 2 chairs, with a custom logo table runner",
+          "Two A4 company promotional pages in the conference manual",
+          "Logo on on-site materials and the official conference website",
+          "4 complimentary conference registrations"
+        ]
       }
     },
     "contact": {
-      "prefix": "For sponsorship inquiries, please contact:"
+      "eyebrow": "Sponsorship enquiries",
+      "title": "Let’s create the right partnership.",
+      "contact": "Conference sponsorship contact: Miss Lin",
+      "email": "ichec2026.info@gmail.com",
+      "phone": "+853-28715616",
+      "website": "Conference website"
     }
   },
   "Home": {
@@ -435,7 +474,7 @@
       "amalunch": "AMA Lunch",
       "venue": "Venue",
       "committees": "Committee",
-      "sponsors": "Sponsorship",
+      "sponsors": "Call for Sponsorship",
       "news": "News",
       "dashboard": "Dashboard",
       "admin": "Admin",

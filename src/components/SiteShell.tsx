@@ -18,6 +18,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
   const tHome = useTranslations("Home");
   const tCfp = useTranslations("CFP");
   const tRegistration = useTranslations("Registration");
+  const tSponsors = useTranslations("Sponsors");
   const pathname = usePathname();
   const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH);
   const pathnameNoBase =
@@ -55,6 +56,8 @@ export function SiteShell({ children }: { children: ReactNode }) {
         : topSegment === "registration"
           ? tRegistration("lead")
           : "";
+  const heroDate = topSegment === "sponsors" ? tSponsors("hero.date") : tHome("date");
+  const heroLocation = topSegment === "sponsors" ? tSponsors("hero.location") : tHome("location");
 
   return (
     <div className="site-shell min-h-dvh" data-site-shell-root>
@@ -72,7 +75,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
                 <h1>{heroTitle}</h1>
                 <div className="inner-hero-rule" />
                 <p className="inner-hero-meta">
-                  {tHome("date")} · {tHome("location")}
+                  {heroDate} · {heroLocation}
                 </p>
                 {heroNote ? <p className="inner-hero-note">{heroNote}</p> : null}
               </div>
