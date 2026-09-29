@@ -334,12 +334,12 @@
     },
     "fees": {
       "kicker": "Fees",
-      "title": "Registration & Fees (Official announcement prevails)",
-      "desc": "The following content is based on planning materials and placeholders to help align budgeting and workflow.",
+      "title": "Registration fees",
+      "desc": "All fees are shown in USD. Registration and payment arrangements will be announced through the official conference system.",
       "pricing": {
-        "title": "Registration pricing",
-        "desc": "Registration fees are organized by registration period. Final payment instructions will be published in the registration system.",
-        "cta": "Register",
+        "title": "Choose your registration period",
+        "desc": "Register by the relevant deadline. Final payment instructions will be published in the registration system.",
+        "status": "Registration system details to be announced",
         "prev": "Previous",
         "next": "Next",
         "dots": "Carousel dots",
@@ -353,8 +353,8 @@
           "regular": "Registration by Nov 13, 2026",
           "late": "Registration from Nov 14, 2026"
         },
-        "standard": "Standard (In-person)",
-        "student": "Student (In-person)",
+        "standard": "Standard (in person)",
+        "student": "Student (in person)",
         "standardPrices": {
           "early": "USD 600",
           "regular": "USD 700",

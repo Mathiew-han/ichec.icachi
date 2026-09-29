@@ -162,14 +162,12 @@
 
 .pricingTableWrap {
   margin-top: 1.4rem;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: clamp(1.6rem, 3vw, 2.6rem);
+  display: block;
 }
 
 .pricingTable {
-  min-width: 54rem;
+  width: 100%;
+  min-width: 0;
   display: grid;
   grid-template-columns: minmax(13rem, 0.9fr) repeat(3, minmax(11rem, 1fr));
   background: #fff;
@@ -216,34 +214,24 @@
   border-top: 1px solid rgba(36, 52, 70, 0.12);
 }
 
-.pricingCta {
+.pricingMobile {
+  display: none;
+}
+
+.pricingStatus {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.35rem;
+  margin: 1rem 0 0;
   padding: 1rem 1.45rem;
   border-radius: 9999px;
   border: 1px solid #147a5e;
-  background: #fff;
-  color: #147a5e;
-  box-shadow: 0 12px 26px rgba(20, 122, 94, 0.12);
-  font-size: clamp(1.05rem, 1.5vw, 1.35rem);
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  transition: background 200ms ease, box-shadow 200ms ease, transform 200ms ease;
-  white-space: nowrap;
-}
-
-.pricingCta:hover {
   background: #f2fbf7;
-  box-shadow: 0 16px 32px rgba(20, 122, 94, 0.16);
-  transform: translateY(-1px);
-}
-
-.pricingCtaArrow {
-  font-size: 1.6em;
-  line-height: 0.8;
+  color: #147a5e;
+  font-size: clamp(0.82rem, 1vw, 0.94rem);
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
 }
 
 .markdownWrap :global(.prose) {
@@ -733,18 +721,70 @@
   }
 
   .pricingTableWrap {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-    overflow-x: auto;
-    padding-bottom: 0.3rem;
+    display: block;
+    overflow: visible;
+    padding-bottom: 0;
   }
 
   .pricingTable {
-    min-width: 48rem;
+    display: none;
   }
 
-  .pricingCta {
-    justify-self: start;
+  .pricingMobile {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .pricingMobileCard {
+    padding: 1.15rem 1rem;
+    border-top: 1px solid rgba(36, 52, 70, 0.12);
+    border-bottom: 1px solid rgba(36, 52, 70, 0.12);
+    background: #fff;
+  }
+
+  .pricingMobileCard h3 {
+    margin: 0 0 0.85rem;
+    color: #405063;
+    font-family: var(--site-text-font);
+    font-size: 1.08rem;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .pricingMobileCard dl {
+    display: grid;
+    gap: 0.6rem;
+    margin: 0;
+  }
+
+  .pricingMobileCard dl > div {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .pricingMobileCard dt {
+    color: #5f7083;
+    font-family: Manrope, system-ui, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .pricingMobileCard dd {
+    margin: 0;
+    color: #405063;
+    font-family: Manrope, system-ui, sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.4;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .pricingStatus {
+    margin-top: 1rem;
   }
 }
 
@@ -753,8 +793,10 @@
     min-width: 36rem;
   }
 
-  .pricingCell {
-    padding: 1rem 0.9rem;
+  .pricingStatus {
+    display: flex;
+    padding: 0.75rem 1rem;
+    font-size: 0.78rem;
   }
 }
 

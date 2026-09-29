@@ -43,3 +43,9 @@ Checked on 2026-09-11:
 - All 38 asset paths are present and images load; no page JavaScript errors or horizontal page overflow in the checked layouts.
 - Desktop and mobile poster screenshots compared with the previous live page: identical dimensions and zero changed pixel channels.
 - The Attend-only overflow rule uses `clip` so section navigation sticks below the site header. Other routes retain their existing layout.
+
+## Registration refinement — 2026-09-29
+
+- Registration fees remain the first content block and now use concise, localized currency and registration-system guidance.
+- The placeholder registration link is replaced with a clear announcement-status label, avoiding a non-functional action.
+- At tablet and phone widths, the wide four-column fee table becomes two readable attendee cards, each listing the three registration periods and fees without horizontal scrolling.

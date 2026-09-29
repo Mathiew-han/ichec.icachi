@@ -121,10 +121,23 @@ export function RegistrationClient({ content }: { content: string }) {
               ))}
             </div>
 
-            <a className={styles.pricingCta} href="#" aria-label={pricingT("cta")}>
-              {pricingT("cta")}
-              <span className={styles.pricingCtaArrow} aria-hidden="true">›</span>
-            </a>
+            <div className={styles.pricingMobile} aria-label={pricingT("title")}>
+              {feeRows.map((row) => (
+                <section className={styles.pricingMobileCard} key={row.key}>
+                  <h3>{row.label}</h3>
+                  <dl>
+                    {priceColumns.map((column, index) => (
+                      <div key={column.key}>
+                        <dt>{tableT(column.titleKey)}</dt>
+                        <dd>{row.prices[index]}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </section>
+              ))}
+            </div>
+
+            <p className={styles.pricingStatus}>{pricingT("status")}</p>
           </div>
         </div>
 
