@@ -37,6 +37,15 @@ export function Footer({ hideAboutFull }: { hideAboutFull?: boolean }) {
                 height={360}
               />
             </div>
+            <div className="site-footer-partner">
+              <Image
+                className="site-footer-partner-logo"
+                src="/partners/macau-expo-group.svg"
+                alt={t("footer.macauExpoGroup")}
+                width={780}
+                height={150}
+              />
+            </div>
           </div>
         </section>
 
