@@ -187,17 +187,24 @@ export default function Home() {
         <section className={styles.hostSection}>
           <h2>{isZh ? zh("主办 / 承办", "主辦 / 承辦") : "Host / Organizer"}</h2>
           <div className={styles.logoGrid}>
-            <a href="https://icachi.org" target="_blank" rel="noreferrer">
+            <a className={styles.logoPartner} href="https://icachi.org" target="_blank" rel="noreferrer">
               <img src="https://ichec.icachi.org/assets/img/logo/icachi-logo.svg" alt="ICACHI" />
               <span>{isZh ? zh("世界华人华侨人机交互协会", "世界華人華僑人機交互協會") : "ICACHI"}</span>
             </a>
-            <a href="https://www.cityu.edu.mo/" target="_blank" rel="noreferrer">
+            <a className={styles.logoPartner} href="https://www.cityu.edu.mo/" target="_blank" rel="noreferrer">
               <img
                 src="https://upload.wikimedia.org/wikipedia/zh/thumb/7/71/City_University_of_Macau_logo.svg/250px-City_University_of_Macau_logo.svg.png"
                 alt="City University of Macau"
               />
               <span>{isZh ? zh("澳门城市大学", "澳門城市大學") : "City University of Macau"}</span>
             </a>
+            <div className={styles.logoPartner}>
+              <img
+                src="/partners/macau-expo-group.svg"
+                alt={isZh ? zh("澳门博览集团有限公司", "澳門博覽集團有限公司") : "Macau Expo Group Limited"}
+              />
+              <span>{isZh ? zh("澳门博览集团有限公司", "澳門博覽集團有限公司") : "Macau Expo Group Limited"}</span>
+            </div>
           </div>
         </section>
       </div>
