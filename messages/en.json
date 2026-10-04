@@ -130,10 +130,10 @@
     "timelineStatusPending": "Pending",
     "timelineEarlyMay": "Early May",
     "timelineLateAugust": "Abstract Aug 10 · Full paper Aug 14",
-    "timelineLateSeptember": "October 1, 2026",
+    "timelineLateSeptember": "October 7, 2026",
     "timelineRound1Dates": "Abstract Aug 10 · Full paper Aug 14",
     "timelineRound2Dates": "Abstract Sep 10 · Full paper Sep 13",
-    "timelineDecisionDate": "October 1, 2026",
+    "timelineDecisionDate": "October 7, 2026",
     "contact": "Contact",
     "backToHome": "Back to Home",
     "attend": "Attend"
@@ -180,7 +180,7 @@
         "kicker": "Research track",
         "desc": "Complete original research with substantial contributions across HCI methods, systems, theory, design, and critical inquiry.",
         "bestFor": "Mature research with clear evidence, analysis, and contribution.",
-        "deadline": "Round 1: Aug 10 / Aug 14; Round 2: Sep 10 / Sep 13, 2026; notification: Oct 1.",
+        "deadline": "Round 1: Aug 10 / Aug 14; Round 2: Sep 10 / Sep 13, 2026; notification: Oct 7.",
         "materials": "Anonymous full paper PDF, ACM template, optional supplementary materials.",
         "topics": {
           "title": "Topics",
@@ -197,7 +197,7 @@
           "d3Label": "Round 2 abstract / full paper",
           "d3Date": "September 10 / September 13, 2026, 23:59 AoE",
           "d4Label": "Notification of acceptance",
-          "d4Date": "October 1, 2026, 23:59 AoE"
+          "d4Date": "October 7, 2026, 23:59 AoE"
         },
         "requirements": {
           "title": "Requirements",
@@ -257,7 +257,7 @@
         "desc": "We invite proposals addressing contemporary and emerging HCI areas through structured discussion, making, critique, or community building.",
         "overview": "Organized by the International Chinese Association of Computer Human Interaction (ICACHI) and hosted by City University of Macau, ICHEC 2026 will take place at Wynn Macau, Macau, China, on November 23–26, 2026. Conference themes: Inclusivity, Experience, Innovation.",
         "bestFor": "Organizers proposing workshops on emerging HCI topics, design practices, and interdisciplinary or international research communities.",
-        "deadline": "Proposal: September 18; notification: September 25; call for participants: October 1; final materials: November 20, 2026. All deadlines: 23:59 AoE.",
+        "deadline": "Proposal: September 18; notification of acceptance (1st round): October 8; call for participants: October 15; final materials: November 20, 2026. All deadlines: 23:59 AoE.",
         "materials": "English PDF proposal, maximum 3 pages excluding references, using the provided proposal template; submit via Google Form.",
         "submit": "Submit workshop proposal via Google Form",
         "topics": {
@@ -271,10 +271,10 @@
           "title": "Important Dates (23:59 AoE)",
           "d1Label": "Proposal submission deadline",
           "d1Date": "September 18, 2026, 23:59 AoE",
-          "d2Label": "Notification of acceptance",
-          "d2Date": "September 25, 2026, 23:59 AoE",
+          "d2Label": "Notification of acceptance (1st round)",
+          "d2Date": "October 8, 2026, 23:59 AoE",
           "d3Label": "Call for participants",
-          "d3Date": "October 1, 2026, 23:59 AoE",
+          "d3Date": "October 15, 2026",
           "d4Label": "Final materials submission",
           "d4Date": "November 20, 2026, 23:59 AoE"
         },
@@ -351,7 +351,7 @@
       "step2": { "title": "Round 1 Full Paper", "date": "August 14, 2026" },
       "step3": { "title": "Round 2 Abstract", "date": "September 10, 2026" },
       "step4": { "title": "Round 2 Full Paper", "date": "September 13, 2026" },
-      "step5": { "title": "Results Announced", "date": "October 1, 2026" },
+      "step5": { "title": "Results Announced", "date": "October 7, 2026" },
       "step6": { "title": "Publication-ready Deadline", "date": "October 22, 2026" }
     },
     "guide": {

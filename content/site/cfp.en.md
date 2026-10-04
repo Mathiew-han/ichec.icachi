@@ -52,4 +52,4 @@ ACM has introduced an open access publishing model. Depending on whether the cor
 
 ## Workshop Call
 
-The workshop proposal deadline is September 18, 2026; acceptance notification is September 25; the call for participants is October 1; and final materials are due November 20. All deadlines are 23:59 AoE (Anywhere on Earth). See the Workshop section above for the proposal template, Google Form, participation requirements, and chairs’ contact details.
+The workshop proposal deadline is September 18, 2026; notification of acceptance (1st round) is October 8; the call for participants is October 15; and final materials are due November 20. All deadlines are 23:59 AoE (Anywhere on Earth). See the Workshop section above for the proposal template, Google Form, participation requirements, and chairs’ contact details.

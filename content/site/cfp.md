@@ -8,5 +8,5 @@ This page is organized by submission track. Please use the track sections above 
 - ICHEC 2026 accepts English submissions only.
 - **Formatting**: Paper submissions should use the ACM Conference Proceedings Primary Article Template in single-column review format. Workshop proposals use the [workshop proposal template](https://docs.google.com/document/d/1c1IM1TA6uayPuOaBB1kIwGNpzgZC8PcXyP4-h9XbMUo/edit?usp=sharing): maximum 3 pages, excluding references, in English PDF format.
 - Tracks using blinded review require author-identifying information to be removed from papers and supplementary materials.
-- Workshop proposals are due September 18, 2026; notification: September 25; call for participants: October 1; final materials: November 20. All deadlines are 23:59 AoE.
+- Workshop proposals are due September 18, 2026; notification of acceptance (1st round): October 8; call for participants: October 15; final materials: November 20. All deadlines are 23:59 AoE.
 
