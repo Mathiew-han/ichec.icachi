@@ -136,6 +136,9 @@
 .paymentButton strong, .paymentButton small { display: inline; font-size: 1rem; font-weight: 800; line-height: 1.4; }
 .paymentButton small { color: #fff; font-size: .92rem; font-weight: 700; }
 :global(html[lang^="zh"]) .paymentButton:hover strong { color: #101712; }
+:global(html[lang="en"]) .paymentButton > span:nth-child(2) { gap: .18rem; }
+:global(html[lang="en"]) .paymentButton:hover strong,
+:global(html[lang="en"]) .paymentButton:hover small { color: #101712; }
 @container (max-width: 48rem) { .paymentButton small { display: none; } }
 
 .invoiceNotice { margin-top: 1.8rem; color: var(--ink); }
