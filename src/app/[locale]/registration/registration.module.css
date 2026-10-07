@@ -13,9 +13,8 @@
 
 .portalLayout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 9.4rem;
+  grid-template-columns: minmax(0, 1fr);
   align-items: start;
-  gap: clamp(1.25rem, 3vw, 2.75rem);
 }
 
 .portalMain { display: grid; gap: 1.75rem; min-width: 0; }
@@ -111,15 +110,15 @@
 
 .paymentSection { padding-top: 1.9rem; }
 .paymentSection .sectionIntro h2 { display: none; }
-.paymentGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.paymentGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: min(100%, 42rem); gap: .9rem; margin: 0.1rem auto 0; }
 
 .paymentButton {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: .45rem;
-  min-height: 4.9rem;
-  padding: 1rem 1.35rem;
+  min-height: 4rem;
+  padding: .75rem 1.1rem;
   border: 0;
   border-radius: 999px;
   background: #5a7e45;
@@ -155,10 +154,13 @@
 .policyCard p::before { position: absolute; left: .15rem; color: var(--green); content: "•"; }
 
 .countdown {
-  position: sticky;
-  top: 7.5rem;
+  position: fixed;
+  z-index: 30;
+  top: 50%;
+  right: clamp(0px, 1vw, 18px);
   display: grid;
   min-height: 11rem;
+  transform: translateY(-50%);
   padding: 1.25rem .75rem;
   place-content: center;
   border-radius: 0 0 .8rem .8rem;
@@ -176,7 +178,7 @@
 
 @media (max-width: 1050px) {
   .portalLayout { grid-template-columns: 1fr; }
-  .countdown { position: relative; top: auto; min-height: 8rem; grid-template-columns: auto auto; column-gap: .8rem; align-items: center; justify-content: center; }
+  .countdown { position: relative; top: auto; right: auto; z-index: auto; min-height: 8rem; transform: none; grid-template-columns: auto auto; column-gap: .8rem; align-items: center; justify-content: center; }
   .countdownNumber { grid-row: span 2; }
   .countdownDays { margin: 0; text-align: left; }
   .countdownLabel { align-self: start; border: 0; padding: 0; text-align: left; }
