@@ -161,6 +161,7 @@ function PlaceCard({ place, labels, onOpen }: { place: AttendPlace | AttendTourS
 export function AttendClient({ content, children }: { content: AttendContent; children: ReactNode }) {
   const { labels, venue } = content;
   const [activeSection, setActiveSection] = useState(navigationSections[0]);
+  const [showSectionNav, setShowSectionNav] = useState(false);
   const [origin, setOrigin] = useState(1);
   const [category, setCategory] = useState("all");
   const [allPlaces, setAllPlaces] = useState(false);
@@ -183,6 +184,14 @@ export function AttendClient({ content, children }: { content: AttendContent; ch
   }, []);
 
   useEffect(() => {
+    const hero = document.querySelector(".inner-hero");
+    if (!hero) return;
+    const observer = new IntersectionObserver(([entry]) => setShowSectionNav(!entry.isIntersecting), { threshold: 0 });
+    observer.observe(hero);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
     if (gallery && dialog.current && !dialog.current.open) dialog.current.showModal();
     if (!gallery && dialog.current?.open) dialog.current.close();
   }, [gallery]);
@@ -190,11 +199,11 @@ export function AttendClient({ content, children }: { content: AttendContent; ch
 
   return (
     <div className={styles.page}>
-      <nav className={styles.sectionNav} aria-label={labels.navLabel}>
+      {showSectionNav ? <nav className={styles.sectionNav} aria-label={labels.navLabel}>
         <div className={styles.navInner}>
-          {navigationSections.map((id, i) => <a key={id} href={`#${id}`} onClick={() => setActiveSection(id)} aria-current={activeSection === id ? "location" : undefined}><span>{String(i + 1).padStart(2, "0")}</span>{i === 0 ? labels.registration : labels.nav[i - 1]}</a>)}
+          {navigationSections.map((id, i) => <a key={id} href={`#${id}`} onClick={() => setActiveSection(id)} aria-current={activeSection === id ? "location" : undefined}><span>{String(i + 1).padStart(2, "0")}</span><span className={styles.navLabel}>{i === 0 ? labels.registration : labels.nav[i - 1]}</span></a>)}
         </div>
-      </nav>
+      </nav> : null}
 
       <section id="attend-registration" className={`${styles.section} ${styles.registrationSection}`} aria-label={labels.registration}>
         <div className={styles.container}>
