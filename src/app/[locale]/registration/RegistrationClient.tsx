@@ -92,7 +92,7 @@ export function RegistrationClient() {
               <span className={styles.paymentSymbol} aria-hidden="true">{channel.symbol}</span>
               <span>
                 <strong>{t(`payment.channels.${channel.id}.title`)}</strong>
-                <small>{t(`payment.channels.${channel.id}.hint`)}</small>
+                <small>({t(`payment.channels.${channel.id}.hint`)})</small>
               </span>
               <span className={styles.externalMark} aria-hidden="true">↗</span>
             </a>

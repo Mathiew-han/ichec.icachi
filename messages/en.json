@@ -572,11 +572,11 @@
         "lead": "Use the payment channel that best matches your invoice and payment requirements.",
         "channels": {
           "cny": {
-            "title": "CNY payment",
+            "title": "CNY Payment",
             "hint": "RMB · VAT invoice channel"
           },
           "hkd": {
-            "title": "HKD payment",
+            "title": "HKD Payment",
             "hint": "Hong Kong dollar · international credit card channel"
           }
         },

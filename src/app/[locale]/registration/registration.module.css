@@ -110,15 +110,16 @@
 
 .paymentSection { padding-top: 1.9rem; }
 .paymentSection .sectionIntro h2 { display: none; }
-.paymentGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: min(100%, 42rem); gap: .9rem; margin: 0.1rem auto 0; }
+.paymentGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; gap: 2rem; margin: .1rem auto 0; container-type: inline-size; }
 
 .paymentButton {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: .45rem;
-  min-height: 4rem;
-  padding: .75rem 1.1rem;
+  min-height: 4.9rem;
+  min-width: 0;
+  padding: .9rem 1.35rem;
   border: 0;
   border-radius: 999px;
   background: #5a7e45;
@@ -131,9 +132,11 @@
 
 .paymentButton:hover { transform: translateY(-3px); background: #426c36; }
 .paymentSymbol, .externalMark { display: none; }
-.paymentButton > span:nth-child(2) { display: flex; align-items: baseline; justify-content: center; gap: .45rem; flex-wrap: wrap; }
+.paymentButton > span:nth-child(2) { display: flex; align-items: baseline; justify-content: center; gap: .45rem; min-width: 0; flex-wrap: nowrap; white-space: nowrap; }
 .paymentButton strong, .paymentButton small { display: inline; font-size: 1rem; font-weight: 800; line-height: 1.4; }
-.paymentButton small { color: #fff; font-size: .92rem; }
+.paymentButton small { color: #fff; font-size: .92rem; font-weight: 700; }
+:global(html[lang^="zh"]) .paymentButton:hover strong { color: #101712; }
+@container (max-width: 48rem) { .paymentButton small { display: none; } }
 
 .invoiceNotice { margin-top: 1.8rem; color: var(--ink); }
 .invoiceNotice strong { font-size: 1rem; font-weight: 850; }
