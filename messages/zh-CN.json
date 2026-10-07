@@ -151,13 +151,21 @@
     },
     "resources": {
       "title": "资源",
-      "heading": "模板与政策",
+      "heading": "终稿文件与模板",
+      "cameraReadyDesc": "下载终稿提交所需的说明、作者填写表单及 Springer 模板。",
+      "cameraReadyInstructions": "ICHEC 2026 终稿提交说明（DOCX）",
+      "springerInstructions": "Springer 会议论文作者说明（PDF）",
+      "licenseToPublish": "附件 1：出版许可书（DOCX）",
+      "publicationInformation": "附件 2：最终出版信息表（XLSX）",
+      "latexTemplate": "附件 3：LaTeX 论文模板（ZIP）",
+      "wordTemplate": "附件 3：Microsoft Word 论文模板（ZIP）",
+      "references": "其他参考资料",
       "template": "ACM 出版格式",
       "check": "ACM 官方完整性与 AI 检测说明",
       "website": "会议官网征稿启事",
       "registration": "注册与费用",
       "contact": "联系：ichec2026.info@gmail.com",
-      "hint": "格式模板、完整性检查说明与投稿入口均以官方链接为准。"
+      "hint": "终稿文件、格式模板、完整性检查说明与投稿入口均可在此获取。"
     },
     "tracks": {
       "title": "类别",

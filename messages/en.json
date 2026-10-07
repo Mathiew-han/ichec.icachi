@@ -151,13 +151,21 @@
     },
     "resources": {
       "title": "Resources",
-      "heading": "Templates & Policies",
+      "heading": "Camera-ready Files & Templates",
+      "cameraReadyDesc": "Download the instructions, forms, and Springer templates required for your camera-ready submission.",
+      "cameraReadyInstructions": "ICHEC 2026 Camera-ready Instructions (DOCX)",
+      "springerInstructions": "Springer Instructions for Authors of Proceedings (PDF)",
+      "licenseToPublish": "Attachment 1: License to Publish (DOCX)",
+      "publicationInformation": "Attachment 2: Final Publication Information (XLSX)",
+      "latexTemplate": "Attachment 3: LaTeX Proceedings Template (ZIP)",
+      "wordTemplate": "Attachment 3: Microsoft Word Proceedings Template (ZIP)",
+      "references": "Additional References",
       "template": "ACM publication format",
       "check": "ACM integrity and AI check guidance",
       "website": "Conference website CFP",
       "registration": "Registration & Fees",
       "contact": "Contact: ichec2026.info@gmail.com",
-      "hint": "Format templates, integrity-check guidance, and submission entry are linked to official sources."
+      "hint": "Camera-ready files, format templates, integrity guidance, and submission entry are available here."
     },
     "tracks": {
       "title": "Tracks",

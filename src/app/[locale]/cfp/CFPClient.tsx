@@ -256,6 +256,28 @@ export function CFPClient({ content }: { content: string }) {
               <div className={styles.label}>{t("resources.title")}</div>
               <div className={styles.cardTitle}>{t("resources.heading")}</div>
             </div>
+            <div className={styles.cardBody}>{t("resources.cameraReadyDesc")}</div>
+            <div className={styles.resourceList}>
+              <a className={styles.resourceItem} href="/downloads/camera-ready/ICHEC2026_Camera_Ready_Instructions.docx" download>
+                {t("resources.cameraReadyInstructions")}
+              </a>
+              <a className={styles.resourceItem} href="/downloads/camera-ready/Springer_Instructions_for_Authors_of_Proceedings.pdf" download>
+                {t("resources.springerInstructions")}
+              </a>
+              <a className={styles.resourceItem} href="/downloads/camera-ready/Attachment_1_License_to_Publish.docx" download>
+                {t("resources.licenseToPublish")}
+              </a>
+              <a className={styles.resourceItem} href="/downloads/camera-ready/Attachment_2_Final_Publication_Information.xlsx" download>
+                {t("resources.publicationInformation")}
+              </a>
+              <a className={styles.resourceItem} href="/downloads/camera-ready/Attachment_3_LaTeX_Proceedings_Template.zip" download>
+                {t("resources.latexTemplate")}
+              </a>
+              <a className={styles.resourceItem} href="/downloads/camera-ready/Attachment_3_Microsoft_Word_Proceedings_Template.zip" download>
+                {t("resources.wordTemplate")}
+              </a>
+            </div>
+            <p className={styles.resourceSubheading}>{t("resources.references")}</p>
             <div className={styles.resourceList}>
               <a
                 className={styles.resourceItem}
