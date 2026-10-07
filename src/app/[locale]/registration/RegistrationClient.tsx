@@ -88,7 +88,7 @@ export function RegistrationClient() {
 
         <div className={styles.paymentGrid}>
           {paymentChannels.map((channel) => (
-            <a key={channel.id} className={styles.paymentButton} href={channel.href} target="_blank" rel="noreferrer">
+            <a key={channel.id} className={styles.paymentButton} data-payment-channel={channel.id} href={channel.href} target="_blank" rel="noreferrer">
               <span className={styles.paymentSymbol} aria-hidden="true">{channel.symbol}</span>
               <span>
                 <strong>{t(`payment.channels.${channel.id}.title`)}</strong>
