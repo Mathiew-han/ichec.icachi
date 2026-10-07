@@ -19,11 +19,19 @@ const paymentChannels = [
 const feeRows = ["author", "professional", "student"] as const;
 const pricePeriods = ["early", "regular", "late"] as const;
 
+function getDaysRemaining() {
+  const conferenceStart = new Date("2026-11-23T00:00:00+08:00").getTime();
+  return Math.max(0, Math.ceil((conferenceStart - Date.now()) / 86_400_000));
+}
+
 export function RegistrationClient() {
   const t = useTranslations("Registration.portal");
+  const daysRemaining = getDaysRemaining();
 
   return (
     <div className={styles.page}>
+      <div className={styles.portalLayout}>
+        <div className={styles.portalMain}>
       <section className={styles.feesSection} aria-labelledby="registration-fees-title">
         <div className={styles.sectionIntro}>
           <p className={styles.eyebrow}>{t("fees.eyebrow")}</p>
@@ -120,6 +128,14 @@ export function RegistrationClient() {
           ))}
         </div>
       </section>
+        </div>
+
+        <aside className={styles.countdown} aria-label={t("countdown.ariaLabel")}>
+          <span className={styles.countdownNumber}>{daysRemaining}</span>
+          <span className={styles.countdownDays}>{t("countdown.days")}</span>
+          <span className={styles.countdownLabel}>{t("countdown.label")}</span>
+        </aside>
+      </div>
     </div>
   );
 }

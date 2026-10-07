@@ -608,6 +608,11 @@
             "text": "Paper-related registrations are non-refundable. Non-author registrations cancelled by Oct. 30, 2026 (AoE) receive a 70% refund; no refund is available afterwards. Send a formal institutional request to ichec2026.info@gmail.com."
           }
         }
+      },
+      "countdown": {
+        "ariaLabel": "Countdown to ICHEC 2026",
+        "days": "days",
+        "label": "countdown"
       }
     }
   },
