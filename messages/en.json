@@ -108,7 +108,7 @@
     "aboutSubtitle": "An Open, Inclusive, and Future-Oriented HCI Community",
     "aboutBrief": "Meet in Macau, connect research, design, and industry.",
     "aboutP1": "The International Chinese Association of Computer Human Interaction (ICACHI) is delighted to announce that the International Conference on Human-Engaged Computing (ICHEC 2026) will be hosted by the City University of Macau and held at Wynn Macau, Macau, China, from November 23 to 26, 2026. The conference theme is “Inclusivity, Experience, Innovation”.",
-    "aboutP2": "ICHEC (formerly known as “Chinese CHI”) was initiated by ICACHI and has become a premier venue connecting HCI scholars, practitioners, and industry leaders worldwide. Since 2012, Chinese CHI has been successfully held in Paris, Toronto, Seoul, Silicon Valley, Guangzhou, Montreal, Xiamen, Bali, Shenzhen, and Singapore. The papers accepted at the conference in the past years have been published annually in the ACM Digital Library and are indexed by EI Compendex.",
+    "aboutP2": "ICHEC (formerly known as “Chinese CHI”) was initiated by ICACHI and has become a premier venue connecting HCI scholars, practitioners, and industry leaders worldwide. Since 2012, Chinese CHI has been successfully held in Paris, Toronto, Seoul, Silicon Valley, Guangzhou, Montreal, Xiamen, Bali, Shenzhen, and Singapore.",
     "aboutP3": "The conference was officially renamed ICHEC in 2025 to reflect its broader inclusiveness and international participation. In 2026, we cordially invite leading scholars, researchers, and industry leaders from around the world to share their latest research progress and practical experiences, foster intellectual exchange and research collaboration, and explore the boundless possibilities that lie ahead in the future development of HCI.",
     "registerNow": "Register Now",
     "themeTitle": "Theme",
@@ -159,9 +159,7 @@
       "publicationInformation": "Attachment 2: Final Publication Information (XLSX)",
       "latexTemplate": "Attachment 3: LaTeX Proceedings Template (ZIP)",
       "wordTemplate": "Attachment 3: Microsoft Word Proceedings Template (ZIP)",
-      "references": "Additional References",
-      "template": "ACM publication format",
-      "check": "ACM integrity and AI check guidance",
+      "references": "Conference information",
       "website": "Conference website CFP",
       "registration": "Registration & Fees",
       "contact": "Contact: ichec2026.info@gmail.com",
@@ -174,7 +172,7 @@
       "cta": "Go to submission",
       "view": "View track details",
       "submit": "Submit via EasyChair",
-      "note": "Each track has its own dates and required materials. General ACM policies are collected at the bottom of the page.",
+      "note": "Each track has its own dates and required materials. Shared submission guidance is collected at the bottom of the page.",
       "detailsTitle": "Track Details",
       "detailsHeading": "Topics, Timeline, Requirements",
       "detailsDesc": "The same structure repeats for every track so authors can compare what is in scope, what is due, and what must be submitted.",
@@ -189,7 +187,7 @@
         "desc": "Complete original research with substantial contributions across HCI methods, systems, theory, design, and critical inquiry.",
         "bestFor": "Mature research with clear evidence, analysis, and contribution.",
         "deadline": "Round 1: Aug 10 / Aug 14; Round 2: Sep 10 / Sep 13, 2026; notification: Oct 7.",
-        "materials": "Anonymous full paper PDF, ACM template, optional supplementary materials.",
+        "materials": "Anonymous full paper PDF, optional supplementary materials.",
         "topics": {
           "title": "Topics",
           "b1": "Human-AI collaboration, generative AI and HCI, intelligent interaction, and responsible technology.",
@@ -211,14 +209,14 @@
           "title": "Requirements",
           "b1": "English submissions only.",
           "b2": "Double-blind review: remove author-identifying information from the paper and supplements.",
-          "b3": "Use the ACM Conference Proceedings Primary Article Template in single-column review format.",
+          "b3": "Use the single-column review format specified in the official submission instructions.",
           "b4": "Main text should be 5,000-12,000 words; references, appendices, and figure/table captions are excluded."
         },
         "outcome": {
           "title": "Review & Publication",
           "b1": "Submissions undergo blinded peer review by experienced HCI scholars.",
           "b2": "Accepted full papers are expected to be presented on site during the conference.",
-          "b3": "At least one author of each accepted paper must register; ACM publication workflow applies."
+          "b3": "At least one author of each accepted paper must register and complete the final publication requirements."
         }
       },
       "poster": {
@@ -227,7 +225,7 @@
         "desc": "Work-in-progress, early results, design prototypes, pilot studies, and perspective pieces that benefit from focused feedback.",
         "bestFor": "Developing work, early evidence, prototypes, methods, cases, and discussion papers.",
         "deadline": "Submission: September 21; notification: October 19; camera-ready: October 22, 2026.",
-        "materials": "Anonymous short paper PDF in the ACM single-column review format; no more than 5,000 words.",
+        "materials": "Anonymous short paper PDF; no more than 5,000 words.",
         "topics": {
           "title": "Topics",
           "b1": "Preliminary findings, pilots, exploratory studies, and emerging research directions.",
@@ -248,7 +246,7 @@
         "requirements": {
           "title": "Requirements",
           "b1": "English submissions only.",
-          "b2": "Use the ACM template in single-column review format.",
+          "b2": "Use the single-column review format specified in the official submission instructions.",
           "b3": "The main text must not exceed 5,000 words in a single-column layout.",
           "b4": "Double-blind review: remove author-identifying information from the paper and supplements."
         },

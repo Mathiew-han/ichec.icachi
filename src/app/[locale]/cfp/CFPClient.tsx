@@ -281,22 +281,6 @@ export function CFPClient({ content }: { content: string }) {
             <div className={styles.resourceList}>
               <a
                 className={styles.resourceItem}
-                href="https://chi2026.acm.org/chi-publication-formats/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {t("resources.template")}
-              </a>
-              <a
-                className={styles.resourceItem}
-                href="https://www.acm.org/publications/icps/integrity-check-criteria"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {t("resources.check")}
-              </a>
-              <a
-                className={styles.resourceItem}
                 href="https://www.ichec2026.com/en/"
                 target="_blank"
                 rel="noreferrer"

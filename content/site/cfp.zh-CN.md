@@ -20,35 +20,13 @@ ICHEC 2026 欢迎人机交互与 Human-Engaged Computing 全领域投稿，包�
 - **投稿入口**：论文与艺术作品通过 [EasyChair](https://easychair.org/my/conference?conf=ichec2026) 提交。工作坊提案须通过专用 [Google 表单](https://docs.google.com/forms/d/e/1FAIpQLSfqd0YCnKP056a-Gmv8luVLSnO6_CL56LuL3aFGpODmlSIgSA/viewform?usp=publish-editor) 提交。
 - **原创性**：投稿不得已公开发表，也不得同时投往其他会议或期刊。
 - **匿名要求**：采用匿名评审的类别，需要从正文和补充材料中移除作者身份信息。
-- **格式要求**：论文使用 ACM Conference Proceedings Primary Article Template，投稿阶段采用单栏评审格式。工作坊提案使用[指定工作坊模板](https://docs.google.com/document/d/1c1IM1TA6uayPuOaBB1kIwGNpzgZC8PcXyP4-h9XbMUo/edit?usp=sharing)，以英文撰写，最多 3 页（不含参考文献），提交 PDF。
+- **格式要求**：论文请使用官方投稿说明中规定的单栏评审格式。工作坊提案使用[指定工作坊模板](https://docs.google.com/document/d/1c1IM1TA6uayPuOaBB1kIwGNpzgZC8PcXyP4-h9XbMUo/edit?usp=sharing)，以英文撰写，最多 3 页（不含参考文献），提交 PDF。
 - **注册参会**：录用论文或作品如需报告、展示或展出，至少一名作者 / 贡献者应注册并到场参与。所有工作坊组织者和参与者须同时注册工作坊和主会议，无额外工作坊费用。
 
-## 模板与出版
-
-格式与出版制作请参考 ACM 官方流程：
-
-- ACM / CHI 出版格式说明：[https://chi2026.acm.org/chi-publication-formats/](https://chi2026.acm.org/chi-publication-formats/)
-- Word 模板：[https://www.acm.org/binaries/content/assets/publications/taps/acm_submission_template.docx](https://www.acm.org/binaries/content/assets/publications/taps/acm_submission_template.docx)
-- LaTeX 模板：[https://portalparts.acm.org/hippo/latex_templates/acmart-primary.zip](https://portalparts.acm.org/hippo/latex_templates/acmart-primary.zip)
-- Overleaf 模板：[https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc](https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc)
-
-录用论文应按照 ACM 在录用后提供的出版说明完成后续流程。
 
 ## 生成式 AI 与学术诚信
 
-作者需对提交内容承担全部责任。若使用生成式 AI 工具进行写作、润色、分析辅助，或用途超出普通文本编辑范畴，应根据 ACM 政策进行适当披露。生成式 AI 工具不得列为作者。
-
-ACM 完整性检查与 AI 内容说明：
-
-- [https://www.acm.org/publications/icps/integrity-check-criteria](https://www.acm.org/publications/icps/integrity-check-criteria)
-- [https://www.acm.org/publications/policies/frequently-asked-questions](https://www.acm.org/publications/policies/frequently-asked-questions)
-
-## ACM Open Access
-
-ACM 已引入开放获取出版模式。根据通讯作者所在机构是否加入 ACM Open program，录用论文发表后可能涉及开放获取费用。
-
-- ACM Open Access Guidance for ICPS Authors：[https://www.acm.org/publications/icps/author-guidance](https://www.acm.org/publications/icps/author-guidance)
-- FAQ：[https://www.acm.org/publications/icps/faq](https://www.acm.org/publications/icps/faq)
+作者需对提交内容承担全部责任。若使用生成式 AI 工具进行写作、润色、分析辅助，或用途超出普通文本编辑范畴，应进行适当披露。生成式 AI 工具不得列为作者。
 
 ## 工作坊征集
 

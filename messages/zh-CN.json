@@ -108,7 +108,7 @@
     "aboutSubtitle": "开放、包容、面向未来的人机交互共同体",
     "aboutBrief": "澳门相聚，连接研究设计与产业",
     "aboutP1": "世界华人华侨人机交互协会（International Chinese Association of Computer Human Interaction，简称 ICACHI）举办的 International Conference on Human-Engaged Computing (ICHEC 2026) 将由澳门城市大学承办，于 2026 年 11 月 23 日至 26 日在中国澳门，永利澳门（Macau Wynn）举行。本次会议主题为：共融（Inclusivity）、体验（Experience）、创新（Innovation）。",
-    "aboutP2": "ICHEC（前身为 Chinese CHI）由 ICACHI 发起，已成为连接全球人机交互领域学者、业界人士的重要学术会议。自 2012 年起，Chinese CHI 已在巴黎、多伦多、首尔、硅谷、广州、蒙特利尔、厦门、巴厘岛、深圳及新加坡成功举办。往年历届会议发表论文均会收录于 ACM Digital Library，并提交 EI 检索。",
+    "aboutP2": "ICHEC（前身为 Chinese CHI）由 ICACHI 发起，已成为连接全球人机交互领域学者、业界人士的重要学术会议。自 2012 年起，Chinese CHI 已在巴黎、多伦多、首尔、硅谷、广州、蒙特利尔、厦门、巴厘岛、深圳及新加坡成功举办。",
     "aboutP3": "2025 年会议正式更名为 ICHEC，以体现其更广泛的包容性与国际参与度。2026 年，我们诚邀全球人机交互领域的学者、研究人员及业界领袖，分享最新研究成果与实践经验，共同探索人机交互的未来可能。",
     "registerNow": "立即注册",
     "themeTitle": "主题",
@@ -159,9 +159,7 @@
       "publicationInformation": "附件 2：最终出版信息表（XLSX）",
       "latexTemplate": "附件 3：LaTeX 论文模板（ZIP）",
       "wordTemplate": "附件 3：Microsoft Word 论文模板（ZIP）",
-      "references": "其他参考资料",
-      "template": "ACM 出版格式",
-      "check": "ACM 官方完整性与 AI 检测说明",
+      "references": "会议信息",
       "website": "会议官网征稿启事",
       "registration": "注册与费用",
       "contact": "联系：ichec2026.info@gmail.com",
@@ -174,7 +172,7 @@
       "cta": "进入投稿",
       "view": "查看该类别详情",
       "submit": "通过 EasyChair 提交",
-      "note": "每个 track 都有独立日期和材料要求。通用 ACM 政策集中放在页面底部，避免与各类投稿要求混在一起。",
+      "note": "每个 track 都有独立日期和材料要求。通用投稿说明集中放在页面底部，避免与各类投稿要求混在一起。",
       "detailsTitle": "分类详情",
       "detailsHeading": "主题、时间线、材料要求",
       "detailsDesc": "每个投稿类别都使用同一套结构，方便作者快速比较适用范围、关键日期和应提交材料。",
@@ -189,7 +187,7 @@
         "desc": "面向完整原创研究与系统性贡献，欢迎方法、系统、理论、设计与批判性研究。",
         "bestFor": "已有较完整证据、分析和贡献陈述的成熟研究。",
         "deadline": "第一轮：2026 年 8 月 10 / 14 日；第二轮：2026 年 9 月 10 / 13 日；结果通知：10 月 7 日。",
-        "materials": "匿名全文 PDF、ACM 模板、可选补充材料。",
+        "materials": "匿名全文 PDF、可选补充材料。",
         "topics": {
           "title": "主题范围",
           "b1": "人机协作、生成式 AI 与 HCI、智能交互和负责任技术。",
@@ -211,14 +209,14 @@
           "title": "材料要求",
           "b1": "仅接受英文投稿。",
           "b2": "采用双盲评审：正文和补充材料中不得出现作者身份信息。",
-          "b3": "使用 ACM Conference Proceedings Primary Article Template，投稿阶段为单栏评审格式。",
+          "b3": "请使用官方投稿说明中规定的单栏评审格式。",
           "b4": "正文建议 5,000-12,000 词；参考文献、附录、图表标题等不计入。"
         },
         "outcome": {
           "title": "评审与出版",
           "b1": "稿件将由人机交互领域学者进行匿名同行评议。",
           "b2": "录用长文预计在会议期间进行现场报告。",
-          "b3": "每篇录用论文至少一名作者需注册参会，并完成 ACM 出版流程。"
+          "b3": "每篇录用论文至少一名作者需注册参会，并完成最终出版要求。"
         }
       },
       "poster": {
@@ -227,7 +225,7 @@
         "desc": "适合进行中工作、早期成果、设计原型、试点研究和观点型论文，强调现场交流与反馈。",
         "bestFor": "阶段性研究、初步证据、原型、方法探索、案例研究与讨论性论文。",
         "deadline": "投稿截止：9 月 21 日；结果通知：10 月 19 日；终稿：10 月 22 日。",
-        "materials": "匿名短论文 PDF，使用 ACM 单栏评审格式；正文不超过 5,000 词。",
+        "materials": "匿名短论文 PDF；正文不超过 5,000 词。",
         "topics": {
           "title": "主题范围",
           "b1": "初步发现、试点研究、探索性研究和新兴研究方向。",
@@ -248,7 +246,7 @@
         "requirements": {
           "title": "材料要求",
           "b1": "仅接受英文投稿。",
-          "b2": "使用 ACM 模板，投稿阶段为单栏评审格式。",
+          "b2": "请使用官方投稿说明中规定的单栏评审格式。",
           "b3": "正文采用单栏格式，不超过 5,000 词。",
           "b4": "采用双盲评审：正文和补充材料中不得出现作者身份信息。"
         },

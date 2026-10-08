@@ -20,35 +20,13 @@ Submissions focusing on Macao characteristics, local innovation, regional cultur
 - **Submission portal**: Papers and artworks should be submitted through [EasyChair](https://easychair.org/my/conference?conf=ichec2026). Workshop proposals must be submitted through the dedicated [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSfqd0YCnKP056a-Gmv8luVLSnO6_CL56LuL3aFGpODmlSIgSA/viewform?usp=publish-editor).
 - **Originality**: Submissions must not have been previously published and must not be under concurrent review by another conference or journal.
 - **Anonymity**: Tracks that use blinded review require authors to remove identifying information from the paper and supplementary materials.
-- **Formatting**: Paper submissions should use the ACM Conference Proceedings Primary Article Template in single-column review format. Workshop proposals use the [workshop proposal template](https://docs.google.com/document/d/1c1IM1TA6uayPuOaBB1kIwGNpzgZC8PcXyP4-h9XbMUo/edit?usp=sharing): maximum 3 pages, excluding references, in English PDF format.
+- **Formatting**: Paper submissions should use the single-column review format specified in the official submission instructions. Workshop proposals use the [workshop proposal template](https://docs.google.com/document/d/1c1IM1TA6uayPuOaBB1kIwGNpzgZC8PcXyP4-h9XbMUo/edit?usp=sharing): maximum 3 pages, excluding references, in English PDF format.
 - **Registration**: At least one author or contributor of each accepted paper or artwork is expected to register and attend to present or exhibit. All workshop organizers and participants must register for both the workshop and the main conference; no additional workshop fee applies.
 
-## Templates and Publication
-
-Formatting and production guidance should follow the official ACM workflow:
-
-- ACM / CHI publication format guidance: [https://chi2026.acm.org/chi-publication-formats/](https://chi2026.acm.org/chi-publication-formats/)
-- Word template: [https://www.acm.org/binaries/content/assets/publications/taps/acm_submission_template.docx](https://www.acm.org/binaries/content/assets/publications/taps/acm_submission_template.docx)
-- LaTeX template: [https://portalparts.acm.org/hippo/latex_templates/acmart-primary.zip](https://portalparts.acm.org/hippo/latex_templates/acmart-primary.zip)
-- Overleaf template: [https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc](https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc)
-
-Accepted paper submissions should follow the ACM publication instructions provided after acceptance.
 
 ## Generative AI and Academic Integrity
 
-Authors are responsible for all submitted content. If generative AI tools are used for writing, polishing, analysis support, or other purposes beyond ordinary editing, authors should disclose the use appropriately according to ACM policy. Generative AI tools should not be listed as authors.
-
-ACM integrity and AI-content guidance:
-
-- [https://www.acm.org/publications/icps/integrity-check-criteria](https://www.acm.org/publications/icps/integrity-check-criteria)
-- [https://www.acm.org/publications/policies/frequently-asked-questions](https://www.acm.org/publications/policies/frequently-asked-questions)
-
-## ACM Open Access
-
-ACM has introduced an open access publishing model. Depending on whether the corresponding author's institution participates in the ACM Open program, an accepted publication may involve an article processing charge after acceptance.
-
-- ACM Open Access guidance for ICPS authors: [https://www.acm.org/publications/icps/author-guidance](https://www.acm.org/publications/icps/author-guidance)
-- FAQ: [https://www.acm.org/publications/icps/faq](https://www.acm.org/publications/icps/faq)
+Authors are responsible for all submitted content. If generative AI tools are used for writing, polishing, analysis support, or other purposes beyond ordinary editing, authors should disclose the use appropriately. Generative AI tools should not be listed as authors.
 
 ## Workshop Call
 
