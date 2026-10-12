@@ -163,7 +163,8 @@
       "website": "Conference website CFP",
       "registration": "Registration & Fees",
       "contact": "Contact: ichec2026.info@gmail.com",
-      "hint": "Camera-ready files, format templates, integrity guidance, and submission entry are available here."
+      "hint": "Camera-ready files, format templates, integrity guidance, and submission entry are available here.",
+      "download": "Download files"
     },
     "tracks": {
       "title": "Tracks",

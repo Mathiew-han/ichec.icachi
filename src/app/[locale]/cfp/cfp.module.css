@@ -828,3 +828,120 @@
     transition: none;
   }
 }
+
+.resourcesSection { scroll-margin-top: 7rem; }
+
+.resourcesHero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: end;
+  padding: clamp(1.45rem, 3vw, 2.7rem);
+  border: 1px solid color-mix(in oklab, var(--accent-green) 24%, transparent);
+  border-radius: 20px 20px 0 0;
+  background:
+    linear-gradient(125deg, color-mix(in oklab, var(--accent-green) 12%, white 88%), color-mix(in oklab, var(--background) 84%, white 16%));
+}
+
+.resourcesTitle {
+  margin: .75rem 0 0;
+  color: color-mix(in oklab, var(--foreground) 92%, transparent);
+  font-size: clamp(1.65rem, 3.2vw, 2.5rem);
+  font-weight: 760;
+  letter-spacing: -.025em;
+  line-height: 1.14;
+}
+
+.resourcesLead {
+  max-width: 46rem;
+  margin: .8rem 0 0;
+  color: color-mix(in oklab, var(--foreground) 70%, transparent);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.resourcesJump {
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+  min-height: 3rem;
+  padding: .7rem 1rem;
+  border-radius: 999px;
+  background: var(--accent-green);
+  color: #fff;
+  font-size: .88rem;
+  font-weight: 750;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.resourcesJump:hover { transform: translateY(-2px); background: color-mix(in oklab, var(--accent-green) 85%, #000); }
+.resourcesJump span:last-child { font-size: 1.1rem; }
+
+.resourceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid color-mix(in oklab, var(--accent-green) 22%, transparent);
+  border-top: 0;
+  background: color-mix(in oklab, var(--accent-green) 13%, transparent);
+}
+
+.resourceFile {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: .85rem;
+  align-items: center;
+  min-height: 7.4rem;
+  padding: 1.05rem 1.2rem;
+  background: color-mix(in oklab, var(--background) 94%, white 6%);
+  color: color-mix(in oklab, var(--foreground) 86%, transparent);
+  text-decoration: none;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.resourceFile:hover { background: #fff; color: color-mix(in oklab, var(--accent-green) 76%, var(--foreground)); }
+.resourceFileIndex { align-self: start; color: color-mix(in oklab, var(--accent-green) 80%, transparent); font-size: .72rem; font-weight: 800; letter-spacing: .1em; }
+.resourceFileCopy { min-width: 0; }
+.resourceFileName { display: block; font-size: .98rem; font-weight: 700; line-height: 1.45; overflow-wrap: anywhere; }
+.resourceFileType { display: inline-block; margin-top: .65rem; padding: .16rem .42rem; border-radius: 4px; background: color-mix(in oklab, var(--accent-green) 11%, transparent); color: color-mix(in oklab, var(--accent-green) 90%, var(--foreground)); font-size: .66rem; font-weight: 800; letter-spacing: .1em; }
+.resourceFileDownload { display: grid; width: 2rem; height: 2rem; place-items: center; border: 1px solid color-mix(in oklab, var(--accent-green) 30%, transparent); border-radius: 50%; color: var(--accent-green); font-size: 1rem; }
+.resourceFile:hover .resourceFileDownload { border-color: var(--accent-green); background: var(--accent-green); color: #fff; }
+
+.resourceFooter {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+  align-items: center;
+  padding: 1rem clamp(1.15rem, 2vw, 1.75rem) 1.25rem;
+  border: 1px solid color-mix(in oklab, var(--accent-green) 22%, transparent);
+  border-top: 0;
+  border-radius: 0 0 20px 20px;
+  background: color-mix(in oklab, var(--background) 92%, white 8%);
+}
+
+.resourceFooter > p { margin: 0; color: color-mix(in oklab, var(--foreground) 56%, transparent); font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.resourceSupportLinks { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .65rem 1.1rem; }
+.resourceSupportLinks a { color: color-mix(in oklab, var(--foreground) 72%, transparent); font-size: .86rem; font-weight: 650; text-decoration: underline; text-underline-offset: 4px; }
+.resourceSupportLinks a:hover { color: var(--accent-green); }
+
+.submitSection { padding-top: 0 !important; border-top: 0 !important; }
+.submitPanel { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; padding: 1.5rem clamp(1.25rem, 2.4vw, 2.2rem); border: 1px solid color-mix(in oklab, var(--foreground) 8%, transparent); border-radius: 16px; background: color-mix(in oklab, var(--background) 91%, white 9%); }
+.submitPanel .cardBody { max-width: 42rem; }
+.submitPanel .cardActions { flex-shrink: 0; margin: 0; justify-content: flex-end; }
+
+@media (max-width: 900px) {
+  .resourceGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .submitPanel { align-items: flex-start; flex-direction: column; }
+  .submitPanel .cardActions { justify-content: flex-start; }
+}
+
+@media (max-width: 600px) {
+  .resourcesHero { grid-template-columns: 1fr; gap: 1.2rem; }
+  .resourcesJump { width: fit-content; }
+  .resourceGrid { grid-template-columns: 1fr; }
+  .resourceFile { min-height: 5.75rem; }
+  .resourceFooter { align-items: flex-start; flex-direction: column; }
+  .resourceSupportLinks { justify-content: flex-start; }
+}

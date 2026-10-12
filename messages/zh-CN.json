@@ -163,7 +163,8 @@
       "website": "会议官网征稿启事",
       "registration": "注册与费用",
       "contact": "联系：ichec2026.info@gmail.com",
-      "hint": "终稿文件、格式模板、完整性检查说明与投稿入口均可在此获取。"
+      "hint": "终稿文件、格式模板、完整性检查说明与投稿入口均可在此获取。",
+      "download": "下载终稿文件"
     },
     "tracks": {
       "title": "类别",
