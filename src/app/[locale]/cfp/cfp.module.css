@@ -1233,17 +1233,6 @@
   margin-right: -0.8rem;
 }
 
-.workshopNavItem::before {
-  position: absolute;
-  top: 1rem;
-  bottom: 1rem;
-  left: 0;
-  width: 3px;
-  border-radius: 0 999px 999px 0;
-  background: color-mix(in oklab, var(--accent-green) 74%, #c8a454);
-  content: "";
-}
-
 .workshopNavItem::after {
   position: absolute;
   z-index: -1;
@@ -1279,10 +1268,6 @@
   color: #fff;
   box-shadow: 0 20px 48px rgba(18, 78, 56, 0.23);
   transform: translateX(0.45rem);
-}
-
-.workshopNavItemActive::before {
-  background: #d8b35e;
 }
 
 .workshopNavItemActive::after {
