@@ -195,64 +195,7 @@ export function WorkshopShowcase({ locale }: { locale: string }) {
                 alt={`${content.workshopLabel} ${activeWorkshopIndex + 1}: ${activeWorkshop.title}`}
               />
             </div>
-
-            <div className={styles.workshopPanelBar}>
-              <div className={styles.workshopPanelActions}>
-                <a className={styles.workshopRegisterButton} href={activeWorkshop.registrationUrl} target="_blank" rel="noreferrer">
-                  {content.registerWorkshop} <span aria-hidden="true">↗</span>
-                </a>
-                {activeWorkshop.moreInfoUrl && (
-                  <a className={styles.workshopTextLink} href={activeWorkshop.moreInfoUrl} target="_blank" rel="noreferrer">
-                    {content.moreInformation} <span aria-hidden="true">↗</span>
-                  </a>
-                )}
-              </div>
-              <div className={styles.workshopPanelControls}>
-                <span>{String(activeWorkshopIndex + 1).padStart(2, "0")} / {String(content.workshops.length).padStart(2, "0")}</span>
-                <button type="button" onClick={() => selectWorkshop(activeWorkshopIndex - 1)} aria-label={`${content.workshopLabel} ${activeWorkshopIndex || content.workshops.length}`}>
-                  <span aria-hidden="true">←</span>
-                </button>
-                <button type="button" onClick={() => selectWorkshop(activeWorkshopIndex + 1)} aria-label={`${content.workshopLabel} ${(activeWorkshopIndex + 1) % content.workshops.length + 1}`}>
-                  <span aria-hidden="true">→</span>
-                </button>
-              </div>
-            </div>
-
-            <div className={styles.workshopPanelCopy}>
-              <div className={styles.workshopCardKicker}>{content.workshopLabel} {String(activeWorkshopIndex + 1).padStart(2, "0")}</div>
-              <h3>{activeWorkshop.title}</h3>
-              <p>{activeWorkshop.description}</p>
-              <details className={styles.workshopDetails}>
-                <summary>{content.detailsLabel}<span aria-hidden="true">＋</span></summary>
-                <div className={styles.workshopDetailsContent}>
-                  <h4>{content.organisersLabel}</h4>
-                  <ul>
-                    {activeWorkshop.organisers.map((organiser) => <li key={organiser}>{organiser}</li>)}
-                  </ul>
-                  <div className={styles.workshopContact}>
-                    <span>{content.contactLabel}</span>
-                    <a href={`mailto:${activeWorkshop.contact}`}>{activeWorkshop.contact}</a>
-                  </div>
-                </div>
-              </details>
-            </div>
           </motion.article>
-        </div>
-
-        <div className={styles.workshopChairs}>
-          <div>
-            <div className={styles.label}>{content.chairsTitle}</div>
-            <p>{content.chairsNote}</p>
-          </div>
-          <div className={styles.workshopChairList}>
-            {content.chairs.map((chair) => (
-              <div key={chair.email} className={styles.workshopChair}>
-                <strong>{chair.name}</strong>
-                <span>{chair.affiliation}</span>
-                <a href={`mailto:${chair.email}`}>{chair.email}</a>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
     </>

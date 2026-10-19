@@ -1194,13 +1194,9 @@
 
 .workshopBrowser {
   display: grid;
-  grid-template-columns: minmax(15rem, 0.28fr) minmax(0, 0.72fr);
+  grid-template-columns: minmax(16rem, 0.26fr) minmax(0, 0.74fr);
+  gap: clamp(2rem, 4vw, 4.5rem);
   align-items: start;
-  border: 1px solid color-mix(in oklab, var(--foreground) 10%, transparent);
-  border-radius: 22px;
-  background: color-mix(in oklab, var(--background) 96%, white 4%);
-  box-shadow: 0 28px 80px rgba(31, 52, 43, 0.08);
-  overflow: clip;
 }
 
 .workshopNav {
@@ -1208,50 +1204,101 @@
   top: 6.5rem;
   z-index: 1;
   display: grid;
-  border-right: 1px solid color-mix(in oklab, var(--foreground) 9%, transparent);
-  background: color-mix(in oklab, var(--background) 98%, white 2%);
+  gap: 0.9rem;
+  padding: 0.35rem 0.75rem 0.35rem 0;
 }
 
 .workshopNavItem {
+  position: relative;
   display: grid;
-  min-height: clamp(8.5rem, 12vw, 11rem);
-  grid-template-columns: 2.25rem minmax(0, 1fr) 1.25rem;
-  gap: 0.8rem;
-  align-items: start;
-  padding: 1.35rem 1.2rem;
-  border: 0;
-  border-bottom: 1px solid color-mix(in oklab, var(--foreground) 9%, transparent);
-  background: transparent;
+  min-height: 7.5rem;
+  grid-template-columns: 2.5rem minmax(0, 1fr) 1.25rem;
+  gap: 0.85rem;
+  align-items: center;
+  padding: 1.15rem 1rem;
+  border: 1px solid color-mix(in oklab, var(--foreground) 10%, transparent);
+  border-radius: 20px;
+  background: color-mix(in oklab, var(--background) 96%, white 4%);
   color: color-mix(in oklab, var(--foreground) 84%, transparent);
+  box-shadow: 0 12px 32px rgba(37, 56, 48, 0.06);
   cursor: pointer;
+  isolation: isolate;
+  overflow: hidden;
   text-align: left;
-  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+  transition: border-color 220ms ease, box-shadow 220ms ease, color 220ms ease, transform 220ms ease;
 }
 
-.workshopNavItem:last-child {
-  border-bottom: 0;
+.workshopNavItem:nth-child(even) {
+  margin-left: 0.8rem;
+  margin-right: -0.8rem;
+}
+
+.workshopNavItem::before {
+  position: absolute;
+  top: 1rem;
+  bottom: 1rem;
+  left: 0;
+  width: 3px;
+  border-radius: 0 999px 999px 0;
+  background: color-mix(in oklab, var(--accent-green) 74%, #c8a454);
+  content: "";
+}
+
+.workshopNavItem::after {
+  position: absolute;
+  z-index: -1;
+  top: -3.5rem;
+  right: -3.5rem;
+  width: 7rem;
+  height: 7rem;
+  border: 1px solid color-mix(in oklab, var(--accent-green) 22%, transparent);
+  border-radius: 50%;
+  content: "";
+  transition: transform 300ms ease, background 300ms ease;
 }
 
 .workshopNavItem:hover {
-  background: color-mix(in oklab, var(--accent-green) 7%, transparent);
+  border-color: color-mix(in oklab, var(--accent-green) 38%, transparent);
+  box-shadow: 0 18px 42px rgba(27, 75, 57, 0.12);
+  transform: translateY(-2px);
+}
+
+.workshopNavItem:hover::after {
+  transform: scale(1.2);
 }
 
 .workshopNavItem:focus-visible {
-  position: relative;
-  z-index: 2;
   outline: 2px solid color-mix(in oklab, var(--accent-green) 72%, white);
-  outline-offset: -4px;
+  outline-offset: 3px;
 }
 
 .workshopNavItemActive,
 .workshopNavItemActive:hover {
-  background: color-mix(in oklab, var(--accent-green) 86%, #10271f);
+  border-color: transparent;
+  background: linear-gradient(135deg, color-mix(in oklab, var(--accent-green) 84%, #10271f), #123b2d);
   color: #fff;
+  box-shadow: 0 20px 48px rgba(18, 78, 56, 0.23);
+  transform: translateX(0.45rem);
+}
+
+.workshopNavItemActive::before {
+  background: #d8b35e;
+}
+
+.workshopNavItemActive::after {
+  border-color: rgba(255, 255, 255, 0.17);
+  background: rgba(255, 255, 255, 0.035);
+  transform: scale(1.18);
 }
 
 .workshopNavNumber {
-  padding-top: 0.15rem;
-  color: color-mix(in oklab, currentColor 58%, transparent);
+  display: grid;
+  width: 2.35rem;
+  height: 2.35rem;
+  place-items: center;
+  border: 1px solid color-mix(in oklab, currentColor 22%, transparent);
+  border-radius: 50%;
+  color: color-mix(in oklab, currentColor 65%, transparent);
   font-size: 0.66rem;
   font-weight: 850;
   letter-spacing: 0.11em;
@@ -1259,7 +1306,7 @@
 
 .workshopNavTitle {
   display: -webkit-box;
-  font-size: clamp(0.86rem, 1.05vw, 1.02rem);
+  font-size: clamp(0.84rem, 1vw, 0.98rem);
   font-weight: 720;
   line-height: 1.45;
   -webkit-box-orient: vertical;
@@ -1282,280 +1329,31 @@
 
 .workshopPanel {
   min-width: 0;
-  background: color-mix(in oklab, var(--background) 90%, #f2f1eb 10%);
 }
 
 .workshopPosterStage {
   display: grid;
-  min-height: 52rem;
   place-items: start center;
-  padding: clamp(1.25rem, 3.2vw, 3rem);
-  background:
-    radial-gradient(circle at 78% 12%, color-mix(in oklab, var(--accent-green) 7%, transparent), transparent 32%),
-    color-mix(in oklab, var(--background) 88%, #f0efe9 12%);
 }
 
 .workshopPosterFull {
   display: block;
   width: min(100%, 50rem);
   height: auto;
-  border: 1px solid color-mix(in oklab, var(--foreground) 9%, transparent);
   background: #fff;
-  box-shadow: 0 24px 70px rgba(29, 45, 38, 0.14);
+  box-shadow: 0 26px 76px rgba(29, 45, 38, 0.13);
   object-fit: contain;
-}
-
-.workshopPanelBar {
-  display: flex;
-  min-height: 5.25rem;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem clamp(1.1rem, 2.6vw, 2rem);
-  border-top: 1px solid color-mix(in oklab, var(--foreground) 9%, transparent);
-  border-bottom: 1px solid color-mix(in oklab, var(--foreground) 9%, transparent);
-  background: color-mix(in oklab, var(--background) 97%, white 3%);
-}
-
-.workshopPanelActions,
-.workshopPanelControls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  align-items: center;
-}
-
-.workshopPanelControls > span {
-  margin-right: 0.25rem;
-  color: color-mix(in oklab, var(--foreground) 50%, transparent);
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.09em;
-}
-
-.workshopPanelControls button {
-  display: grid;
-  width: 2.5rem;
-  height: 2.5rem;
-  place-items: center;
-  border: 1px solid color-mix(in oklab, var(--foreground) 12%, transparent);
-  border-radius: 50%;
-  background: transparent;
-  color: color-mix(in oklab, var(--foreground) 78%, transparent);
-  cursor: pointer;
-  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
-}
-
-.workshopPanelControls button:hover {
-  transform: translateY(-1px);
-  background: var(--accent-green);
-  color: #fff;
-}
-
-.workshopPanelControls button:focus-visible {
-  outline: 2px solid var(--accent-green);
-  outline-offset: 2px;
-}
-
-.workshopPanelCopy {
-  padding: clamp(1.35rem, 3vw, 2.4rem);
-}
-
-.workshopCardKicker {
-  color: var(--accent-green);
-  font-size: 0.67rem;
-  font-weight: 850;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-}
-
-.workshopPanelCopy h3 {
-  margin: 0.7rem 0 0;
-  color: color-mix(in oklab, var(--foreground) 91%, transparent);
-  font-size: clamp(1.25rem, 2.2vw, 1.85rem);
-  line-height: 1.25;
-  letter-spacing: -0.025em;
-  text-wrap: balance;
-}
-
-.workshopPanelCopy > p {
-  max-width: 66rem;
-  margin: 1rem 0 0;
-  color: color-mix(in oklab, var(--foreground) 62%, transparent);
-  font-size: 0.9rem;
-  line-height: 1.78;
-}
-
-.workshopRegisterButton {
-  display: inline-flex;
-  min-height: 2.65rem;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  padding: 0.62rem 0.95rem;
-  border-radius: 999px;
-  background: var(--accent-green);
-  color: #fff;
-  font-size: 0.78rem;
-  font-weight: 750;
-  text-decoration: none;
-  transition: transform 180ms ease, background 180ms ease;
-}
-
-.workshopRegisterButton:hover {
-  transform: translateY(-2px);
-  background: color-mix(in oklab, var(--accent-green) 84%, #000);
-}
-
-.workshopDetails {
-  margin-top: 1.15rem;
-  border-top: 1px solid color-mix(in oklab, var(--foreground) 8%, transparent);
-}
-
-.workshopDetails summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem 0 0;
-  color: color-mix(in oklab, var(--foreground) 76%, transparent);
-  cursor: pointer;
-  font-size: 0.78rem;
-  font-weight: 750;
-  list-style: none;
-}
-
-.workshopDetails summary::-webkit-details-marker {
-  display: none;
-}
-
-.workshopDetails[open] summary span {
-  transform: rotate(45deg);
-}
-
-.workshopDetails summary span {
-  font-size: 1rem;
-  transition: transform 180ms ease;
-}
-
-.workshopDetailsContent {
-  padding: 1rem 0 0.2rem;
-}
-
-.workshopDetailsContent > p,
-.workshopDetailsContent li {
-  color: color-mix(in oklab, var(--foreground) 62%, transparent);
-  font-size: 0.8rem;
-  line-height: 1.7;
-}
-
-.workshopDetailsContent > p {
-  margin: 0;
-}
-
-.workshopDetailsContent h4 {
-  margin: 1.25rem 0 0;
-  color: color-mix(in oklab, var(--foreground) 82%, transparent);
-  font-size: 0.8rem;
-}
-
-.workshopDetailsContent ul {
-  display: grid;
-  gap: 0.45rem;
-  margin: 0.7rem 0 0;
-  padding-left: 1.1rem;
-}
-
-.workshopContact {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem 0.8rem;
-  margin-top: 1rem;
-  padding-top: 0.9rem;
-  border-top: 1px solid color-mix(in oklab, var(--foreground) 7%, transparent);
-  font-size: 0.78rem;
-}
-
-.workshopContact span {
-  color: color-mix(in oklab, var(--foreground) 48%, transparent);
-  font-weight: 750;
-}
-
-.workshopContact a {
-  color: var(--accent-green);
-  font-weight: 700;
-}
-
-.workshopChairs {
-  display: grid;
-  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
-  gap: clamp(1.5rem, 4vw, 4rem);
-  align-items: center;
-  margin-top: 1.25rem;
-  padding: clamp(1.35rem, 2.5vw, 2rem);
-  border: 1px solid color-mix(in oklab, var(--foreground) 8%, transparent);
-  border-radius: 18px;
-  background: color-mix(in oklab, var(--background) 92%, white 8%);
-}
-
-.workshopChairs > div:first-child p {
-  margin: 0.65rem 0 0;
-  color: color-mix(in oklab, var(--foreground) 58%, transparent);
-  font-size: 0.84rem;
-  line-height: 1.65;
-}
-
-.workshopChairList {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
-}
-
-.workshopChair {
-  padding: 1rem;
-  border-left: 2px solid color-mix(in oklab, var(--accent-green) 52%, transparent);
-  background: color-mix(in oklab, var(--accent-green) 5%, transparent);
-}
-
-.workshopChair strong,
-.workshopChair span,
-.workshopChair a {
-  display: block;
-}
-
-.workshopChair strong {
-  color: color-mix(in oklab, var(--foreground) 84%, transparent);
-  font-size: 0.9rem;
-}
-
-.workshopChair span {
-  margin-top: 0.3rem;
-  color: color-mix(in oklab, var(--foreground) 56%, transparent);
-  font-size: 0.76rem;
-  line-height: 1.5;
-}
-
-.workshopChair a {
-  margin-top: 0.55rem;
-  color: var(--accent-green);
-  font-size: 0.74rem;
-  overflow-wrap: anywhere;
 }
 
 @media (max-width: 1280px) {
   .workshopBrowser {
     grid-template-columns: minmax(13.5rem, 0.26fr) minmax(0, 0.74fr);
   }
-
-  .workshopPosterStage {
-    min-height: 44rem;
-  }
 }
 
 @media (max-width: 900px) {
   .workshopHero,
-  .workshopListHeader,
-  .workshopChairs {
+  .workshopListHeader {
     grid-template-columns: 1fr;
   }
 
@@ -1569,13 +1367,14 @@
 
   .workshopBrowser {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .workshopNav {
     position: static;
     display: flex;
-    border-right: 0;
-    border-bottom: 1px solid color-mix(in oklab, var(--foreground) 9%, transparent);
+    gap: 0.75rem;
+    padding: 0.35rem 0 0.8rem;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     scrollbar-width: thin;
@@ -1585,13 +1384,14 @@
   .workshopNavItem {
     min-width: 17rem;
     min-height: 8rem;
-    border-right: 1px solid color-mix(in oklab, var(--foreground) 9%, transparent);
-    border-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
     scroll-snap-align: start;
   }
 
-  .workshopPosterStage {
-    min-height: 0;
+  .workshopNavItemActive,
+  .workshopNavItemActive:hover {
+    transform: translateY(-2px);
   }
 }
 
@@ -1617,37 +1417,10 @@
     font-size: clamp(2rem, 12vw, 3rem);
   }
 
-  .workshopBrowser {
-    border-radius: 16px;
-  }
-
   .workshopNavItem {
     min-width: min(84vw, 15rem);
     min-height: 7.25rem;
     padding: 1.1rem;
-  }
-
-  .workshopPosterStage {
-    padding: 0.75rem;
-  }
-
-  .workshopPanelBar {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .workshopPanelControls {
-    width: 100%;
-    justify-content: flex-end;
-  }
-
-  .workshopPanelCopy {
-    padding: 1.25rem;
-  }
-
-  .workshopChairList {
-    grid-template-columns: 1fr;
   }
 }
 
