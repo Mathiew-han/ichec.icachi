@@ -145,7 +145,7 @@
     "submit": {
       "title": "Submit",
       "heading": "Submission Portals",
-      "desc": "Papers and artworks use EasyChair. Workshop proposals use the dedicated Google Form and workshop template linked above. Check the requirements for your track before submitting.",
+      "desc": "Papers and artworks use EasyChair. Workshop participants can review the four accepted workshops and use each workshop’s individual registration link below.",
       "cta": "Sign in to submit",
       "easychair": "Open EasyChair"
     },
@@ -260,13 +260,13 @@
       },
       "workshop": {
         "title": "Workshops",
-        "kicker": "Call for Workshops",
-        "desc": "We invite proposals addressing contemporary and emerging HCI areas through structured discussion, making, critique, or community building.",
+        "kicker": "Call for Participants",
+        "desc": "Four participatory workshops have been accepted, spanning XR, culturally situated design, human-AI craft co-creation, and immersive healing narratives.",
         "overview": "Organized by the International Chinese Association of Computer Human Interaction (ICACHI) and hosted by City University of Macau, ICHEC 2026 will take place at Wynn Macau, Macau, China, on November 23–26, 2026. Conference themes: Inclusivity, Experience, Innovation.",
-        "bestFor": "Organizers proposing workshops on emerging HCI topics, design practices, and interdisciplinary or international research communities.",
-        "deadline": "Proposal: September 18; notification of acceptance (1st round): October 8; call for participants: October 15; final materials: November 20, 2026. All deadlines: 23:59 AoE.",
-        "materials": "English PDF proposal, maximum 3 pages excluding references, using the provided proposal template; submit via Google Form.",
-        "submit": "Submit workshop proposal via Google Form",
+        "bestFor": "Researchers, designers, practitioners, students, and community members who want to take part in hands-on HCI discussion and making.",
+        "deadline": "Call for participants is open. Room assignments and exact session times will be announced later.",
+        "materials": "Register for both your chosen workshop and the main conference. No additional workshop fee applies.",
+        "submit": "View accepted workshops",
         "topics": {
           "title": "Topics and Scope",
           "b1": "Emerging interaction paradigms and user experience design.",

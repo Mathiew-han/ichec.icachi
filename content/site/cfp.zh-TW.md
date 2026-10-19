@@ -17,10 +17,10 @@ ICHEC 2026 歡迎人機互動與 Human-Engaged Computing 全領域投稿，包�
 ## 所有類別共用政策
 
 - **語言**：ICHEC 2026 僅接受英文投稿。
-- **投稿入口**：論文與藝術作品透過 [EasyChair](https://easychair.org/my/conference?conf=ichec2026) 提交。工作坊提案須透過專用 [Google 表單](https://docs.google.com/forms/d/e/1FAIpQLSfqd0YCnKP056a-Gmv8luVLSnO6_CL56LuL3aFGpODmlSIgSA/viewform?usp=publish-editor) 提交。
+- **投稿入口**：論文與藝術作品透過 [EasyChair](https://easychair.org/my/conference?conf=ichec2026) 提交。工作坊參與者請查看[已接收工作坊資訊](https://docs.google.com/document/d/1mtPgChHjtDAH_UauceDvsBAUSr275UEztXoQs9jU51I/edit?usp=sharing)，並使用所選工作坊的獨立報名入口。
 - **原創性**：投稿不得已公開發表，也不得同時投往其他會議或期刊。
 - **匿名要求**：採用匿名評審的類別，需要從正文和補充材料中移除作者身份資訊。
-- **格式要求**：論文請使用官方投稿說明中規定的單欄評審格式。工作坊提案使用[指定工作坊範本](https://docs.google.com/document/d/1c1IM1TA6uayPuOaBB1kIwGNpzgZC8PcXyP4-h9XbMUo/edit?usp=sharing)，以英文撰寫，最多 3 頁（不含參考文獻），提交 PDF。
+- **格式要求**：論文請使用官方投稿說明中規定的單欄評審格式。
 - **註冊參會**：錄用論文或作品如需報告、展示或展出，至少一名作者 / 貢獻者應註冊並到場參與。所有工作坊組織者和參與者須同時註冊工作坊和主會議，無額外工作坊費用。
 
 
@@ -28,6 +28,6 @@ ICHEC 2026 歡迎人機互動與 Human-Engaged Computing 全領域投稿，包�
 
 作者需對提交內容承擔全部責任。若使用生成式 AI 工具進行寫作、潤色、分析輔助，或用途超出普通文本編輯範疇，應進行適當披露。生成式 AI 工具不得列為作者。
 
-## 工作坊徵集
+## 工作坊參與者徵集
 
-工作坊提案提交截止為 2026 年 9 月 18 日，10 月 8 日發出第一輪錄取通知，10 月 15 日發布參與徵集，11 月 20 日提交最終材料。所有截止時間均為 23:59 AoE（Anywhere on Earth）。指定範本、Google 表單、參與要求及主席聯繫方式見上方工作坊詳情。
+四個工作坊已正式接收，參與者徵集現已開放。參與者須同時註冊所選工作坊和主會，工作坊不額外收取費用。會場分配和具體會期時間將於稍後通知。海報、完整介紹、報名入口和組織者聯絡方式見上方已接收工作坊專區。

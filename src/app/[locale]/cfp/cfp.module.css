@@ -945,3 +945,604 @@
   .resourceFooter { align-items: flex-start; flex-direction: column; }
   .resourceSupportLinks { justify-content: flex-start; }
 }
+
+.publicationSection {
+  padding-top: 0 !important;
+  border-top: 0 !important;
+}
+
+.publicationNotice {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: clamp(1rem, 2.4vw, 2rem);
+  align-items: center;
+  padding: clamp(1.25rem, 2.8vw, 2.2rem);
+  border: 1px solid color-mix(in oklab, var(--accent-green) 32%, transparent);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 86% 18%, color-mix(in oklab, #d9b24a 18%, transparent), transparent 26%),
+    linear-gradient(128deg, color-mix(in oklab, var(--accent-green) 15%, white 85%), color-mix(in oklab, var(--background) 90%, white 10%));
+  box-shadow: 0 22px 64px rgba(31, 74, 57, 0.08);
+}
+
+.publicationMark {
+  display: grid;
+  width: clamp(3.6rem, 7vw, 5.5rem);
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent-green);
+  color: #fff;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-weight: 850;
+  letter-spacing: -0.04em;
+  box-shadow: inset 0 0 0 8px color-mix(in oklab, white 10%, transparent);
+}
+
+.publicationTitle {
+  margin: 0.45rem 0 0;
+  color: color-mix(in oklab, var(--foreground) 91%, transparent);
+  font-size: clamp(1.25rem, 2.2vw, 1.85rem);
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+
+.publicationCopy {
+  max-width: 58rem;
+  margin: 0.55rem 0 0;
+  color: color-mix(in oklab, var(--foreground) 70%, transparent);
+  font-size: clamp(0.94rem, 1.3vw, 1.08rem);
+  line-height: 1.72;
+}
+
+.publicationCopy a {
+  color: var(--accent-green);
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in oklab, #cda53c 84%, transparent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+.publicationArrow {
+  display: grid;
+  width: 2.8rem;
+  height: 2.8rem;
+  place-items: center;
+  border: 1px solid color-mix(in oklab, var(--accent-green) 30%, transparent);
+  border-radius: 50%;
+  color: var(--accent-green);
+  font-size: 1.15rem;
+  text-decoration: none;
+  transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+}
+
+.publicationArrow:hover {
+  transform: translateY(-2px);
+  background: var(--accent-green);
+  color: #fff;
+}
+
+.workshopShowcase {
+  max-width: min(96rem, 94vw);
+  scroll-margin-top: 7rem;
+}
+
+.workshopHero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(19rem, 0.88fr);
+  gap: clamp(1.6rem, 4vw, 4rem);
+  padding: clamp(1.4rem, 3.6vw, 3.5rem);
+  border: 1px solid color-mix(in oklab, var(--accent-green) 22%, transparent);
+  border-radius: 24px;
+  background:
+    linear-gradient(145deg, color-mix(in oklab, var(--background) 93%, white 7%), color-mix(in oklab, var(--accent-green) 7%, var(--background)));
+  overflow: hidden;
+}
+
+.workshopHeroCopy {
+  align-self: center;
+}
+
+.workshopHeroTitle {
+  max-width: 58rem;
+  margin: 0.8rem 0 0;
+  color: color-mix(in oklab, var(--foreground) 94%, transparent);
+  font-size: clamp(2rem, 4.5vw, 4.25rem);
+  font-weight: 720;
+  letter-spacing: -0.055em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.workshopHeroIntro {
+  max-width: 48rem;
+  margin: 1.25rem 0 0;
+  color: color-mix(in oklab, var(--foreground) 67%, transparent);
+  font-size: clamp(0.98rem, 1.35vw, 1.12rem);
+  line-height: 1.8;
+}
+
+.workshopHeroActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem 1.4rem;
+  margin-top: 1.6rem;
+}
+
+.workshopTextLink {
+  color: color-mix(in oklab, var(--foreground) 76%, transparent);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.workshopTextLink:hover {
+  color: var(--accent-green);
+}
+
+.workshopHeroSide {
+  display: grid;
+  gap: 1rem;
+}
+
+.workshopFacts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid color-mix(in oklab, var(--accent-green) 18%, transparent);
+  border-radius: 16px;
+  background: color-mix(in oklab, var(--accent-green) 14%, transparent);
+  overflow: hidden;
+}
+
+.workshopFact {
+  min-height: 6rem;
+  padding: 1rem;
+  background: color-mix(in oklab, var(--background) 94%, white 6%);
+}
+
+.workshopFact span,
+.workshopFact strong {
+  display: block;
+}
+
+.workshopFact span {
+  color: color-mix(in oklab, var(--foreground) 50%, transparent);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.workshopFact strong {
+  margin-top: 0.65rem;
+  color: color-mix(in oklab, var(--foreground) 86%, transparent);
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
+.participationPanel {
+  padding: 1.25rem;
+  border-radius: 16px;
+  background: color-mix(in oklab, var(--accent-green) 88%, #17382e);
+  color: #fff;
+}
+
+.participationPanel h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  letter-spacing: -0.015em;
+}
+
+.participationPanel ol {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.participationPanel li {
+  display: grid;
+  grid-template-columns: 1.9rem minmax(0, 1fr);
+  gap: 0.65rem;
+  align-items: start;
+}
+
+.participationPanel li > span {
+  color: color-mix(in oklab, #fff 58%, transparent);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.7;
+}
+
+.participationPanel p {
+  margin: 0;
+  color: color-mix(in oklab, #fff 88%, transparent);
+  font-size: 0.82rem;
+  line-height: 1.62;
+}
+
+.workshopListHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.52fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: end;
+  margin: clamp(3.25rem, 7vw, 6.5rem) 0 1.5rem;
+}
+
+.workshopListHeader h2 {
+  max-width: 48rem;
+  margin: 0.65rem 0 0;
+  color: color-mix(in oklab, var(--foreground) 92%, transparent);
+  font-size: clamp(1.75rem, 3.5vw, 3.1rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.workshopListHeader > p {
+  margin: 0;
+  color: color-mix(in oklab, var(--foreground) 60%, transparent);
+  font-size: 0.92rem;
+  line-height: 1.72;
+}
+
+.workshopGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.workshopCard {
+  display: grid;
+  grid-template-columns: minmax(13.5rem, 0.78fr) minmax(0, 1.22fr);
+  min-width: 0;
+  border: 1px solid color-mix(in oklab, var(--foreground) 8%, transparent);
+  border-radius: 20px;
+  background: color-mix(in oklab, var(--background) 94%, white 6%);
+  box-shadow: 0 18px 56px rgba(41, 59, 50, 0.06);
+  overflow: hidden;
+}
+
+.workshopPoster {
+  position: relative;
+  display: block;
+  min-height: 29rem;
+  background: color-mix(in oklab, var(--foreground) 6%, transparent);
+  overflow: hidden;
+}
+
+.workshopPoster::after {
+  position: absolute;
+  inset: auto 0 0;
+  height: 36%;
+  background: linear-gradient(transparent, rgba(7, 22, 17, 0.68));
+  content: "";
+  pointer-events: none;
+}
+
+.workshopPoster img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 420ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.workshopPoster:hover img {
+  transform: scale(1.025);
+}
+
+.workshopPosterNumber,
+.workshopPosterAction {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+}
+
+.workshopPosterNumber {
+  top: 1rem;
+  left: 1rem;
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  border-radius: 50%;
+  background: rgba(15, 40, 31, 0.58);
+  backdrop-filter: blur(10px);
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+}
+
+.workshopPosterAction {
+  right: 1rem;
+  bottom: 1rem;
+  font-size: 0.75rem;
+  font-weight: 750;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.workshopCardBody {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: 1.35rem;
+}
+
+.workshopCardKicker {
+  color: var(--accent-green);
+  font-size: 0.67rem;
+  font-weight: 850;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.workshopCardBody h3 {
+  margin: 0.7rem 0 0;
+  color: color-mix(in oklab, var(--foreground) 91%, transparent);
+  font-size: clamp(1.12rem, 1.6vw, 1.45rem);
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.workshopDescription {
+  display: -webkit-box;
+  margin: 1rem 0 0;
+  color: color-mix(in oklab, var(--foreground) 62%, transparent);
+  font-size: 0.86rem;
+  line-height: 1.72;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  overflow: hidden;
+}
+
+.workshopCardActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+
+.workshopRegisterButton {
+  display: inline-flex;
+  min-height: 2.65rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.62rem 0.95rem;
+  border-radius: 999px;
+  background: var(--accent-green);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 750;
+  text-decoration: none;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.workshopRegisterButton:hover {
+  transform: translateY(-2px);
+  background: color-mix(in oklab, var(--accent-green) 84%, #000);
+}
+
+.workshopDetails {
+  margin-top: 1.15rem;
+  border-top: 1px solid color-mix(in oklab, var(--foreground) 8%, transparent);
+}
+
+.workshopDetails summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0 0;
+  color: color-mix(in oklab, var(--foreground) 76%, transparent);
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 750;
+  list-style: none;
+}
+
+.workshopDetails summary::-webkit-details-marker {
+  display: none;
+}
+
+.workshopDetails[open] summary span {
+  transform: rotate(45deg);
+}
+
+.workshopDetails summary span {
+  font-size: 1rem;
+  transition: transform 180ms ease;
+}
+
+.workshopDetailsContent {
+  padding: 1rem 0 0.2rem;
+}
+
+.workshopDetailsContent > p,
+.workshopDetailsContent li {
+  color: color-mix(in oklab, var(--foreground) 62%, transparent);
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+.workshopDetailsContent > p {
+  margin: 0;
+}
+
+.workshopDetailsContent h4 {
+  margin: 1.25rem 0 0;
+  color: color-mix(in oklab, var(--foreground) 82%, transparent);
+  font-size: 0.8rem;
+}
+
+.workshopDetailsContent ul {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0.7rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.workshopContact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.8rem;
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid color-mix(in oklab, var(--foreground) 7%, transparent);
+  font-size: 0.78rem;
+}
+
+.workshopContact span {
+  color: color-mix(in oklab, var(--foreground) 48%, transparent);
+  font-weight: 750;
+}
+
+.workshopContact a {
+  color: var(--accent-green);
+  font-weight: 700;
+}
+
+.workshopChairs {
+  display: grid;
+  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: center;
+  margin-top: 1.25rem;
+  padding: clamp(1.35rem, 2.5vw, 2rem);
+  border: 1px solid color-mix(in oklab, var(--foreground) 8%, transparent);
+  border-radius: 18px;
+  background: color-mix(in oklab, var(--background) 92%, white 8%);
+}
+
+.workshopChairs > div:first-child p {
+  margin: 0.65rem 0 0;
+  color: color-mix(in oklab, var(--foreground) 58%, transparent);
+  font-size: 0.84rem;
+  line-height: 1.65;
+}
+
+.workshopChairList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.workshopChair {
+  padding: 1rem;
+  border-left: 2px solid color-mix(in oklab, var(--accent-green) 52%, transparent);
+  background: color-mix(in oklab, var(--accent-green) 5%, transparent);
+}
+
+.workshopChair strong,
+.workshopChair span,
+.workshopChair a {
+  display: block;
+}
+
+.workshopChair strong {
+  color: color-mix(in oklab, var(--foreground) 84%, transparent);
+  font-size: 0.9rem;
+}
+
+.workshopChair span {
+  margin-top: 0.3rem;
+  color: color-mix(in oklab, var(--foreground) 56%, transparent);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+.workshopChair a {
+  margin-top: 0.55rem;
+  color: var(--accent-green);
+  font-size: 0.74rem;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1280px) {
+  .workshopGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .workshopPoster {
+    min-height: 31rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .workshopHero,
+  .workshopListHeader,
+  .workshopChairs {
+    grid-template-columns: 1fr;
+  }
+
+  .workshopListHeader {
+    align-items: start;
+  }
+
+  .workshopListHeader > p {
+    max-width: 42rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .publicationNotice {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .publicationArrow {
+    display: none;
+  }
+
+  .workshopShowcase {
+    max-width: 100%;
+  }
+
+  .workshopHero {
+    padding: 1.25rem;
+    border-radius: 18px;
+  }
+
+  .workshopHeroTitle {
+    font-size: clamp(2rem, 12vw, 3rem);
+  }
+
+  .workshopCard {
+    grid-template-columns: 1fr;
+  }
+
+  .workshopPoster {
+    min-height: 0;
+    aspect-ratio: 4 / 5;
+  }
+
+  .workshopChairList {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 440px) {
+  .publicationNotice {
+    grid-template-columns: 1fr;
+  }
+
+  .publicationMark {
+    width: 3.5rem;
+  }
+
+  .workshopFacts {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "eyebrow": "已接收工作坊",
+  "title": "ICHEC 2026 工作坊 · 參與者徵集",
+  "intro": "ICHEC 2026 專案已接收四個工作坊。每個工作坊均設有專門的半天會期，旨在圍繞 HCI 的當代與新興領域，促進結構化討論、動手製作、批判性思考或社群建設。",
+  "facts": [
+    { "label": "工作坊", "value": "已接收 4 個" },
+    { "label": "形式", "value": "線下參與" },
+    { "label": "時長", "value": "半天 · 約 3 小時" },
+    { "label": "工作坊費用", "value": "不額外收費" }
+  ],
+  "participationTitle": "如何參與",
+  "participation": [
+    "加入討論、參與動手活動並共同總結，而不僅僅是旁聽。",
+    "請同時註冊所選工作坊和主會。",
+    "工作坊不額外收取費用。",
+    "會場分配和具體會期時間將於稍後通知。"
+  ],
+  "viewSource": "檢視原始文件",
+  "registerConference": "主會註冊",
+  "listEyebrow": "工作坊資訊",
+  "listTitle": "選擇工作坊，加入現場交流",
+  "listIntro": "展開卡片可閱讀完整介紹、檢視組織團隊，並前往各工作坊的獨立報名入口。",
+  "workshopLabel": "工作坊",
+  "openPoster": "檢視完整海報",
+  "detailsLabel": "完整介紹與組織者",
+  "organisersLabel": "組織者 · 專長",
+  "contactLabel": "聯絡方式",
+  "registerWorkshop": "報名該工作坊",
+  "moreInformation": "更多工作坊資訊",
+  "chairsTitle": "工作坊主席",
+  "chairsNote": "工作坊相關問題，請聯絡各工作坊組織者。",
+  "publicationEyebrow": "論文出版",
+  "publicationTitle": "Springer LNAI 會議論文集",
+  "publicationBefore": "錄用的會議論文將由",
+  "publicationLink": "Springer LNAI",
+  "publicationAfter": "（Lecture Notes in Artificial Intelligence，人工智慧講義）出版，並被 EI 和 DBLP 收錄。",
+  "workshops": [
+    {
+      "id": "more-than-human-xr",
+      "poster": "/images/workshops/workshop-1.jpg",
+      "title": "從超越人類的視角設計 XR",
+      "description": "XR 如何支援超越人類的視角？本次線下工作坊邀請研究者、設計師、從業者和學生，共同探索超越人類 XR 的機遇、挑戰與可能方向。透過協作活動和跨學科討論，參與者將分享觀點、發展 XR 構想，並識別可為初步反思框架和潛在設計工具提供參考的問題。我們歡迎來自 HCI、XR、超越人類設計、可持續性、生態學及相關領域的參與者，不限職業階段和技術經驗水平。",
+      "organisers": [
+        "Wenjing Deng，清華大學｜可持續設計、XR",
+        "Shuzi Yin，清華大學｜參與式設計、社會參與式 HCI",
+        "Xuezhu Wang，香港理工大學｜參與式設計、創意工具",
+        "Tianyu Li，清華大學，中國｜植物啟發設計",
+        "Zhihao Yao，清華大學，中國｜XR、3D 設計、創意工具",
+        "Jiachen Du，清華大學，中國｜行為改變、數字健康",
+        "Qiuyu Lu，香港理工大學，中國香港特別行政區｜生態 HCI、數字製造",
+        "Haipeng Mi，清華大學，中國｜人機互動、數字製造"
+      ],
+      "contact": "christydeng_1@outlook.com",
+      "registrationUrl": "https://qrfy.io/pUD5t0pzct"
+    },
+    {
+      "id": "healing-renewal",
+      "poster": "/images/workshops/workshop-2.jpg",
+      "title": "天人合一與人機共協計算：面向療愈與更新的原住民設計路徑",
+      "description": "我們邀請對“人機共協計算”（Human-Engaged Computing）、批判性與去殖民化設計、文化視角、關懷與福祉感興趣的 HCI 研究者、設計師、從業者和學生，加入本次線下工作坊。透過具身活動、文化敘事、集體反思和思辨設計，參與者將探索文化情境化、關係性的關懷、療愈與更新實踐，如何啟發思考人與技術互動的替代方式。無需具備瑜伽、冥想或其他具身實踐的先備經驗，工作坊將支援多種參與形式。參與者將對這些實踐進行批判性反思，並協作提出設計問題、激發性議題以及可能性，以探索更具關懷性、包容性和關係性的 HCI 形式。與工作坊主題相關文章和設計反思將有機會由 HCI 領域知名出版社結集出版成書。",
+      "organisers": [
+        "Huatong Sun，華盛頓大學塔科馬分校，美國｜數字與社交媒體、全球設計、批判性設計",
+        "Sean Wolfgand Matsui Siqueira，里約熱內盧州立聯邦大學，巴西｜資訊系統、思辨設計",
+        "Jin Yu，廣州中醫藥大學，中國｜中醫與守神養護",
+        "Peng Tan，復旦大學，生物醫學工程與技術創新學院，粵港澳大灣區精準醫學研究院（廣州），中國｜人機共協計算、協同互動與節律、心理健康數字干預"
+      ],
+      "contact": "huatongs@gmail.com",
+      "registrationUrl": "https://forms.cloud.microsoft/r/BVMu0PB7pM?origin=lprLink",
+      "moreInfoUrl": "https://docs.qq.com/doc/DRWJmTnFtUktIYmNV"
+    },
+    {
+      "id": "baticloud",
+      "poster": "/images/workshops/workshop-3.jpg",
+      "title": "BATICLOUD：面向蠟染非物質文化遺產的人機共創工作坊——從工藝知識到數字",
+      "description": "非物質文化遺產（ICH）承載著人類的活態記憶，然而許多傳統工藝正面臨消失的風險。當蠟染遇見人工智慧，會湧現出怎樣的可能性？歡迎加入我們的工作坊“蠟染程式設計語法與人工智慧：面向 ICH 的人機共創”。我們開發了 BatikScript——一種從蠟染工藝過程衍生而來的中文關鍵詞程式設計語法，以及 Batik AI Creation Studio——一個基於網頁的工具。只需用一句話描述你的想法：AI 會將其轉譯為簡潔的 BatikScript 程式碼，並在畫布上實時渲染蠟染效果。你可以讓 AI 生成程式碼，也可以自行編輯，體驗人機共創。本工作坊歡迎所有人，包括研究者、藝術學習者、ICH 愛好者、老年人和兒童。無需程式設計經驗。在 90 分鐘的會期中，你將瞭解當前關於 ICH 數字化的觀點，討論“什麼是 ICH？”，創作自己的蠟染作品並與他人分享。本工作坊還將共創作為研究方法。經你同意，你創作過程中的匿名資料將幫助我們探索 ICH 傳承的新路徑。僅限線下參與，約 15 個名額。如果你想了解 ICH 並體驗 AI 與工藝的結合，我們熱忱邀請你註冊！",
+      "organisers": [
+        "Xin Tang，廣州美術學院，中國｜蠟染數字化",
+        "Rongcong Cai，廣州美術學院，中國｜人機協作",
+        "Houjie Yu，西南林業大學，中國｜蠟染傳承人",
+        "Weifan Wang，廣州美術學院，中國｜視覺傳達設計"
+      ],
+      "contact": "xintang0119@gmail.com",
+      "registrationUrl": "https://v.wjx.cn/vm/wFNPB2J.aspx"
+    },
+    {
+      "id": "sandbox-world-building",
+      "poster": "/images/workshops/workshop-4.jpg",
+      "title": "沙盒世界構建：透過沉浸式敘事共創療愈空間",
+      "description": "我們邀請你加入 ICHEC 2026 的半天工作坊“沙盒世界構建：透過沉浸式敘事共創療愈空間”。本次動手參與式工作坊探索參與者如何為面臨學業壓力、就業焦慮、社交孤獨和身份焦慮的人群，共創沉浸式敘事療愈空間。參與者分組使用固定元素套件和壓力情境卡片，搭建一段療愈之旅。隨後各組交換設計，並圍繞壓力相關性、療愈預期、沉浸感、可控性和情感安全進行交叉評議。本工作坊適合 HCI、設計、心理學、健康、無障礙和創意工具領域的研究者和從業者。所有材料均由主辦方提供。我們熱忱歡迎你加入本工作坊。",
+      "organisers": [
+        "Li Meng，北京郵電大學，中國｜兒童-計算機互動、數字文化遺產",
+        "Guoran Yang，北京郵電大學，中國｜遊戲化設計、兒童-計算機互動、虛擬療愈"
+      ],
+      "contact": "yungseee@bupt.edu.cn",
+      "registrationUrl": "https://qr.generatorqr.com/BCKaIEmKH"
+    }
+  ],
+  "chairs": [
+    { "name": "Yun Wang", "affiliation": "北京航空航天大學", "email": "wang_yun@buaa.edu.cn" },
+    { "name": "Yongjie Gao", "affiliation": "澳門城市大學", "email": "yjgao@cityu.edu.mo" }
+  ]
+}

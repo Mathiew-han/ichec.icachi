@@ -2,9 +2,10 @@
 
 import { Link } from "@/navigation";
 import { Markdown } from "@/components/Markdown";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { motion, type Variants } from "framer-motion";
 import styles from "./cfp.module.css";
+import { WorkshopShowcase } from "./WorkshopShowcase";
 
 const easeStandard: [number, number, number, number] = [0.2, 0.8, 0.2, 1];
 
@@ -106,6 +107,7 @@ function TrackDetailList({
 
 export function CFPClient({ content }: { content: string }) {
   const t = useTranslations("CFP");
+  const locale = useLocale();
 
   return (
     <div className={styles.page}>
@@ -155,7 +157,7 @@ export function CFPClient({ content }: { content: string }) {
                     </div>
                   </dl>
                   <div className={styles.expandActions}>
-                    <a className={styles.primaryButton} href={`#cfp-${track}`}>
+                    <a className={styles.primaryButton} href={track === "workshop" ? "#cfp-workshops" : "#cfp-guide"}>
                       {t("tracks.view")}
                     </a>
                   </div>
@@ -165,6 +167,8 @@ export function CFPClient({ content }: { content: string }) {
           ))}
         </div>
       </section>
+
+      <WorkshopShowcase locale={locale} />
 
       <section id="cfp-resources" className={`${styles.section} ${styles.resourcesSection}`}>
         <motion.div
@@ -223,12 +227,12 @@ export function CFPClient({ content }: { content: string }) {
           <div className={styles.cardActions}>
             <a href="https://easychair.org/my/conference?conf=ichec2026" className={styles.primaryButton}>{t("submit.cta")}</a>
             <a href="https://easychair.org/my/conference?conf=ichec2026" className={styles.secondaryLink}>{t("submit.easychair")}</a>
-            <a href={workshopFormUrl} className={styles.secondaryLink}>{t("tracks.workshop.submit")}</a>
+            <a href="#cfp-workshops" className={styles.secondaryLink}>{t("tracks.workshop.submit")}</a>
           </div>
         </motion.div>
       </section>
 
-      <section className={`${styles.section} ${styles.guideSection}`}>
+      <section id="cfp-guide" className={`${styles.section} ${styles.guideSection}`}>
         <div className={styles.guideLayout}>
           <motion.div
             className={`${styles.sectionHeader} ${styles.guideHeader}`}
