@@ -2,6 +2,7 @@
 
 import { Link } from "@/navigation";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import styles from "./cfp.module.css";
 import workshopEn from "./workshops.en.json";
 import workshopZhCN from "./workshops.zh-CN.json";
@@ -34,7 +35,6 @@ type WorkshopContent = {
   listTitle: string;
   listIntro: string;
   workshopLabel: string;
-  openPoster: string;
   detailsLabel: string;
   organisersLabel: string;
   contactLabel: string;
@@ -59,6 +59,16 @@ const workshopContentByLocale: Record<string, WorkshopContent> = {
 
 export function WorkshopShowcase({ locale }: { locale: string }) {
   const content = workshopContentByLocale[locale] ?? workshopEn as WorkshopContent;
+  const [activeWorkshopIndex, setActiveWorkshopIndex] = useState(0);
+  const activeWorkshop = content.workshops[activeWorkshopIndex];
+
+  const selectWorkshop = (index: number, focusTab = false) => {
+    const nextIndex = (index + content.workshops.length) % content.workshops.length;
+    setActiveWorkshopIndex(nextIndex);
+    if (focusTab) {
+      requestAnimationFrame(() => document.getElementById(`workshop-tab-${nextIndex + 1}`)?.focus());
+    }
+  };
 
   return (
     <>
@@ -128,56 +138,105 @@ export function WorkshopShowcase({ locale }: { locale: string }) {
           <p>{content.listIntro}</p>
         </div>
 
-        <div className={styles.workshopGrid}>
-          {content.workshops.map((workshop, index) => (
-            <motion.article
-              id={`workshop-${index + 1}`}
-              key={workshop.id}
-              className={styles.workshopCard}
-              initial={{ opacity: 0, y: 22 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-8% 0px -8% 0px" }}
-              transition={{ duration: 0.65, delay: (index % 2) * 0.08, ease: [0.2, 0.8, 0.2, 1] }}
-            >
-              <a className={styles.workshopPoster} href={workshop.poster} target="_blank" rel="noreferrer">
-                <img src={workshop.poster} alt={`${content.workshopLabel} ${index + 1}: ${workshop.title}`} loading="lazy" />
-                <span className={styles.workshopPosterNumber}>{String(index + 1).padStart(2, "0")}</span>
-                <span className={styles.workshopPosterAction}>{content.openPoster} ↗</span>
-              </a>
+        <div className={styles.workshopBrowser}>
+          <div className={styles.workshopNav} role="tablist" aria-orientation="vertical">
+            {content.workshops.map((workshop, index) => {
+              const isActive = index === activeWorkshopIndex;
 
-              <div className={styles.workshopCardBody}>
-                <div className={styles.workshopCardKicker}>{content.workshopLabel} {String(index + 1).padStart(2, "0")}</div>
-                <h3>{workshop.title}</h3>
-                <p className={styles.workshopDescription}>{workshop.description}</p>
+              return (
+                <button
+                  id={`workshop-tab-${index + 1}`}
+                  key={workshop.id}
+                  className={`${styles.workshopNavItem} ${isActive ? styles.workshopNavItemActive : ""}`}
+                  type="button"
+                  role="tab"
+                  aria-selected={isActive}
+                  aria-controls="active-workshop-panel"
+                  tabIndex={isActive ? 0 : -1}
+                  onClick={() => selectWorkshop(index)}
+                  onKeyDown={(event) => {
+                    if (event.key === "ArrowDown" || event.key === "ArrowRight") {
+                      event.preventDefault();
+                      selectWorkshop(index + 1, true);
+                    } else if (event.key === "ArrowUp" || event.key === "ArrowLeft") {
+                      event.preventDefault();
+                      selectWorkshop(index - 1, true);
+                    } else if (event.key === "Home") {
+                      event.preventDefault();
+                      selectWorkshop(0, true);
+                    } else if (event.key === "End") {
+                      event.preventDefault();
+                      selectWorkshop(content.workshops.length - 1, true);
+                    }
+                  }}
+                >
+                  <span className={styles.workshopNavNumber}>{String(index + 1).padStart(2, "0")}</span>
+                  <span className={styles.workshopNavTitle}>{workshop.title}</span>
+                  <span className={styles.workshopNavArrow} aria-hidden="true">→</span>
+                </button>
+              );
+            })}
+          </div>
 
-                <div className={styles.workshopCardActions}>
-                  <a className={styles.workshopRegisterButton} href={workshop.registrationUrl} target="_blank" rel="noreferrer">
-                    {content.registerWorkshop} <span aria-hidden="true">↗</span>
+          <motion.article
+            id="active-workshop-panel"
+            key={activeWorkshop.id}
+            className={styles.workshopPanel}
+            role="tabpanel"
+            aria-labelledby={`workshop-tab-${activeWorkshopIndex + 1}`}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.36, ease: [0.2, 0.8, 0.2, 1] }}
+          >
+            <div className={styles.workshopPosterStage}>
+              <img
+                className={styles.workshopPosterFull}
+                src={activeWorkshop.poster}
+                alt={`${content.workshopLabel} ${activeWorkshopIndex + 1}: ${activeWorkshop.title}`}
+              />
+            </div>
+
+            <div className={styles.workshopPanelBar}>
+              <div className={styles.workshopPanelActions}>
+                <a className={styles.workshopRegisterButton} href={activeWorkshop.registrationUrl} target="_blank" rel="noreferrer">
+                  {content.registerWorkshop} <span aria-hidden="true">↗</span>
+                </a>
+                {activeWorkshop.moreInfoUrl && (
+                  <a className={styles.workshopTextLink} href={activeWorkshop.moreInfoUrl} target="_blank" rel="noreferrer">
+                    {content.moreInformation} <span aria-hidden="true">↗</span>
                   </a>
-                  {workshop.moreInfoUrl && (
-                    <a className={styles.workshopTextLink} href={workshop.moreInfoUrl} target="_blank" rel="noreferrer">
-                      {content.moreInformation} <span aria-hidden="true">↗</span>
-                    </a>
-                  )}
-                </div>
-
-                <details className={styles.workshopDetails}>
-                  <summary>{content.detailsLabel}<span aria-hidden="true">＋</span></summary>
-                  <div className={styles.workshopDetailsContent}>
-                    <p>{workshop.description}</p>
-                    <h4>{content.organisersLabel}</h4>
-                    <ul>
-                      {workshop.organisers.map((organiser) => <li key={organiser}>{organiser}</li>)}
-                    </ul>
-                    <div className={styles.workshopContact}>
-                      <span>{content.contactLabel}</span>
-                      <a href={`mailto:${workshop.contact}`}>{workshop.contact}</a>
-                    </div>
-                  </div>
-                </details>
+                )}
               </div>
-            </motion.article>
-          ))}
+              <div className={styles.workshopPanelControls}>
+                <span>{String(activeWorkshopIndex + 1).padStart(2, "0")} / {String(content.workshops.length).padStart(2, "0")}</span>
+                <button type="button" onClick={() => selectWorkshop(activeWorkshopIndex - 1)} aria-label={`${content.workshopLabel} ${activeWorkshopIndex || content.workshops.length}`}>
+                  <span aria-hidden="true">←</span>
+                </button>
+                <button type="button" onClick={() => selectWorkshop(activeWorkshopIndex + 1)} aria-label={`${content.workshopLabel} ${(activeWorkshopIndex + 1) % content.workshops.length + 1}`}>
+                  <span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+
+            <div className={styles.workshopPanelCopy}>
+              <div className={styles.workshopCardKicker}>{content.workshopLabel} {String(activeWorkshopIndex + 1).padStart(2, "0")}</div>
+              <h3>{activeWorkshop.title}</h3>
+              <p>{activeWorkshop.description}</p>
+              <details className={styles.workshopDetails}>
+                <summary>{content.detailsLabel}<span aria-hidden="true">＋</span></summary>
+                <div className={styles.workshopDetailsContent}>
+                  <h4>{content.organisersLabel}</h4>
+                  <ul>
+                    {activeWorkshop.organisers.map((organiser) => <li key={organiser}>{organiser}</li>)}
+                  </ul>
+                  <div className={styles.workshopContact}>
+                    <span>{content.contactLabel}</span>
+                    <a href={`mailto:${activeWorkshop.contact}`}>{activeWorkshop.contact}</a>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </motion.article>
         </div>
 
         <div className={styles.workshopChairs}>
