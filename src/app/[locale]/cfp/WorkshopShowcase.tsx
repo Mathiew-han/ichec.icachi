@@ -9,7 +9,7 @@ import workshopZhCN from "./workshops.zh-CN.json";
 import workshopZhTW from "./workshops.zh-TW.json";
 
 const sourceDocumentUrl = "https://docs.google.com/document/d/1mtPgChHjtDAH_UauceDvsBAUSr275UEztXoQs9jU51I/edit?usp=sharing";
-const springerLnaiUrl = "https://www.springer.com/gp/computer-science/lncs/lncs-topical-sublibraries";
+const springerCcisUrl = "https://link.springer.com/series/7899";
 
 type WorkshopEntry = {
   id: string;
@@ -74,17 +74,17 @@ export function WorkshopShowcase({ locale }: { locale: string }) {
     <>
       <section className={`${styles.section} ${styles.publicationSection}`} aria-labelledby="publication-title">
         <div className={styles.publicationNotice}>
-          <div className={styles.publicationMark} aria-hidden="true">LN</div>
+          <div className={styles.publicationMark} aria-hidden="true">CCIS</div>
           <div>
             <div className={styles.label}>{content.publicationEyebrow}</div>
             <h2 id="publication-title" className={styles.publicationTitle}>{content.publicationTitle}</h2>
             <p className={styles.publicationCopy}>
               {content.publicationBefore}{" "}
-              <a href={springerLnaiUrl} target="_blank" rel="noreferrer">{content.publicationLink}</a>{" "}
+              <a href={springerCcisUrl} target="_blank" rel="noreferrer">{content.publicationLink}</a>{" "}
               {content.publicationAfter}
             </p>
           </div>
-          <a className={styles.publicationArrow} href={springerLnaiUrl} target="_blank" rel="noreferrer" aria-label={content.publicationLink}>↗</a>
+          <a className={styles.publicationArrow} href={springerCcisUrl} target="_blank" rel="noreferrer" aria-label={content.publicationLink}>↗</a>
         </div>
       </section>
 

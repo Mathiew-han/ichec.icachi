@@ -29,10 +29,10 @@
   "chairsTitle": "工作坊主席",
   "chairsNote": "工作坊相关问题，请联系各工作坊组织者。",
   "publicationEyebrow": "论文出版",
-  "publicationTitle": "Springer LNAI 会议论文集",
+  "publicationTitle": "Springer CCIS 会议论文集",
   "publicationBefore": "录用的会议论文将由",
-  "publicationLink": "Springer LNAI",
-  "publicationAfter": "（Lecture Notes in Artificial Intelligence，人工智能讲义）出版，并被 EI 和 DBLP 收录。",
+  "publicationLink": "Springer CCIS",
+  "publicationAfter": "（Communications in Computer and Information Science，计算机与信息科学通讯）出版，并被 EI 和 DBLP 收录。",
   "workshops": [
     {
       "id": "more-than-human-xr",

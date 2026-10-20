@@ -29,10 +29,10 @@
   "chairsTitle": "Workshop Chairs",
   "chairsNote": "For workshop-specific questions, please contact the individual workshop organisers.",
   "publicationEyebrow": "Publication",
-  "publicationTitle": "Springer LNAI proceedings",
-  "publicationBefore": "Accepted conference papers will be published by",
-  "publicationLink": "Springer in LNAI",
-  "publicationAfter": "(Lecture Notes in Artificial Intelligence) and indexed in EI and DBLP.",
+  "publicationTitle": "Springer CCIS proceedings",
+  "publicationBefore": "Accepted conference papers will be published in",
+  "publicationLink": "Springer CCIS",
+  "publicationAfter": "(Communications in Computer and Information Science) and indexed in EI and DBLP.",
   "workshops": [
     {
       "id": "more-than-human-xr",
