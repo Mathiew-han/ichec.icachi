@@ -71,8 +71,8 @@ export function WorkshopShowcase({ locale }: { locale: string }) {
   };
 
   return (
-    <>
-      <section className={`${styles.section} ${styles.publicationSection}`} aria-labelledby="publication-title">
+    <section id="attend-workshops" className={styles.workshopFeature} aria-labelledby="workshop-showcase-title">
+      <div className={`${styles.section} ${styles.publicationSection}`} aria-labelledby="publication-title">
         <div className={styles.publicationNotice}>
           <div className={styles.publicationMark} aria-hidden="true">CCIS</div>
           <div>
@@ -86,9 +86,9 @@ export function WorkshopShowcase({ locale }: { locale: string }) {
           </div>
           <a className={styles.publicationArrow} href={springerCcisUrl} target="_blank" rel="noreferrer" aria-label={content.publicationLink}>↗</a>
         </div>
-      </section>
+      </div>
 
-      <section id="cfp-workshops" className={`${styles.section} ${styles.workshopShowcase}`} aria-labelledby="workshop-showcase-title">
+      <div className={`${styles.section} ${styles.workshopShowcase}`}>
         <motion.div
           className={styles.workshopHero}
           initial={{ opacity: 0, y: 18 }}
@@ -197,7 +197,7 @@ export function WorkshopShowcase({ locale }: { locale: string }) {
             </div>
           </motion.article>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

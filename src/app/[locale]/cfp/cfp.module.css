@@ -951,6 +951,11 @@
   border-top: 0 !important;
 }
 
+.workshopFeature {
+  padding: clamp(3rem, 5vw, 4.5rem) 0;
+  scroll-margin-top: 11rem;
+}
+
 .publicationNotice {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;

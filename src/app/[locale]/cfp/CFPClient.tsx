@@ -2,10 +2,9 @@
 
 import { Link } from "@/navigation";
 import { Markdown } from "@/components/Markdown";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { motion, type Variants } from "framer-motion";
 import styles from "./cfp.module.css";
-import { WorkshopShowcase } from "./WorkshopShowcase";
 
 const easeStandard: [number, number, number, number] = [0.2, 0.8, 0.2, 1];
 
@@ -24,13 +23,7 @@ const slideInRight: Variants = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: easeStandard } },
 };
 
-const tracks = ["paper", "poster", "workshop", "artdemo"] as const;
-const detailSections = ["topics", "timeline", "requirements", "outcome"] as const;
-const workshopSections = ["topics", "timeline", "requirements", "support", "participation", "chairs"] as const;
-const workshopItemCounts = { topics: 4, requirements: 3, support: 5, participation: 4, chairs: 2 };
-const workshopFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfqd0YCnKP056a-Gmv8luVLSnO6_CL56LuL3aFGpODmlSIgSA/viewform?usp=publish-editor";
-const workshopTemplateUrl = "https://docs.google.com/document/d/1c1IM1TA6uayPuOaBB1kIwGNpzgZC8PcXyP4-h9XbMUo/edit?usp=sharing";
-const workshopChairEmails = ["wang_yun@buaa.edu.cn", "yjgao@cityu.edu.mo"];
+const tracks = ["paper", "poster", "artdemo"] as const;
 const cameraReadyFiles = [
   { key: "cameraReadyInstructions", type: "DOCX", href: "/downloads/camera-ready/ICHEC2026_Camera_Ready_Instructions.docx" },
   { key: "springerInstructions", type: "PDF", href: "/downloads/camera-ready/Springer_Instructions_for_Authors_of_Proceedings.pdf" },
@@ -40,74 +33,8 @@ const cameraReadyFiles = [
   { key: "wordTemplate", type: "ZIP", href: "/downloads/camera-ready/Attachment_3_Microsoft_Word_Proceedings_Template.zip" },
 ] as const;
 
-function TrackDetailList({
-  track,
-  section,
-}: {
-  track: (typeof tracks)[number];
-  section: (typeof detailSections)[number] | (typeof workshopSections)[number];
-}) {
-  const t = useTranslations("CFP");
-
-  if (section === "timeline") {
-    return (
-      <ol className={styles.dateList}>
-        {Array.from({ length: 4 }, (_, index) => {
-          const step = index + 1;
-          const isSupersededSubmissionDate = track === "paper" && step <= 2;
-
-          return (
-            <li
-              key={step}
-              className={`${styles.dateItem}${isSupersededSubmissionDate ? ` ${styles.supersededDateItem}` : ""}`}
-            >
-              <span className={styles.dateLabel}>{t(`tracks.${track}.timeline.d${step}Label`)}</span>
-              <span className={styles.dateValue}>{t(`tracks.${track}.timeline.d${step}Date`)}</span>
-            </li>
-          );
-        })}
-      </ol>
-    );
-  }
-
-  const itemCount = track === "workshop" && section !== "outcome"
-    ? workshopItemCounts[section]
-    : section === "requirements" ? 4 : 3;
-
-  return (
-    <ul className={styles.bullets}>
-      {Array.from({ length: itemCount }, (_, index) => {
-        const step = index + 1;
-        const href = track === "workshop"
-          ? section === "requirements" && step === 2 ? workshopTemplateUrl
-            : section === "requirements" && step === 3 ? workshopFormUrl
-              : undefined
-          : undefined;
-        return (
-          <li key={step}>
-            {href ? (
-              <a href={href} className={styles.secondaryLink} target="_blank" rel="noreferrer">
-                {t(`tracks.${track}.${section}.b${step}`)}
-              </a>
-            ) : t(`tracks.${track}.${section}.b${step}`)}
-            {track === "workshop" && section === "chairs" && (
-              <>
-                <br />
-                <a className={styles.secondaryLink} href={`mailto:${workshopChairEmails[index]}`}>
-                  {workshopChairEmails[index]}
-                </a>
-              </>
-            )}
-          </li>
-        );
-      })}
-    </ul>
-  );
-}
-
 export function CFPClient({ content }: { content: string }) {
   const t = useTranslations("CFP");
-  const locale = useLocale();
 
   return (
     <div className={styles.page}>
@@ -157,7 +84,7 @@ export function CFPClient({ content }: { content: string }) {
                     </div>
                   </dl>
                   <div className={styles.expandActions}>
-                    <a className={styles.primaryButton} href={track === "workshop" ? "#cfp-workshops" : "#cfp-guide"}>
+                    <a className={styles.primaryButton} href="#cfp-guide">
                       {t("tracks.view")}
                     </a>
                   </div>
@@ -167,8 +94,6 @@ export function CFPClient({ content }: { content: string }) {
           ))}
         </div>
       </section>
-
-      <WorkshopShowcase locale={locale} />
 
       <section id="cfp-resources" className={`${styles.section} ${styles.resourcesSection}`}>
         <motion.div
@@ -227,7 +152,6 @@ export function CFPClient({ content }: { content: string }) {
           <div className={styles.cardActions}>
             <a href="https://easychair.org/my/conference?conf=ichec2026" className={styles.primaryButton}>{t("submit.cta")}</a>
             <a href="https://easychair.org/my/conference?conf=ichec2026" className={styles.secondaryLink}>{t("submit.easychair")}</a>
-            <a href="#cfp-workshops" className={styles.secondaryLink}>{t("tracks.workshop.submit")}</a>
           </div>
         </motion.div>
       </section>

@@ -6,7 +6,7 @@ import type { AttendContent, AttendPlace, AttendTourStop } from "@/lib/attend-co
 import styles from "./attend.module.css";
 
 const sections = ["attend-venue", "attend-routes", "attend-stay", "attend-tour", "attend-explore", "attend-dining"];
-const navigationSections = ["attend-registration", ...sections];
+const navigationSections = ["attend-registration", "attend-workshops", ...sections];
 const categories = ["all", "heritage", "resorts", "outdoors"];
 
 function Icon({ type }: { type: "pin" | "plane" | "car" | "clock" | "arrow" }) {
@@ -25,7 +25,7 @@ function ExternalLink({ href, children, primary = false }: { href: string; child
 }
 
 function Heading({ content, index }: { content: AttendContent; index: number }) {
-  return <div className={styles.heading}><p className={styles.eyebrow}><span>{String(index + 2).padStart(2, "0")}</span>{content.labels.eyebrows[index]}</p><h2>{content.labels.headings[index]}</h2></div>;
+  return <div className={styles.heading}><p className={styles.eyebrow}><span>{String(index + 3).padStart(2, "0")}</span>{content.labels.eyebrows[index]}</p><h2>{content.labels.headings[index]}</h2></div>;
 }
 
 type Gallery = { title: string; images: string[]; index: number };
@@ -158,7 +158,7 @@ function PlaceCard({ place, labels, onOpen }: { place: AttendPlace | AttendTourS
   }
 
 
-export function AttendClient({ content, children }: { content: AttendContent; children: ReactNode }) {
+export function AttendClient({ content, children, workshops }: { content: AttendContent; children: ReactNode; workshops: ReactNode }) {
   const { labels, venue } = content;
   const [activeSection, setActiveSection] = useState(navigationSections[0]);
   const [showSectionNav, setShowSectionNav] = useState(false);
@@ -201,7 +201,7 @@ export function AttendClient({ content, children }: { content: AttendContent; ch
     <div className={styles.page}>
       {showSectionNav ? <nav className={styles.sectionNav} aria-label={labels.navLabel}>
         <div className={styles.navInner}>
-          {navigationSections.map((id, i) => <a key={id} href={`#${id}`} onClick={() => setActiveSection(id)} aria-current={activeSection === id ? "location" : undefined}><span>{String(i + 1).padStart(2, "0")}</span><span className={styles.navLabel}>{i === 0 ? labels.registration : labels.nav[i - 1]}</span></a>)}
+          {navigationSections.map((id, i) => <a key={id} href={`#${id}`} onClick={() => setActiveSection(id)} aria-current={activeSection === id ? "location" : undefined}><span>{String(i + 1).padStart(2, "0")}</span><span className={styles.navLabel}>{i === 0 ? labels.registration : i === 1 ? labels.workshops : labels.nav[i - 2]}</span></a>)}
         </div>
       </nav> : null}
 
@@ -211,6 +211,8 @@ export function AttendClient({ content, children }: { content: AttendContent; ch
           <div className={styles.registrationContent}>{children}</div>
         </div>
       </section>
+
+      {workshops}
 
       <section id={sections[0]} className={`${styles.section} ${styles.venue}`} aria-label={labels.nav[0]}>
         <div className={`${styles.container} ${styles.venueGrid}`}>
