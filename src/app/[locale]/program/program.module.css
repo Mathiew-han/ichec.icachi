@@ -1,206 +1,62 @@
 .page {
-  display: flex;
-  flex-direction: column;
-  gap: 2.25rem;
-}
-
-.hero {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 72rem;
-  padding: 4.5rem 1rem 1.4rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-  text-align: center;
-}
-
-.heroTitle {
-  margin: 0;
-  font-size: clamp(2rem, 4.5vw, 3.2rem);
-  line-height: 1.1;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.heroDesc {
-  margin: 0.9rem auto 0;
-  max-width: 44rem;
-  font-size: 1.03rem;
-  line-height: 1.7;
-  color: color-mix(in oklab, var(--foreground) 70%, transparent);
-}
-
-.dayTabs {
-  margin-top: 1.45rem;
-  display: flex;
-  justify-content: center;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-}
-
-.dayTab {
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  background: #efeded;
-  color: color-mix(in oklab, var(--foreground) 72%, transparent);
-  padding: 0.55rem 0.9rem;
-  font-size: 0.84rem;
-  font-weight: 700;
-  border-radius: 9999px;
-}
-
-.dayTabActive {
-  background: #34a18f;
-  color: #fff;
-  border-color: #34a18f;
-}
-
-.scheduleSection {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 72rem;
-  padding: 0 1rem;
-}
-
-.scheduleGrid {
+  --program-green: #315f4c;
+  --program-green-soft: #edf4ef;
+  --program-line: #dfe8e1;
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
+  padding: 1rem 0 4rem;
 }
 
-.sidebar {
-  display: grid;
-  gap: 0.75rem;
+.intro { display: grid; gap: 1.25rem; align-items: end; padding: 1.25rem 0 0.5rem; }
+.eyebrow { margin: 0 0 0.75rem; color: var(--program-green); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; }
+.title { margin: 0; max-width: 48rem; font-family: Newsreader, Georgia, serif; font-size: clamp(2.25rem, 5vw, 4.75rem); font-weight: 500; letter-spacing: -0.045em; line-height: 0.98; }
+.lead { margin: 1rem 0 0; max-width: 45rem; color: #59655f; font-size: 1rem; line-height: 1.75; }
+.notice { display: flex; gap: 0.75rem; align-items: flex-start; border: 1px solid var(--program-line); border-radius: 1rem; background: #f8faf8; padding: 1rem; }
+.noticeDot { width: 0.65rem; height: 0.65rem; flex: 0 0 auto; margin-top: 0.3rem; border-radius: 999px; background: #d4a749; box-shadow: 0 0 0 5px #f5ead3; }
+.notice strong { font-size: 0.88rem; }
+.notice p { margin: 0.25rem 0 0; color: #68726d; font-size: 0.82rem; line-height: 1.55; }
+.dayTabs { display: grid; gap: 0.75rem; }
+.dayTab { min-width: 0; border: 1px solid var(--program-line); border-radius: 1rem; background: #fff; padding: 1rem; text-align: left; transition: border-color 180ms ease, background 180ms ease, transform 180ms ease; }
+.dayTab:hover { border-color: #9db6a7; transform: translateY(-2px); }
+.dayTabActive { border-color: var(--program-green); background: var(--program-green); color: #fff; }
+.dayDate { display: block; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.17em; }
+.dayLabel { display: block; margin-top: 0.5rem; font-size: 1.05rem; font-weight: 750; }
+.dayMeta { display: block; margin-top: 0.25rem; color: #738078; font-size: 0.78rem; }
+.dayTabActive .dayMeta { color: rgb(255 255 255 / 70%); }
+.scheduleSection { overflow: hidden; border: 1px solid var(--program-line); border-radius: 1.4rem; background: #fff; }
+.scheduleHeader { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; align-items: end; padding: 1.3rem; border-bottom: 1px solid var(--program-line); background: linear-gradient(135deg, #f7faf7, #edf4ef); }
+.scheduleHeader span { color: var(--program-green); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.16em; }
+.scheduleHeader h3 { margin: 0.25rem 0 0; font-family: Newsreader, Georgia, serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 500; }
+.keynoteLink { color: var(--program-green); font-size: 0.85rem; font-weight: 750; text-decoration: underline; text-underline-offset: 0.35rem; }
+.timeline { display: grid; }
+.timelineCard { display: grid; grid-template-columns: 5.3rem minmax(0, 1fr); border-bottom: 1px solid var(--program-line); }
+.timelineCard:last-child { border-bottom: 0; }
+.timeColumn { display: flex; flex-direction: column; justify-content: space-between; gap: 1rem; border-right: 1px solid var(--program-line); padding: 1.1rem 0.8rem; background: #fbfcfb; }
+.time { color: #263d33; font-size: 0.76rem; font-weight: 800; line-height: 1.35; }
+.sequence { color: #aeb9b2; font-family: Newsreader, Georgia, serif; font-size: 1.3rem; }
+.itemContent { min-width: 0; padding: 1.1rem; }
+.itemTopline { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+.badge, .pending { display: inline-flex; width: fit-content; border-radius: 999px; padding: 0.22rem 0.55rem; font-size: 0.64rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+.badge { background: var(--program-green-soft); color: var(--program-green); }
+.pending { background: #f7edd8; color: #8a6220; }
+.itemContent h4 { margin: 0.55rem 0 0; max-width: 55rem; font-family: Newsreader, Georgia, serif; font-size: clamp(1.35rem, 3vw, 2rem); font-weight: 550; line-height: 1.15; }
+.itemContent > p { margin: 0.45rem 0 0; color: #69736d; font-size: 0.88rem; line-height: 1.55; }
+.trackGrid { display: grid; gap: 0.65rem; margin-top: 1rem; }
+.trackCard { display: grid; gap: 0.3rem; border: 1px solid var(--program-line); border-radius: 0.85rem; padding: 0.85rem; background: #fafcfb; }
+.trackCard span { color: var(--program-green); font-size: 0.65rem; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; }
+.trackCard strong { font-size: 0.9rem; line-height: 1.4; }
+.trackCard small { color: #828b86; font-size: 0.7rem; }
+.workshopLink { display: inline-flex; margin-top: 1rem; align-items: center; gap: 0.4rem; color: var(--program-green); font-size: 0.85rem; font-weight: 800; text-decoration: underline; text-underline-offset: 0.35rem; }
+
+@media (min-width: 720px) {
+  .intro { grid-template-columns: minmax(0, 1.7fr) minmax(16rem, 0.8fr); }
+  .dayTabs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .trackGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .timelineCard { grid-template-columns: 8.5rem minmax(0, 1fr); }
+  .timeColumn { padding: 1.35rem 1.1rem; }
+  .time { font-size: 0.88rem; }
+  .itemContent { padding: 1.35rem 1.5rem; }
+  .scheduleHeader { padding: 1.6rem; }
 }
 
-.sideCard {
-  border: 1px solid #e2e7e4;
-  background: #f3f6f5;
-  padding: 0.95rem;
-}
-
-.sideIcon {
-  color: #1f8b79;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.sideTitle {
-  margin: 0.35rem 0 0;
-  font-size: 1.02rem;
-  font-weight: 700;
-}
-
-.sideText {
-  margin: 0.4rem 0 0;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: color-mix(in oklab, var(--foreground) 70%, transparent);
-}
-
-.timeline {
-  display: grid;
-  gap: 0.72rem;
-}
-
-.timelineCard {
-  display: grid;
-  grid-template-columns: 120px minmax(0, 1fr);
-  border: 1px solid #e2e7e4;
-  background: #fff;
-}
-
-.timelineTime {
-  padding: 0.85rem 0.85rem 0.85rem 0.95rem;
-  font-size: 0.86rem;
-  font-weight: 700;
-  color: #2d8f80;
-}
-
-.timelineContent {
-  border-left: 2px solid #34a18f;
-  padding: 0.75rem 0.9rem;
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  background: #0f766e;
-  color: #fff;
-  padding: 0.1rem 0.4rem;
-  font-size: 0.64rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border-radius: 9999px;
-}
-
-.timelineTitle {
-  margin: 0.32rem 0 0;
-  font-size: 1.5rem;
-  line-height: 1.22;
-  font-weight: 500;
-  font-family: Newsreader, Georgia, serif;
-}
-
-.timelineDesc {
-  margin: 0.3rem 0 0;
-  font-size: 0.88rem;
-  color: color-mix(in oklab, var(--foreground) 72%, transparent);
-}
-
-.downloadSection {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 72rem;
-  border-radius: 18px;
-  padding: 2.35rem 1rem;
-  background: #f4f7f6;
-  text-align: center;
-}
-
-.downloadTitle {
-  margin: 0;
-  font-size: clamp(1.7rem, 3.1vw, 2.8rem);
-  font-family: Newsreader, Georgia, serif;
-  font-weight: 600;
-}
-
-.downloadDesc {
-  margin: 0.8rem auto 0;
-  max-width: 42rem;
-  color: color-mix(in oklab, var(--foreground) 72%, transparent);
-  line-height: 1.7;
-}
-
-.downloadActions {
-  margin-top: 1.15rem;
-  display: inline-flex;
-  gap: 0.65rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.primaryBtn,
-.secondaryBtn {
-  border-radius: 8px;
-  padding: 0.62rem 1rem;
-  font-weight: 700;
-  font-size: 0.86rem;
-}
-
-.primaryBtn {
-  border: 1px solid #34a18f;
-  background: #34a18f;
-  color: #fff;
-}
-
-.secondaryBtn {
-  border: 1px solid #34a18f;
-  background: #fff;
-  color: #1e7f70;
-}
-
-@media (min-width: 1024px) {
-  .scheduleGrid {
-    grid-template-columns: 260px minmax(0, 1fr);
-    gap: 1.1rem;
-  }
-}
+@media (prefers-reduced-motion: reduce) { .dayTab { transition: none; } }
