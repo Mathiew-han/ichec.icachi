@@ -3,6 +3,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { Link } from "@/navigation";
+import { KeynoteShowcase } from "@/components/KeynoteShowcase";
 import { useLocale, useTranslations } from "next-intl";
 import styles from "./home.module.css";
 
@@ -163,6 +164,8 @@ export default function Home() {
             ))}
           </ul>
         </section>
+
+        <KeynoteShowcase />
 
         <section className={styles.venueSection}>
           <div className={styles.venueText}>
