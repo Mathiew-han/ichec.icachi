@@ -29,12 +29,6 @@
 .copyBlock h5 { margin: 0 0 0.6rem; color: var(--keynote-green); font-size: 0.7rem; font-weight: 850; letter-spacing: 0.13em; text-transform: uppercase; }
 .copyBlock p { margin: 0.7rem 0 0; color: #4f5b55; font-size: 0.9rem; line-height: 1.75; }
 
-.pendingCard { display: grid; gap: 1rem; align-items: center; border: 1px dashed #aebbaf; border-radius: 1.3rem; background: #f8faf8; padding: 1.25rem; }
-.pendingCard > div { display: flex; gap: 0.65rem; align-items: center; }
-.pendingCard span { color: var(--keynote-green); font-family: Newsreader, Georgia, serif; font-size: 2rem; }
-.pendingCard p { margin: 0; color: #68746d; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
-.pendingCard h3 { margin: 0; font-family: Newsreader, Georgia, serif; font-size: clamp(1.5rem, 3vw, 2.3rem); font-weight: 500; }
-.pendingCard > strong { width: fit-content; border-radius: 999px; background: #eee5d4; color: #84652f; padding: 0.4rem 0.7rem; font-size: 0.72rem; }
 .programCta { display: flex; justify-content: center; }
 .programCta a { display: inline-flex; gap: 0.55rem; align-items: center; border-radius: 999px; background: var(--keynote-green); color: #fff; padding: 0.8rem 1.2rem; font-size: 0.85rem; font-weight: 800; }
 
@@ -46,5 +40,4 @@
   .speaker.reverse .speakerContent { order: 1; }
   .portrait { min-height: 100%; }
   .speakerContent { padding: clamp(2rem, 4vw, 3.75rem); }
-  .pendingCard { grid-template-columns: 0.5fr 1fr auto; padding: 1.5rem 2rem; }
 }

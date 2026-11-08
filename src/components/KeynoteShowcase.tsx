@@ -11,8 +11,8 @@ const copy = {
   en: {
     eyebrow: "Keynote speakers",
     title: "Ideas that question the systems we build.",
-    intro: "Two keynote speakers are now announced. The second keynote and selected program details will be added after final confirmation.",
-    announced: "2 of 3 speakers announced",
+    intro: "Meet the three keynote speakers. Selected program details will be added after final confirmation.",
+    announced: "3 keynote speakers announced",
     keynote: "Keynote",
     biography: "Biography",
     schedule: "View preliminary program",
@@ -23,14 +23,16 @@ const copy = {
     k3Role: "Director, Alibaba Cloud Intelligence Design Center",
     k3Title: "Go Vibe Designing: Design Judgment in the AI Era",
     k3Bio: "Wang Luping is Director of the Alibaba Cloud Intelligence Design Center, Vice Chairman of the Design Standards Branch of the China Industrial Design Association, a standing committee member of the Art and Design Professional Committee of the China Association for Educational Technology, a Senior Industrial Designer of Zhejiang Province, and one of China's Top Ten Design Industry Promoters in 2024. He founded Alibaba Cloud's design center and leads a design team of nearly one hundred people working across AI product experience, industry AI transformation, new AI design paradigms, and AIGC design platforms. His work includes the one-stop AIGC design platform PAI ArtLab and industry–education collaboration supporting design transformation in the AI era.",
-    k2Title: "Keynote 2 speaker and topic",
-    pending: "To be announced",
+    k2Name: "Professor Kibum Kim",
+    k2Role: "Full Professor, Hanyang University ERICA, South Korea",
+    k2Title: "Serious Games in VR/AR/MR and Human-Computer Interaction (HCI)",
+    k2Bio: "Kibum Kim is a Full Professor in the Division of Media, Culture, and Design Technology at Hanyang University ERICA's College of Computing, South Korea. He earned his Ph.D. in Computer Science from Virginia Tech, his M.S. from the University of Illinois Urbana-Champaign, and his B.S. from Korea University. His research uses gamification in VR/AR/MR to encourage voluntary engagement and participation, with work published in leading HCI journals. He was named among the world's top 2% scientists in the 2023, 2024, and 2025 Stanford University–Elsevier citation rankings. Previously, he held academic posts in South Korea, Japan, and Canada, and worked on HCI at Motorola Labs in the United States.",
   },
   "zh-CN": {
     eyebrow: "主旨演讲嘉宾",
     title: "以设计重新审视我们正在构建的世界。",
-    intro: "目前已公布两位主旨演讲嘉宾。Keynote 2及部分日程信息将在最终确认后补充。",
-    announced: "三位嘉宾中已公布两位",
+    intro: "三位主旨演讲嘉宾均已公布。部分日程信息将在最终确认后补充。",
+    announced: "三位主旨演讲嘉宾已公布",
     keynote: "主旨演讲",
     biography: "嘉宾简介",
     schedule: "查看暂定议程",
@@ -41,14 +43,16 @@ const copy = {
     k3Role: "阿里云智能设计中心总监",
     k3Title: "Go Vibe Designing——AI时代的设计判断力",
     k3Bio: "王路平现任阿里云智能设计中心总监、中国工业设计协会设计标准分会副理事长、中国教育技术协会艺术设计专业委员会常务委员、浙江省高级工业设计师，并入选2024中国设计产业十佳设计推动人物。他创立了阿里云设计中心，带领近百人的设计团队深耕AI产品体验设计与创新、行业AI数字化设计、AI设计新范式及AIGC设计平台等领域。他主导探索AIGC设计新范式与一站式AIGC设计平台PAI ArtLab，联结教育协同育人，服务行业AI设计转型，促进AI时代的设计变革。",
-    k2Title: "Keynote 2嘉宾及主题",
-    pending: "即将公布",
+    k2Name: "Kibum Kim 教授",
+    k2Role: "韩国汉阳大学 ERICA 校区教授",
+    k2Title: "虚拟、增强与混合现实（VR/AR/MR）及人机交互（HCI）中的严肃游戏",
+    k2Bio: "Kibum Kim 是韩国汉阳大学 ERICA 校区计算学院媒体、文化与设计技术学部教授。他先后在弗吉尼亚理工大学、伊利诺伊大学厄巴纳—香槟分校和高丽大学取得计算机科学博士、硕士和学士学位。其研究聚焦于在虚拟、增强及混合现实应用中运用游戏化设计，促进用户自愿参与，成果发表于多本人机交互领域期刊。他入选斯坦福大学与爱思唯尔发布的 2023、2024 和 2025 年全球前 2% 科学家榜单。此前，他曾在韩国、日本和加拿大任教或从事研究，并在美国摩托罗拉实验室从事人机交互相关工作。",
   },
   "zh-TW": {
     eyebrow: "主旨演講嘉賓",
     title: "以設計重新審視我們正在建構的世界。",
-    intro: "目前已公布兩位主旨演講嘉賓。Keynote 2及部分日程資訊將在最終確認後補充。",
-    announced: "三位嘉賓中已公布兩位",
+    intro: "三位主旨演講嘉賓均已公布。部分日程資訊將在最終確認後補充。",
+    announced: "三位主旨演講嘉賓已公布",
     keynote: "主旨演講",
     biography: "嘉賓簡介",
     schedule: "查看暫定議程",
@@ -59,8 +63,10 @@ const copy = {
     k3Role: "阿里雲智能設計中心總監",
     k3Title: "Go Vibe Designing——AI時代的設計判斷力",
     k3Bio: "王路平現任阿里雲智能設計中心總監、中國工業設計協會設計標準分會副理事長、中國教育技術協會藝術設計專業委員會常務委員、浙江省高級工業設計師，並入選2024中國設計產業十佳設計推動人物。他創立了阿里雲設計中心，帶領近百人的設計團隊深耕AI產品體驗設計與創新、行業AI數位化設計、AI設計新範式及AIGC設計平台等領域。他主導探索AIGC設計新範式與一站式AIGC設計平台PAI ArtLab，聯結教育協同育人，服務行業AI設計轉型，促進AI時代的設計變革。",
-    k2Title: "Keynote 2嘉賓及主題",
-    pending: "即將公布",
+    k2Name: "Kibum Kim 教授",
+    k2Role: "韓國漢陽大學 ERICA 校區教授",
+    k2Title: "虛擬、擴增與混合實境（VR/AR/MR）及人機互動（HCI）中的嚴肅遊戲",
+    k2Bio: "Kibum Kim 是韓國漢陽大學 ERICA 校區計算學院媒體、文化與設計技術學部教授。他先後在維吉尼亞理工大學、伊利諾大學厄巴納－香檳分校和高麗大學取得電腦科學博士、碩士和學士學位。其研究聚焦於在虛擬、擴增及混合實境應用中運用遊戲化設計，促進使用者自願參與，成果發表於多本人機互動領域期刊。他入選史丹佛大學與愛思唯爾發布的 2023、2024 和 2025 年全球前 2% 科學家榜單。此前，他曾在韓國、日本和加拿大任教或從事研究，並在美國摩托羅拉實驗室從事人機互動相關工作。",
   },
 } as const;
 
@@ -77,7 +83,7 @@ export function KeynoteShowcase() {
           <h2>{t.title}</h2>
           <p>{t.intro}</p>
         </div>
-        <div className={styles.status}><span aria-hidden="true">02</span><strong>{t.announced}</strong></div>
+        <div className={styles.status}><span aria-hidden="true">03</span><strong>{t.announced}</strong></div>
       </section>
 
       <section className={styles.speaker}>
@@ -95,6 +101,19 @@ export function KeynoteShowcase() {
 
       <section className={`${styles.speaker} ${styles.reverse}`}>
         <figure className={styles.portrait}>
+          <Image src="/images/keynotes/kibum-kim.jpg" alt="Professor Kibum Kim" fill sizes="(max-width: 780px) 100vw, 38vw" />
+        </figure>
+        <div className={styles.speakerContent}>
+          <div className={styles.numberRow}><span>02</span><b>{t.keynote} 2</b><time>NOV 24 · 14:00</time></div>
+          <h3>{t.k2Name}</h3>
+          <p className={styles.role}>{t.k2Role}</p>
+          <h4 className={styles.talkTitle}>{t.k2Title}</h4>
+          <div className={styles.copyBlock}><h5>{t.biography}</h5><p>{t.k2Bio}</p></div>
+        </div>
+      </section>
+
+      <section className={styles.speaker}>
+        <figure className={styles.portrait}>
           <Image src="/images/keynotes/wang-luping.jpg" alt={t.k3Name} fill sizes="(max-width: 780px) 100vw, 38vw" />
         </figure>
         <div className={styles.speakerContent}>
@@ -105,12 +124,6 @@ export function KeynoteShowcase() {
           <h4 className={styles.talkTitle}>{t.k3Title}</h4>
           <div className={styles.copyBlock}><h5>{t.biography}</h5><p>{t.k3Bio}</p></div>
         </div>
-      </section>
-
-      <section className={styles.pendingCard}>
-        <div><span>02</span><p>{t.keynote} 2</p></div>
-        <h3>{t.k2Title}</h3>
-        <strong>{t.pending}</strong>
       </section>
 
       <div className={styles.programCta}>

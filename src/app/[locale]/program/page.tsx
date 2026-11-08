@@ -80,7 +80,7 @@ export default function ProgramPage() {
       { time: "10:30–11:00", type: isZh ? zh("茶歇", "茶歇") : "Break", title: isZh ? zh("茶歇与交流", "茶歇與交流") : "Coffee Break & Networking" },
       { time: "11:00–12:30", type: "Paper Session 1", title: isZh ? zh("论文分场第一轮", "論文分場第一輪") : "Parallel Paper Sessions · Round 1", tracks: round1 },
       { time: "12:30–14:00", type: isZh ? zh("午餐", "午餐") : "Lunch", title: isZh ? zh("午餐休息", "午餐休息") : "Lunch Break" },
-      { time: "14:00–15:00", type: "Keynote 2", title: labels.pending, status: "TBA" },
+      { time: "14:00–15:00", type: "Keynote 2", title: isZh ? zh("虚拟、增强与混合现实（VR/AR/MR）及人机交互（HCI）中的严肃游戏", "虛擬、擴增與混合實境（VR/AR/MR）及人機互動（HCI）中的嚴肅遊戲") : "Serious Games in VR/AR/MR and Human-Computer Interaction (HCI)", detail: isZh ? zh("Kibum Kim 教授 · 韩国汉阳大学 ERICA 校区", "Kibum Kim 教授 · 韓國漢陽大學 ERICA 校區") : "Professor Kibum Kim · Hanyang University ERICA" },
       { time: "15:00–16:30", type: isZh ? zh("交流", "交流") : "Exchange", title: isZh ? zh("茶歇与海报交流", "茶歇與海報交流") : "Coffee Break & Poster Session" },
       { time: "16:30–18:00", type: "Paper Session 2", title: isZh ? zh("论文分场第二轮", "論文分場第二輪") : "Parallel Paper Sessions · Round 2", tracks: round2 },
       { time: "18:30–20:30", type: isZh ? zh("晚宴", "晚宴") : "Banquet", title: isZh ? zh("大会晚宴", "大會晚宴") : "Conference Banquet" },
