@@ -50,6 +50,45 @@
   gap: 1rem;
 }
 
+.reviewersSection {
+  display: grid;
+  gap: 1.5rem;
+  border-top: 1px solid var(--glass-border);
+  padding-top: 2.5rem;
+  scroll-margin-top: 6rem;
+}
+
+.reviewersHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+}
+
+.reviewersHeader h2 { margin-top: 0.85rem; }
+.reviewersHeader p { max-width: 48rem; margin: 0.65rem 0 0; color: color-mix(in oklab, var(--foreground) 70%, transparent); line-height: 1.7; }
+.reviewerCount { flex: none; color: var(--accent-green); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; line-height: 1; }
+
+.reviewerList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reviewerList li {
+  border: 1px solid var(--glass-border);
+  border-radius: 0.85rem;
+  background: var(--glass-bg);
+  padding: 0.85rem 1rem;
+  color: var(--foreground);
+  font-size: 0.94rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
 .grid {
   display: grid;
   gap: 1.15rem;

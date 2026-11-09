@@ -22,6 +22,30 @@ type CommitteeGroup = {
   members: Person[];
 };
 
+const additionalReviewers = [
+  "Han Bao", "Ziyi Chen", "Shiping Chen", "Changlu Chen", "Yu Chen", "Yuan Chen",
+  "Shenglan Cui", "Jiaqi Jimmy Dong", "Yuan-Ling Feng", "Yuan Feng", "Fang Fu", "Xinyi Fu",
+  "Yue Gu", "Yongqi Guan", "Buer Guo", "Mengyan Guo", "Binyang Han", "Feiyu Han",
+  "Yilu He", "Honghong He", "Liwen He", "Xinlei Hu", "Yuru Huang", "Zhuangtong Huang",
+  "Lusha Huang", "Hongying Jia", "Fusheng Jia", "Mengqi Jiang", "Yang Jiao", "Tongtong Jin",
+  "Lingxi Jin", "Yin Jing", "Kumkum Kang", "Manusha Karunathilaka", "Yafeng Lai",
+  "Qinghua Lei", "Yuelu Li", "Saisai Li", "Yuanlinxi Li", "Xiaojie Li", "Zeshui Li",
+  "Meng Li", "Jiawei Li", "Wei Li", "Qingchuan Li", "Zisu Li", "Tinghui Li", "Haoyi Lin",
+  "Min Lin", "Guanhong Liu", "Ting Liu", "Xiaofeng Liu", "Yuelin Liu", "Hengzhu Liu",
+  "Minghui Liu", "Qi Lu", "Yue Luo", "Yuxin Ma", "Ling Ma", "Han Meng", "Chaoxi Niu",
+  "Xiaojing Niu", "Ruowen Niu", "Lingyu Peng", "Yu Peng", "Zhaoxian Ren", "Weijiang She",
+  "Yingying She", "Huatong Sun", "Peng Tan", "Xin Tang", "Guyue Tang", "Yuxuan Tian",
+  "Xin Tong", "Weijing Wang", "Xiyuan Wang", "Yi Wang", "Duotun Wang", "Ruolin Wang",
+  "Yong Wang", "Ruotong Wang", "Zhenyu Wang", "Zheng Wang", "Di Weng", "Fangbo Wu",
+  "Haopeng Wu", "Jun Wu", "Zhiqing Wu", "Xingting Wu", "Hao Wu", "Xiaochao Xi",
+  "Nan Xia", "Liyi Xie", "Junan Xie", "Ningchang Xiong", "Zeyu Xiong", "Chuanyue Xu",
+  "Liyi Xu", "Jing Xue", "Shuo Yan", "Yuan Yao", "Yin Ye", "Linping Yuan", "Siyu Zha",
+  "Shizhen Zhang", "Haoxiang Zhang", "Shumeng Zhang", "Zhongyue Zhang", "Yuanhao Zhang",
+  "Jiaxin Zhang", "Jingling Zhang", "Ying Zhao", "Jichun Zhao", "Shichao Zhao",
+  "Yuheng Zhao", "Ruishen Zheng", "Wen Zheng", "Shuai Zhou", "Dawei Zhou", "You Zhou",
+  "Yancong Zhu", "Zicheng Zhu", "Xuhan Zuo",
+];
+
 export default function CommitteesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = use(params);
   const [selectedPerson, setSelectedPerson] = useState<Person | null>(null);
@@ -459,6 +483,22 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
           </div>
         </section>
       ))}
+
+      <section id="pc-reviewers" className={styles.reviewersSection} aria-labelledby="pc-reviewers-title">
+        <div className={styles.reviewersHeader}>
+          <div>
+            <span className={styles.eyebrow}>{isZh ? zh("审稿致谢", "審稿致謝") : "Reviewer recognition"}</span>
+            <h2 id="pc-reviewers-title" className={styles.h2}>
+              {isZh ? zh("程序委员会审稿成员", "程序委員會審稿成員") : "Program Committee Reviewers"}
+            </h2>
+            <p>{isZh ? zh("感谢以下审稿人为 ICHEC 2026 的论文评审贡献时间与专业知识。", "感謝以下審稿人為 ICHEC 2026 的論文評審貢獻時間與專業知識。") : "We thank the following reviewers for contributing their time and expertise to the ICHEC 2026 paper review process."}</p>
+          </div>
+          <span className={styles.reviewerCount}>{additionalReviewers.length}</span>
+        </div>
+        <ul className={styles.reviewerList}>
+          {additionalReviewers.map((name) => <li key={name}>{name}</li>)}
+        </ul>
+      </section>
 
       <AnimatePresence>
         {selectedPerson && (
