@@ -401,7 +401,7 @@ img {
       rgba(255, 255, 255, 0.3) 44%,
       rgba(0, 108, 63, 0.18)
     ),
-    url("/visuals/hero/ichec-hero-ink-arc-v2.png") center bottom / cover no-repeat;
+    url("/visuals/hero/ichec-hero-supplied-2026.png") center bottom / cover no-repeat;
   opacity: 0.96;
   filter: saturate(0.92) contrast(0.98);
 }
