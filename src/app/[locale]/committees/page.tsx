@@ -123,38 +123,6 @@ export default function CommitteesPage({ params }: { params: Promise<{ locale: s
       ],
     },
     {
-      id: "panel",
-      label: { zh: zh("圆桌主席", "圓桌主席"), en: "Panel Chairs" },
-      layout: "three",
-      members: [
-        {
-          name: isZh ? "由振偉" : "Zhenwei You",
-          affiliation: isZh
-            ? zh("澳门城市大学创新设计学院", "澳門城市大學創新設計學院")
-            : "Faculty of Innovation and Design · City University of Macau",
-          avatarUrl: "/avatars/youzhenwei.png",
-          avatarObjectPosition: "50% 20%",
-          profileUrl: "https://fiad.cityu.edu.mo/acad_ft/854",
-        },
-        {
-          name: isZh ? "左旭含" : "Xuhan Zuo",
-          affiliation: isZh
-            ? zh("澳门城市大学数据科学学院", "澳門城市大學數據科學學院")
-            : "Faculty of Data Science · City University of Macau",
-          avatarUrl: "https://fds.cityu.edu.mo/uploads/userfiles/%E5%B7%A6%E6%97%AD%E5%90%AB.jpg",
-          profileUrl: "https://fds.cityu.edu.mo/members/496",
-        },
-        {
-          name: isZh ? "苏中和" : "Chung-Ho Su",
-          affiliation: isZh
-            ? zh("澳门城市大学创新设计学院", "澳門城市大學創新設計學院")
-            : "Faculty of Innovation and Design · City University of Macau",
-          avatarUrl: "/avatars/suzhonghe.jpg",
-          profileUrl: "https://fiad.cityu.edu.mo/acad_ft/927",
-        },
-      ],
-    },
-    {
       id: "full",
       label: { zh: zh("长文主席", "長文主席"), en: "Full Paper Chairs" },
       layout: "two",
@@ -307,6 +275,38 @@ REPRESENTATIVE PUBLICATIONS: Published multiple papers in top journals such as C
             : "University of British Columbia",
           avatarUrl: "/avatars/robert-xiao.jpg",
           profileUrl: "https://robertxiao.ca",
+        },
+      ],
+    },
+    {
+      id: "panel",
+      label: { zh: zh("圆桌主席", "圓桌主席"), en: "Panel Chairs" },
+      layout: "three",
+      members: [
+        {
+          name: isZh ? "由振偉" : "Zhenwei You",
+          affiliation: isZh
+            ? zh("澳门城市大学创新设计学院", "澳門城市大學創新設計學院")
+            : "Faculty of Innovation and Design · City University of Macau",
+          avatarUrl: "/avatars/youzhenwei.png",
+          avatarObjectPosition: "50% 20%",
+          profileUrl: "https://fiad.cityu.edu.mo/acad_ft/854",
+        },
+        {
+          name: isZh ? "左旭含" : "Xuhan Zuo",
+          affiliation: isZh
+            ? zh("澳门城市大学数据科学学院", "澳門城市大學數據科學學院")
+            : "Faculty of Data Science · City University of Macau",
+          avatarUrl: "https://fds.cityu.edu.mo/uploads/userfiles/%E5%B7%A6%E6%97%AD%E5%90%AB.jpg",
+          profileUrl: "https://fds.cityu.edu.mo/members/496",
+        },
+        {
+          name: isZh ? "苏中和" : "Chung-Ho Su",
+          affiliation: isZh
+            ? zh("澳门城市大学创新设计学院", "澳門城市大學創新設計學院")
+            : "Faculty of Innovation and Design · City University of Macau",
+          avatarUrl: "/avatars/suzhonghe.jpg",
+          profileUrl: "https://fiad.cityu.edu.mo/acad_ft/927",
         },
       ],
     },
