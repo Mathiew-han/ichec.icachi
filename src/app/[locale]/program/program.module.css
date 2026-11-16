@@ -15,6 +15,7 @@
 .noticeDot { width: 0.65rem; height: 0.65rem; flex: 0 0 auto; margin-top: 0.3rem; border-radius: 999px; background: #d4a749; box-shadow: 0 0 0 5px #f5ead3; }
 .notice strong { font-size: 0.88rem; }
 .notice p { margin: 0.25rem 0 0; color: #68726d; font-size: 0.82rem; line-height: 1.55; }
+.bookDownload { display: inline-flex; margin-top: 0.75rem; color: var(--program-green); font-size: 0.85rem; font-weight: 800; text-decoration: underline; text-underline-offset: 0.25rem; }
 .dayTabs { display: grid; gap: 0.75rem; }
 .dayTab { min-width: 0; border: 1px solid var(--program-line); border-radius: 1rem; background: #fff; padding: 1rem; text-align: left; transition: border-color 180ms ease, background 180ms ease, transform 180ms ease; }
 .dayTab:hover { border-color: #9db6a7; transform: translateY(-2px); }
@@ -47,10 +48,13 @@
 .trackCard strong { font-size: 0.9rem; line-height: 1.4; }
 .trackCard small { color: #828b86; font-size: 0.7rem; }
 .workshopLink { display: inline-flex; margin-top: 1rem; align-items: center; gap: 0.4rem; color: var(--program-green); font-size: 0.85rem; font-weight: 800; text-decoration: underline; text-underline-offset: 0.35rem; }
+.guidelines { display: grid; gap: 1rem; border: 1px solid var(--program-line); border-radius: 1.25rem; background: #f8faf8; padding: 1.5rem; }
+.guidelines h3 { margin: 0; font-family: Newsreader, Georgia, serif; font-size: clamp(1.6rem, 3vw, 2.3rem); font-weight: 550; }
+.guidelines ul { display: grid; gap: 0.7rem; margin: 0; padding-left: 1.25rem; color: #4f5b55; line-height: 1.65; }
 
 @media (min-width: 720px) {
   .intro { grid-template-columns: minmax(0, 1.7fr) minmax(16rem, 0.8fr); }
-  .dayTabs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .dayTabs { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .trackGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .timelineCard { grid-template-columns: 8.5rem minmax(0, 1fr); }
   .timeColumn { padding: 1.35rem 1.1rem; }
