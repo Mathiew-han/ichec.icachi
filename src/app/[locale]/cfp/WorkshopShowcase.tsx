@@ -1,6 +1,7 @@
 "use client";
 
 import { Link } from "@/navigation";
+import { workshopSchedule, type WorkshopId } from "@/lib/workshop-schedule";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import styles from "./cfp.module.css";
@@ -12,8 +13,8 @@ const sourceDocumentUrl = "https://docs.google.com/document/d/1mtPgChHjtDAH_Uauc
 const springerCcisUrl = "https://link.springer.com/series/7899";
 
 type WorkshopEntry = {
-  id: string;
-  poster: string;
+  id: WorkshopId;
+  poster?: string;
   title: string;
   description: string;
   organisers: string[];
@@ -61,6 +62,12 @@ export function WorkshopShowcase({ locale }: { locale: string }) {
   const content = workshopContentByLocale[locale] ?? workshopEn as WorkshopContent;
   const [activeWorkshopIndex, setActiveWorkshopIndex] = useState(0);
   const activeWorkshop = content.workshops[activeWorkshopIndex];
+  const slot = workshopSchedule[activeWorkshop.id];
+  const dateAndVenue = locale === "zh-CN"
+    ? ["11 月 23 日", "永利澳门"]
+    : locale === "zh-TW"
+      ? ["11 月 23 日", "永利澳門"]
+      : ["November 23", "Wynn Macau"];
 
   const selectWorkshop = (index: number, focusTab = false) => {
     const nextIndex = (index + content.workshops.length) % content.workshops.length;
@@ -188,13 +195,23 @@ export function WorkshopShowcase({ locale }: { locale: string }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.36, ease: [0.2, 0.8, 0.2, 1] }}
           >
-            <div className={styles.workshopPosterStage}>
-              <img
-                className={styles.workshopPosterFull}
-                src={activeWorkshop.poster}
-                alt={`${content.workshopLabel} ${activeWorkshopIndex + 1}: ${activeWorkshop.title}`}
-              />
+            <div className={`${styles.participationPanel} mb-4 space-y-3`}>
+              <h3>{activeWorkshop.title}</h3>
+              <p>{dateAndVenue[0]} · {slot.time} · {dateAndVenue[1]} · {slot.room}</p>
+              {!activeWorkshop.poster && <p>{activeWorkshop.description}</p>}
+              <a className={styles.workshopTextLink} href={activeWorkshop.registrationUrl} target="_blank" rel="noreferrer">
+                {content.registerWorkshop} <span aria-hidden="true">↗</span>
+              </a>
             </div>
+            {activeWorkshop.poster && (
+              <div className={styles.workshopPosterStage}>
+                <img
+                  className={styles.workshopPosterFull}
+                  src={activeWorkshop.poster}
+                  alt={`${content.workshopLabel} ${activeWorkshopIndex + 1}: ${activeWorkshop.title}`}
+                />
+              </div>
+            )}
           </motion.article>
         </div>
       </div>

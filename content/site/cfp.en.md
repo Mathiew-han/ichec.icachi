@@ -30,4 +30,4 @@ Authors are responsible for all submitted content. If generative AI tools are us
 
 ## Workshop Participation
 
-Four workshops have been accepted and the call for participants is now open. Participants must register for both their chosen workshop and the main conference; no additional workshop fee applies. Room assignments and exact session times will be announced later. See the accepted Workshop section above for posters, descriptions, registration links, and organiser contacts.
+Four workshops take place on November 23. Participants must register for both their chosen workshop and the main conference. No additional workshop fee applies. See [workshop times, rooms and registration](/registration#attend-workshops).

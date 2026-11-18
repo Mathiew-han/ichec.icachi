@@ -1,13 +1,7 @@
 # 新闻与更新（News / Updates）
 
-## 2026-11-23–26 · Chinese CHI 2026 in Macau
+## 2026 年 11 月 23–26 日 · ICHEC 2026
 
-- Chinese CHI 2026 将于 2026 年 11 月 23–26 日在澳门举办。
-- 场地：Wynn Macau（永利澳门）。
-- 重要节点与筹备节奏见 [重要日期](/important-dates)。
+ICHEC 2026 由澳门城市大学承办，于 11 月 23–26 日在永利澳门举行。
 
-## TODO
-
-- AAAAAAAAAAAAAA（发布正式 CFP：投稿类别/模板/提交流程）
-- AAAAAAAAAAAAAA（发布参会指南：场地/住宿/交通）
-- AAAAAAAAAAAAAA（发布赞助权益包与对接方式）
+查看[大会日程与会议手册](/program)、[会场平面图](/venue)或[参会与交通指南](/registration)。

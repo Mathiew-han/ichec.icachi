@@ -13,13 +13,13 @@
     "Join the discussion, hands-on activities, and shared synthesis rather than simply listening in.",
     "Register for both your chosen workshop and the main conference.",
     "There is no additional workshop fee.",
-    "Room assignments and session times will be announced later."
+    "All workshops take place on November 23. Select a workshop below for its time and room."
   ],
   "viewSource": "View source document",
   "registerConference": "Conference registration",
   "listEyebrow": "Workshop information",
   "listTitle": "Choose a workshop and join the conversation",
-  "listIntro": "Choose a workshop from the navigation to switch between and view each complete poster without leaving the page.",
+  "listIntro": "Select a workshop to view its schedule and registration link.",
   "workshopLabel": "Workshop",
   "detailsLabel": "Full details & organisers",
   "organisersLabel": "Organisers · Expertise",
@@ -69,9 +69,8 @@
     },
     {
       "id": "baticloud",
-      "poster": "/images/workshops/workshop-3.jpg",
       "title": "BATICLOUD: Human-AI Co-Creation Workshop for Batik Intangible Cultural Heritage, From Craft Knowledge to Digital",
-      "description": "Intangible cultural heritage embodies humanity’s living memory, yet many traditional crafts face the risk of disappearance. What possibilities emerge when batik meets artificial intelligence? Join our workshop, “Batik Programming Grammar and Artificial Intelligence: Human–AI Co-Creation for ICH”. We have developed BatikScript, a Chinese-keyword programming grammar derived from batik craft processes, and Batik AI Creation Studio, a web-based tool. Simply describe your idea in a sentence: AI translates it into concise BatikScript code and renders batik effects on the canvas in real time. You can let AI generate the code or edit it yourself to experience human–AI co-creation. The workshop welcomes everyone, including researchers, art learners, ICH enthusiasts, older adults and children. No programming experience is required. During the 90-minute session, you will hear current perspectives on ICH digitisation, discuss “What is ICH?”, create your own batik work and share it with others. The workshop also uses co-creation as a research method. With your consent, anonymised data from your creative process will help us explore new approaches to ICH transmission. Participation is in person only, with approximately 15 places available. If you would like to learn about ICH and experience the combination of AI and craft, we warmly invite you to register!",
+      "description": "Intangible cultural heritage embodies humanity’s living memory, yet many traditional crafts face the risk of disappearance. What possibilities emerge when batik meets artificial intelligence? Join our workshop, “Batik Programming Grammar and Artificial Intelligence: Human–AI Co-Creation for ICH”. We have developed BatikScript, a Chinese-keyword programming grammar derived from batik craft processes, and Batik AI Creation Studio, a web-based tool. Simply describe your idea in a sentence: AI translates it into concise BatikScript code and renders batik effects on the canvas in real time. You can let AI generate the code or edit it yourself to experience human–AI co-creation. The workshop welcomes everyone, including researchers, art learners, ICH enthusiasts, older adults and children. No programming experience is required. During the workshop, you will hear current perspectives on ICH digitisation, discuss “What is ICH?”, create your own batik work and share it with others. The workshop also uses co-creation as a research method. With your consent, anonymised data from your creative process will help us explore new approaches to ICH transmission. Participation is in person only, with approximately 15 places available. If you would like to learn about ICH and experience the combination of AI and craft, we warmly invite you to register!",
       "organisers": [
         "Xin Tang, Guangzhou Academy of Fine Arts, China | Digitalization of Batik",
         "Rongcong Cai, Guangzhou Academy of Fine Arts, China | Human-AI Collaboration",

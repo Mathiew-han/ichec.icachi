@@ -1,27 +1,19 @@
-# 会场信息（Venue）
+# 会场信息
 
 ## 永利澳门（Wynn Macau）
 
-会场地点依据 **CChi2026 筹备工作推进会（终版会议纪要）**：**永利澳门**。
+会议在永利澳门一楼宴会厅（Ballroom）举行。进入酒店后，请按「宴会厅」指示牌前往会场。
 
-更详细的楼宇/房间、动线与地图信息将在会务系统上线后补充。
+- 地址：澳门新口岸仙德丽街（Rua Cidade de Sintra, NAPE, Macau）
+- 酒店电话：+853 2888 9966
+- 免费接驳车站：永利澳门北门，永利名店街（Wynn Esplanade）外
 
 ## 会场与空间
 
-- 会议空间规划将参考往届三天议程
-- Art Gallery 如开展，预计需要约 **600㎡** 场地并需协会支持
+- 签到处：Meeting Foyer
+- 主会场及 11 月 24 日晚宴：Ballroom 1
+- 分会场：Meeting Room 1、Meeting Room 2
+- 午餐：Ballrooms 2、3、4
+- 艺术展：11 月 23–24 日，Meeting Foyer 艺术展区
 
-## 功能区（参考）
-
-- Registration Area（注册区）
-- Plenary Hall（主会场）
-- Breakout Rooms（分会场）
-- Coffee Break & Short Paper Session（茶歇与短论文区）
-- Lunch / Banquet（午餐/晚宴）
-
-## 参会指南（待发布）
-
-- 参会指南将包含：场地与楼宇信息、住宿建议、交通与到达方式、现场动线与服务点位
-- 相关链接将在资料就绪后统一发布
-
-详情见 [重要日期](/important-dates)。
+查看[大会日程与会议手册](/program)或[参会与交通指南](/registration)。

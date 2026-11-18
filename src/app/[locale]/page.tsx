@@ -5,6 +5,7 @@
 import { Link } from "@/navigation";
 import { KeynoteShowcase } from "@/components/KeynoteShowcase";
 import { useLocale, useTranslations } from "next-intl";
+import wynnMacau from "../../../images/venue/wynn-macau-exterior.jpg";
 import styles from "./home.module.css";
 
 const importantDates = {
@@ -183,7 +184,7 @@ export default function Home() {
             </Link>
           </div>
           <figure className={styles.venueImage}>
-            <img src="/venue/wynn-palace.png" alt={isZh ? zh("永利澳门", "永利澳門") : "Wynn Macau"} />
+            <img src={wynnMacau.src} alt={isZh ? zh("永利澳门酒店外观", "永利澳門酒店外觀") : "Wynn Macau hotel exterior"} />
           </figure>
         </section>
 
